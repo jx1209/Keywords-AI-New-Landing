@@ -1,0 +1,6 @@
+.PricingCard {}
+
+.pricing-card-outer {
+    background: var(--resend-com-linear-dodger-blue-dodger-blue-mercury-gray-french-rose, linear-gradient(90deg, rgba(56, 189, 248, 0.00) 0%, rgba(56, 189, 248, 0.00) 0%, rgba(232, 232, 232, 0.20) 33.02%, rgba(143, 143, 143, 0.67) 64.41%, rgba(236, 72, 153, 0.00) 98.93%));
+    @apply p-[1px] rounded-lg z-0;
+}

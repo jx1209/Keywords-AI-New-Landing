@@ -1,0 +1,27 @@
+{
+    "date": "July 1, 2024",
+    "Title": "Build Your Golden Dataset in Minutes",
+    "snapshot": "dataset.gif",
+    "introduction": "Today, we are introducing a new feature called Datasets. With Datasets, you can effortlessly save and export log data for various purposes, such as fine-tuning, synthetic data generation, and evaluation. Simply click the 'Create Dataset' button on the Logs page and adjust the filters as needed.",
+    "sections": {
+      "New": [
+        {"tag": "Logs", "description": "Added full-text search, allowing users to search through system prompts, user prompts, and responses."},
+        {"tag": "Logs", "description": "You can now open logs with function calls in the playground."},
+        {"tag": "Logs", "description": "Added fuzzy search for filter options."},
+        {"tag": "Playground", "description": "Added function calls support; you can now call functions in the playground."},
+        {"tag": "Playground", "description": "Added image upload code to playground code viewer."},
+        {"tag": "Playground", "description": "Added fuzzy search for models."},
+        {"tag": "Other", "description": "A new blog page!"}
+      ],
+      "Improved": [
+        {"tag": "Dashboard", "description": "Loading speed is 100% faster!"},
+        {"tag": "Logs", "description": "Improved data export feature; you can now export unlimited logs asynchronously and download them via email."}
+      ],
+      "Fixed": [
+
+        {"tag": "Logs", "description": "Fixed a bug where user could not selecte multiple items in the filter dropdown."},
+        {"tag": "Logs", "description": "Fixed a bug where the user's applied filter was not reflected in auto-refetching."}
+      ]
+    }
+  }
+  

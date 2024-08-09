@@ -1,0 +1,19 @@
+{
+    "date": "July 18, 2024",
+    "Title": "GPT-4o mini is avaliable on Keywords AI!",
+    "snapshot": "openai.png",
+    "introduction": "Integrated GPT-4o mini into Keywords AI, try it out in our model playground!",
+    "sections": {
+      "New": [
+        {"tag": "Datasets", "description": "Implemented bottom toolbar."}
+      ],
+      "Improved": [
+        {"tag": "Settings", "description": "Improved the UI of the credential card."},
+        {"tag": "Users", "description": "Improved page loading speed, now it's 5x faster!"}
+      ],
+      "Fixed": [
+        {"tag": "Logs", "description": "Fixed the bug where search did not perform when deleting characters."}
+      ]
+    }
+  }
+  

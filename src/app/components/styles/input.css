@@ -1,0 +1,7 @@
+.input-box {
+    @apply flex items-center px-xs py-xxs self-stretch rounded-sm shadow-border shadow-gray-3 bg-gray-2 text-gray-white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    font-style: normal;
+}

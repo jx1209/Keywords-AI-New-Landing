@@ -1,0 +1,8 @@
+{
+  "timestamp": "June 26, 2024",
+  "type": "GUIDE",
+  "subtitle": "",
+  "title": "How to stop LLM hallucinations?",
+  "description": "Discover effective strategies to reduce LLM hallucinations, including advanced prompting, Retrieval Augmented Generation (RAG), and fine-tuning. Learn how these methods enhance LLM accuracy and reliability.",
+  "image": "/images/blog_Images/blog5/cover.jpg"
+}

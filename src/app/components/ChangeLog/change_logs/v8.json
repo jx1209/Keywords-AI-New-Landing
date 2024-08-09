@@ -1,0 +1,19 @@
+{
+    "date": "July 24, 2024",
+    "Title": "New model every day! Mistral Large 2!",
+    "snapshot": "mistral.jpg",
+    "introduction": "Integrated Mistral Large 2 into Keywords AI, try it out in our model playground!",
+    "sections": {
+        "New": [
+            {"tag": "Models", "description": "Integrated Groq tool use models into the platform."},
+            {"tag": "Logs", "description": "You can add notes to each log, which is helpful when running evaluations."},
+            {"tag": "Logs", "description": "Added Customer ID and Thread ID columns on the Logs page."},
+            {"tag": "Evaluations", "description": "You can now run batch evaluations on specified metrics through an API call now."}
+    
+          ],
+          "Improved": [
+            {"tag": "Users", "description": "Added many shortcuts to the Users side panel."},
+            {"tag": "Users", "description": "Improved the UI of the Users page."}
+          ]
+    }
+  }

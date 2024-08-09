@@ -1,0 +1,24 @@
+{
+    "date": "July 16, 2024",
+    "Title": "Have a better observability minute-level graphs",
+    "snapshot": "minute.gif",
+    "introduction": "We have put much effort into improving the performance of our dashboard. Now, you can see your LLM usage and performance at minute and hour levels. Its loading time is even 2x faster than before!",
+    "sections": {
+      "New": [
+        {"tag": "Dashboard", "description": "Added the View all button for breakdown graphs in Dashboard."},
+        {"tag": "Dashboard", "description": "Added 2 day timeframe for the graphs in Dashboard."}
+
+      ],
+      "Improved": [
+        {"tag": "Logs", "description": "You could now see the exact delpoyment name in the side panel if you're using your own credentials."},
+        {"tag": "Datasets", "description": "Added creator column in Datasets."},
+        {"tag": "Settings", "description": "Added Test button for users to verify their credentials."}
+      ],
+      "Fixed": [
+        {"tag": "Dashboard", "description": "Fixed the bug where the Error graph's summary value does not match the actual value."},
+        {"tag": "Dashboard", "description": "Fixed the bug where accumulative graphs have incorrect values."},
+        {"tag": "API", "description": "Fixed the bug where Claude 3 Opus token counting is inaccurate."}
+      ]
+    }
+  }
+  

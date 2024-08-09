@@ -1,0 +1,138 @@
+.display-xl {
+    @apply text-gray-white font-inter;
+    font-size: 72px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 88px;
+    font-style: normal;
+}
+
+.display-lg {
+    @apply text-gray-white font-inter;
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 56px;
+    font-style: normal;
+}
+
+.display-sm {
+    @apply text-gray-white font-inter;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 32px;
+    font-style: normal;
+}
+
+.display-xs {
+    @apply text-gray-white font-inter;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    font-style: normal;
+}
+
+.text-lg {
+    @apply text-gray-white font-inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    font-style: normal;
+}
+
+.text-md-medium {
+    @apply text-gray-white font-inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    font-style: normal;
+}
+
+.text-md-regular {
+    @apply text-gray-white font-inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-style: normal;
+}
+
+.text-md {
+    @apply text-gray-white font-inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-style: normal;
+}
+
+.text-sm {
+    @apply text-gray-white font-inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    font-style: normal;
+}
+
+.text-sm-regular {
+    @apply text-gray-white font-inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    font-style: normal;
+}
+
+
+.caption {
+    @apply text-gray-white font-inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    font-style: normal;
+}
+
+.display-md-bold {
+    @apply text-gray-white font-inter;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+    font-style: normal;
+}
+
+.display-md-semibold {
+    @apply text-gray-white font-inter;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    font-style: normal;
+}
+
+.text-sm-md {
+    @apply text-gray-white font-inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    font-style: normal;
+}
+
+.caption-cap {
+    @apply font-inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 133.333% */
+    letter-spacing: 2.4px;
+}
+
+.gradient-text {
+    background: var(--gray-cool-white, linear-gradient(92deg, #FFF 47.94%, #D1CAE4 100%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.caption-md {
+    @apply font-inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+}

@@ -1,0 +1,26 @@
+{
+    "date": "July 22, 2024",
+    "Title": "Group chatlogs by thread ID to have better observability!",
+    "snapshot": "thread.gif",
+    "introduction": "We pushed our latest update to improve the observability of chatlogs. Now, you can group logs by thread ID to have a better understanding of the conversation flow!",
+    "sections": {
+      "New": [
+        {"tag": "Settings", "description": "Added a test button on the credential card for users to verify their credentials."},
+        {"tag": "Datasets", "description": "Added JSON mode display, open in playground, and message editing in the side panel."},
+        {"tag": "Datasets", "description": "Added the Delete button in the side panel."},
+        {"tag": "Datasets", "description": "Added filters on the Datasets page. You can now filter your data by dataset ID, system message, user message, and assistant message."},
+        {"tag": "Datasets", "description": "Added sorting on the Datasets page. You can now sort data by updated time and dataset ID."},
+        {"tag": "Users", "description": "You can now export your user data to a CSV/JSONL file."}
+
+      ],
+      "Improved": [
+        {"tag": "Logs", "description": "Improved display of log messages in the side panel; now, you will be directed to the last message when you click on a log."},
+        {"tag": "Logs", "description": "Improved JSON model display in the side panel."},
+        {"tag": "Dashboard", "description": "Improved UI of Dashboard."}
+      ],
+      "Fixed": [
+        {"tag": "Playground", "description": "Fixed the bug where enabled compare mode, but the left message glitched and disappeared."}
+      ]
+    }
+  }
+  

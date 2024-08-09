@@ -1,0 +1,19 @@
+.button-primary {
+    display: flex;
+    min-width: 60px;
+    justify-content: center;
+    align-items: center;
+    @apply gap-xxs px-sm py-xxs rounded-lg;
+}
+
+.button-secondary-black {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @apply gap-xxs px-sm py-xxs rounded-lg
+}
+
+.btn-rainbow-border {
+    background: var(--resend-com-linear-cyan-aqua-green-haze-electric-violet, linear-gradient(90deg, rgba(2, 252, 239, 0.44) 0%, rgba(255, 181, 43, 0.44) 50%, rgba(160, 43, 254, 0.44) 100%));
+    @apply p-[1px] rounded-lg max-h-[36px];
+}

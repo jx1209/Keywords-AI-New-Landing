@@ -1,0 +1,64 @@
+@import './typography.css';
+@import './button.css';
+@import './input.css';
+@import './animation.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  margin: none;
+  padding: none
+}
+
+
+strong {
+  font-weight: bold;
+
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  @apply bg-gray-black text-gray-white;
+}
+
+
+body[style] {
+  margin: 0 auto !important;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+::-webkit-scrollbar {
+  @apply bg-gray-black w-[4px] h-[4px];
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-4 rounded-full;
+}
+
+
+.bg-gradient-in {
+  background: var(--Linear-Electric-Lime-Rio-Grande-Rio-Grande, linear-gradient(180deg, rgba(192, 197, 228, 0.16) 0%, rgba(189, 200, 255, 0.09) 50%, rgba(54, 49, 60, 0.08) 100%), #000);
+}
+
+.bg-gradient-out {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.20) 0%, rgba(143, 143, 143, 0.67) 50%, rgba(0, 0, 0, 0.04) 100%);
+}

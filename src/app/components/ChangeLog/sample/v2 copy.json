@@ -1,0 +1,20 @@
+{
+  "date": "October 23, 2023",
+  "Title": "Sample Changelog #2",
+  "snapshot": "snapshot1.png",
+  "introduction": "This is a random paragraph that I am typing here to serve as a placeholder for the Changelog. The Changelog may have one or more than one paragraphs like this that compliments a new feature. Above this paragraph, there will alway be a snapshot of the new feature we shipped. Below these paragraphs, there will always be 3 sections: “New,” “Improved,” and “Fixed.”The 3 sections below use the TextButton component and is collapsed by default. The scrolling behavior should be referring to Linear’s.A sample Changelog will look just like this.  ",
+  "sections": {
+    "New": [
+      {"tag": "Dashboard", "description": "You can now do so many things with the dashboard."},
+      {"tag": "Dashboard", "description": "Fixed weird UI bug where an icon disappeared was fixed."},
+      {"tag": "Requests", "description": "A lot of change here."},
+      {"tag": "Users", "description": "Same as above."},
+      {"tag": "Playground", "description": "Now you can run 50 models at the same time, side by side too."},
+      {"tag": "API", "description": "Router actually works now!"},
+      {"tag": "API", "description": "Issue where backend was down for 5 days is resolved."},
+      {"tag": "Other", "description": "Some boring stuff."}
+    ],
+    "Improved": [],
+    "Fixed": []
+  }
+}

@@ -1,0 +1,7 @@
+.ModelLogos-box-shadow {
+    box-shadow: 0px 0px 40px 0px rgba(66, 107, 255, 0.25);
+}
+
+.ModelLogos-model-item {
+    background: linear-gradient(180deg, rgba(192, 197, 228, 0.16) 0%, rgba(189, 200, 255, 0.09) 50%, rgba(54, 49, 60, 0.08) 100%), #000;
+}
