@@ -1,15 +1,9 @@
 {
-    "timestamp": "March 25, 2024",
-    "type": "MODEL",
-    "subtitle":"",
-    "title":
-      "Claude Haiku can substitute GPT-4 in 95% of AI tasks at 4% cost",
-    "slug": "claude-haiku-vs-gpt-4",
-    "cover": {
-      "id": 1,
-      "url": "/images/blog_Images/blog1/cover.jpg",
-      "props": {
-        "variant": "circle"
-      }
-    }
+  "timestamp": "July 14, 2024",
+  "type": "GUIDE",
+  "subtitle":"",
+  "title":
+    "How to increase your LLM rate limits for free",
+  "description": "Discover free strategies to enhance LLM rate limits, including load balancing techniques. Compare provider limits and explore methods to optimize LLM application performance.",
+  "image": "/images/blog_Images/blog10/cover.jpg"
 }
