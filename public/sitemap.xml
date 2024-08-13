@@ -23,8 +23,5 @@
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
-   <sitemap>
-      <loc>https://docs.keywordsai.co/sitemap.xml</loc>
-   </sitemap>
 
 </urlset>
