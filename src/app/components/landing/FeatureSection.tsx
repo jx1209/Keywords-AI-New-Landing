@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "@/utilities/ClassMerge";
 import { ModelLogos } from "./ModelLogos";
-import { BrandLogo, ScaleChart, SimpleImage } from "./OtherSVG";
+import { SimpleImage } from "./OtherSVG";
 import "./Landing.css";
 import {
   ClearFilter,
@@ -17,6 +17,7 @@ import {
   ViewMode,
   ViewNext,
 } from "./ShortcutSVG";
+import Image from "next/image";
 
 type Props = {};
 
@@ -71,7 +72,16 @@ export default function FeatureSection({}: Props) {
           }
         >
           <div className="flex justify-center items-center content-center gap-md self-stretch flex-wrap rounded-lg">
-            <img src="/images/ScaleChart.png" className="w-[320px] " />
+            <div className="relative w-[320px] h-auto">
+              <Image
+                src="/images/ScaleChart.png"
+                alt="Scale Chart"
+                width={320}
+                height={320} // Adjust this based on the actual aspect ratio of your image
+                style={{ width: "100%", height: "auto" }}
+                className=""
+              />
+            </div>
           </div>
         </Card>
         <Card
@@ -81,10 +91,16 @@ export default function FeatureSection({}: Props) {
             "One-stop DevOps platform for the entire LLM development lifecycle."
           }
         >
-          <img
-            src="/images/BrandLogo.png"
-            className="w-[320px] h-[216px] max-w-[360px]"
-          />
+          <div className="relative w-[320px] h-[216px] max-w-[360px]">
+            <Image
+              src="/images/BrandLogo.png"
+              alt="Brand Logo"
+              fill
+              sizes="(max-width: 360px) 100vw, 320px"
+              style={{ objectFit: "contain" }}
+              className=""
+            />
+          </div>
         </Card>
         <Card
           min_width="min-w-[320px]"
@@ -139,6 +155,13 @@ const Card = ({
   heading,
   subheading,
   reversed = false,
+}: {
+  children: React.ReactNode;
+  min_width: string;
+  max_width?: string;
+  heading: string;
+  subheading: string;
+  reversed?: boolean;
 }) => {
   return (
     <div className={cn("landing-card-outer flex", min_width, max_width)}>

@@ -1,6 +1,6 @@
 import { AnalyticCard, DataCollectionCard, DeployCard, EvaluationCard, FineTuneCard, LogsCard, PlaygroundCard, PromptCard, UserInsightCard } from "./OtherSVG";
 
-  const Section = ({ keyword, header, children, footer, footerHighlight }) => {
+  const Section = ({ keyword, header, children, footer, footerHighlight }: { keyword: string, header: string, children: React.ReactNode, footer: string, footerHighlight: string }) => {
     return (
       <div className="flex  flex-col items-center gap-md bg-gray-black py-[80px] px-md">
         <div className="flex-col items-center gap-xxs self-stretch">

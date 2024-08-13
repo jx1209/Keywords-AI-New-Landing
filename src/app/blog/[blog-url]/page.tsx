@@ -25,8 +25,9 @@ import SocialIcons from "../components/social";
 import { getMetadata } from "@/utilities/getMetadata";
 import Link from "next/link";
 import Image from "next/image";
+import { ButtonWrapper } from "./buttonwrapper";
 
-const getImageClass = (size) => {
+const getImageClass = (size: string) => {
   switch (size) {
     case "lg":
       // return "max-w-[1200px]";
@@ -211,11 +212,16 @@ export default async function BlogDetail({
                 <Image
                   src={paragraph.image.url}
                   alt="Paragraph Image"
-                  width={getImageClass(paragraph?.image?.props?.variant)}
-                  layout="fill"
+                  width={getImageClass(
+                    paragraph?.image?.props?.variant || "default"
+                  )}
+                  height={0}
+                  // style={{ height: 'auto' }}
                   className={cn(
-                    "w-full rounded-lg ",
-                    getImageClass(paragraph?.image?.props?.variant)
+                    "w-full rounded-lg  ",
+                    `max-w-[${getImageClass(
+                      paragraph?.image?.props?.variant as string
+                    )}px]`
                   )}
                 />
                 <a
@@ -264,13 +270,12 @@ export default async function BlogDetail({
             Powering the best AI startups.
           </span>
         </div>
-        <Button
+        <ButtonWrapper
           variant="big-white"
           text="Get started free"
           size="large"
           bgColor="bg-gray-3"
           textColor="text-gray-white"
-          href="https://platform.keywordsai.co/platform"
           target="_blank"
           rel="noopener noreferrer"
         />

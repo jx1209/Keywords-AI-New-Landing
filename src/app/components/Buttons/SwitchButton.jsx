@@ -45,4 +45,5 @@ const SwitchButton = React.forwardRef(({
   );
 })
 
-export default SwitchButton;
+SwitchButton.displayName = 'SwitchButton';
+export { SwitchButton };

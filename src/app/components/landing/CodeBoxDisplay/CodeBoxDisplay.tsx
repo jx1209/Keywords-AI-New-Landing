@@ -22,7 +22,7 @@ import { whiteLightInit } from "@uiw/codemirror-theme-white/light";
 // import { colors } from "../../styles/color-themes";
 // import { useSelector } from "react-redux";
 // import { useTypedSelector } from "src/store/store";
-import ButtonGroupSmall from "@/app/components/Buttons/ButtonGroupSmall";
+import {ButtonGroupSmall} from "@/app/components/Buttons/ButtonGroupSmall";
 import { NewDropDownMenu } from "@/app/components/DropDownMenu/NewDropDownMenu";
 
 // const LightTheme = whiteLightInit({
@@ -41,6 +41,14 @@ import { NewDropDownMenu } from "@/app/components/DropDownMenu/NewDropDownMenu";
 //     gutterBorder: "transparent",
 //   },
 // });
+
+export type ChatMessageType = {
+  id?: string | number;
+  role: string;
+  content: string | any;
+  model?: string | null;
+};
+
 const DarkTheme = whiteDarkInit({
   settings: {
     foreground: "#F9FAFC",
@@ -50,22 +58,22 @@ const DarkTheme = whiteDarkInit({
     selection: "#3E424A",
     fontFamily: "monospace",
     gutterForeground: "#B1B3BC",
-    matchingBracket: "#6483F0",
-    keyword: null,
-    storage: null,
-    variable: null,
-    parameter: null,
-    function: null,
-    string: "#B1B3BC",
-    constant: null,
-    type: null,
-    class: null,
-    number: null,
-    comment: "#2e2e37",
-    heading: null,
-    invalid: null,
-    regexp: "#B1B3BC",
-    tag: null,
+    // matchingBracket: "#6483F0",
+    // keyword: null,
+    // storage: null,
+    // variable: null,
+    // parameter: null,
+    // function: null,
+    // string: "#B1B3BC",
+    // constant: null,
+    // type: null,
+    // class: null,
+    // number: null,
+    // comment: "#2e2e37",
+    // heading: null,
+    // invalid: null,
+    // regexp: "#B1B3BC",
+    // tag: null,
     gutterBorder: "transparent",
   },
 });
@@ -103,7 +111,7 @@ export function CodeBoxDisplay({
   }
 
   const [isOpenAI, setIsOpenAI] = useState(true);
-  const languages = (model, displayMessages) => {
+  const languages:any = (model: string, displayMessages: string) => {
     return [
       {
         name: "Python",
@@ -238,7 +246,7 @@ func main() {
       },
     ];
   };
-  const openAIlanguages = (model, displayMessages) => {
+  const openAIlanguages = (model: string, displayMessages: string) => {
     return [
       {
         name: "Python",
@@ -319,7 +327,7 @@ const chatCompletion = await openai.chat.completions.create({
     }
   }, [isOpenAI, modelName]);
   const languagesButtons = languages(modelName, displayMessages).map(
-    (e, i) => ({
+    (e: { name: string; value: string; icon: any }, i: number) => ({
       text: e.name,
       value: e.value,
       icon: e.icon,
@@ -331,7 +339,7 @@ const chatCompletion = await openai.chat.completions.create({
   const openAIlanguagesButtons = openAIlanguages(
     modelName,
     displayMessages
-  ).map((e, i) => ({
+  ).map((e: { name: string; value: string; icon: any }, i: number) => ({
     text: e.name,
     value: e.value,
     icon: e.icon,
@@ -344,7 +352,7 @@ const chatCompletion = await openai.chat.completions.create({
         <div className="flex flex-row items-center gap-xxs">
           <NewDropDownMenu
             open={open}
-            setOpen={setOpen as Dispatch<SetStateAction<boolean | undefined>>}
+            setOpen={setOpen as Dispatch<SetStateAction<boolean>>}
             align="start"
             alignOffset={0}
             sideOffset={4}
@@ -388,7 +396,7 @@ const chatCompletion = await openai.chat.completions.create({
             <ButtonGroupSmall
               buttons={languagesButtons}
               defaultActive={languagesButtons.findIndex(
-                (i) => i.value == currentLanguage?.value
+                (i: any) => i.value == currentLanguage?.value
               )}
             />
           )}
@@ -439,7 +447,7 @@ function generatePHPArrayCode(obj: any): string {
   }
 }
 
-const CodeBlock = ({ currentLanguage, theme }) => {
+const CodeBlock = ({ currentLanguage, theme }: { currentLanguage: any, theme: any }) => {
   return (
     <div className="flex p-xs self-stretch w-full rounded-b-md bg-fill">
       <CodeMirror

@@ -10,7 +10,7 @@ import {
   UserInsightCard,
 } from "./OtherSVG";
 
-const Section = ({ keyword, header, children, footer, footerHighlight }) => {
+const Section = ({ keyword, header, children, footer, footerHighlight }: { keyword: string, header: string, children: React.ReactNode, footer: string, footerHighlight: string }) => {
   return (
     <div className="flex w-[1440px] flex-col items-center gap-xl bg-black_gradient py-xxxl px-sm sm:p-lg sm:w-full sm:gap-md">
       <div className="flex-col items-center gap-sm self-stretch">

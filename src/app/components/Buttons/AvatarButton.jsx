@@ -2,7 +2,7 @@ import React from "react";
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
 import cn from "@/utilities/ClassMerge";
 
-export default function AvatarButton({
+export function AvatarButton({
   firstName,
   textClassName,
   onClick = () => {},

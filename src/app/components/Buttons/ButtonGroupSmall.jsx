@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "./Button";
 
-export default function ButtonGroupSmall({ buttons, defaultActive = 0, buttonPadding = "py-xxxs px-xxs" }) {
+export function ButtonGroupSmall({ buttons, defaultActive = 0, buttonPadding = "py-xxxs px-xxs" }) {
   const [activeButton, setActiveButton] = useState(defaultActive);
 
   const handleClick = (button, index) => {

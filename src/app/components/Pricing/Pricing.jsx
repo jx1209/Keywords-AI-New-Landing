@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { Page } from "@/app/components/Page/Page";
 import PricingCard from "./components/PricingCard/PricingCard";
 import { Button } from "@/app/components/Buttons";
@@ -19,6 +19,7 @@ import {
   ShepherdLogo,
   WonderChatLogo,
 } from "@/app/components/landing/TeamsLogo";
+import Image from "next/image";
 export function Pricing() {
   const [isYearly, setIsYearly] = useState(true);
   const [teamPrice, setTeamPrice] = useState("$239");
@@ -243,7 +244,18 @@ export function Pricing() {
           </div>
           <div onClick={() => window.open("https://retellai.com/", "_blank")}>
             <div className="p-xxs w-[152px] h-[44px] flex justify-center items-center gap-[10px] ">
-              <img src="/images/retell.png" className="w-full max-w-[1200px]" />
+              <div
+                className="w-full max-w-[1200px] relative"
+                style={{ aspectRatio: "16/9" }}
+              >
+                <Image
+                  src="/images/retell.png"
+                  alt="Retell"
+                  fill
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
             </div>
           </div>
           <div onClick={() => window.open("https://shepherd.study/", "_blank")}>
@@ -264,7 +276,16 @@ export function Pricing() {
           </div>
           <div onClick={() => window.open("https://i.inc/", "_blank")}>
             <div className="p-xxs w-[152px] h-[44px] flex justify-center items-center gap-[10px] ">
-              <img src="/images/IInc.png" className="w-full max-w-[1200px]" />
+              <div className="w-full max-w-[1200px]">
+                <Image
+                  src="/images/IInc.png"
+                  alt="IInc"
+                  width={1200}
+                  height={675} // Adjust this based on the actual aspect ratio of your image
+                  style={{ width: "100%", height: "auto" }}
+                  className=""
+                />
+              </div>
             </div>
           </div>
           <div onClick={() => window.open("https://www.lawme.ai/", "_blank")}>

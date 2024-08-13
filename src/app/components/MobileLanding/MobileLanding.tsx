@@ -11,10 +11,10 @@ import {
   Chat,
   Document,
   Electric,
-} from "src/components/icons-old";
-import { Page } from "src/components/Page";
-import { Button } from "src/components/Buttons";
-import { LinkedIn, Logo, Right } from "src/components/Icons";
+} from "@/app/components/icons-old";
+import { Page } from "@/app/components/Page";
+import { Button } from "@/app/components/Buttons";
+import { LinkedIn, Logo, Right } from "@/app/components/Icons";
 import {
   AgentHubLogo,
   CruxLogo,
@@ -23,10 +23,10 @@ import {
   LawmeLogo,
   ShepherdLogo,
   OctolaneLogo,
-} from "../Landing1/TeamsLogo";
+} from "@/app/components/landing/TeamsLogo";
 import { FeatureSection } from "./FeatureSection";
 import { IntrimLogo, LogoCard } from "./OtherSVG";
-import { Helmet } from "react-helmet";
+import Image from "next/image";
 
 export function MobileLanding() {
   useEffect(() => {
@@ -55,7 +55,7 @@ export function MobileLanding() {
                   "_blank"
                 )
               }
-              aria-aria-label="frame 1603"
+              aria-label="frame 1603"
               className="flex flex-row justify-center items-center gap-xxs "
             >
               <span className="text-center caption text-resend-64">
@@ -74,7 +74,7 @@ export function MobileLanding() {
             className="flex-col max-w-[1200px] w-full items-center gap-lg"
           >
             <div
-              aria-aria-label="frame 619"
+              aria-label="frame 619"
               className="flex flex-col items-center gap-xs self-stretch"
             >
               <p
@@ -130,7 +130,17 @@ export function MobileLanding() {
           data-aos-delay="500"
           data-aos-anchor-placement="top-bottom"
         >
-          <img src="/images/Landing.png" className="w-full max-w-[1200px]" />
+          <div className="w-full max-w-[1200px]">
+            <Image
+              src="/images/Landing.png"
+              alt="Landing"
+              width={1200}
+              height={675} // Adjust this based on the actual aspect ratio of your image
+              sizes="(max-width: 1200px) 100vw, 1200px"
+              style={{ width: "100%", height: "auto" }}
+              priority
+            />
+          </div>
         </div>
       </div>
     );
@@ -153,7 +163,18 @@ export function MobileLanding() {
         >
           <div onClick={() => window.open("https://retellai.com/", "_blank")}>
             <div className="p-xxs w-[152px] h-[44px] flex justify-center items-center gap-[10px] ">
-              <img src="/images/retell.png" className="w-full max-w-[1200px]" />
+              <div
+                className="w-full max-w-[1200px] relative"
+                style={{ aspectRatio: "16/9" }}
+              >
+                <Image
+                  src="/images/retell.png"
+                  alt="Retell"
+                  fill
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
             </div>
           </div>
           <div
@@ -224,9 +245,9 @@ export function MobileLanding() {
 
         <div className="flex-col flex items-center gap-lg max-w-[600px] w-full">
           <p className="text-md-md  text-center text-gray-white self-stretch">
-            “Keywords AI legit has some of the best UX/DX I've ever seen in my
-            life. I'm not even just saying that, I truly don't think I've ever
-            integrated a product that was as easy.”
+          &ldquo;Keywords AI legit has some of the best UX/DX I&apos;ve ever seen in my
+            life. I&apos;m not even just saying that, I truly don&apos;t think I&apos;ve ever
+            integrated a product that was as easy.&rdquo;
           </p>
           <div className="flex-col items-center gap-xxxs">
             <p className="text-sm-md text-center text-gray-white">
@@ -266,27 +287,6 @@ export function MobileLanding() {
 
   return (
     <Page>
-      <Helmet>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@keywordsai" />
-        <meta name="twitter:title" content="Keywords AI" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Keywords AI - Build better AI products with complete observability"
-        />
-        <meta
-          property="og:description"
-          content="Keywords AI makes it easy to ship AI applications.Every feature you need to build, deploy, and monitor your AI product. Keywords AI is the new way to build software with LLMs."
-        />
-        <meta property="og:url" content="https://keywordsai.co" />
-        <meta property="og:site_name" content="Keywords AI" />
-        <meta
-          name="description"
-          content="Keywords AI makes it easy to ship AI applications.Every feature you need to build, deploy, and monitor your AI product. Keywords AI is the new way to build software with LLMs."
-        />
-      </Helmet>
       <IntroductionSection />
       <CollaborationSection />
       <CommentSesction />

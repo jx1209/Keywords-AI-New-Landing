@@ -44,7 +44,48 @@ import cn from "@/utilities/ClassMerge";
  * @param {string} [props.width=""] - The width of the button.
  */
 
-export const Button = forwardRef(
+interface ButtonProps {
+  active?: boolean;
+  variant?: string;
+  text?: string;
+  type?: "button" | "submit" | "reset";
+  icon?: React.ElementType;
+  secIcon?: React.ElementType;
+  className?: string;
+  borderRadius?: string;
+  onClick?: () => void;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+  textClassName?: string;
+  bgColor?: string;
+  hoverColor?: string;
+  clickedColor?: string;
+  textColor?: string;
+  textHoverColor?: string;
+  textClickedColor?: string;
+  iconFill?: string;
+  iconHoverFill?: string;
+  iconPosition?: "left" | "right";
+  iconSize?: string;
+  secIconPosition?: "left" | "right";
+  secIconSize?: string;
+  padding?: string;
+  borderColor?: string;
+  borderHoverColor?: string;
+  borderClickedColor?: string;
+  justification?: string;
+  width?: string;
+  children?: React.ReactNode;
+  disabled?: boolean;
+  iconActiveFill?: string;
+  hover?: boolean;
+  isMouseDown?: boolean;
+  size?: string;
+  target?: string;
+  rel?: string; 
+}
+
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       active = false,
@@ -555,3 +596,7 @@ export const Button = forwardRef(
     );
   }
 );
+
+Button.displayName = 'Button';
+
+export { Button };

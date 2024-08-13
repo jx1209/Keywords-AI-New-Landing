@@ -2,7 +2,7 @@ import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import React from "react";
 import { DownArrow, RightArrow } from "@/app/components/Icons";
 import cn from "@/utilities/ClassMerge";
-import { Button } from '@/app/components/Buttons';
+import { Button } from "@/app/components/Buttons";
 
 type AccordionProps = {
   isExpanded?: boolean;
@@ -19,7 +19,34 @@ type AccordionProps = {
     className?: string;
   };
 };
-export default ({
+interface CustomTriggerProps {
+  onClick: () => void;
+  children: React.ReactNode;
+  isExpanded: boolean;
+  className?: string;  // Add this line
+}
+
+const CustomTrigger = React.forwardRef<HTMLDivElement, CustomTriggerProps>(
+  ({ onClick, children, isExpanded, className, ...props }, ref) =>(
+    <div ref={ref} {...props}>
+      <Button
+        variant="text"
+        padding="p-0"
+        text={children?.toString()}
+        textClassName="text-gray-white text-md-medium"
+        textColor="text-gray-white"
+        icon={isExpanded ? DownArrow : RightArrow}
+        iconSize="xs"
+        iconFill=""
+        onClick={onClick}
+      />
+    </div>
+  )
+);
+
+CustomTrigger.displayName = 'CustomTrigger'
+
+const Accordion = ({
   className,
   value,
   onValueChange,
@@ -60,6 +87,9 @@ export default ({
   );
 };
 
+Accordion.displayName = 'Accordion'
+export default Accordion
+
 const AccordionItem = React.forwardRef(
   (
     {
@@ -81,6 +111,8 @@ const AccordionItem = React.forwardRef(
   )
 );
 
+AccordionItem.displayName = 'AccordionItem'
+
 const AccordionTrigger = React.forwardRef(
   (
     {
@@ -94,20 +126,20 @@ const AccordionTrigger = React.forwardRef(
     const [isExpanded, setIsExpanded] = React.useState(false);
     return (
       <AccordionPrimitive.Header className="flex self-stretch ">
-        <AccordionPrimitive.Trigger
+        {/* <AccordionPrimitive.Trigger
           className={cn(className, "group")}
           {...props}
           ref={forwardedRef as React.Ref<HTMLButtonElement>}
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
           onClick={() => setIsExpanded(!isExpanded)}
-        >
-          {/* <Right
+        > */}
+        {/* <Right
             className=" ease-[cubic-bezier(0.87,_0,_0.13,_1)] transition-transform duration-300 group-data-[state=open]:rotate-90 group-hover:fill-gray-5"
             active={hover}
           /> */}
-          
-          {isExpanded ? 
+
+        {/* {isExpanded ? 
             <Button
               variant="text"
               padding="p-0"
@@ -129,12 +161,21 @@ const AccordionTrigger = React.forwardRef(
               iconSize="xs"
               iconFill=""
             /> 
-          }
+          } */}
+        <AccordionPrimitive.Trigger asChild>
+          <CustomTrigger
+            className={cn(className, "group")}
+            onClick={() => setIsExpanded(!isExpanded)}
+            isExpanded={isExpanded}
+          >
+            {children}
+          </CustomTrigger>
         </AccordionPrimitive.Trigger>
       </AccordionPrimitive.Header>
     );
   }
 );
+AccordionTrigger.displayName = 'AccordionTrigger'
 
 const AccordionContent = React.forwardRef(
   (
@@ -158,3 +199,5 @@ const AccordionContent = React.forwardRef(
     </AccordionPrimitive.Content>
   )
 );
+
+AccordionContent.displayName = 'AccordionContent'

@@ -3,7 +3,7 @@ import { ArrowRight, ArrowLeft } from "../icons-old";
 import "./Button.css";
 import { forwardRef } from "react";
 
-export const Button = forwardRef(
+const Button = forwardRef(
   (
     {
       variant,
@@ -116,3 +116,7 @@ export const Button = forwardRef(
     );
   }
 );
+
+Button.displayName = 'Button';
+
+export { Button };

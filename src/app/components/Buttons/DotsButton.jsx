@@ -2,7 +2,7 @@ import { Button } from "./Button";
 import React from "react";
 import { Dots } from "../Icons";
 
-export const DotsButton = React.forwardRef(({ onClick }, ref) => {
+const DotsButton = React.forwardRef(({ onClick }, ref) => {
   return (
     <div className="flex flex-col items-start gap-[10px] self-stretch justify-center">
       <Button
@@ -19,3 +19,7 @@ export const DotsButton = React.forwardRef(({ onClick }, ref) => {
     </div>
   );
 })
+
+DotsButton.displayName = 'DotsButton';
+
+export { DotsButton };

@@ -1,17 +1,16 @@
-'use client';
+"use client";
 import React from "react";
 import BlogDetail from "../[blog-url]/page";
 import { Blog } from "../articles/articles";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 type Props = {
   blog: Blog;
 };
 
 export const Smallcard: React.FC<Props> = ({ blog }) => {
-
-
   console.log(blog);
   return (
     <Link
@@ -21,11 +20,16 @@ export const Smallcard: React.FC<Props> = ({ blog }) => {
       //   <BlogDetail />;
       // }}
     >
-      <img
-        src={blog.cover.url}
-        className="w-[200px] rounded-lg h-[116px]"
-        alt={blog.title}
-      />
+      <div className="relative w-[200px] h-[116px]">
+        <Image
+          src={blog.cover.url}
+          alt={blog.title}
+          fill
+          sizes="200px"
+          style={{ objectFit: "cover" }}
+          className="rounded-lg"
+        />
+      </div>
       <div className="flex flex-col items-start gap-sm flex-1 min-h-[116px]">
         <div className="flex flex-col items-start gap-xxxs flex-1">
           <span className="text-sm-regular text-gray-4">{blog.type}</span>

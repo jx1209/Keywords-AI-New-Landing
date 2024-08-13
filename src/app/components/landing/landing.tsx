@@ -1,6 +1,7 @@
 "use client";
-import { useRouter } from 'next/navigation'
-import {Subtract,
+import { useRouter } from "next/navigation";
+import {
+  Subtract,
   ArrowRight,
   Brain,
   Search,
@@ -9,7 +10,8 @@ import {Subtract,
   Stars,
   Chat,
   Document,
-  Electric,} from "@/app/components/icons-old";
+  Electric,
+} from "@/app/components/icons-old";
 import { Page } from "@/app/components/Page";
 import { Divider } from "@/app/components/Divider";
 import { SectionTitle } from "@/app/components/SectionTitle";
@@ -36,13 +38,12 @@ import {
 import FeatureSection from "@/app/components/landing/FeatureSection";
 import { AdvantagesSecctions } from "@/app/components/landing/AdvantagesSecctions";
 import CodePrewview from "@/app/components/landing/CodePrewview";
+import Image from "next/image";
 // import "react-multi-carousel/lib/styles.css";
 export default function Landing() {
-
   useEffect(() => {
     AOS.init({ duration: 1500 });
   }, []);
-
 
   const IntroductionSection = () => {
     return (
@@ -160,10 +161,16 @@ export default function Landing() {
           data-aos-delay="500"
           data-aos-anchor-placement="top-bottom"
         >
-          <img
-            src="/images/Landing.png"
-            className="w-full px-sm max-w-[1200px]"
-          />
+          <div className="w-full px-sm max-w-[1200px]">
+            <Image
+              src="/images/Landing.png"
+              alt="Landing Page"
+              width={1200}
+              height={675} // Adjust this based on the actual aspect ratio of your image
+              style={{ width: "100%", height: "auto" }}
+              className=""
+            />
+          </div>
         </div>
       </div>
     );
@@ -241,7 +248,16 @@ export default function Landing() {
           </div>
           <div onClick={() => window.open("https://retellai.com/", "_blank")}>
             <div className="p-xxs w-[152px] h-[44px] flex justify-center items-center gap-[10px] ">
-              <img src="/images/retell.png" className="w-full max-w-[1200px]" />
+              <div className="w-full max-w-[1200px]">
+                <Image
+                  src="/images/retell.png"
+                  alt="Retell"
+                  width={1200}
+                  height={675} // Adjust this based on the actual aspect ratio of your image
+                  style={{ width: "100%", height: "auto" }}
+                  className=""
+                />
+              </div>
             </div>
           </div>
           <div onClick={() => window.open("https://shepherd.study/", "_blank")}>
@@ -262,7 +278,16 @@ export default function Landing() {
           </div>
           <div onClick={() => window.open("https://i.inc/", "_blank")}>
             <div className="p-xxs w-[152px] h-[44px] flex justify-center items-center gap-[10px] ">
-              <img src="/images/IInc.png" className="w-full max-w-[1200px]" />
+              <div className="w-full max-w-[1200px]">
+                <Image
+                  src="/images/IInc.png"
+                  alt="IInc"
+                  width={1200}
+                  height={675} // Adjust this based on the actual aspect ratio of your image
+                  style={{ width: "100%", height: "auto" }}
+                  className=""
+                />
+              </div>
             </div>
           </div>
           <div onClick={() => window.open("https://www.lawme.ai/", "_blank")}>
@@ -322,9 +347,9 @@ export default function Landing() {
         </svg>
         <div className="flex-col items-center gap-lg max-w-[600px] w-full">
           <p className="display-xs text-center text-gray-white self-stretch">
-            “Keywords AI legit has some of the best UX/DX I've ever seen in my
-            life. I'm not even just saying that, I truly don't think I've ever
-            integrated a product that was as easy.”
+          &ldquo;Keywords AI legit has some of the best UX/DX I&apos;ve ever seen in my
+            life. I&apos;m not even just saying that, I truly don&apos;t think I&apos;ve ever
+            integrated a product that was as easy.&rdquo;
           </p>
           <div className="flex-col items-center gap-xxxs">
             <p className="text-md-medium text-center text-gray-white">

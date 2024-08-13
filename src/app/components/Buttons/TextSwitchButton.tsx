@@ -1,6 +1,7 @@
 import React, { ForwardedRef } from "react";
 import * as Switch from "@radix-ui/react-switch";
 import cn from "@/utilities/ClassMerge";
+import { text } from "stream/consumers";
 
 interface SwitchButtonProps {
   label?: string;
@@ -72,4 +73,5 @@ const TextSwitchButton = React.forwardRef(
   }
 );
 
+TextSwitchButton.displayName = "TextSwitchButton";
 export default TextSwitchButton;

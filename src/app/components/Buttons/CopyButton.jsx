@@ -2,7 +2,7 @@ import React from "react";
 import { IconButton } from ".";
 import { Copy, Check } from "../Icons";
 
-export default function CopyButton({
+export function CopyButton({
   text,
   onClick = () => {},
   className = "",
