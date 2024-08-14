@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: '#1 LLM Monitoring Platform for AI Startups',
-  description: 'Keywords AI is an LLM monitoring platform where you can call 200+ LLMs using the same format and get complete LLM observability.',
+  description: 'Best LLM monitoring platform for AI startups, you can easily monitor and improve your LLM performance with 2 lines of code.',
   openGraph: {
     type: 'website',
     title: 'Keywords AI - Build better AI products with complete observability',
