@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+
+
+Sitemap: https://www.keywordsai.co/sitemap.xml
+Sitemap: https://docs.keywordsai.co/sitemap.xml
