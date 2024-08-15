@@ -1155,4 +1155,128 @@ export const blogs: Blog[] = [
       },
     ]
   },
+  {
+    id: 11,
+    timestamp: "July 18, 2024",
+    title: "A new choice in small models: GPT-4o mini vs. GPT-3.5, Claude-3 Haiku, and Gemini 1.5 Flash",
+    slug: "gpt-4o-mini-vs-claude-3-haiku-vs-gemini-1-5-flash",
+    type: "MODEL",
+    author: {
+      name: "Hendrix",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/hendrix.png",
+      },
+    },
+    cover: {
+      id: 1,
+      url: "/images/blog_Images/blog11/cover.jpg",
+    },
+    meta: {
+      description: "",
+    },
+    paragraphs: [
+      {id: 1,
+        primary_title: "Intro",
+        text: "On July 18, 2024, OpenAI released GPT-4o Mini, a new, intelligent small model. OpenAI claims that GPT-4o Mini matches the speed of GPT-3.5 Turbo while being significantly smarter and more cost-effective. This means future LLMs will be cheaper and smarter, making cost reduction less of a sustainable business strategy. \n\n Could GPT-4o Mini become the go-to choice for AI companies and developers seeking a balance of cost, speed, and performance? In this blog, I’ll present the test results of GPT-4o Mini show you what’s the best small model for you!"
+      },
+      {
+        id:2,
+        primary_title: "Basic Comparison",
+        image: {
+          id: 1,
+          url: "/images/blog_Images/blog11/basic.png",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 3,
+        text: "GPT-4o Mini stands out with its cost-effectiveness, extended context window, and ability to handle both text and images, making it a strong contender against its competitors. It offers a compelling balance of price, performance, and versatility, positioning it as an attractive option for AI developers and companies.",
+      },
+      {
+        id:4,
+        primary_title: "Speed comparison",
+        text: "**Latency**\n\n ",
+        image: {
+          id: 1,
+          url: "/images/blog_Images/blog11/latency.png",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id:5,
+        text: "From the graph, we can conclude that GPT-3.5 Turbo and Claude-3 Haiku have the lowest latency, making them the fastest in response time. GPT-4o Mini performs better than Gemini-1.5 Flash but lags behind the top two models.",
+      },
+      {
+        id:6,
+        text: "**TTFT (Time to first token)**\n\n ",
+        image: {
+          id: 1,
+          url: "/images/blog_Images/blog11/ttft.png",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id:7,
+        text: "Gemini-1.5 Flash has an incredible TTFT, clocking in at under 0.2 seconds. This is particularly impressive and highlights its efficiency for applications requiring rapid initial responses. However, GPT-4o Mini has the longest TTFT, indicating it may not be suitable for voice AI applications where immediate feedback is critical.",
+      },
+      {
+        id:8,
+        text: "**Throughput (Tokens per second)** ",
+        image: {
+          id: 1,
+          url: "/images/blog_Images/blog11/throughput.png",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id:9,
+        text: "GPT-4o Mini is on par with GPT-3.5 Turbo, both delivering around 80 tokens per second. Claude-3 Haiku, however, leads the pack with a throughput of 165 tokens per second, making it the fastest model in terms of token generation speed.\n\n In terms of speed, GPT-4o Mini shows competitive latency and throughput but falls behind in TTFT compared to its rivals. While it performs well in latency and token generation, its slower TTFT suggests it may not yet be ideal for applications where immediate responses are crucial, such as voice AI. However, its overall performance indicates it is still a strong contender in the market, particularly for tasks where latency and throughput are more critical than initial response time.",
+      },
+      {
+        id:10,
+        primary_title: "Performance comparison",
+        image: {
+          id: 1,
+          url: "/images/blog_Images/blog11/performance.png",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id:11,
+        text: "According to OpenAI's official model evaluation scores, GPT-4o Mini outperforms all other small models and is second only to GPT-4o.\n\n  We also conducted evaluation tests on the [Keywords AI platform](https://www.keywordsai.co). The evaluation comprised three parts: \n- **Coding Task:** We used the four models to debug the frontend development of Keywords AI. Both Claude-3 Haiku and GPT-4o Mini solved most bugs in zero shots and all bugs within three shots. \n- **Document Processing:** We provided large documents (around 100 pages) for the models to process. Gemini-1.5 Flash had the fastest processing speed with good performance. Claude-3 Haiku and GPT-4o Mini demonstrated the best performance, showing minimal hallucinations throughout the process. \n- **Logical Reasoning:** Claude-3 Haiku and GPT-4o Mini excelled in this task, easily solving complex problems across multiple domains. \n\n The evaluation metrics results are as follows:",
+        image: {
+          id: 1,
+          url: "/images/blog_Images/blog11/evaluation.png",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id:12,
+        text: "GPT-4o Mini excels in multiple evaluation metrics, showcasing its superior performance in context precision, faithfulness, readability, and relevance. It particularly stands out in coding tasks and logical reasoning, making it a robust choice for diverse applications.",
+      },
+      {
+        id:13,
+        primary_title: "Conclusion",
+        text: "In this comprehensive analysis, we have evaluated the performance, speed, and cost of several leading language models, including Claude-3 Haiku, GPT-4o Mini, GPT-3.5 Turbo, and Gemini 1.5 Flash. Each model brings unique strengths to the table, making them suitable for different applications.",
+      },
+      {
+        id:14,
+        primary_title: "Recommendations:",
+        text: "**GPT-4o mini:** \n- **Best For:** Developers and AI companies seeking a balance of cost, speed, and performance. \n- **Strengths:** Superior context precision, faithfulness, and relevance. It performs exceptionally well in coding tasks and logical reasoning, making it an excellent choice for complex problem-solving and technical applications.\n\n **Claude-3 Haiku:** \n- **Best For:** Applications requiring fast response times and high throughput. \n- **Strengths:** Lowest latency and highest throughput among the tested models. Excels in coding tasks and logical reasoning, providing reliable performance with minimal hallucinations in document processing. \n\n **GPT-3.5 Turbo:**   \n- **Recommendation:** Switch to GPT-4o Mini. \n- **Reasons:** GPT-4o Mini offers a longer output length, a more recent knowledge cutoff, and overall improved performance. It's a more cost-effective and advanced choice for most applications, making it a better investment in the long term. \n\n**Gemini 1.5 Flash:** \n- **Best For:** Scenarios requiring the fastest TTFT and high processing speed for large documents. \n- **Strengths:** Incredible TTFT, making it ideal for applications where immediate response is critical. Strong performance in document processing, though it has a higher latency compared to others. \n\n In conclusion, while GPT-4o Mini emerges as a robust and versatile model, the choice ultimately depends on your specific needs and priorities. Evaluate your requirements based on cost, speed, and performance to select the most suitable model for your applications.",
+      },
+    ]
+  },
 ];

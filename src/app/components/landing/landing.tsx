@@ -49,7 +49,7 @@ export default function Landing() {
     return (
       <div
         aria-label="frame 636"
-        className="flex py-xxxl px-sm sm:p-lg flex-col items-center gap-xxxl self-stretch  bg-black_gradient"
+        className="flex py-xxxl px-sm sm:p-lg flex-col items-center gap-xxxl self-stretch  bg-black_gradient select-none"
       >
         <div
           aria-label="frame 2023"

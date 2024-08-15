@@ -94,7 +94,7 @@ export default async function BlogDetail({
     <React.Fragment>
       <div
         className={cn(
-          "flex flex-col pt-[140px] pb-[120px] px-sm items-center gap-xl w-full "
+          "flex flex-col pt-[140px] pb-[120px] px-sm items-center gap-xl w-full !select-text"
         )}
       >
         <div
@@ -155,6 +155,8 @@ export default async function BlogDetail({
                       </li>
                     );
                   },
+                  ol: ({ ordered, ...props }) => <ol className="list-decimal pl-6 mb-4">{props.children}</ol>,
+                  ul: ({ ...props }) => <ul className="list-disc pl-6 mb-4">{props.children}</ul>,
                   p: ({ node, ...props }) => {
                     // Exclude captions under images from being styled with text-gray-white
                     // const isCaption =
