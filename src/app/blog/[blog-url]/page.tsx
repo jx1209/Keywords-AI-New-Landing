@@ -155,8 +155,6 @@ export default async function BlogDetail({
                       </li>
                     );
                   },
-                  ol: ({ ordered, ...props }) => <ol className="list-decimal pl-6 mb-4">{props.children}</ol>,
-                  ul: ({ ...props }) => <ul className="list-disc pl-6 mb-4">{props.children}</ul>,
                   p: ({ node, ...props }) => {
                     // Exclude captions under images from being styled with text-gray-white
                     // const isCaption =
