@@ -2,8 +2,18 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { NavigationLayout } from "@/layouts/NavigationLayout";
+// const inter = Inter({
+//   subsets: ['latin'],
+//   display: 'swap',
+//   preload: true,
+//   variable: '--font-inter',
+// })
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
 
 export const metadata: Metadata = {
   title: '#1 LLM Monitoring Platform for AI Startups',
@@ -39,9 +49,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      {/* <body className={inter.className}> */}
-      <body>
+    // <html lang="en" className={`${inter.variable} font-sans`}>
+    <html lang="en" className={`${inter.variable}`}>
+      <body >
+      {/* <body> */}
         <div className="bg-gray-black h-full w-full">
           <NavigationLayout>{children}</NavigationLayout>
         </div>
