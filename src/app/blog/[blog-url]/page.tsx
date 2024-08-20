@@ -5,8 +5,8 @@ import { Largecard } from "../components/Largecard";
 import fs from "fs";
 import { getCompiledServerMdx } from "@mintlify/mdx";
 import "@mintlify/mdx/dist/styles.css";
-// import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-// import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import {
   BlogLogo,
@@ -149,6 +149,7 @@ export default async function BlogDetail({
               )}
               <ReactMarkdown
                 components={{
+
                   li: ({ node, ...props }) => {
                     return (
                       <li style={{ marginBottom: "8px" }}>
