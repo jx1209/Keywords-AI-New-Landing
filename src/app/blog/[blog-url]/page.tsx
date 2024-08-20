@@ -5,6 +5,8 @@ import { Largecard } from "../components/Largecard";
 import fs from "fs";
 import { getCompiledServerMdx } from "@mintlify/mdx";
 import "@mintlify/mdx/dist/styles.css";
+// import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+// import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import {
   BlogLogo,
@@ -26,6 +28,7 @@ import { getMetadata } from "@/utilities/getMetadata";
 import Link from "next/link";
 import Image from "next/image";
 import { ButtonWrapper } from "./buttonwrapper";
+// import { MarkdownRenderer } from "./markdownRender";
 
 const getImageClass = (size: string) => {
   switch (size) {
@@ -63,7 +66,10 @@ export default async function BlogDetail({
   };
 }) {
   console.log("Current working directory:", process.cwd());
-  const blog = blogs.find((blog) => blog.slug === params["blog-url"]);
+  const blog = blogs.find(
+    (blog) => blog.slug === "/blog/" + params["blog-url"]
+  );
+  console.log("Blog:", blog);
   // const { slug } = useParams(); // Get the slug parameter from the URL
   // const router = useRouter();
   // const {slug} = router.query

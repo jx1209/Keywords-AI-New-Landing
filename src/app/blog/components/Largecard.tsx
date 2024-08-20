@@ -23,10 +23,12 @@ export const Largecard: React.FC<Props> = ({
   slug,
   id,
 }) => {
+  const isExternalLink = slug.startsWith('http://') || slug.startsWith('https://');
   return (
     <Link
       className="w-full flex flex-col pb-lg items-start gap-lg flex-1 rounded-lg border border-gray-3 bg-gray-2 cursor-pointer transform transition-transform duration-300 hover:scale-101"
-      href={`/blog/${slug}`}
+      href={`${slug}`}
+      {...(isExternalLink ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       // onClick={() => {
       //   // router.push(`blog/${slug}`);
       //   <BlogDetail />;

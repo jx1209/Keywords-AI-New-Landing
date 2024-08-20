@@ -29,7 +29,7 @@ export type Blog = {
   timestamp: string;
   title: string;
   subtitle?: string;
-  paragraphs: Paragraph[];
+  paragraphs?: Paragraph[];
   cover: Image;
   type: string;
   author: {
@@ -47,7 +47,7 @@ export const blogs: Blog[] = [
     timestamp: "March 25, 2024",
     title:
       "Claude Haiku can substitute GPT-4 in 95% of AI tasks at 4% cost",
-    slug: "claude-haiku-vs-gpt-4",
+    slug: "/blog/claude-haiku-vs-gpt-4",
     type: "MODEL",
     cover: {
       id: 1,
@@ -137,7 +137,7 @@ export const blogs: Blog[] = [
     id: 2,
     timestamp: "June 20, 2024",
     title: "The ten LLM metrics you need to monitor (and why)",
-    slug: "ten-llm-metrics-need-monitor",
+    slug: "/blog/ten-llm-metrics-need-monitor",
     type: "GUIDE",
     cover: {
       id: 1,
@@ -272,7 +272,7 @@ export const blogs: Blog[] = [
     id: 3,
     timestamp: "June 21, 2024",
     title: "Claude-3.5-Sonnet vs. GPT-4o: which is better?",
-    slug: "claude-3.5-vs-gpt-4o",
+    slug: "/blog/claude-3.5-vs-gpt-4o",
     type: "MODEL",
     cover: {
       id: 1,
@@ -402,7 +402,7 @@ export const blogs: Blog[] = [
     id: 4,
     timestamp: "June 24, 2024",
     title: "LLM Benchmarking: A complete guide to evaluating LLM in 2024",
-    slug: "llm-benchmarking",
+    slug: "/blog/llm-benchmarking",
     type: "GUIDE",
     cover: {
       id: 1,
@@ -594,7 +594,7 @@ export const blogs: Blog[] = [
     id: 5,
     timestamp: "June 26, 2024",
     title: "How to stop LLM hallucinations?",
-    slug: "stop-llm-hallucinations",
+    slug: "/blog/stop-llm-hallucinations",
     type: "GUIDE",
     cover: {
       id: 1,
@@ -696,7 +696,7 @@ export const blogs: Blog[] = [
     title: "5 best LLM playgrounds in 2024",
     subtitle:
       "Discover the Top Tools for Experimenting with Large Language Models in 2024",
-    slug: "5-best-llm-playgrounds",
+    slug: "/blog/5-best-llm-playgrounds",
     type: "GUIDE",
     cover: {
       id: 1,
@@ -846,7 +846,7 @@ export const blogs: Blog[] = [
     id: 7,
     timestamp: "June 30, 2024",
     title: "All about LLM evaluating",
-    slug: "all-about-llm-evaluating",
+    slug: "/blog/all-about-llm-evaluating",
     subtitle:
       "Discover 3 Essential LLM Evaluation Metrics and the Innovative LLM-as-a-Judge Approach to Ensuring Quality Outputs",
     type: "GUIDE",
@@ -931,7 +931,7 @@ export const blogs: Blog[] = [
     id: 8,
     timestamp: "July 4, 2024",
     title: "Fine-Tuning LLMs with Custom Datasets",
-    slug: "fine-tuning-llm-with-datasets",
+    slug: "/blog/fine-tuning-llm-with-datasets",
     type: "GUIDE",
     author: {
       name: "Hendrix",
@@ -1003,8 +1003,8 @@ export const blogs: Blog[] = [
     id: 9,
     timestamp: "July 10, 2024",
     title: "The 2024 LLM Directory: Find the Best Models for Your Use Cases",
-    slug: "2024-llm-directory",
-    type: "GUIDE",
+    slug: "/blog/2024-llm-directory",
+    type: "MODEL",
     author: {
       name: "Hendrix",
       image: {
@@ -1059,7 +1059,7 @@ export const blogs: Blog[] = [
     id: 10,
     timestamp: "July 15, 2024",
     title: "How to increase your LLM rate limits for free",
-    slug: "increase-llm-rate-limits",
+    slug: "/blog/increase-llm-rate-limits",
     type: "GUIDE",
     author: {
       name: "Hendrix",
@@ -1159,7 +1159,7 @@ export const blogs: Blog[] = [
     id: 11,
     timestamp: "July 18, 2024",
     title: "A new choice in small models: GPT-4o mini vs. GPT-3.5, Claude-3 Haiku, and Gemini 1.5 Flash",
-    slug: "gpt-4o-mini-vs-claude-3-haiku-vs-gemini-1-5-flash",
+    slug: "/blog/gpt-4o-mini-vs-claude-3-haiku-vs-gemini-1-5-flash",
     type: "MODEL",
     author: {
       name: "Hendrix",
@@ -1278,5 +1278,26 @@ export const blogs: Blog[] = [
         text: "**GPT-4o mini:** \n- **Best For:** Developers and AI companies seeking a balance of cost, speed, and performance. \n- **Strengths:** Superior context precision, faithfulness, and relevance. It performs exceptionally well in coding tasks and logical reasoning, making it an excellent choice for complex problem-solving and technical applications.\n\n **Claude-3 Haiku:** \n- **Best For:** Applications requiring fast response times and high throughput. \n- **Strengths:** Lowest latency and highest throughput among the tested models. Excels in coding tasks and logical reasoning, providing reliable performance with minimal hallucinations in document processing. \n\n **GPT-3.5 Turbo:**   \n- **Recommendation:** Switch to GPT-4o Mini. \n- **Reasons:** GPT-4o Mini offers a longer output length, a more recent knowledge cutoff, and overall improved performance. It's a more cost-effective and advanced choice for most applications, making it a better investment in the long term. \n\n**Gemini 1.5 Flash:** \n- **Best For:** Scenarios requiring the fastest TTFT and high processing speed for large documents. \n- **Strengths:** Incredible TTFT, making it ideal for applications where immediate response is critical. Strong performance in document processing, though it has a higher latency compared to others. \n\n In conclusion, while GPT-4o Mini emerges as a robust and versatile model, the choice ultimately depends on your specific needs and priorities. Evaluate your requirements based on cost, speed, and performance to select the most suitable model for your applications.",
       },
     ]
+  },
+  {
+    id: 12,
+    timestamp: "Auguest 14, 2024",
+    title: "Innovative LLM Solutions: Andy Li Discusses Keywords AI’s Impact",
+    slug: "https://www.websiteplanet.com/blog/interview-keywordsai/",
+    type: "INTERVIEW",
+    author: {
+      name: "Predrag",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/predrag.jpg",
+      },
+    },
+    cover: {
+      id: 1,
+      url: "/images/blog_Images/blog12/cover.jpg",
+    },
+    meta: {
+      description: "",
+    },
   },
 ];
