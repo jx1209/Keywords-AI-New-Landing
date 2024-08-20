@@ -12,10 +12,12 @@ type Props = {
 
 export const Smallcard: React.FC<Props> = ({ blog }) => {
   console.log(blog);
+  const isExternalLink = blog.slug.startsWith('http://') || blog.slug.startsWith('https://');
   return (
     <Link
       className="flex max-w-[800px] items-center gap-lg cursor-pointer transform transition-transform duration-300 hover:scale-101"
-      href={`/blog/${blog.slug}`}
+      href={`${blog.slug}`}
+      {...(isExternalLink ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       // onClick={() => {
       //   <BlogDetail />;
       // }}

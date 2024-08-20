@@ -12,10 +12,12 @@ type Props = {
 };
 
 export const MediumCard: React.FC<Props> = ({ blog }) => {
+  const isExternalLink = blog.slug.startsWith('http://') || blog.slug.startsWith('https://');
   return (
     <Link
       className="flex flex-col pb-lg items-start gap-lg flex-1 rounded-lg border border-gray-3 bg-gray-2 max-w-[378px] w-full cursor-pointer transform transition-transform duration-300 hover:scale-101"
       href={`${blog.slug}`}
+      {...(isExternalLink ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
       {/* <img
         className="flex flex-col h-[200px] min-w-[320px] w-full justify-center items-center gap-xl self-stretch  rounded-t-lg rounded-b-[0px] bg-gray-black"
