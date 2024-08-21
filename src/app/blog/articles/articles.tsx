@@ -1487,7 +1487,7 @@ export const blogs: Blog[] = [
   },
   {
     id: 14,
-    timestamp: "July 28, 2024",
+    timestamp: "July 31, 2024",
     title: "95% of LLM developers are missing these 3 key reliability setups",
     slug: "/blog/llm-reliability-setups",
     type: "GUIDE",
