@@ -24,72 +24,87 @@
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.keywordsai.co/blog/increase-llm-rate-limits</loc>
+      <loc>https://keywordsai.co/blog/increase-llm-rate-limits</loc>
+      <lastmod>2024-08-13</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
-      <loc>https://www.keywordsai.co/blog/2024-llm-directory</loc>
+      <loc>https://keywordsai.co/blog/2024-llm-directory</loc>
+      <lastmod>2024-08-13</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
-      <loc>https://www.keywordsai.co/blog/fine-tuning-llm-with-datasets</loc>
+      <loc>https://keywordsai.co/blog/fine-tuning-llm-with-datasets</loc>
+      <lastmod>2024-08-13</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
-      <loc>https://www.keywordsai.co/blog/5-best-llm-playgrounds</loc>
+      <loc>https://keywordsai.co/blog/5-best-llm-playgrounds</loc>
+      <lastmod>2024-08-13</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
-      <loc>https://www.keywordsai.co/blog/stop-llm-hallucinations</loc>
+      <loc>https://keywordsai.co/blog/stop-llm-hallucinations</loc>
+      <lastmod>2024-08-13</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
-      <loc>https://www.keywordsai.co/blog/llm-benchmarking</loc>
+      <loc>https://keywordsai.co/blog/llm-benchmarking</loc>
+      <lastmod>2024-08-13</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
-      <loc>https://www.keywordsai.co/blog/claude-3.5-vs-gpt-4o</loc>
+      <loc>https://keywordsai.co/blog/claude-3.5-vs-gpt-4o</loc>
+      <lastmod>2024-08-13</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
-      <loc>https://www.keywordsai.co/blog/ten-llm-metrics-need-monitor</loc>
+      <loc>https://keywordsai.co/blog/ten-llm-metrics-need-monitor</loc>
+      <lastmod>2024-08-13</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
-      <loc>https://www.keywordsai.co/blog/claude-haiku-vs-gpt-4</loc>
+      <loc>https://keywordsai.co/blog/claude-haiku-vs-gpt-4</loc>
+      <lastmod>2024-08-13</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
-      <url>
-      <loc>https://www.keywordsai.co/blog/gpt-4o-mini-vs-claude-3-haiku-vs-gemini-1-5-flash</loc>
+   <url>
+      <loc>https://keywordsai.co/blog/gpt-4o-mini-vs-claude-3-haiku-vs-gemini-1-5-flash</loc>
+      <lastmod>2024-08-13</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
-   </url>
-      <url>
-      <loc>https://www.keywordsai.co/blog/yc-startup-llm-router</loc>
+   <url>
+      <loc>https://keywordsai.co/blog/yc-startup-llm-router</loc>
+      <lastmod>2024-08-20</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
-   </url>
-      <url>
-      <loc>https://www.keywordsai.co/blog/mistral-large-2-vs-llama-3-1</loc>
+   <url>
+      <loc>https://keywordsai.co/blog/mistral-large-2-vs-llama-3-1</loc>
+      <lastmod>2024-08-20</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
-   </url>
-      <url>
-      <loc>https://www.keywordsai.co/blog/llm-reliability-setups</loc>
+   <url>
+      <loc>https://keywordsai.co/blog/llm-reliability-setups</loc>
+      <lastmod>2024-08-20</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
-
+   <url>
+      <loc>https://www.keywordsai.co/blog/what-is-lpu</loc>
+      <lastmod>2024-08-20</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
 </urlset>
