@@ -98,9 +98,8 @@ export default function Landing() {
                 data-aos="custom-fade-down"
                 data-aos-delay="50"
               >
-                Unified developer platform
-                <br />
-                to build AI software
+                LLM observability <br />
+                for AI startups
               </p>
               <p
                 className="sm:hidden display-xs self-stretch text-gray-4 text-center"
@@ -115,9 +114,8 @@ export default function Landing() {
                 data-aos="custom-fade-down"
                 data-aos-delay="250"
               >
-                Every feature you need to build, deploy, and scale your
-                application. Keywords AI is the new way to build software with
-                LLMs.
+                Easily build, deploy, and monitor your AI application.
+                Keywords AI is basically Datadog for LLM applications.
               </p>
             </div>
           </div>
@@ -347,9 +345,10 @@ export default function Landing() {
         </svg>
         <div className="flex-col items-center gap-lg max-w-[600px] w-full">
           <p className="display-xs text-center text-gray-white self-stretch">
-          &ldquo;Keywords AI legit has some of the best UX/DX I&apos;ve ever seen in my
-            life. I&apos;m not even just saying that, I truly don&apos;t think I&apos;ve ever
-            integrated a product that was as easy.&rdquo;
+            &ldquo;Keywords AI legit has some of the best UX/DX I&apos;ve ever
+            seen in my life. I&apos;m not even just saying that, I truly
+            don&apos;t think I&apos;ve ever integrated a product that was as
+            easy.&rdquo;
           </p>
           <div className="flex-col items-center gap-xxxs">
             <p className="text-md-medium text-center text-gray-white">

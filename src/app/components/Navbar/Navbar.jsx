@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { ArrowRight, Logo } from "../icons-old";
 import "./Navbar.css";
 import React from "react";
@@ -19,7 +19,10 @@ import {
 } from "../Icons";
 import { platformURL } from "src/utilities/platformURL";
 import SingleNavigationMenu from "../Displays/NavigationMenu";
-import { usePathname,useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
+
 
 export function Navbar() {
   const router = useRouter();
@@ -79,7 +82,7 @@ export function Navbar() {
       className=" w-full flex-col sm:flex-row px-sm sm:px-lg py-xs sm:py-sm justify-between items-center bg-gray-black bg-opacity-0 backdrop-blur-[3px] border-b border-gray-2 fixed z-10 "
     >
       <div className="flex max-w-[1200px] justify-between items-center flex-1 w-full">
-        <div className="flex flex-row gap-lg items-center">
+        <div className="flex flex-row gap-lg items-center ">
           <div
             className="flex items-center gap-xxs self-stretch hover:cursor-pointer"
             onClick={() => {
@@ -166,11 +169,11 @@ export function Navbar() {
                 // active={location.pathname == "/"}
               />
               <Button
-              text="Changelog"
-              variant="header"
-              onClick={() => router.push("/changelog")}
-              active={pathname == "/changelog"}
-            />
+                text="Changelog"
+                variant="header"
+                onClick={() => router.push("/changelog")}
+                active={pathname == "/changelog"}
+              />
               <Button
                 text="Pricing"
                 variant="header"
@@ -187,7 +190,6 @@ export function Navbar() {
                 onClick={() =>
                   window.open("https://platform.keywordsai.co/platform/models")
                 }
-
               />
               <Button
                 text="Blog"
@@ -204,11 +206,9 @@ export function Navbar() {
                 variant="header"
                 onClick={() => window.open("https://discord.gg/KEanfAafQQ")}
                 // active={location.pathname == "/pricing"}
-
               />
 
-              
-            {/* <Button
+              {/* <Button
               text="Changelog"
               variant="header"
               onClick={() => navigate("/changelog")}
@@ -254,7 +254,7 @@ const NavigationItem = ({ title, subTitle, link, icon, border = "" }) => {
         border ? "gap-xs" : "gap-xxxs"
       )}
       onMouseEnter={() => setHover(true)}
-      onMouseLeave={() =>  setHover(false)}
+      onMouseLeave={() => setHover(false)}
       onClick={() => {
         if (link.startsWith("http")) {
           window.open(link, "_blank");
