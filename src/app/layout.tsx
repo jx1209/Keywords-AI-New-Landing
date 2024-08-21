@@ -17,7 +17,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: '#1 LLM Monitoring Platform for AI Startups',
-  description: 'Keywords AI is the No.1 LLM monitoring platform for AI startups, you can easily monitor and improve your LLM appications with 2 lines of code.',
+  description: 'Keywords AI: The leading LLM monitoring platform for AI startups. Easily monitor and improve your LLM applications with just 2 lines of code. Boost performance now.',
   openGraph: {
     type: 'website',
     title: 'Keywords AI - Build better AI products with complete observability',
