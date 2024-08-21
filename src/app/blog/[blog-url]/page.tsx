@@ -7,7 +7,7 @@ import { getCompiledServerMdx } from "@mintlify/mdx";
 import "@mintlify/mdx/dist/styles.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import {
   BlogLogo,
   Discord,
@@ -148,25 +148,23 @@ export default async function BlogDetail({
                 </span>
               )}
               <ReactMarkdown
-
                 components={{
-                  code({node, className, children, ...props}) {
-
-                    const match = /language-(\w+)/.exec(className || '')
+                  code(props) {
+                    const { children, className, node, ...rest } = props;
+                    const match = /language-(\w+)/.exec(className || "");
                     return match ? (
                       <SyntaxHighlighter
-                      style={dark}
-                      language={match[1]}
-                      PreTag="div"
-                      // {...props}
-                    >
-                      {String(children).replace(/\n$/, '')}
-                    </SyntaxHighlighter>
-                  ) : (
-                    <code className={"bg-gray-3"} {...props}>
-                      {children}
-                    </code>
-                    )
+                        PreTag="div"
+                        language={match[1]}
+                        style={dark}
+                      >
+                        {String(children).replace(/\n$/, "")}
+                      </SyntaxHighlighter>
+                    ) : (
+                      <code className={"bg-gray-3"} {...props}>
+                        {children}
+                      </code>
+                    );
                   },
                   li: ({ node, ...props }) => {
                     return (

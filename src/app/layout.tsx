@@ -17,11 +17,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: '#1 LLM Monitoring Platform for AI Startups',
-  description: 'Best LLM monitoring platform for AI startups, you can easily monitor and improve your LLM performance with 2 lines of code.',
+  description: 'Keywords AI is the No.1 LLM monitoring platform for AI startups, you can easily monitor and improve your LLM appications with 2 lines of code.',
   openGraph: {
     type: 'website',
     title: 'Keywords AI - Build better AI products with complete observability',
-    description: 'LLM monitoring platform for AI startups',
+    description: 'Keywords AI is the best LLM monitoring platform for AI startups, you can easily monitor and improve your LLM appications with 2 lines of code.',
     url: 'https://keywordsai.co',
     siteName: 'Keywords AI',
     images: [

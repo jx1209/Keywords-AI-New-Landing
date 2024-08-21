@@ -1158,7 +1158,7 @@ export const blogs: Blog[] = [
   {
     id: 11,
     timestamp: "July 18, 2024",
-    title: "A new choice in small models: GPT-4o mini vs. GPT-3.5, Claude-3 Haiku, and Gemini 1.5 Flash",
+    title: "A new choice in small models: GPT-4o mini vs.Haiku, and Flash",
     slug: "/blog/gpt-4o-mini-vs-claude-3-haiku-vs-gemini-1-5-flash",
     type: "MODEL",
     author: {
@@ -1281,6 +1281,324 @@ export const blogs: Blog[] = [
   },
   {
     id: 12,
+    timestamp: "July 22, 2024",
+    title: "A YC startup's first project - an LLM router (with code)",
+    slug: "/blog/yc-startup-llm-router",
+    type: "GUIDE",
+    author: {
+      name: "Hendrix",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/hendrix.png",
+      },
+    },
+    cover: {
+      id: 1,
+      url: "/images/blog_Images/blog12/cover.jpg",
+    },
+    meta: {
+      description: "",
+    },
+    paragraphs: [
+      {id: 1,
+        text: "Last September, [Andy](https://www.linkedin.com/in/hanheli/) came across a paper that introduced the concept of [FrugalGPT](https://arxiv.org/abs/2305.05176). This paper presented a method for reducing the cost of using Large Language Models (LLMs) while maintaining comparable performance by leveraging various smaller models.\n\n Inspired by FrugalGPT, we quickly turned theory into practice. [Raymond](https://www.linkedin.com/in/yunrui-huang/) developed a Minimum Viable Product (MVP) for an LLM router in just one week, followed by a front-end implementation the next week. Remarkably, we secured our first customer by week three. \n\n This blog post will guide you through our journey of building the LLM router MVP and provide insights on how you can create your own."
+      },
+      {
+        id:2,
+        primary_title: "What is FrugalGPT?",
+        text: "**FrugalGPT** is a framework designed to reduce the costs of using Large Language Models (LLMs) while maintaining or improving performance. It employs three strategies: \n- **Prompt Adaptation:** Reducing the length of prompts to save costs. \n- **LLM Approximation:** Using cheaper models or caching responses to approximate expensive LLMs. \n- **LLM Cascade:** Sequentially querying different LLMs, starting with cheaper ones and only using expensive models if necessary. \n\n FrugalGPT can significantly cut costs (up to 98%) and even enhance accuracy by up to 4% compared to using a single LLM like GPT-4.",
+        image: {
+          id: 1,
+          url: "/images/blog_Images/blog12/graph.png",
+          caption: "from FrugalGPT",
+          captionURL: "https://arxiv.org/abs/2305.05176",
+          props: {
+            variant: "sm",
+          },
+        },
+      },
+      {
+        id: 3,
+        primary_title: "Initial concept of the LLM router",
+        text: "After thoroughly reviewing the FrugalGPT paper, Andy recognized its potential to significantly reduce costs for AI startups and developers. This was particularly relevant to us, as our one-stop job search copilot consumed substantial daily resources on OpenAI. \n\n Our investigation led us to focus on LLM approximation, which we found to be the most practical and efficient strategy for our use case. To rapidly gather user feedback, we created a simplified LLM router integrating only GPT-3.5 Turbo and GPT-4. \n\n At the time, the cost difference between these models was substantial: \n- GPT-4: $30 (input) and $60 (output) per million tokens \n- GPT-3.5 Turbo: $0.5 (input) and $1.5 (output) per million tokens \n\nThis stark contrast highlighted the importance of efficient model selection. After all, you wouldn't want your AI application to use the expensive GPT-4 for simple responses like \"Hello\"! "
+      },
+      {
+        id:4,
+        primary_title: "Developing the MVP: Architecture and Classification System",
+        text: "Our LLM router concept utilizes an embedding model (text-embedding-3-small from OpenAI) to classify input, generate a vector score, and select the most suitable LLM based on that score. To enhance the router's model selection capability, we first established our evaluation and model ranking framework. \n\n **Model Ranking System:** \n\n We defined models and their characteristics in our backend:\n\n ```  gpt_4 = ModelParam(model_name=\"gpt-4\", speed=48, max_context_window=8192, model_size=170, mmlu_score=86.4, mt_bench_score=8.96, big_bench_score=83, input_cost=30,output_cost=60, rate_limit=10000, function_call=1)  ```  \n\n ```gpt_3_5_turbo = ModelParam(model_name=\"gpt-3.5-turbo\", speed=150,  max_context_window=4096, model_size=20, mmlu_score=70,  mt_bench_score=7.94, big_bench_score=71.6, input_cost=0.5, output_cost=0.1,function_call=1)```",
+      },
+      {
+        id:5,
+        primary_title: "Classification Categories",
+        text: '**1. Difficulty Levels:** \n\n ```difficulty_details = { "1": "This query is just as a greeting or the most basic human interaction.", "2": "This is a simple question that can be answered with a single sentence.", "3": "This question requires a few sentences to answer, probably some logic or reasoning, basic coding question, or short JSON parsing.", "4": "This question requires a paragraph to answer, requires a fair amount of logic and reasoning, coding algorithm, or long JSON parsing.", "5": "This question requires a long answer, intricated logic or reasoning, complicated coding questions, or complicated nested JSON parsing."}   ```',
+      },
+      {
+        id:6,
+        text: '**2. Task Categories:** \n\n ```category_details = { "Writing": "Engaging in narrative and creative text generation.", "Questions": "Responding to inquiries across various topics.", "Math": "Performing calculations and interpreting data.", "Roleplay": "Engaging in simulated dialogues and scenarios.", "Analysis": "Performing sentiment analysis, summarization, and entity recognition.","Creativity": "Generating ideas and concepts in arts and design.", "Coding": "This task requires coding assistants and code generation.", "Education": "Developing learning materials and providing explanations.", "Research": "Conducting online research and compiling information.", "Translation": "Translating text across multiple languages."}```',
+      },
+      {
+        id:7,
+        text: '**3. Input Formats:** \n\n ```format_details = { "PlainText": "Standard unformatted text responses.", "StructuredData": "JSON, XML, and YAML output for structured data formats.", "CodeScript": "Generation of source code and executable scripts.", "ListOutput": "Bullet points and numbered list formats.", "InteractiveText": "Q&A style and other interactive text elements.","Customized": "Custom instructions and unique output formats."}```',
+      },
+
+      {
+        id:8,
+        text: '**4. Expertise Areas:** \n\n ```expertise_details = { "STEM": "Covering science, technology, engineering, mathematics topics.", "Humanities": "Specializing in literature, history, philosophy, arts.", "Business": "Expertise in economics, management, marketing.", "Health": "Providing healthcare and medical knowledge.", "Legal": "Insights into law, politics, and governance.", "Education": "Specializing in teaching and learning techniques.", "Environment": "Focus on ecology, geography, and environmental science.", "Tech": "Information technology, computer science, AI specialization.","Arts": "Covering music, visual arts, and entertainment.","Social": "Understanding of sociology, psychology, anthropology."}```',
+      },
+      {
+        id: 9,
+        text: "Check out the full code for the LLM router here: [LLM Router Code](https://medium.com/ai-advances/a-yc-startups-first-project-an-llm-router-with-code-4e8a66363b94)"
+      }
+      
+
+      
+    ]
+  },
+  {
+    id: 13,
+    timestamp: "July 28, 2024",
+    title: "Week of Open-Source models: Mistral Large 2 vs. Llama 3.1 405B",
+    slug: "/blog/mistral-large-2-vs-llama-3-1",
+    type: "MODEL",
+    author: {
+      name: "Hendrix",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/hendrix.png",
+      },
+    },
+    cover: {
+      id: 1,
+      url: "/images/blog_Images/blog13/cover.png",
+    },
+    meta: {
+      description: "",
+    },
+    paragraphs: [
+      {id: 1,
+        primary_title: "Intro",
+        text: "This week has been bustling with activity in the open-source AI community. Meta unveiled its new flagship model, Llama 3.1 405B, along with its smaller counterparts, the 70B and 8B models. Not to be outdone, Mistral quickly followed suit by releasing its latest top-tier model, the Mistral Large 2, boasting an impressive 123B parameters. \n\n In this blog, we'll dive deep into a comparison of these two powerhouse models and offer recommendations to help you choose the one that best suits your needs."
+      },
+      {
+        id:2,
+        primary_title: "Basic Comparison",
+        text: "Both the Llama 3.1 405B and Mistral Large 2 models are open-source, making them accessible for hosting on your desktop or through an AI gateway. For our analysis, we utilized [Keywords AI](https://www.keywordsai.co), a platform that allows seamless integration with over 200 LLMs using a unified format.",
+        image: {
+          id: 1,
+          url: "/images/blog_Images/blog13/basic.png",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 3,
+        text: "While both models offer substantial parameter counts, context windows, and max output tokens, the Llama 3.1 405B stands out with its significantly higher parameter count. However, the Mistral Large 2 has a later knowledge cutoff date, potentially offering more up-to-date information. Pricing structures are similar for input tokens but differ for output tokens, with Mistral Large 2 being more expensive.",
+
+      },
+      {
+        id: 4,
+        image: {
+          id: 1,
+          url: "/images/blog_Images/blog13/benchmark.png",
+          props: {
+            variant: "md",
+          },
+        },
+        text: "Llama 3.1 405B generally leads in MMLU and GSM8K, indicating strong performance in multi-task language understanding and grade school math problems. However, Mistral Large 2 excels in the HumanEval benchmark, demonstrating superior coding capabilities. The MBPP Plus scores show a closer competition, with Llama 3.1 405B slightly ahead.",
+      },
+      {
+        id:5,
+        primary_title: "Speed comparison",
+        text: "**Latency**\n\n ",
+        image: {
+          id: 1,
+          url: "/images/blog_Images/blog13/latency.png",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id:6,
+        text: "In terms of latency, Mistral Large 2 and Llama 3.1 405B perform at comparable levels. Our tests, consisting of hundreds of requests for each model, revealed that Mistral Large 2 has an average latency of 20.642 seconds, while Llama 3.1 405B averages at 25.47 seconds. Despite these differences, the overall generation times for both models are quite similar, indicating no significant disparity in performance.",
+      },
+      {
+        id:7,
+        text: "**TTFT (Time to first token)**\n\n ",
+        image: {
+          id: 1,
+          url: "/images/blog_Images/blog13/ttft.png",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id:7,
+        text: "The Time to First Token (TTFT) for Mistral Large 2 and Llama 3.1 405B is remarkably similar. Mistral Large 2 averages a TTFT of 0.5446 seconds, while Llama 3.1 405B comes in at 0.5282 seconds. Both models have TTFTs of around 0.5 seconds, which, while slower than GPT-4o and Claude 3.5 Sonnet, still represents a good performance level.",
+      },
+      {
+        id:8,
+        text: "**Throughput (Tokens per second)** ",
+        image: {
+          id: 1,
+          url: "/images/blog_Images/blog13/throughput.png",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id:9,
+        text: "The throughput for Mistral Large 2 and Llama 3.1 405B is relatively modest, with Mistral Large 2 achieving 27.465 tokens per second and Llama 3.1 405B reaching 26.395 tokens per second. This throughput, around 25 tokens per second, is significantly slower than that of GPT-4o and Claude 3.5 Sonnet. However, it is comparable to models like Claude 3 Opus and GPT-4. \n\n In terms of speed, both Mistral Large 2 and Llama 3.1 405B deliver similar performance levels across various metrics. Their latency is comparable, with Mistral Large 2 slightly ahead at 20.642 seconds versus Llama 3.1 405B's 25.47 seconds. The Time to First Token (TTFT) for both models hovers around 0.5 seconds, demonstrating their efficiency despite being marginally slower than some of the latest offerings like GPT-4o and Claude 3.5 Sonnet. When it comes to throughput, both models perform at around 25 tokens per second, aligning them more closely with models like Claude 3 Opus and GPT-4. Overall, while neither model leads the pack in speed, they maintain competitive performance levels that are suitable for many applications..",
+      },
+      {
+        id:10,
+        primary_title: "Performance comparison",
+        image: {
+          id: 1,
+          url: "/images/blog_Images/blog13/performance.png",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id:11,
+        text: "We conducted evaluation tests on the [Keywords AI platform](https://www.keywordsai.co). The evaluation comprised three parts: \n- **Coding Task:** Both models were tested on debugging the frontend development of Keywords AI. Their understanding of coding was comparable, but Mistral Large 2 exhibited a slightly smarter problem-solving approach in certain instances compared to Llama 3.1 405B. \n- **Document Processing:** Large documents (around 100 pages) were provided to the models for information extraction. Both models demonstrated strong capabilities in this area. However, their slower processing speeds make them less ideal for handling large documents efficiently. \n- **Logical Reasoning:** Llama 3.1 405B outperformed Mistral Large 2 in logical reasoning tasks. Mistral Large 2 made some incorrect explanations and provided wrong answers, whereas Llama 3.1 405B consistently delivered accurate and reliable responses",
+      },
+      {
+        id:13,
+        primary_title: "Conclusion",
+        text: "In conclusion, our evaluations reveal distinct strengths and weaknesses for both Mistral Large 2 and Llama 3.1 405B. Mistral Large 2 demonstrated smarter problem-solving abilities in coding tasks, while Llama 3.1 405B excelled in logical reasoning. Both models performed well in document processing but are hampered by slower processing speeds, making them less suitable for extensive document handling. Overall, these tests highlight that each model has unique advantages, and the best choice depends on the specific requirements of your use case.",
+      },
+      {
+        id:14,
+        primary_title: "Model recommendations:",
+        text: "**Llama 3.1 405B:** \n- **Best For:** Logical reasoning tasks, complex problem-solving, and applications requiring high parameter counts for nuanced understanding and detailed responses. \n- **Not suitable for:** Tasks requiring fast processing speeds, such as real-time document processing or applications where throughput is critical. Additionally, due to its large parameter size, hosting the 405B model can be prohibitively expensive for individual users. \n\n **Mistral Large 2:** \n- **Best For:** Coding tasks, especially those requiring intelligent problem-solving and debugging. It also performs well in scenarios where slightly faster latency is beneficial. \n- **Not suitable for:** Tasks requiring precise logical reasoning and accuracy, as well as applications demanding high throughput for large-scale document processing.",
+      },
+      {
+        id:14,
+        primary_title: "Where to try these open-source models?",
+        text: "Self-hosting open-source models has its own strengths, offering complete control and customization. However, it can be inconvenient for developers who want a simpler and more streamlined way to experiment with these models. \n\n Consider using Keywords AI, a platform that allows you to access and test over 200 LLMs using a consistent format. With Keywords AI, you can try all the trending models with a simple API call or use the [model playground](https://docs.keywordsai.co/features/prompt/model-playground) to test them instantly.",
+      },
+    ]
+  },
+  {
+    id: 14,
+    timestamp: "July 28, 2024",
+    title: "95% of LLM developers are missing these 3 key reliability setups",
+    slug: "/blog/llm-reliability-setups",
+    type: "GUIDE",
+    author: {
+      name: "Hendrix",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/hendrix.png",
+      },
+    },
+    cover: {
+      id: 1,
+      url: "/images/blog_Images/blog14/cover.png",
+    },
+    meta: {
+      description: "",
+    },
+    paragraphs: [
+      {id: 1,
+        text: "AI has become the hottest topic for startups and investors, largely due to the rapid development of Large Language Models (LLMs). Major providers like OpenAI, Anthropic, and Google are releasing new models almost monthly, leading to a surge in LLM-based applications. Alongside this growth, numerous tools have emerged to help developers build LLM products more quickly and easily. Developers can now use OpenAI's Assistant API to create AI assistants, LangChain to construct AI agents, and various frameworks to develop autopilots. \n\n However, most tools in the market focus solely on enabling developers to build LLM products, without offering any reliability assistance. As a result, developers often need to rely on third-party services or create their own reliability setups to ensure their LLM apps maintain high uptime and reliability. \n\n In this blog, we'll explore three key reliability setups that LLM developers are often overlooking. We'll discuss how to implement these setups or build your own solutions quickly and effectively."
+      },
+      {
+        id:2,
+        primary_title: "LLM App Reliability: Key Metrics",
+        text: "To measure an LLM application's reliability, developers should focus on three crucial metrics: \n\n **Uptime:** Critical for all products, not just LLM applications. Uptime directly impacts user retention. If an application experiences significant downtime, users will likely abandon it. The current industry standard for LLM application uptime should be at least 99.95%." ,
+        image: {
+          id: 1,
+          url: "/images/blog_Images/blog14/cover.png",
+          props: {
+            variant: "md",
+          },
+          caption: "Keywords AI status page",
+          captionURL: "https://status.keywordsai.co/",
+        },
+      },
+      {
+        id: 3,
+        text: "**Error rate:** This metric represents the number of errors that occur per 100 requests sent to LLMs. For example, an error rate of 5 means that 5 out of every 100 requests result in an error. Errors can stem from various sources: \n- Instability of upstream providers (e.g., OpenAI) \n- Incompatibility between tool frameworks and providers \n- Mismatches between developers' use cases and LLM capabilities (e.g., sending an image to a text-only LLM) \n- Exceeding rate limits due to high request volumes to a single model/provider",
+        image: {
+          id: 1,
+          url: "/images/blog_Images/blog14/error.png",
+          props: {
+            variant: "md",
+          },
+          caption: "Keywords AI usage dashboard",
+          captionURL: "https://docs.keywordsai.co/features/monitoring/analytics",
+        },
+      },
+      {
+        id: 4,
+        image: {
+          id: 1,
+          url: "/images/blog_Images/blog14/user.png",
+          props: {
+            variant: "md",
+          },
+          caption: "User analytics",
+          captionURL: "https://docs.keywordsai.co/features/user/user-data",
+
+        },
+        text: "**User churn rate:** With thousands of new LLM applications entering the market daily, competition is intensifying rapidly. Developers may see a surge in users one day, only to lose them the next. Monitoring user activity and understanding the churn rate is essential for any developer aiming for long-term success.",
+      },
+      {
+        id:5,
+        primary_title: "Reliability setup",
+        text: "**Implementing an alert system**\n\n An alert system is crucial for all products, including LLM applications, regardless of whether they operate in real-time. Timely notifications allow for swift problem resolution. Consider the following components: \n- Uptime monitoring platforms: Set up an uptime page for your apps to track availability and enhance credibility for potential users. For example, [Better Stack](https://betterstack.com/) offers a simple sign-up process for a unique uptime page and provides downtime notifications. \n- All-in-one alert system: This goes beyond simple system status monitoring, addressing LLM-specific issues like provider outages, API errors (400/404), and webhook failures. You can build your own using frameworks like Django for email notifications, or utilize specialized services like [Keywords AI's all-in-one alert system](https://docs.keywordsai.co/features/monitoring/subscribe-alerts) for customizable LLM-specific alerts.",
+        image: {
+          id: 1,
+          url: "/images/blog_Images/blog14/alert.png",
+          props: {
+            variant: "md",
+          },
+          caption: "LLM alert system",
+          captionURL: "https://docs.keywordsai.co/features/monitoring/subscribe-alerts",
+
+        },
+      },
+      {
+        id:6,
+        primary_title: "Setup fallbacks",
+        text: "Fallback is crucial when you encounter errors from your primary model. It allows you to switch to another model seamlessly, without users experiencing any errors. This is vital for ensuring a great user experience - nobody wants to waste time on AI apps that constantly generate errors. For instance, if you're using OpenAI's API to call models like GPT-4o or GPT-4 Turbo, you might notice frequent incidents and elevated error rates. Your job is to handle all of this in your backend, ensuring users never see these errors. \n\n Ways to implement a fallback system: \n- Build your own: Integrate models from different providers. If you're using Google's Gemini 1.5 Flash, consider also integrating Claude 3 Haiku and GPT-4 Mini into your product. They offer similar performance! The quickest way is to use an LLM gateway to access these models with a consistent format. Check out [the LLM gateway provider](https://docs.keywordsai.co/integration/supported-models). Then you could try to catch the exceptions and then switch to other models. \n- Choose a third-party fallback system: While you could build everything in your backend, it might take many hours of work. Alternatively, [the fallback system on Keywords AI](https://docs.keywordsai.co/features/generation/fallbacks) is super simple. Just add your desired fallback models on their website, and they'll handle all LLM outages for you. It takes just 1 minute to set up and ensures 0 seconds of downtime.",
+        image: {
+          id: 1,
+          url: "/images/blog_Images/blog14/fallback.png",
+          props: {
+            variant: "md",
+          },
+          caption: "LLM fallback system",
+          captionURL: "https://docs.keywordsai.co/features/generation/fallbacks",
+
+        },
+      },
+      {
+        id:7,
+        primary_title: "Increase LLM rate limits",
+        text: "No one can predict when a surge in demand will occur, but being prepared for this possibility is crucial. As a developer or startup founder, you should always dream big and have a robust plan in place to handle sudden spikes in usage. Here are two effective strategies to increase your LLM rate limits: \n- If you have a substantial spending history with a provider, you can request a manual increase in your rate limits. While this option is viable, it typically requires significant expenditure and can be a slow process. Waiting for provider approval can result in downtime and potential loss of users. Therefore, while this method is viable, it shouldn't be your only line of defense. \n- Load Balancing LLM Requests: A more dynamic and efficient approach is to load balance your LLM requests across different models or accounts. This method is straightforward and can be implemented with just a few lines of code. By distributing requests among various models or creating multiple accounts, you can handle large volumes of traffic seamlessly. For a detailed guide on how to implement load balancing, check out our article: [How to Increase Your LLM Rate Limits for Free!](https://keywordsai.co/#/blog/how-to-increase-your-llm-rate-limits-for-free).",
+      },
+      {
+        id:8,
+        primary_title: "Monitor your users!",
+        text: "While this isn't directly related to reliability setups, it's crucial for developers to understand the importance of user monitoring in maintaining a reliable LLM application. Knowing your users' behavior and inputs (with their permission plz) and tracking your application's responses ensures output quality and enhances overall reliability. \n\n  Key monitoring aspects include user inputs and application responses (with user permission), total number of users, number of active users, individual user usage statistics, and cost per user. Implementing user monitoring offers several benefits: it ensures output quality, identifies potential issues or areas for improvement, helps optimize resource allocation, and provides insights for product development. \n\n There are numerous user analytics tools and internal solutions available to gain insights into user sessions. For a comprehensive solution, consider platforms like [Keywords AI's User feature](https://docs.keywordsai.co/features/user/user-data), which allows you to track various user metrics in one place.",
+      },
+      {
+        id:10,
+        primary_title: "Conclusion",
+        text: "In the rapidly evolving LLM landscape, reliability is key to standing out. By implementing a robust alert system, setting up fallbacks, and strategically increasing rate limits, developers can ensure their applications remain stable and user-friendly even under unexpected conditions. These setups, combined with effective user monitoring, form the backbone of a resilient LLM application. \n\n While implementing these reliability measures may require initial effort, the long-term benefits are substantial. A reliable LLM application not only retains users but also builds trust and credibility in a competitive field. As you continue to develop your LLM products, prioritizing these reliability setups will position you for success, enabling your application to scale efficiently and adapt to the dynamic challenges of the AI industry."
+      },
+    ]
+  },
+  {
+    id: 14,
     timestamp: "Auguest 14, 2024",
     title: "Innovative LLM Solutions: Andy Li Discusses Keywords AI’s Impact",
     slug: "https://www.websiteplanet.com/blog/interview-keywordsai/",
@@ -1294,7 +1612,7 @@ export const blogs: Blog[] = [
     },
     cover: {
       id: 1,
-      url: "/images/blog_Images/blog12/cover.jpg",
+      url: "/images/blog_Images/blog16/cover.jpg",
     },
     meta: {
       description: "",

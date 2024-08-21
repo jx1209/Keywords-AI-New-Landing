@@ -73,5 +73,23 @@
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
+   </url>
+      <url>
+      <loc>https://www.keywordsai.co/blog/yc-startup-llm-router</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   </url>
+      <url>
+      <loc>https://www.keywordsai.co/blog/mistral-large-2-vs-llama-3-1</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   </url>
+      <url>
+      <loc>https://www.keywordsai.co/blog/llm-reliability-setups</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
 
 </urlset>
