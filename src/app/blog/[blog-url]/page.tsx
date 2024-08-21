@@ -89,7 +89,7 @@ export default async function BlogDetail({
 
     // Filter out the current blog by slug and select top 3 latest blogs
     const latestBlogs = reversedBlogs
-      .filter((blog) => blog.slug !== currentBlogSlug)
+      .filter((blog) => blog.slug !== "/blog/"+currentBlogSlug)
       .slice(0, 3);
 
     return latestBlogs;
