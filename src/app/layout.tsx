@@ -2,13 +2,18 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { NavigationLayout } from "@/layouts/NavigationLayout";
-import Head from "next/head";
+import { PHProvider } from './providers';
+import dynamic from 'next/dynamic';
 // const inter = Inter({
 //   subsets: ['latin'],
 //   display: 'swap',
 //   preload: true,
 //   variable: '--font-inter',
 // })
+
+const PostHogPageView = dynamic(() => import('./PostHogPageView'), {
+  ssr: false,
+})
 
 const inter = Inter({
   subsets: ["latin"],
@@ -65,12 +70,14 @@ export default function RootLayout({
           sizes="26x26"
         />
       </head>
+      <PHProvider>
       <body>
         {/* <body> */}
         <div className="bg-gray-black h-full w-full">
           <NavigationLayout>{children}</NavigationLayout>
         </div>
       </body>
+      </PHProvider>
     </html>
   );
 }
