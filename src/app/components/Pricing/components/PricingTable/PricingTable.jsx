@@ -28,7 +28,7 @@ export function PricingTable() {
       analytics: "User analytics",
       prompt_management: "Prompt management",
       playground: "Model playground",
-      datasets: "Dataets",
+      datasets: "Datasets",
       webhooks: "Webhook",
       eval: "Custom evaluations",
       classification: "Topic classification",
