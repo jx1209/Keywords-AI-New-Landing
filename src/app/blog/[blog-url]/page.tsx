@@ -142,16 +142,13 @@ export default async function BlogDetail({
             className=" flex flex-col max-w-[1200px] w-full items-center gap-md"
           >
             <div className=" flex flex-col max-w-[800px] w-full items-start gap-md">
-              {paragraph.primary_title && (
-                <span className="display-md-bold text-gray-white">
-                  {paragraph.primary_title}
-                </span>
-              )}
               {paragraph.primary_title &&
                 (paragraph.primary_title_url ? (
                   <Link
                     href={paragraph.primary_title_url}
                     className="display-md-bold text-gray-white underline"
+                    target="_blank" // Open link in a new tab
+                    rel="noopener noreferrer" // Recommended for security
                   >
                     {paragraph.primary_title}
                   </Link>

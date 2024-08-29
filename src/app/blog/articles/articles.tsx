@@ -1628,7 +1628,7 @@ export const blogs: Blog[] = [
       id: 1,
       url: "/images/blog_Images/blog15/cover.jpg"
     },
-    type: "TECHNOLOGY",
+    type: "GUIDE",
     author: {
       name: "Hendrix",
       image: {
@@ -1691,6 +1691,86 @@ export const blogs: Blog[] = [
         id: 7,
         primary_title: "Conclusion",
         text: "Language Processing Units represent a significant advancement in AI hardware. By combining architectural innovations with a software-optimized approach, LPUs achieve remarkable speeds in language processing tasks. As we enter a new era of LLMs, technologies like LPUs will play a crucial role in pushing the boundaries of what's possible in natural language processing and generation."
+      },
+    ],
+  },
+  {
+    id: 1,
+    timestamp: "August 28, 2024",
+    slug: "/blog/top-llm-dev-tools",
+    title: "Top LLM dev tools for AI developers",
+    cover: {
+      id: 1,
+      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/top_tools/cover.png"
+    },
+    type: "GUIDE",
+    author: {
+      name: "Hendrix",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/hendrix.png",
+        props: {
+          variant: "circle"
+        }
+      }
+    },
+    paragraphs: [
+      {
+        id: 1,
+        text: "Large language models (LLMs) are revolutionizing AI development. This blog highlights essential dev tools that streamline LLM work, from building AI applications to fine-tuning models. Whether you're a seasoned AI practitioner or a newcomer, these tools will enhance your productivity and unlock new possibilities in LLM projects.",
+      },
+      {
+        id: 2,
+        primary_title: "Langchain: Building AI Products",
+        text: "LangChain is a powerful framework built around LLMs, designed to accelerate AI development. It offers a range of capabilities for creating chatbots, Generative Question-Answering (GQA) systems, summarization tools, and more. \n\n **Key Features** \n\n LangChain's core concept is \"chaining\" different components to create advanced LLM use cases. These components include: \n- **Prompt Templates:** Pre-designed templates for various prompt types, including chatbot-style and ELI5 question-answering \n- **LLMs:** Integration with large language models like GPT-4 and Claude-3.5 Sonnet. \n- **Agents:** LLM-powered decision-making tools that can use web search, calculators, and other resources in a logical operation loop. \n- **Memory:** Both short-term and long-term memory capabilities. \n\n Keywords AI is fully Langchain compatible! Check out Keywords AI [Langchain integration](https://docs.keywordsai.co/integration/development-frameworks/langchain) for more details.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/top_tools/langchain.jpg",
+          caption: "Langchain",
+          captionURL: "https://www.langchain.com/",
+          props: {
+            variant: "sm",
+          },
+        },
+      },
+      {
+        id: 2,
+        primary_title: "Keywords AI: LLM monitoring platform",
+        primary_title_url: "https://www.keywordsai.co",
+        text: "Keywords AI is an LLM monitoring platform where you can call 200+ LLMs using a single format and get complete observability. It helps you monitor, debug, and iterate your LLM applications in production. \n\n **Key features** \n\n Keywords AI's core concept is monitoring. Think of it as Datadog, but built for LLMs. With the surge of AI applications in the market, developers need a more efficient way to debug and iterate their applications to stay competitive. \n- **Unified LLM API:** Call 200+ LLMs using a single format. \n- **LLM usage dashboard:** View 20+ LLM metrics, including number of requests, LLM performance, speed, and costs. \n- **Logs:** See details of every LLM request, which is helpful for debugging and improving prompts. \n- **Model playground:** Test 200+ LLMs and bring the best model to your production. \n- **Security settings:** Build reliable LLM apps with features like fallback, load balancing, outage alerts, and warnings.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/top_tools/keywords-ai.jpg",
+          caption: "Keywords AI LLM dashbaord",
+          captionURL: "https://docs.keywordsai.co/features/monitoring/analytics",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 3,
+        primary_title: "Relari AI: Evaluating your LLM outputs",
+        text: "[Relari AI](https://www.relari.ai) is a comprehensive, data-driven toolkit designed to evaluate and improve LLM applications. It helps AI teams simulate, test, and validate complex AI systems throughout the development lifecycle. \n\n **Key features** \n- **Experiment-Driven Development:** Relari enables systematic decision-making through comprehensive evaluations, moving beyond anecdotal testing or subjective impressions. \n- **Versatile Metrics:** Relari offers over 30 standard metrics covering various LLM use cases, including text generation, retrieval (RAG), classification, summarization, agent tool use, and code generation. \n- **Custom Metrics:** For task-specific evaluations, Relari allows you to create custom metrics that align with your unique application requirements and user preferences. \n- **Holistic Performance Assessment:** Run experiments on single data points or entire datasets to quickly understand how changes in prompts, models, or hyperparameters impact performance across various scenarios. \n\n Keywords AI integrates Relari AI for developers to run evaluations on their LLM requests. Check out[ Keywords AI LLM evaluation](https://docs.keywordsai.co/features/evaluation/overview) for more information.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/top_tools/relari.jpg",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 4,
+        primary_title: "OpenPipe: Fine-tuning custom LLMs",
+        text: "OpenPipe is a streamlined platform for training specialized LLM models, designed to replace slow and expensive prompts with fine-tuned alternatives. \n\n **Key Features** \n- **Unified SDK:** Collect interaction data to fine-tune custom models and seamlessly switch between LLM providers. \n- **Data Management:** Automatically log and tag past requests, and export recorded request logs. \n- **Fine-Tuning Process:** Select specific data for fine-tuning, apply pruning rules to reduce input size and lower costs, and train models through an intuitive web interface. \n- **Model Hosting:** Automatically host trained models with optional response caching for improved performance and cost reduction. \n- **Evaluation Tools:** Compare custom models against each other and OpenAI base models using tailored instructions. \n\n You can monitor your LLM apps in Keywords AI and export your LLM logs to OpenPipe with one click. Check out [Keywords AI's Datasets feature](https://docs.keywordsai.co/features/datasets) for more details.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/top_tools/openpipe.jpg",
+          props: {
+            variant: "md",
+          },
+        },
       },
     ],
   }
