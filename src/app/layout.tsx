@@ -4,6 +4,7 @@ import "./globals.css";
 import { NavigationLayout } from "@/layouts/NavigationLayout";
 import { PHProvider } from './providers';
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 // const inter = Inter({
 //   subsets: ['latin'],
 //   display: 'swap',
@@ -62,14 +63,14 @@ export default function RootLayout({
   return (
     // <html lang="en" className={`${inter.variable} font-sans`}>
     <html lang="en" className={`${inter.variable}`}>
-      <head>
+      <Head>
         <link
           rel="icon"
-          href="/icon"
+          href="/logo.svg"
           type="image/svg"
           sizes="26x26"
         />
-      </head>
+      </Head>
       <PHProvider>
       <body>
         {/* <body> */}
