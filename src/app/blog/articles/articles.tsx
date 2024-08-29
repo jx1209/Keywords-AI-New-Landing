@@ -16,6 +16,7 @@ export type Paragraph = {
   text?: string;
   image?: Image;
   primary_title?: string;
+  primary_title_url?: string;
   //   secondary_title?: string;
 };
 export type Card = {
@@ -1583,7 +1584,7 @@ export const blogs: Blog[] = [
       {
         id:7,
         primary_title: "Increase LLM rate limits",
-        text: "No one can predict when a surge in demand will occur, but being prepared for this possibility is crucial. As a developer or startup founder, you should always dream big and have a robust plan in place to handle sudden spikes in usage. Here are two effective strategies to increase your LLM rate limits: \n- If you have a substantial spending history with a provider, you can request a manual increase in your rate limits. While this option is viable, it typically requires significant expenditure and can be a slow process. Waiting for provider approval can result in downtime and potential loss of users. Therefore, while this method is viable, it shouldn't be your only line of defense. \n- Load Balancing LLM Requests: A more dynamic and efficient approach is to load balance your LLM requests across different models or accounts. This method is straightforward and can be implemented with just a few lines of code. By distributing requests among various models or creating multiple accounts, you can handle large volumes of traffic seamlessly. For a detailed guide on how to implement load balancing, check out our article: [How to Increase Your LLM Rate Limits for Free!](https://keywordsai.co/#/blog/how-to-increase-your-llm-rate-limits-for-free).",
+        text: "No one can predict when a surge in demand will occur, but being prepared for this possibility is crucial. As a developer or startup founder, you should always dream big and have a robust plan in place to handle sudden spikes in usage. Here are two effective strategies to increase your LLM rate limits: \n- If you have a substantial spending history with a provider, you can request a manual increase in your rate limits. While this option is viable, it typically requires significant expenditure and can be a slow process. Waiting for provider approval can result in downtime and potential loss of users. Therefore, while this method is viable, it shouldn't be your only line of defense. \n- Load Balancing LLM Requests: A more dynamic and efficient approach is to load balance your LLM requests across different models or accounts. This method is straightforward and can be implemented with just a few lines of code. By distributing requests among various models or creating multiple accounts, you can handle large volumes of traffic seamlessly. For a detailed guide on how to implement load balancing, check out our article: [How to Increase Your LLM Rate Limits for Free!](https://www.keywordsai.co/blog/increase-llm-rate-limits).",
       },
       {
         id:8,

@@ -294,7 +294,7 @@ export default function Landing() {
           <div onClick={() => window.open("https://wonderchat.io/", "_blank")}>
             <WonderChatLogo />
           </div>
-          <div onClick={() => window.open("https://wonderchat.io/", "_blank")}>
+          <div onClick={() => window.open("https://www.lumona.ai/", "_blank")}>
             <LumonaLogo />
           </div>
         </div>

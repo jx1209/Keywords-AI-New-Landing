@@ -89,7 +89,7 @@ export default async function BlogDetail({
 
     // Filter out the current blog by slug and select top 3 latest blogs
     const latestBlogs = reversedBlogs
-      .filter((blog) => blog.slug !== "/blog/"+currentBlogSlug)
+      .filter((blog) => blog.slug !== "/blog/" + currentBlogSlug)
       .slice(0, 3);
 
     return latestBlogs;
@@ -147,6 +147,19 @@ export default async function BlogDetail({
                   {paragraph.primary_title}
                 </span>
               )}
+              {paragraph.primary_title &&
+                (paragraph.primary_title_url ? (
+                  <Link
+                    href={paragraph.primary_title_url}
+                    className="display-md-bold text-gray-white underline"
+                  >
+                    {paragraph.primary_title}
+                  </Link>
+                ) : (
+                  <span className="display-md-bold text-gray-white">
+                    {paragraph.primary_title}
+                  </span>
+                ))}
               <ReactMarkdown
                 components={{
                   code(props) {
