@@ -65,6 +65,9 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable}`}>
       <Head>
         <link rel="icon" href="/logo.svg" type="image/svg" sizes="26x26" />
+        <Head>
+          <link rel="icon" href="/icon.svg" type="image/svg" sizes="26x26" />
+        </Head>
       </Head>
       <PHProvider>
         <body>
