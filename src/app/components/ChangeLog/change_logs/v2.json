@@ -1,18 +1,18 @@
 {
     "date": "July 10, 2024",
-    "Title": "Increase your LLM rate limits for free",
+    "Title": "Model load balancing",
     "snapshot": "LB.gif",
-    "introduction": "We're thrilled to introduce our latest feature: Load balancing! \n\nThere are 2 ways to load balance your LLM requests. First, you can specify weights for the models you want to load balance in the code, ensuring that requests are distributed based on your desired percentages. \n\nThe second way is to easily add your credentials and set the weight for each one to distribute requests efficiently between deployments.",
+    "introduction": "We're thrilled to introduce our latest feature. \n\nThere are 2 ways to load balance your LLM requests. First, you can specify weights for the models you want to load balance in the code, ensuring that requests are distributed based on your desired percentages. \n\nThe second way is to easily add your credentials and set the weight for each one to distribute requests efficiently between deployments.",
     "sections": {
       "New": [
         {"tag": "Settings", "description": "Added usage page, where you could see your detailed usage by model, provider, and features on Settings page."},
-        {"tag": "Logs", "description": "You can now handpick logs and add them to your datasets!"},
+        {"tag": "Logs", "description": "You can now handpick logs and add them to your datasets."},
         {"tag": "Datasets", "description": "Added Eval panel for datasets."},
         {"tag": "Datasets", "description": "Added display button on Datasets page, you can now choose which column should be displayed."}
       ],
       "Improved": [
-        {"tag": "Dashboard", "description": "Loading speed is 100% faster again!"},
-        {"tag": "API", "description": "Improved proxy performance, the latency is reduced by 50%!"},
+        {"tag": "Dashboard", "description": "Loading speed is 100% faster again."},
+        {"tag": "API", "description": "Improved proxy performance, the latency is reduced by 50%."},
         {"tag": "Logs", "description": "Improved full-text search performance, you could now search exact words."},
         {"tag": "Prompts", "description": "Improved title editing."},
         {"tag": "Prompts", "description": "You can now update the prompt's title and description."},

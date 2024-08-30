@@ -172,7 +172,6 @@ export function Navbar() {
                 text="Changelog"
                 variant="header"
                 onClick={() => router.push("/changelog")}
-                active={pathname == "/changelog"}
               />
               <Button
                 text="Pricing"

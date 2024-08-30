@@ -1,8 +1,8 @@
 {
     "date": "July 22, 2024",
-    "Title": "Group chatlogs by thread ID to have better observability!",
+    "Title": "Introducing Threads",
     "snapshot": "thread.gif",
-    "introduction": "We pushed our latest update to improve the observability of chatlogs. Now, you can group logs by thread ID to have a better understanding of the conversation flow!",
+    "introduction": "We pushed our latest update to improve the observability of chatlogs. Now, you can group logs by thread ID to have a better understanding of the conversation flow.",
     "sections": {
       "New": [
         {"tag": "Settings", "description": "Added a test button on the credential card for users to verify their credentials."},

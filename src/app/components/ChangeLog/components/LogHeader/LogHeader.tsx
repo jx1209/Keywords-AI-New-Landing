@@ -21,7 +21,7 @@ export function LogHeader() {
             <div aria-label='frame 1611'
               className='flex items-center gap-[8px]'>
               <a href='https://twitter.com/keywordsai' target="_blank" rel="noopener noreferrer" className="text-sm-md text-primary cursor-pointer hover:text-primary-2">
-                Follow us on Twitter
+                Follow us on X
               </a>
               <SmallDotChangeLog />
               <a href='https://discord.gg/KEanfAafQQ' target="_blank" rel="noopener noreferrer" className="text-sm-md text-primary cursor-pointer hover:text-primary-2">

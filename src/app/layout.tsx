@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { NavigationLayout } from "@/layouts/NavigationLayout";
-import { PHProvider } from './providers';
-import dynamic from 'next/dynamic';
-import Head from 'next/head';
+import { PHProvider } from "./providers";
+import dynamic from "next/dynamic";
+import Head from "next/head";
 // const inter = Inter({
 //   subsets: ['latin'],
 //   display: 'swap',
@@ -12,9 +12,9 @@ import Head from 'next/head';
 //   variable: '--font-inter',
 // })
 
-const PostHogPageView = dynamic(() => import('./PostHogPageView'), {
+const PostHogPageView = dynamic(() => import("./PostHogPageView"), {
   ssr: false,
-})
+});
 
 const inter = Inter({
   subsets: ["latin"],
@@ -64,20 +64,15 @@ export default function RootLayout({
     // <html lang="en" className={`${inter.variable} font-sans`}>
     <html lang="en" className={`${inter.variable}`}>
       <Head>
-        <link
-          rel="icon"
-          href="/logo.svg"
-          type="image/svg"
-          sizes="26x26"
-        />
+        <link rel="icon" href="/logo.svg" type="image/svg" sizes="26x26" />
       </Head>
       <PHProvider>
-      <body>
-        {/* <body> */}
-        <div className="bg-gray-black h-full w-full">
-          <NavigationLayout>{children}</NavigationLayout>
-        </div>
-      </body>
+        <body>
+          {/* <body> */}
+          <div className="bg-gray-black h-full w-full">
+            <NavigationLayout>{children}</NavigationLayout>
+          </div>
+        </body>
       </PHProvider>
     </html>
   );

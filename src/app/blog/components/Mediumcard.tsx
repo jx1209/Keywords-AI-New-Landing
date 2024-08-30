@@ -15,7 +15,7 @@ export const MediumCard: React.FC<Props> = ({ blog }) => {
   const isExternalLink = blog.slug.startsWith('http://') || blog.slug.startsWith('https://');
   return (
     <Link
-      className="flex flex-col pb-lg items-start gap-lg flex-1 rounded-lg border border-gray-3 bg-gray-2 max-w-[378px] w-full cursor-pointer transform transition-transform duration-300 hover:scale-101"
+      className="flex flex-col pb-lg items-start gap-lg flex-1 rounded-lg border border-gray-3 bg-gray-2 max-w-[400px] w-full cursor-pointer transform transition-transform duration-200 hover:scale-101"
       href={`${blog.slug}`}
       {...(isExternalLink ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
@@ -36,13 +36,13 @@ export const MediumCard: React.FC<Props> = ({ blog }) => {
       </div>
       <div className="flex flex-col py-[0px] px-lg items-start gap-sm self-stretch">
         <div className="flex flex-col items-start gap-[8px]  ">
-          <span className="text-md-md text-gray-4">{blog.type}</span>
-          <span className="display-sm text-gray-white self-stretch min-h-[96px]">
+          <span className="caption text-gray-4">{blog.type}</span>
+          <span className="display-xs-md text-gray-white self-stretch min-h-[96px]">
             {blog.title}
           </span>
         </div>
         <div className="flex flex-row justify-between items-center self-stretch">
-          <span className="text-sm-regular text-gray-4">{blog.timestamp}</span>
+          <span className="caption text-gray-4">{blog.timestamp}</span>
 
           <div className="relative h-[24px] w-[24px]">
             <Image

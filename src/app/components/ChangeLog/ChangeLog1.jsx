@@ -57,7 +57,6 @@ const changeLogItemData = [
   - xyz bug fixed
   - abc bug fixed`,
   },
-  
 ];
 const ChangeLogItem = ({ date, content }) => {
   return (

@@ -1,8 +1,8 @@
 {
     "date": "July 24, 2024",
-    "Title": "New model every day! Mistral Large 2!",
+    "Title": "Mistral Large 2 availability",
     "snapshot": "mistral.jpg",
-    "introduction": "Integrated Mistral Large 2 into Keywords AI, try it out in our model playground!",
+    "introduction": "Integrated Mistral Large 2 into Keywords AI, try it out in our model playground.",
     "sections": {
         "New": [
             {"tag": "Models", "description": "Integrated Groq tool use models into the platform."},

@@ -19,7 +19,7 @@ export default {
       xxxl: "120px",
     },
     scale: {
-      '101': '1.01',
+      101: "1.01",
     },
     padding: {
       xxxs: "4px",

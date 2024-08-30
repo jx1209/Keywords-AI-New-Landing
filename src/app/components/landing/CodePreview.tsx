@@ -3,7 +3,7 @@ import { CodeBoxDisplay } from "./CodeBoxDisplay";
 
 type Props = {};
 
-export default function CodePrewview({}: Props) {
+export default function CodePreview({}: Props) {
   return (
     <div
       aria-label="frame 664"
@@ -28,7 +28,7 @@ export default function CodePrewview({}: Props) {
       </div>
       {/* code box */}
       <CodeBoxDisplay />
-      <p className="max-w-[600px]  w-full text-gray-4 text-center display-sm">
+      <p className="max-w-[600px] w-full text-gray-4 text-center display-sm">
         A simple interface so you can switch without rewriting code.{" "}
         <span className=" text-gray-white">
           It fits right into your codebase.

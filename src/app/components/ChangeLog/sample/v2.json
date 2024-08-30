@@ -10,7 +10,7 @@
       {"tag": "Requests", "description": "A lot of change here."},
       {"tag": "Users", "description": "Same as above."},
       {"tag": "Playground", "description": "Now you can run 50 models at the same time, side by side too."},
-      {"tag": "API", "description": "Router actually works now!"},
+      {"tag": "API", "description": "Router actually works now."},
       {"tag": "API", "description": "Issue where backend was down for 5 days is resolved."},
       {"tag": "Other", "description": "Some boring stuff."}
     ],

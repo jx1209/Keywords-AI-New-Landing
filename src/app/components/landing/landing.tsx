@@ -37,7 +37,7 @@ import {
 } from "@/app/components/landing/TeamsLogo";
 import FeatureSection from "@/app/components/landing/FeatureSection";
 import { AdvantagesSecctions } from "@/app/components/landing/AdvantagesSecctions";
-import CodePrewview from "@/app/components/landing/CodePrewview";
+import CodePreview from "@/app/components/landing/CodePreview";
 import Image from "next/image";
 // import "react-multi-carousel/lib/styles.css";
 export default function Landing() {
@@ -86,11 +86,11 @@ export default function Landing() {
               className="flex-col items-center gap-lg w-full max-w-[1000px]"
             >
               <p
-                className="sm:hidden  text-center display-xl gradient-text"
+                className="sm:hidden text-center display-xl gradient-text"
                 data-aos="custom-fade-down"
                 data-aos-delay="50"
               >
-                LLM observability <br />
+                LLM monitoring <br />
                 for AI startups
               </p>
               <p
@@ -98,7 +98,7 @@ export default function Landing() {
                 data-aos="custom-fade-down"
                 data-aos-delay="50"
               >
-                LLM observability <br />
+                LLM monitoring <br />
                 for AI startups
               </p>
               <p
@@ -106,16 +106,17 @@ export default function Landing() {
                 data-aos="custom-fade-down"
                 data-aos-delay="250"
               >
-                Easily build, deploy, and monitor your AI application. <br />
-                Keywords AI is basically Datadog for LLM applications.
+                Meet the easiest way to monitor your LLM workflows.{" "}
+                <br />
+                Debug and ship reliable AI features so much faster.
               </p>
               <p
                 className="hidden sm:flex text-md self-stretch text-gray-4 text-center"
                 data-aos="custom-fade-down"
                 data-aos-delay="250"
               >
-                Easily build, deploy, and monitor your AI application.
-                Keywords AI is basically Datadog for LLM applications.
+                Easily build, deploy, and monitor your AI application. Keywords
+                AI is basically Datadog for LLM applications.
               </p>
             </div>
           </div>
@@ -141,7 +142,7 @@ export default function Landing() {
               iconSize="sm"
             />
             <Button
-              text="Demo from Andy"
+              text="Request a demo"
               variant="big-black"
               icon={Right}
               iconSize="sm"
@@ -426,7 +427,7 @@ export default function Landing() {
       <FeatureSection />
       <CommentSesction />
       <AdvantagesSecctions />
-      <CodePrewview />
+      <CodePreview />
       <CallToActionSection />
     </Page>
   );

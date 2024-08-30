@@ -1,8 +1,8 @@
 {
     "date": "July 16, 2024",
-    "Title": "Have a better observability minute-level graphs",
+    "Title": "Minute-level dashboard graphs",
     "snapshot": "minute.gif",
-    "introduction": "We have put much effort into improving the performance of our dashboard. Now, you can see your LLM usage and performance at minute and hour levels. Its loading time is even 2x faster than before!",
+    "introduction": "We have put much effort into improving the performance of our dashboard. Now, you can see your LLM usage and performance at minute and hour levels. Its loading time is even 2x faster than before.",
     "sections": {
       "New": [
         {"tag": "Dashboard", "description": "Added the View all button for breakdown graphs in Dashboard."},

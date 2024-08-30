@@ -36,7 +36,6 @@ export function TagIconHelper(flag: string) {
       return <TagRocket />;
   }
 }
-
 interface LogSectionProps {
   sectionContent: Array<{
     id?: string | number;
@@ -59,13 +58,13 @@ interface Log {
 }
 export function LogSection({ sectionContent, sectionName }: LogSectionProps) {
   return (
-    <div className="flex flex-col items-start gap-xxs self-stretch">
+    <div className="flex flex-col items-start gap-xs self-stretch">
       <Accordion
-        className={cn("flex flex-col items-start gap-xxs self-stretch ")}
+        className={cn("flex flex-col items-start self-stretch ")}
         content={{
           trigger: sectionName,
           content: (
-            <div className="flex w-[594px] flex-col items-start gap-xxs">
+            <div className="flex flex-col items-start gap-xxs">
               {/* {sectionContent.map((item) => (
                 <div className="flex pl-sm items-start gap-xxxs self-stretch">
                   <p className="inline-block text-gray-white">·</p>
@@ -93,7 +92,7 @@ export function LogSection({ sectionContent, sectionName }: LogSectionProps) {
               ))}
             </div>
           ),
-          contentClassName: "flex flex-col items-start gap-xxs self-stretch",
+          contentClassName: "flex flex-col items-start gap-xs self-stretch",
         }}
       ></Accordion>
     </div>
@@ -107,7 +106,7 @@ export function LogContent({ log }: { log: Log }) {
         <p className="caption text-gray-4">{log.date}</p>
       </div>
       <div className="flex w-[600px] flex-col items-start gap-md flex-shrink-0">
-        <p className="text-gray-white display-xs">{log.Title}</p>
+        <p className="text-gray-white display-xs-md">{log.Title}</p>
         {log.snapshot && (
           <div className="relative w-full aspect-w-16 aspect-h-9">
             <Image

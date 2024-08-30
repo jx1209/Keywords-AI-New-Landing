@@ -35,7 +35,7 @@ export const Smallcard: React.FC<Props> = ({ blog }) => {
       <div className="flex flex-col items-start gap-sm flex-1 min-h-[116px]">
         <div className="flex flex-col items-start gap-xxxs flex-1">
           <span className="text-sm-regular text-gray-4">{blog.type}</span>
-          <span className="display-xs text-gray-white">{blog.title}</span>
+          <span className="display-xs-md text-gray-white">{blog.title}</span>
         </div>
         <span className="text-sm-regular text-gray-4">{blog.timestamp}</span>
       </div>

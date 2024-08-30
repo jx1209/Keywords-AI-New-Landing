@@ -1,17 +1,17 @@
 {
     "date": "July 15, 2024",
-    "Title": "Guarantee your LLM apps' uptime and reliability",
+    "Title": "Introducing fallbacks",
     "snapshot": "fallback.gif",
-    "introduction": "Today, you could specify the fallback model for your LLM deployments on our platform! If the primary model fails to respond, your fallback models will be used instead. This feature is especially useful for critical deployments where you can't afford any downtime.",
+    "introduction": "Today, you could specify fallback models for your LLM deployments on our platform. If the primary model fails to respond, your fallback models will be used instead. This feature is especially useful for critical deployments where you can't afford any downtime.",
     "sections": {
       "New": [
-        {"tag": "API", "description": "Added completion_choices parameter to the API, allowing you to specify the number of reponses to return."},
-        {"tag": "Logs", "description": "You can now share a specific log with a sharable link!"},
-        {"tag": "Prompts", "description": "You can now added Functions you created in the Playground to the Prompts!"},
-        {"tag": "Settings", "description": "You could now add your Vertex AI credentials in Credentials page!"}
+        {"tag": "API", "description": "Added completion_choices parameter to the API, allowing you to specify the number of responses to return."},
+        {"tag": "Logs", "description": "You can now share a specific log with a sharable link."},
+        {"tag": "Prompts", "description": "You can now added Functions you created in the Playground to the Prompts."},
+        {"tag": "Settings", "description": "You could now add your Vertex AI credentials in Credentials page."}
       ],
       "Improved": [
-        {"tag": "Dashboard", "description": "The main graph in Dashboard is 3 time faster!"},
+        {"tag": "Dashboard", "description": "The main graph in Dashboard is 3 time faster."},
         {"tag": "Logs", "description": "Improved UI of row selection in Logs."},
         {"tag": "Datasets", "description": "Added Last Updated/Created columns in Datasets."}
       ],

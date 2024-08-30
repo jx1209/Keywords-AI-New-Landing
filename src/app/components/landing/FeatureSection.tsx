@@ -140,7 +140,7 @@ export default function FeatureSection({}: Props) {
       <p className=" max-w-[800px]  w-full text-center text-gray-white display-sm">
         Beautiful, lightweight, and powerful.{" "}
         <span className="text-gray-4">
-          Keywords AI is the only platform you need to launch and optimize your
+          Keywords AI is the only platform you need to monitor and debug your
           LLM application.
         </span>
       </p>

@@ -33,7 +33,7 @@ const CustomTrigger = React.forwardRef<HTMLDivElement, CustomTriggerProps>(
         variant="text"
         padding="p-0"
         text={children?.toString()}
-        textClassName="text-gray-white text-md-medium"
+        textClassName="text-gray-white text-md"
         textColor="text-gray-white"
         icon={isExpanded ? DownArrow : RightArrow}
         iconSize="xs"
@@ -75,7 +75,7 @@ const Accordion = ({
         <AccordionTrigger
           className={cn(
             content.triggerClassName ||
-              "flex items-center gap-xxs py-xxxs text-sm-md text-gray-4 hover:text-gray-white",
+              "flex items-center gap-xs py-xxxs text-sm-md text-gray-4 hover:text-gray-white",
             "outline-none"
           )}
         >

@@ -1,8 +1,8 @@
 {
     "date": "July 27, 2024",
-    "Title": "New feature - Caches!",
+    "Title": "LLM request caching",
     "snapshot": "caches.jpg",
-    "introduction": "Supercharge Your LLM Calls! Our new Caches feature allows you to store and reuse LLM responses, eliminating redundant API calls. \n\n This smart caching system optimizes your AI performance by delivering instant responses, reducing costs, and ensuring consistent, high-quality outputs.",
+    "introduction": "Supercharge your LLM calls with caching. Our new Caches feature allows you to store and reuse LLM responses, eliminating redundant API calls. \n\n This smart caching system optimizes your AI performance by delivering instant responses, reducing costs, and ensuring consistent, high-quality outputs.",
     "sections": {
       "New": [
         {"tag": "API", "description": "Added a new endpoint to update logs. You could update logs with metadata and notes using the PATCH method on the /api/request-logs/batch-update/ endpoint."}

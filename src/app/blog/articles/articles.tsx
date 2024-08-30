@@ -42,6 +42,7 @@ export type Blog = {
     description?: string;
   };
 };
+
 export const blogs: Blog[] = [
   {
     id: 1,
@@ -1179,7 +1180,7 @@ export const blogs: Blog[] = [
     paragraphs: [
       {id: 1,
         primary_title: "Intro",
-        text: "On July 18, 2024, OpenAI released GPT-4o Mini, a new, intelligent small model. OpenAI claims that GPT-4o Mini matches the speed of GPT-3.5 Turbo while being significantly smarter and more cost-effective. This means future LLMs will be cheaper and smarter, making cost reduction less of a sustainable business strategy. \n\n Could GPT-4o Mini become the go-to choice for AI companies and developers seeking a balance of cost, speed, and performance? In this blog, I’ll present the test results of GPT-4o Mini show you what’s the best small model for you!"
+        text: "On July 18, 2024, OpenAI released GPT-4o Mini, a new, intelligent small model. OpenAI claims that GPT-4o Mini matches the speed of GPT-3.5 Turbo while being significantly smarter and more cost-effective. This means future LLMs will be cheaper and smarter, making cost reduction less of a sustainable business strategy. \n\n Could GPT-4o Mini become the go-to choice for AI companies and developers seeking a balance of cost, speed, and performance? In this blog, I’ll present the test results of GPT-4o Mini show you what’s the best small model for you."
       },
       {
         id:2,
@@ -1588,7 +1589,7 @@ export const blogs: Blog[] = [
       },
       {
         id:8,
-        primary_title: "Monitor your users!",
+        primary_title: "Monitor your users.",
         text: "While this isn't directly related to reliability setups, it's crucial for developers to understand the importance of user monitoring in maintaining a reliable LLM application. Knowing your users' behavior and inputs (with their permission plz) and tracking your application's responses ensures output quality and enhances overall reliability. \n\n  Key monitoring aspects include user inputs and application responses (with user permission), total number of users, number of active users, individual user usage statistics, and cost per user. Implementing user monitoring offers several benefits: it ensures output quality, identifies potential issues or areas for improvement, helps optimize resource allocation, and provides insights for product development. \n\n There are numerous user analytics tools and internal solutions available to gain insights into user sessions. For a comprehensive solution, consider platforms like [Keywords AI's User feature](https://docs.keywordsai.co/features/user/user-data), which allows you to track various user metrics in one place.",
       },
       {
@@ -1601,7 +1602,7 @@ export const blogs: Blog[] = [
   {
     id: 15,
     timestamp: "Auguest 14, 2024",
-    title: "Innovative LLM Solutions: Andy Li Discusses Keywords AI’s Impact",
+    title: "Innovative LLM solutions: Keywords AI CEO Andy Li discusses product impact",
     slug: "https://www.websiteplanet.com/blog/interview-keywordsai/",
     type: "INTERVIEW",
     author: {
@@ -1741,7 +1742,7 @@ export const blogs: Blog[] = [
         image: {
           id: 1,
           url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/top_tools/keywords-ai.jpg",
-          caption: "Keywords AI LLM dashbaord",
+          caption: "Keywords AI LLM dashboard",
           captionURL: "https://docs.keywordsai.co/features/monitoring/analytics",
           props: {
             variant: "md",

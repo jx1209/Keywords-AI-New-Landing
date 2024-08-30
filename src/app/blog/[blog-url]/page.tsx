@@ -53,7 +53,7 @@ function getContent(filePath: string) {
     console.log("Sourcegwrgwrgrwegrwg:", source);
     return getCompiledServerMdx({ source });
   } catch (error) {
-    console.error("Error!Error!", error);
+    console.error("Error!Error.", error);
     return null;
   }
 }
@@ -105,55 +105,57 @@ export default async function BlogDetail({
       >
         <div
           aria-label="hero"
-          className="flex flex-col max-w-[800px] items-start gap-md  w-full"
+          className="flex flex-col max-w-[800px] items-start gap-sm w-full"
         >
           <div
-            className="flex flex-col justify-center items-start gap-xxxs"
-            aria-label="info-block"
+            className="flex flex-col w-full items-start gap-xl "
+            aria-label="title-block"
           >
-            <span className="text-sm-md text-gray-4">
-              {String(metadata?.type)}
-            </span>
-            <span className="text-sm-regular text-gray-4">
-              {String(metadata?.timestamp)}
-            </span>
-          </div>
-          <div
-            className="flex flex-col max-w-[1200px] items-start gap-xl "
-            aria-label="title-blcok"
-          >
-            <div className="flex flex-col max-w-[1000px] items-start gap-sm self-stretch">
-              <span className="display-lg text-gray-white">
-                {String(metadata?.title)}
-              </span>
+            <div className="flex flex-col items-center gap-sm self-stretch">
+              <div className="flex flex-col w-full items-center gap-xxs">
+                <span className="caption text-gray-4">
+                  {String(metadata?.type)}
+                </span>
+                <span className="display-lg-600 w-full text-center text-gray-white">
+                  {String(metadata?.title)}
+                </span>
+              </div>
               {String(metadata?.subtitle) && (
-                <span className="display-xs text-gray-4">
+                <span className="display-xs text-gray-4 text-center">
                   {String(metadata?.subtitle)}
                 </span>
               )}
             </div>
-            <SocialIcons />
+            <div
+              className="flex flex-row justify-between w-full items-center"
+              aria-label="info-block"
+            >
+              <span className="text-sm-regular text-gray-4">
+                {String(metadata?.timestamp)}
+              </span>
+              <SocialIcons />
+            </div>
           </div>
           <div className="h-[1px] bg-gray-2 w-full max-w-[800px]"></div>
         </div>
         {blog.paragraphs?.map((paragraph) => (
           <div
             key={paragraph.id}
-            className=" flex flex-col max-w-[1200px] w-full items-center gap-md"
+            className=" flex flex-col max-w-[1200px] w-full items-center gap-sm"
           >
-            <div className=" flex flex-col max-w-[800px] w-full items-start gap-md">
+            <div className=" flex flex-col max-w-[800px] w-full items-start gap-sm">
               {paragraph.primary_title &&
                 (paragraph.primary_title_url ? (
                   <Link
                     href={paragraph.primary_title_url}
-                    className="display-md-bold text-gray-white underline"
+                    className="display-xs-md text-gray-white underline"
                     target="_blank" // Open link in a new tab
                     rel="noopener noreferrer" // Recommended for security
                   >
                     {paragraph.primary_title}
                   </Link>
                 ) : (
-                  <span className="display-md-bold text-gray-white">
+                  <span className="display-xs-md text-gray-white">
                     {paragraph.primary_title}
                   </span>
                 ))}
@@ -274,31 +276,35 @@ export default async function BlogDetail({
           </div>
         ))}
         {/* <article className="prose ">
-          <div className=" flex flex-col max-w-[1200px] w-full items-center gap-md text-gray-white">
-          <div className=" flex flex-col max-w-[800px] w-full items-start gap-md">
+          <div className=" flex flex-col max-w-[1200px] w-full items-center gap-sm text-gray-white">
+          <div className=" flex flex-col max-w-[800px] w-full items-start gap-sm">
             {content}
             </div>
           </div> 
         </article> */}
-        <div className="flex flex-col w-[800px] items-start gap-xxs">
-          <span className="text-md-md text-gray-white ">About Keywords AI</span>
-          <span className="text-sm-regular text-gray-white">
-            Keywords AI is building the leading developer platform for LLM
-            applications.
+        <div className="h-[1px] bg-gray-2 w-full max-w-[800px]"></div>
+        <div className="flex flex-col w-[800px] items-start gap-sm">
+          <span className="display-xs-md text-gray-white ">
+            About Keywords AI
+          </span>
+          <span className="text-md-regular text-gray-white">
+            Keywords AI is the leading developer platform for LLM applications.
           </span>
         </div>
         <div className="h-[1px] bg-gray-2 w-full max-w-[800px]"></div>
         <div className="flex flex-col items-start gap-lg w-[800px]">
-          <span className="display-md-bold text-gray-white">Latest blogs</span>
+          <span className="display-xs-md text-gray-white">Latest blogs</span>
           {latestBlogs.map((blog) => (
             <Smallcard key={blog.id} blog={blog}></Smallcard>
           ))}
         </div>
       </div>
-      <div className="flex flex-col py-xl px-sm items-center gap-md self-stretch bg-gray-2">
+      <div className="flex flex-col py-xl px-sm items-center gap-sm self-stretch bg-gray-2">
         <BlogLogo></BlogLogo>
         <div className="flex flex-col max-w-[600px] items-center gap-xs">
-          <span className="display-lg text-gray-white">Keywords AI</span>
+          <span className="display-md-semibold text-gray-white">
+            Keywords AI
+          </span>
           <span className="display-xs text-gray-4">
             Powering the best AI startups.
           </span>
