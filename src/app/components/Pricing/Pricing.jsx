@@ -140,7 +140,7 @@ export function Pricing() {
       description: "Best for high-growth teams.",
       price: enterprisePrice,
       bonus: bonus,
-      featureTitle: "Everything in Startup, plus",
+      featureTitle: "Everything in Team, plus",
       button: (
         <Button
           variant={"r4-black"}
