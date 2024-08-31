@@ -2,7 +2,7 @@
     "date": "July 10, 2024",
     "Title": "Model load balancing",
     "snapshot": "LB.gif",
-    "introduction": "We're thrilled to introduce our latest feature. \n\nThere are 2 ways to load balance your LLM requests. First, you can specify weights for the models you want to load balance in the code, ensuring that requests are distributed based on your desired percentages. \n\nThe second way is to easily add your credentials and set the weight for each one to distribute requests efficiently between deployments.",
+    "introduction": "We're thrilled to introduce our latest feature. \n\n There are 2 ways to load balance your LLM requests. First, you can specify weights for the models you want to load balance in the code, ensuring that requests are distributed based on your desired percentages. \n\n The second way is to easily add your credentials and set the weight for each one to distribute requests efficiently between deployments.",
     "sections": {
       "New": [
         {"tag": "Settings", "description": "Added usage page, where you could see your detailed usage by model, provider, and features on Settings page."},

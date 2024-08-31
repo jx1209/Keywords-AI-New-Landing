@@ -1,0 +1,22 @@
+{
+    "date": "August 16, 2024",
+    "Title": "PostHog integration",
+    "snapshot": "https://keywordsai-static.s3.amazonaws.com/landing/changelog/posthog.gif",
+    "introduction": "You can bring LLM metrics from Keywords AI (YC W24) to your PostHog dashboard easily! Check out the [tutorial here](https://docs.keywordsai.co/integration/posthog)!",
+    "sections": {
+      "New": [
+        {"tag": "Logs", "description": "Added quick access to your 3 most recently applied filters on the logs page."},
+        {"tag": "Playground", "description": "Added function calls in view code, making it easy to copy and paste the code into your own project."},
+        {"tag": "Settings", "description": "Introduced a Load Balancing Group UI, allowing you to create your own load balancing groups through our load balancing page."}
+
+      ],
+      "Improved": [
+        {"tag": "Logs", "description": "Improved Logs -> Datasets workflow."},
+        {"tag": "Settings", "description": "Upgraded the Fallback UI, enabling LLM developers to easily reorder fallback models using drag-and-drop."}
+      ],
+      "Fixed": [
+        {"tag": "Dashboard", "description": "Fixed a bug where the model filter on the Dashboard was not working properly.​​"}
+      ]
+    }
+  }
+  

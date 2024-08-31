@@ -1,0 +1,26 @@
+{
+    "date": "August 7, 2024",
+    "Title": "New LLM usage page",
+    "snapshot": "usage.jpg",
+    "introduction": "We're introducing the new LLM Usage page! This page shows an overview of your LLM usage, including request numbers, LLM costs, and evaluation costs. It also breaks down your usage by month, helping you track patterns and improve AI performance.",
+    "sections": {
+      "New": [
+        {"tag": "Dashboard", "description": "Added Max TPM (tokens per minute) graph."},
+        {"tag": "API", "description": "Added \"has_function_call\" parameter to the Model API endpoint. Use this to specify if the model has function calls."},
+        {"tag": "Logs", "description": "Added \"parallel_tool_calls\" parameter to the Logs API endpoint. This lets you set the number of parallel tool calls."}
+
+      ],
+      "Improved": [
+        {"tag": "Dashboard", "description": "Added per-minute graph for 12 AM to 1 AM time slot."},
+        {"tag": "Logs", "description": "Added fuzzy search for error messages."},
+        {"tag": "Datasets", "description": "Updated sidebar layout."}
+      ],
+      "Fixed": [
+        {"tag": "Dashboard", "description": "Fixed a bug where the 30-day graph tooltip wasn't showing current data."},
+        {"tag": "Dashboard", "description": "Fixed a bug where the TTFT P50 graph was displaying 0 instead of correct values."},
+        {"tag": "Logs", "description": "Fixed a bug where log display columns interfered with threads."},
+        {"tag": "Users", "description": "Fixed a bug where sorting wasn't working on the Users page."}
+      ]
+    }
+  }
+  

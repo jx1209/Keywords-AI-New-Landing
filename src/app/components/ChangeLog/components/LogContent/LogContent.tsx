@@ -17,6 +17,8 @@ import cn from "src/utilities/ClassMerge";
 import { AccordionTrigger } from "@radix-ui/react-accordion";
 import { StateEffect } from "@uiw/react-codemirror";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
+import gfm from "remark-gfm";
 
 export function TagIconHelper(flag: string) {
   switch (flag) {
@@ -100,6 +102,7 @@ export function LogSection({ sectionContent, sectionName }: LogSectionProps) {
 }
 
 export function LogContent({ log }: { log: Log }) {
+  const isExternalLink = log.snapshot?.startsWith('http://') || log.snapshot?.startsWith('https://');
   return (
     <div aria-label="changelog history" className="flex w-[1200px] items-start">
       <div className="flex w-[300px] h-[28px] py-xxs px-0 flex-col justify-center items-start gap-[8px] flex-shrink-0">
@@ -110,7 +113,7 @@ export function LogContent({ log }: { log: Log }) {
         {log.snapshot && (
           <div className="relative w-full aspect-w-16 aspect-h-9">
             <Image
-              src={`/images/changelog/snapshots/${log.snapshot}`}
+              src={isExternalLink ? log.snapshot : `/images/changelog/snapshots/${log.snapshot}`}
               alt={`Snapshot for version ${log.version}`}
               width={1200}
               height={675}
@@ -128,14 +131,58 @@ export function LogContent({ log }: { log: Log }) {
             </React.Fragment>
           ))}
         </p> */}
-        <p className="text-gray-white text-md-regular">
+        <div className="text-gray-white text-md-regular">
           {log.introduction.split("\n").map((line, index) => (
             <React.Fragment key={index}>
-              {line}
-              {index !== log.introduction.split("\n").length - 1 && <br />}
+               <ReactMarkdown
+                components={{
+                  li: ({ node, ...props }) => {
+                    return (
+                      <li style={{ marginBottom: "8px" }}>
+                        <span style={{ color: "white", marginRight: "8px" }}>
+                          •
+                        </span>
+                        <span className="text-gray-white text-md-regular">
+                          {props.children}
+                        </span>
+                      </li>
+                    );
+                  },
+                  p: ({ node, ...props }) => {
+                    // Exclude captions under images from being styled with text-gray-white
+                    // const isCaption =
+                    //   node?.children.length === 1 &&
+                    //   node?.children?[0].type === "image";
+                    // const textStyle = isCaption ? {} : { color: "text-gray-white" };
+                    const textStyle = { color: "text-gray-white" };
+
+                    return (
+                      <p className={`text-md-regular ${textStyle}`} style={{ marginBottom: "24px" }}>
+                        {props.children}
+                      </p>
+                    );
+                  },
+                  a: ({ href, children }) => (
+                    <a
+                      href={href}
+                      className="text-gray-white underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {children}
+                    </a>
+                  ),
+                }}
+                remarkPlugins={[gfm]}
+              >
+                {line}
+              {/* {index !== log.introduction.split("\n").length - 1 && <br />} */}
+              </ReactMarkdown>
+  
+
             </React.Fragment>
           ))}
-        </p>
+        </div>
         <div
           aria-label="frame 2209"
           className="flex flex-col items-start gap-sm self-stretch"

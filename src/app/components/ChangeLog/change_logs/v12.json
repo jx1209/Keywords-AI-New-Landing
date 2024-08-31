@@ -1,0 +1,21 @@
+{
+    "date": "August 24, 2024",
+    "Title": "LLM monitoring -> Multimodal monitoring",
+    "snapshot": "https://keywordsai-static.s3.amazonaws.com/landing/changelog/multimodal.gif",
+    "introduction": "We're excited to announce that we've expanded to multimodal monitoring! Our unified Model API now supports over 200 LLMs, embedding models, and audio models — all monitored on a single platform. \n\n Learn how to monitor your multimodal models by checking out our [documentation](https://docs.keywordsai.co/api-endpoints/integration/text-to-speech).",
+    "sections": {
+      "New": [
+        {"tag": "Logs", "description": "Added resizable sidebars. You can now drag the sidebar to adjust its width."},
+        {"tag": "Logs", "description": "New sidebar UI!"}
+      ],
+      "Improved": [
+        {"tag": "Logs", "description": "Improved sorting UI/UX."},
+        {"tag": "Logs", "description": "Upgraded the Filter UI/UX. When navigating child items, the search box now filters only within those items for more precise results."},
+        {"tag": "Datasets", "description": "Improved UI for dataset creation & empty state."}
+      ],
+      "Fixed": [
+        {"tag": "Dashboard", "description": "Removed empty column in the table."}
+      ]
+    }
+  }
+  
