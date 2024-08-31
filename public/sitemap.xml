@@ -107,14 +107,13 @@
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
-      <url>
+   <url>
       <loc>https://www.keywordsai.co/blog/top-llm-dev-tools</loc>
       <lastmod>2024-08-28</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
-      </url>
-      <url>
+   <url>
       <loc>https://www.keywordsai.co/blog/what-is-llm-monitoring-and-observability</loc>
       <lastmod>2024-08-30</lastmod>
       <changefreq>weekly</changefreq>
