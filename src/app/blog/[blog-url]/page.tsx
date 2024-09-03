@@ -29,6 +29,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ButtonWrapper } from "./buttonwrapper";
 // import { MarkdownRenderer } from "./markdownRender";
+import rehypeRaw from 'rehype-raw'
 
 const getImageClass = (size: string) => {
   switch (size) {
@@ -231,6 +232,7 @@ export default async function BlogDetail({
                   ),
                 }}
                 remarkPlugins={[gfm]}
+                rehypePlugins={[rehypeRaw]}
               >
                 {paragraph.text}
               </ReactMarkdown>

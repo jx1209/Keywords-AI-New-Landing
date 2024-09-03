@@ -1821,6 +1821,104 @@ export const blogs: Blog[] = [
         text: "Keywords AI is a leading LLM monitoring platform for AI startups and developers. As an AI gateway and LLM observability platform, it simplifies the process of monitoring, debugging, and iterating AI applications. \n\nThe platform offers comprehensive workflow capture, providing developers with complete observability of their AI apps. Through the LLM usage dashboard and logs page, developers can access detailed information about the performance of their applications. \n\n Keywords AI equips developers with an LLM playground and prompt management tools for optimizing and debugging LLM performance. The platform includes an alert system, user management features, and fallback options to enhance reliability. \n\n Additionally, Keywords AI provides user analytics focused on LLM-specific interactions, enabling developers to gain insights into user behavior and improve their applications accordingly. \n\n By offering this suite of tools, Keywords AI enables developers to effectively monitor, optimize, and ensure the reliability of their AI applications, making it an valuable asset in the LLM development ecosystem.",
       },
     ],
+  },
+  {
+    id: 1,
+    timestamp: "September 2, 2024",
+    slug: "/blog/keywords-ai-vs-datadog",
+    title: "Beyond Datadog: Why LLM developers are switching to Keywords AI",
+    cover: {
+      id: 1,
+      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/datadog/cover.png"
+    },
+    type: "GUIDE",
+    author: {
+      name: "Hendrix",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/hendrix.png",
+        props: {
+          variant: "circle"
+        }
+      }
+    },
+    paragraphs: [
+      {
+        id: 1,
+        primary_title: "Introduction",
+        text: "<span classname='text-md-regular' style='color: #6483F0;'>Datadog</span> is a cloud monitoring platform that provides: \n- Infrastructure monitoring \n- Application performance tracking \n- Log management \n- Security monitoring \n- LLM monitoring \n\n It integrates with numerous technologies, offering a unified view of metrics, traces, and logs. Datadog is useful for complex, distributed systems and cloud-based architectures, helping teams quickly identify issues and optimize performance.",
+      },
+      {
+        id: 2,
+        primary_title: "LLM observability platform choice",
+        text: "As AI and LLMs gain prominence, Datadog has expanded its services to include LLM monitoring for companies integrating these technologies into their workflows or core features. While Datadog excels in infrastructure monitoring, users often cite high costs and platform complexity as drawbacks. ",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/datadog/twitter.jpg",
+          props: {
+            variant: "md",
+          },
+          caption: "From X",
+          captionURL: "https://x.com/dhh/status/1828078003579920674",
+        },
+      },
+      {
+        id: 2,
+        text: "Consequently, many LLM developers are turning to Keywords AI instead of Datadog for several reasons: \n- Incredible shipping speed \n- Best UI/UX \n- Comprehensive LLM observability and debugging tools \n- Built for LLM developers \n- Competitive pricing \n- 24/7 Founder support",
+        image: {
+          id: 1,
+          url: " https://keywordsai-static.s3.amazonaws.com/landing/blog/datadog/customer.jpg",
+          props: {
+            variant: "sm",
+          },
+          caption: "Keywords AI customer support",
+          captionURL: "https://discord.com/invite/KEanfAafQQ",
+        },
+      },
+      {
+        id: 3,
+        primary_title: "Features in Keywords AI that you can’t ignore",
+        text: "**LLM playground** \n\n Keywords AI offers a powerful LLM playground used by thousands of developers to test prompts, debug suboptimal LLM outputs, and experiment with various LLMs. Developers can import their LLM logs to the playground and refine their prompts for optimal results. In our LLM playground, developers can: \n- Test prompts with over 200 LLMs \n- Import LLM logs to the playground with a single click \n- Use compare mode to evaluate two LLMs simultaneously \n- Add and test function calling directly in the frontend",
+        image: {
+          id: 1,
+          url: " https://keywordsai-static.s3.amazonaws.com/landing/blog/datadog/playground.jpg",
+          props: {
+            variant: "md",
+          },
+          caption: "LLM playground",
+          captionURL: "https://docs.keywordsai.co/features/prompt/model-playground",
+        },
+      },
+      {
+        id: 4,
+        text: "**Prompt management** \n\n Prompts are the cornerstone of any LLM application, with output quality heavily dependent on prompt effectiveness. Creating clear, accurate, and detailed prompts is crucial for building a great product. \n\n Keywords AI's prompt management system enables teams to: \n- Create, iterate, and version prompts collaboratively. \n- Deploy the latest prompts to production with a single click.\n- Test prompts in our comprehensive LLM playground",
+        image: {
+          id: 1,
+          url: " https://keywordsai-static.s3.amazonaws.com/landing/blog/datadog/prompt.jpg",
+          props: {
+            variant: "md",
+          },
+          caption: "Prompt management",
+          captionURL: "https://docs.keywordsai.co/features/prompt/prompt-management",
+        },
+      },
+      {
+        id: 5,
+        text: "**Reliability Settings** \n\n While many tools enable rapid AI app development, reliability is often overlooked. High error rates can significantly impact user retention and satisfaction. Keywords AI's reliability settings help make your AI apps more robust.\n\n Developers can: \n- [Increase LLM rate limits at no additional cost](https://www.keywordsai.co/blog/increase-llm-rate-limits) \n- [Subscribe to alerts](https://docs.keywordsai.co/features/monitoring/subscribe-alerts) for immediate error notifications \n- [Set up fallbacks using backup models](https://docs.keywordsai.co/features/generation/fallbacks) to mitigate upstream provider errors",
+        image: {
+          id: 1,
+          url: " https://keywordsai-static.s3.amazonaws.com/landing/blog/datadog/alerts.jpg",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 5,
+        primary_title: "Conclusion",
+        text: "While Datadog offers comprehensive infrastructure monitoring, Keywords AI emerges as a specialized solution for LLM developers. With its user-friendly interface, rapid integration, and focused features like the LLM playground, prompt management, and reliability settings, Keywords AI addresses the unique challenges of LLM development. \n\n As AI continues to evolve, tools like Keywords AI provide the necessary observability and debugging capabilities to help developers create more robust and efficient LLM applications. By choosing a platform tailored to LLM development, teams can streamline their workflows, improve productivity, and ultimately deliver better AI-powered products to their users.",
+      },
+    ],
   }
   
 ];
