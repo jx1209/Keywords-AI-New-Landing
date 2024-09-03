@@ -1867,7 +1867,7 @@ export const blogs: Blog[] = [
         text: "Consequently, many LLM developers are turning to Keywords AI instead of Datadog for several reasons: \n- Incredible shipping speed \n- Best UI/UX \n- Comprehensive LLM observability and debugging tools \n- Built for LLM developers \n- Competitive pricing \n- 24/7 Founder support",
         image: {
           id: 1,
-          url: " https://keywordsai-static.s3.amazonaws.com/landing/blog/datadog/customer.jpg",
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/datadog/customer.jpg",
           props: {
             variant: "sm",
           },
@@ -1881,7 +1881,7 @@ export const blogs: Blog[] = [
         text: "**LLM playground** \n\n Keywords AI offers a powerful LLM playground used by thousands of developers to test prompts, debug suboptimal LLM outputs, and experiment with various LLMs. Developers can import their LLM logs to the playground and refine their prompts for optimal results. In our LLM playground, developers can: \n- Test prompts with over 200 LLMs \n- Import LLM logs to the playground with a single click \n- Use compare mode to evaluate two LLMs simultaneously \n- Add and test function calling directly in the frontend",
         image: {
           id: 1,
-          url: " https://keywordsai-static.s3.amazonaws.com/landing/blog/datadog/playground.jpg",
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/datadog/playground.jpg",
           props: {
             variant: "md",
           },
@@ -1894,7 +1894,7 @@ export const blogs: Blog[] = [
         text: "**Prompt management** \n\n Prompts are the cornerstone of any LLM application, with output quality heavily dependent on prompt effectiveness. Creating clear, accurate, and detailed prompts is crucial for building a great product. \n\n Keywords AI's prompt management system enables teams to: \n- Create, iterate, and version prompts collaboratively. \n- Deploy the latest prompts to production with a single click.\n- Test prompts in our comprehensive LLM playground",
         image: {
           id: 1,
-          url: " https://keywordsai-static.s3.amazonaws.com/landing/blog/datadog/prompt.jpg",
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/datadog/prompt.jpg",
           props: {
             variant: "md",
           },
@@ -1907,7 +1907,7 @@ export const blogs: Blog[] = [
         text: "**Reliability Settings** \n\n While many tools enable rapid AI app development, reliability is often overlooked. High error rates can significantly impact user retention and satisfaction. Keywords AI's reliability settings help make your AI apps more robust.\n\n Developers can: \n- [Increase LLM rate limits at no additional cost](https://www.keywordsai.co/blog/increase-llm-rate-limits) \n- [Subscribe to alerts](https://docs.keywordsai.co/features/monitoring/subscribe-alerts) for immediate error notifications \n- [Set up fallbacks using backup models](https://docs.keywordsai.co/features/generation/fallbacks) to mitigate upstream provider errors",
         image: {
           id: 1,
-          url: " https://keywordsai-static.s3.amazonaws.com/landing/blog/datadog/alerts.jpg",
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/datadog/alerts.jpg",
           props: {
             variant: "md",
           },
