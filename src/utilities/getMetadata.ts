@@ -6,7 +6,7 @@ interface BlogStructureMetaData {
   subtitle?: string;
   description: string;
   shortDescription?: string;
-  images: string;
+  image: string;
   time: string;
   timestamp: string;
   author?: string;
@@ -22,6 +22,7 @@ export async function getMetadata(
   try {
     const jsonContent = await fs.readFile(jsonPath, "utf8");
     const hMetadata = JSON.parse(jsonContent);
+    console.log("Metadata loaded:", hMetadata);
     return hMetadata;
   } catch (error) {
     console.error("Error loading metadata:", error);
