@@ -23,7 +23,7 @@ export async function generateMetadata({
       url: `https://keywordsai.co/blog/${filePath}`,
       description: metadata.description ?? "",
       images:
-        (`https://keywordsai.co/${metadata?.image}` ||  metadata?.image) ??
+        (`https://keywordsai.co/${metadata?.image}` || metadata?.image) ??
         `https://keywordsai-static.s3.amazonaws.com/social_media_images/social_image.png`,
       locale: "en_US",
     },
@@ -32,16 +32,16 @@ export async function generateMetadata({
       description: metadata.description ?? "",
       card: "summary_large_image",
       images:
-        metadata?.image ??
+        (`https://keywordsai.co/${metadata?.image}` || metadata?.image) ??
         `https://keywordsai-static.s3.amazonaws.com/social_media_images/social_image.png`,
     },
   };
 }
 
 export default function RootLayout({
-    children,
-  }: Readonly<{
-    children: React.ReactNode;
-  }>) {
-    return <>{children}</>;
-  }
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return <>{children}</>;
+}
