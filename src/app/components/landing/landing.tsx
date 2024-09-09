@@ -39,6 +39,8 @@ import FeatureSection from "@/app/components/landing/FeatureSection";
 import { AdvantagesSecctions } from "@/app/components/landing/AdvantagesSecctions";
 import CodePreview from "@/app/components/landing/CodePreview";
 import Image from "next/image";
+import { useScreenWidth } from "@/hooks/useScreenWidth";
+import { MobileLanding } from "../MobileLanding/MobileLanding";
 // import "react-multi-carousel/lib/styles.css";
 export default function Landing() {
   useEffect(() => {
@@ -106,8 +108,7 @@ export default function Landing() {
                 data-aos="custom-fade-down"
                 data-aos-delay="250"
               >
-                Meet the easiest way to monitor your LLM workflows.{" "}
-                <br />
+                Meet the easiest way to monitor your LLM workflows. <br />
                 Debug and ship reliable AI features so much faster.
               </p>
               <p
@@ -398,37 +399,27 @@ export default function Landing() {
     );
   };
 
+  const [isMobile, setIsMobile] = useState(false);
+  const screenWidth = useScreenWidth();
+  useEffect(() => {
+    setIsMobile(screenWidth < 768);
+  }, [screenWidth]);
+
   return (
     <Page>
-      {/* <Helmet>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@keywordsai" />
-        <meta name="twitter:title" content="Keywords AI" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Keywords AI - Build better AI products with complete observability"
-        />
-        <meta
-          property="og:description"
-          content="Keywords AI makes it easy to ship AI applications.Every feature you need to build, deploy, and monitor your AI product. Keywords AI is the new way to build software with LLMs."
-        />
-        <meta property="og:url" content="https://keywordsai.co" />
-        <meta property="og:site_name" content="Keywords AI" />
-        <meta
-          name="description"
-          content="Keywords AI makes it easy to ship AI applications.Every feature you need to build, deploy, and monitor your AI product. Keywords AI is the new way to build software with LLMs."
-        />
-      </Helmet> */}
-
-      <IntroductionSection />
-      <ColaborationSection />
-      <FeatureSection />
-      <CommentSesction />
-      <AdvantagesSecctions />
-      <CodePreview />
-      <CallToActionSection />
+      {isMobile ? (
+        <MobileLanding />
+      ) : (
+        <>
+          <IntroductionSection />
+          <ColaborationSection />
+          <FeatureSection />
+          <CommentSesction />
+          <AdvantagesSecctions />
+          <CodePreview />
+          <CallToActionSection />
+        </>
+      )}
     </Page>
   );
 }
