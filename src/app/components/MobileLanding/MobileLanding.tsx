@@ -243,7 +243,7 @@ export function MobileLanding() {
           />
         </svg> */}
         <div className="flex-col flex items-start gap-lg w-full">
-          <p className="text-md text-start text-gray-white self-stretch">
+          <p className="text-md-medium text-start text-gray-white self-stretch">
             &ldquo;Keywords AI legit has some of the best UX/DX I&apos;ve ever
             seen in my life. I&apos;m not even just saying that, I truly
             don&apos;t think I&apos;ve ever integrated a product that was as
