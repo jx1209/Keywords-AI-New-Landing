@@ -122,7 +122,7 @@
 .text-sm-md {
   @apply text-gray-white font-inter;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 20px;
   font-style: normal;
 }
