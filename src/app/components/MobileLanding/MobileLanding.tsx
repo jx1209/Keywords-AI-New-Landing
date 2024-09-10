@@ -46,7 +46,7 @@ export function MobileLanding() {
         >
           <div
             aria-label="yc tag"
-            className="flex px-xxs py-xxxs hover:cursor-pointer justify-center items-center gap-xxs rounded-sm border border-solid border-gray-3 bg-gray-2"
+            className="flex px-xs py-xxs hover:cursor-pointer justify-center items-center gap-xxs rounded-md bg-gray-2"
             data-aos="custom-fade-down"
             onClick={() =>
               window.open(
