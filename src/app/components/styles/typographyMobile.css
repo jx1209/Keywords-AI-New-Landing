@@ -1,0 +1,8 @@
+.mobile-display-xl {
+  @apply text-gray-white font-inter;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -1px;
+  line-height: 61px;
+}

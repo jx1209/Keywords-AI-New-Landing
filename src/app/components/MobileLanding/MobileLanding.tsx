@@ -27,6 +27,7 @@ import {
 import { FeatureSection } from "./FeatureSection";
 import { IntrimLogo, LogoCard } from "./OtherSVG";
 import Image from "next/image";
+import { Arrow } from "@radix-ui/react-dropdown-menu";
 
 export function MobileLanding() {
   useEffect(() => {
@@ -36,90 +37,88 @@ export function MobileLanding() {
   const IntroductionSection = () => {
     return (
       <div
-        aria-label="frame 636"
-        className="flex py-xl px-md flex-col items-center gap-xl self-stretch bg-gray-black"
+        aria-label="main frame"
+        className="flex py-sm px-md flex-col items-center gap-xl self-stretch bg-gray-black"
       >
         <div
-          aria-label="frame 2023"
-          className="flex flex-col max-w-[1000px] items-center gap-md "
+          aria-label="hero parent"
+          className="flex flex-col max-w-[1000px] items-start gap-sm"
         >
           <div
-            aria-label="frame 2024"
-            className="flex px-xs py-[6px]  justify-center items-center gap-xxs rounded-lg border border-solid border-gray-3 bg-gray-2"
+            aria-label="yc tag"
+            className="flex px-xxs py-xxxs hover:cursor-pointer justify-center items-center gap-xxs rounded-sm border border-solid border-gray-3 bg-gray-2"
             data-aos="custom-fade-down"
+            onClick={() =>
+              window.open(
+                "https://www.ycombinator.com/companies/keywords-ai/",
+                "_blank"
+              )
+            }
           >
-            <div
-              onClick={() =>
-                window.open(
-                  "https://www.ycombinator.com/companies/keywords-ai/",
-                  "_blank"
-                )
-              }
-              aria-label="frame 1603"
-              className="flex flex-row justify-center items-center gap-xxs "
-            >
-              <span className="text-center caption text-resend-64">
-                Backed by
+            <span className="flex gap-xxxs">
+              <span className="text-center caption text-gray-4">Backed by</span>
+              <span className="text-center caption gradient-text">
+                Y Combinator
               </span>
-              <div className="flex items-center gap-xxxs">
-                <Y />
-                <span className="text-center caption gradient-text">
-                  Combinator
-                </span>
-              </div>
-            </div>
+            </span>
+            <ArrowRight fill="fill-gray-4" />
           </div>
           <div
-            aria-label="frame 1601"
+            aria-label="hero text & button"
             className="flex-col max-w-[1200px] w-full items-center gap-lg"
           >
             <div
-              aria-label="frame 619"
-              className="flex flex-col items-center gap-xs self-stretch"
+              aria-label="hero text"
+              className="flex flex-col items-center gap-xs self-stretch w-full"
             >
               <p
-                className="display-md-bold text-center"
+                className="display-lg text-start w-full"
                 data-aos="custom-fade-down"
                 data-aos-delay="50"
               >
-                Fast track GenAI
+                Trace every
                 <br />
-                product development.
+                LLM request
               </p>
               <p
-                className="text-sm-md text-center text-gray-4"
+                className="text-md text-start text-gray-4"
                 data-aos="custom-fade-down"
                 data-aos-delay="250"
               >
-                Every feature you need to build, deploy, and monitor your
-                product. Keywords AI is unified DevOps platform to build LLM
-                applications.
+                Meet the new way to monitor your LLM workflows. Use logs,
+                metrics, and evals to ship deterministic AI.
               </p>
             </div>
             <div
               aria-label="frame 1816"
-              className="flex flex-col items-center justify-center gap-xs"
+              className="flex flex-col items-center justify-center gap-xxs w-full"
             >
               <Button
                 text="Get started free"
-                variant="big-white"
+                variant="r4-primary"
                 // onClick={() => (window.location.href = platformURL)}
                 onClick={() =>
                   (window.location.href =
                     "https://platform.keywordsai.co/signup")
                 }
-                icon={Right}
                 iconSize="sm"
+                borderRadius="rounded-md"
+                padding="px-md py-xs"
+                width="w-full"
               />
               <Button
-                text="Book a demo"
-                variant="big-black"
-                icon={Right}
-                iconSize="sm"
-                iconFill=""
+                text="Request a demo"
+                variant="r4-gray-2"
+                // icon={Right}
+                // iconSize="sm"
+                // iconFill=""
                 onClick={() =>
                   window.open("https://cal.com/keywordsai/demo", "_blank")
                 }
+                borderRadius="rounded-md"
+                padding="px-md py-xs"
+                width="w-full"
+                justification="justify-center"
               />
             </div>
           </div>
@@ -153,7 +152,7 @@ export function MobileLanding() {
         className="flex flex-col py-[80px] px-md items-center gap-md self-stretch bg-gray-1"
       >
         <div className="flex flex-col items-center gap-sm self-stretch">
-          <span className=" text-center caption-cap gradient-text">
+          <span className="text-center caption-cap gradient-text">
             POWERING THE BEST YC AI STARTUPS
           </span>
         </div>
@@ -204,7 +203,7 @@ export function MobileLanding() {
     );
   };
 
-  const CommentSesction = () => {
+  const CommentSection = () => {
     return (
       <div
         aria-label="frame 643"
@@ -245,9 +244,10 @@ export function MobileLanding() {
 
         <div className="flex-col flex items-center gap-lg max-w-[600px] w-full">
           <p className="text-md-md  text-center text-gray-white self-stretch">
-          &ldquo;Keywords AI legit has some of the best UX/DX I&apos;ve ever seen in my
-            life. I&apos;m not even just saying that, I truly don&apos;t think I&apos;ve ever
-            integrated a product that was as easy.&rdquo;
+            &ldquo;Keywords AI legit has some of the best UX/DX I&apos;ve ever
+            seen in my life. I&apos;m not even just saying that, I truly
+            don&apos;t think I&apos;ve ever integrated a product that was as
+            easy.&rdquo;
           </p>
           <div className="flex-col items-center gap-xxxs">
             <p className="text-sm-md text-center text-gray-white">
@@ -266,19 +266,21 @@ export function MobileLanding() {
     return (
       <div className="flex pt-[120px] pb-[200px] px-md flex-col items-center gap-lg bg-gray-black">
         <LogoCard />
-        <p className="text-center display-md-bold gradient-text w-full">
+        <p className="text-center display-md-semibold gradient-text w-full">
           Integrate in minutes. Available today.
         </p>
         <div className="flex flex-col justify-center items-center gap-xs">
           <Button
-            text="Sign up for free"
-            variant="big-white"
+            text="Get started free"
+            variant="r4-white"
             // onClick={() => (window.location.href = platformURL)}
             onClick={() =>
               (window.location.href = "https://platform.keywordsai.co/signup")
             }
             iconSize="sm"
-            icon={Right}
+            borderRadius="rounded-md"
+            padding="px-md py-xs"
+            width="w-full"
           />
         </div>
       </div>
@@ -289,7 +291,7 @@ export function MobileLanding() {
     <Page>
       <IntroductionSection />
       <CollaborationSection />
-      <CommentSesction />
+      <CommentSection />
       <FeatureSection />
       <CallToActionSection />
     </Page>

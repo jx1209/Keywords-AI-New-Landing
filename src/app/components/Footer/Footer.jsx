@@ -427,7 +427,7 @@ export function MobileFooter() {
     <div className="flex flex-row py-xs px-md justify-between items-center self-stretch bg-gray-2">
       <div className="flex flex-row gap-xxs items-center">
         <IntrimLogo />
-        <span className="text-sm-md text-gray-4">Designed for LLM DevOps.</span>
+        <span className="text-sm-md text-gray-4">The LLM observability platform.</span>
       </div>
       <div className="flex items-start flex-row gap-sm">
         <a

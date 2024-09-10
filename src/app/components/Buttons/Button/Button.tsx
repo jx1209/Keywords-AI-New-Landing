@@ -177,7 +177,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           "cursor-default gradient-in max-h-[36px] tracking-[0.56px]"
         );
         break;
-
       case "small":
         bgColor = bgColor || "bg-gray-2";
         hoverColor = hoverColor || "bg-gray-3";
