@@ -23,7 +23,6 @@ import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
-
 export function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
@@ -79,7 +78,7 @@ export function Navbar() {
   return (
     <div
       aria-label="Navigation Bar"
-      className=" w-full flex-col sm:flex-row px-sm sm:px-lg py-xs sm:py-sm justify-between items-center bg-gray-black bg-opacity-0 backdrop-blur-[3px] border-b border-gray-2 fixed z-10 "
+      className="w-full flex-col sm:flex-row px-sm sm:px-md py-xs sm:py-sm justify-between items-center bg-gray-black bg-opacity-0 backdrop-blur-[3px] border-b border-gray-2 fixed z-10"
     >
       <div className="flex max-w-[1200px] justify-between items-center flex-1 w-full">
         <div className="flex flex-row gap-lg items-center ">
@@ -216,7 +215,6 @@ export function Navbar() {
             </div>
           }
         </div>
-
         <div className="sm:hidden flex items-center gap-xs">
           <Button
             text="Log in"
@@ -247,7 +245,7 @@ const NavigationItem = ({ title, subTitle, link, icon, border = "" }) => {
   return (
     <div
       className={cn(
-        "rounded-md flex-col py-xxs px-xs justify-center items-start  w-full cursor-pointer",
+        "rounded-md flex-col py-xxs px-xs justify-center items-start w-full cursor-pointer",
         hover ? "bg-gray-2" : "bg-gray-black",
         border,
         border ? "gap-xs" : "gap-xxxs"

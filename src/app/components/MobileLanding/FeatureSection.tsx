@@ -26,14 +26,16 @@ const Section = ({
   return (
     <div
       aria-label="feature section"
-      className="flex flex-col items-start gap-md bg-gray-black py-[80px] px-md"
+      className="flex flex-col items-start gap-md bg-gray-black py-xl px-md"
     >
       <div
         aria-label="some frame"
-        className="flex-col items-start gap-xxs self-stretch"
+        className="flex-col items-start gap-sm self-stretch"
       >
-        <p className="caption-cap text-start gradient-text">{keyword}</p>
-        <p className="max-w-[800px] w-full text-start display-md-bold gradient-text">
+        <div className="bg-gray-2 py-xxs px-xs rounded-md">
+          <p className="caption-cap text-start gradient-text">{keyword}</p>
+        </div>
+        <p className="max-w-[800px] w-full text-start display-md-semibold gradient-text">
           {header}
         </p>
       </div>
@@ -102,7 +104,7 @@ export const FeatureSection = () => {
         </div>
       </Section>
       <Section
-        keyword={"OPTIMIZE"}
+        keyword={"IMPROVE"}
         header={"Collect data, improve, and repeat..."}
         footer={
           "Powerful toolkit for collecting datasets from production, so you can "

@@ -72,7 +72,7 @@ export function MobileLanding() {
               className="flex flex-col items-center gap-xs self-stretch w-full"
             >
               <p
-                className="display-lg text-start w-full"
+                className="display-lg-600 text-start w-full"
                 data-aos="custom-fade-down"
                 data-aos-delay="50"
               >
@@ -85,36 +85,37 @@ export function MobileLanding() {
                 data-aos="custom-fade-down"
                 data-aos-delay="250"
               >
-                Meet the new way to monitor your LLM workflows. Use logs,
-                metrics, and evals to ship deterministic AI.
+                Meet the new way to monitor your AI workflows. Use logs,
+                metrics, and evals to build reliable LLM-powered applications.
               </p>
             </div>
             <div
-              aria-label="frame 1816"
+              aria-label="cta buttons"
               className="flex flex-col items-center justify-center gap-xxs w-full"
             >
               <Button
-                text="Get started free"
-                variant="r4-primary"
-                // onClick={() => (window.location.href = platformURL)}
-                onClick={() =>
-                  (window.location.href =
-                    "https://platform.keywordsai.co/signup")
-                }
-                iconSize="sm"
-                borderRadius="rounded-md"
-                padding="px-md py-xs"
-                width="w-full"
-              />
-              <Button
                 text="Request a demo"
-                variant="r4-gray-2"
+                variant="r4-primary"
                 // icon={Right}
                 // iconSize="sm"
                 // iconFill=""
                 onClick={() =>
                   window.open("https://cal.com/keywordsai/demo", "_blank")
                 }
+                borderRadius="rounded-md"
+                padding="px-md py-xs"
+                width="w-full"
+                justification="justify-center"
+              />
+              <Button
+                text="Quickstart docs"
+                variant="r4-gray-2"
+                // onClick={() => (window.location.href = platformURL)}
+                onClick={() =>
+                  (window.location.href =
+                    "https://docs.keywordsai.co/get-started/overview")
+                }
+                iconSize="sm"
                 borderRadius="rounded-md"
                 padding="px-md py-xs"
                 width="w-full"
@@ -207,9 +208,9 @@ export function MobileLanding() {
     return (
       <div
         aria-label="frame 643"
-        className="flex-col py-[80px] px-md flex items-center gap-md self-stretch bg-gray-black"
+        className="flex-col py-lg px-md flex items-start gap-md self-stretch bg-gray-2"
       >
-        <svg
+        {/* <svg
           width="70"
           height="25"
           viewBox="0 0 70 25"
@@ -240,21 +241,18 @@ export function MobileLanding() {
             d="M51.195 15.9244C51.1269 16.0764 51.0306 16.2188 50.9058 16.3436L49.6519 17.5975C49.1033 18.146 48.2139 18.146 47.6653 17.5975L46.4114 16.3436C45.8629 15.7951 45.8628 14.9056 46.4114 14.357L47.6653 13.1031C48.2139 12.5546 49.1034 12.5546 49.6519 13.1031L50.9058 14.357C51.0306 14.4818 51.127 14.6243 51.195 14.7762L52.4067 14.7763L49.437 9.63275C49.0491 8.96089 49.2793 8.10178 49.9512 7.71383L51.4868 6.82724C52.1587 6.4393 53.0179 6.66953 53.4058 7.3414L57.8116 14.9725C58.1995 15.6443 57.9692 16.5034 57.2974 16.8914L55.7617 17.778C55.0899 18.1659 54.2307 17.9357 53.8428 17.2639L53.0695 15.9243L51.195 15.9244ZM50.4312 9.05874L54.8371 16.6898C54.9079 16.8126 55.065 16.8547 55.1877 16.7837L56.7234 15.8971C56.8461 15.8262 56.8883 15.6693 56.8173 15.5465L52.4115 7.9154C52.3407 7.79264 52.1836 7.7506 52.0608 7.82151L50.5252 8.7081C50.4025 8.77896 50.3603 8.93598 50.4312 9.05874ZM50.094 15.1688L48.8401 13.9149C48.7399 13.8147 48.5773 13.8147 48.4771 13.9149L47.2232 15.1688C47.123 15.269 47.123 15.4315 47.2232 15.5318L48.4771 16.7856C48.5774 16.886 48.7399 16.8859 48.8402 16.7857L50.094 15.5319C50.1942 15.4315 50.1942 15.269 50.094 15.1688Z"
             fill="#F9FAFD"
           />
-        </svg>
-
-        <div className="flex-col flex items-center gap-lg max-w-[600px] w-full">
-          <p className="text-md-md  text-center text-gray-white self-stretch">
+        </svg> */}
+        <div className="flex-col flex items-start gap-lg w-full">
+          <p className="text-md text-start text-gray-white self-stretch">
             &ldquo;Keywords AI legit has some of the best UX/DX I&apos;ve ever
             seen in my life. I&apos;m not even just saying that, I truly
             don&apos;t think I&apos;ve ever integrated a product that was as
             easy.&rdquo;
           </p>
-          <div className="flex-col items-center gap-xxxs">
-            <p className="text-sm-md text-center text-gray-white">
-              Rahul Behal
-            </p>
-            <p className="caption text-center text-gray-4">
-              Co-founder, AgentHub (YC W24)
+          <div className="flex-col w-full items-start gap-xxxs">
+            <p className="text-sm text-start text-gray-white">Rahul Behal</p>
+            <p className="caption text-start text-gray-4">
+              Co-founder, Gumloop (YC W24)
             </p>
           </div>
         </div>
@@ -269,18 +267,37 @@ export function MobileLanding() {
         <p className="text-center display-md-semibold gradient-text w-full">
           Integrate in minutes. Available today.
         </p>
-        <div className="flex flex-col justify-center items-center gap-xs">
+        <div
+          aria-label="cta buttons"
+          className="flex flex-row items-center justify-center gap-sm w-full max-w-[320px]"
+        >
           <Button
-            text="Get started free"
+            text="Request a demo"
             variant="r4-white"
+            // icon={Right}
+            // iconSize="sm"
+            // iconFill=""
+            onClick={() =>
+              window.open("https://cal.com/keywordsai/demo", "_blank")
+            }
+            borderRadius="rounded-md"
+            padding="px-md py-xs"
+            width="w-full"
+            justification="justify-center"
+          />
+          <Button
+            text="Quickstart docs"
+            variant="r4-gray-2"
             // onClick={() => (window.location.href = platformURL)}
             onClick={() =>
-              (window.location.href = "https://platform.keywordsai.co/signup")
+              (window.location.href =
+                "https://docs.keywordsai.co/get-started/overview")
             }
             iconSize="sm"
             borderRadius="rounded-md"
             padding="px-md py-xs"
             width="w-full"
+            justification="justify-center"
           />
         </div>
       </div>
