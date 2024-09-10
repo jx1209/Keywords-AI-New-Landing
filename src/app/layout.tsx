@@ -12,6 +12,8 @@ import Head from "next/head";
 //   variable: '--font-inter',
 // })
 
+import Script from "next/script";
+
 const PostHogPageView = dynamic(() => import("./PostHogPageView"), {
   ssr: false,
 });
@@ -63,6 +65,12 @@ export default function RootLayout({
   return (
     // <html lang="en" className={`${inter.variable} font-sans`}>
     <html lang="en" className={`${inter.variable}`}>
+      <Script
+        id="octolane-script"
+        src="https://cdn.octolane.com/tag.js?pk=cccfe315250db4ca1c81"
+        integrity="sha384-XPT8q+NKjJxHQpRdXyP/4m1Y5PU0xM19Plbth0o6ngMt6qZutj+gifGISAv1hORr"
+        crossOrigin="anonymous"
+      />
       <Head>
         <link rel="icon" href="/logo.svg" type="image/svg" sizes="26x26" />
         <Head>
