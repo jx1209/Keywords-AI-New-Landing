@@ -14,7 +14,13 @@ import {
 } from "@/app/components/icons-old";
 import { Page } from "@/app/components/Page";
 import { Button } from "@/app/components/Buttons";
-import { LinkedIn, Logo, Right } from "@/app/components/Icons";
+import {
+  Discord,
+  LinkedIn,
+  Logo,
+  Right,
+  Twitter,
+} from "@/app/components/Icons";
 import {
   AgentHubLogo,
   CruxLogo,
@@ -44,24 +50,54 @@ export function MobileLanding() {
           aria-label="hero parent"
           className="flex flex-col max-w-[1000px] items-start gap-sm"
         >
-          <div
-            aria-label="yc tag"
-            className="flex px-xs py-xxs hover:cursor-pointer justify-center items-center gap-xxs rounded-md bg-gray-2"
-            data-aos="custom-fade-down"
-            onClick={() =>
-              window.open(
-                "https://www.ycombinator.com/companies/keywords-ai/",
-                "_blank"
-              )
-            }
-          >
-            <span className="flex gap-xxxs">
-              <span className="text-center caption text-gray-4">Backed by</span>
-              <span className="text-center caption gradient-text">
-                Y Combinator
+          <div className="flex-row gap-xs items-center justify-between w-full">
+            <div
+              aria-label="yc tag"
+              className="flex px-xs py-xxs hover:cursor-pointer justify-center items-center gap-xxs rounded-md bg-gray-2"
+              data-aos="custom-fade-down"
+              onClick={() =>
+                window.open(
+                  "https://www.ycombinator.com/companies/keywords-ai/",
+                  "_blank"
+                )
+              }
+            >
+              <span className="flex gap-xxxs">
+                <span className="text-center caption text-gray-4">
+                  Backed by
+                </span>
+                <span className="text-center caption gradient-text">
+                  Y Combinator
+                </span>
               </span>
-            </span>
-            <ArrowRight fill="fill-gray-4" />
+              <ArrowRight fill="fill-gray-4" />
+            </div>
+            {/* <div className="flex items-start flex-row gap-sm">
+              <a
+                href="https://discord.gg/KEanfAafQQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-row w-[16px] h-[16px] justify-center items-center gap-[10px]"
+              >
+                <Discord />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/keywordsai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-row w-[16px] h-[16px] justify-center items-center gap-[10px]"
+              >
+                <LinkedIn />
+              </a>
+              <a
+                href="https://twitter.com/keywordsai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-row w-[16px] h-[16px] justify-center items-center gap-[10px]"
+              >
+                <Twitter />
+              </a>
+            </div> */}
           </div>
           <div
             aria-label="hero text & button"
