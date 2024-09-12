@@ -26,6 +26,14 @@ import Image from "next/image";
 export function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
+  const resourceItems = [
+    {
+      title: "SEO description generator",
+      subTitle: "Generate SEO-friendly descriptions.",
+      icon: RequestsIcon,
+      link: "https://seo.keywordsai.co/",
+    }
+  ];
   const leftItems = [
     {
       title: "Request logging",
@@ -75,6 +83,7 @@ export function Navbar() {
     },
   ];
   const [open, setOpen] = React.useState("");
+  const [resourceOpen, setResourceOpen] = React.useState("");
   return (
     <div
       aria-label="Navigation Bar"
@@ -100,7 +109,16 @@ export function Navbar() {
               onClick={() => navigate("/")}
               active={location.pathname == "/"}
             /> */}
-              <SingleNavigationMenu
+              {/* <Button
+                text="Platform"
+                variant="header"
+                // onClick={() => window.open(platformURL, "_blank")}
+                onClick={() => {
+                  window.location.href = platformURL + "/login";
+                }}
+                // active={location.pathname == "/"}
+              /> */}
+                            <SingleNavigationMenu
                 value={open}
                 onValueChange={setOpen}
                 trigger={
@@ -116,7 +134,8 @@ export function Navbar() {
                     iconSize="xxs"
                     active={open == "open"}
                     iconFill="fill-gray-4 "
-                    iconHoverFill="fill-gray-black   transition-transform  origin-center  rotate-180 duration-0"
+                    // iconHoverFill="fill-gray-4   transition-transform  origin-center  rotate-180 duration-0"
+                    iconHoverFill="fill-gray-white"
                   />
                 }
               >
@@ -150,15 +169,6 @@ export function Navbar() {
                   </div>
                 </>
               </SingleNavigationMenu>
-              {/* <Button
-                text="Platform"
-                variant="header"
-                // onClick={() => window.open(platformURL, "_blank")}
-                onClick={() => {
-                  window.location.href = platformURL + "/login";
-                }}
-                // active={location.pathname == "/"}
-              /> */}
               <Button
                 text="Docs"
                 variant="header"
@@ -212,6 +222,35 @@ export function Navbar() {
               onClick={() => navigate("/changelog")}
               active={location.pathname == "/changelog"}
             /> */}
+              <SingleNavigationMenu
+                value={resourceOpen}
+                onValueChange={setResourceOpen}
+                trigger={
+                  <Button
+                    text="Resources"
+                    variant="header"
+                    // onClick={() => window.open(platformURL, "_blank")}
+                    onClick={() => {
+                      // window.location.href = platformURL + "/login";
+                    }}
+                    iconPosition="right"
+                    icon={Down}
+                    iconSize="xxs"
+                    active={open == "open"}
+                    iconFill="fill-gray-4 "
+                    // iconHoverFill="fill-gray-4   transition-transform  origin-center  rotate-180 duration-0"
+                    iconHoverFill="fill-gray-white"
+                  />
+                }
+              >
+                <>
+                  <div className="flex-col w-[280px] items-start gap-xxxs">
+                    {resourceItems.map((item, index) => (
+                      <NavigationItem key={index} {...item} />
+                    ))}
+                  </div>
+                </>
+              </SingleNavigationMenu>
             </div>
           }
         </div>
