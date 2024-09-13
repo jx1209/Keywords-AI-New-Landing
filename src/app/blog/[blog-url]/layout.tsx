@@ -12,6 +12,12 @@ export async function generateMetadata({
   if (!metadata) {
     return {};
   }
+  const getImageUrl = (image: string | undefined) => {
+    if (!image) return 'https://keywordsai-static.s3.amazonaws.com/social_media_images/social_image.png';
+    return image.startsWith('https://') ? image : `https://keywordsai.co/${image}`;
+  };
+
+  const imageUrl = getImageUrl(metadata.image);
 
   return {
     title: metadata?.title ?? "",
@@ -22,9 +28,7 @@ export async function generateMetadata({
       title: metadata.title ?? "",
       url: `https://keywordsai.co/blog/${filePath}`,
       description: metadata.description ?? "",
-      images:
-        (`https://keywordsai.co/${metadata?.image}` || metadata?.image) ??
-        `https://keywordsai-static.s3.amazonaws.com/social_media_images/social_image.png`,
+      images: imageUrl,
       locale: "en_US",
     },
     twitter: {
