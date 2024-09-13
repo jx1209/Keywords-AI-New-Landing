@@ -35,9 +35,7 @@ export async function generateMetadata({
       title: metadata.title ?? "",
       description: metadata.description ?? "",
       card: "summary_large_image",
-      images:
-        (`https://keywordsai.co/${metadata?.image}` || metadata?.image) ??
-        `https://keywordsai-static.s3.amazonaws.com/social_media_images/social_image.png`,
+      images: imageUrl,
     },
   };
 }
