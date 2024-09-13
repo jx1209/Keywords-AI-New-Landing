@@ -14,7 +14,7 @@ export async function generateMetadata({
   }
   const getImageUrl = (image: string | undefined) => {
     if (!image) return 'https://keywordsai-static.s3.amazonaws.com/social_media_images/social_image.png';
-    return image.startsWith('https://') ? image : `https://keywordsai.co/${image}`;
+    return image.startsWith('https://') ? image : `https://keywordsai.co${image}`;
   };
 
   const imageUrl = getImageUrl(metadata.image);
