@@ -125,4 +125,16 @@
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
+    <url>
+      <loc>https://www.keywordsai.co/blog/o1-preview-vs-claude-3-5-sonnet</loc>
+      <lastmod>2024-09-14</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+       <url>
+      <loc>https://seo.keywordsai.co</loc>
+      <lastmod>2024-09-10</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
 </urlset>

@@ -1919,6 +1919,133 @@ export const blogs: Blog[] = [
         text: "While Datadog offers comprehensive infrastructure monitoring, Keywords AI emerges as a specialized solution for LLM developers. With its user-friendly interface, rapid integration, and focused features like the LLM playground, prompt management, and reliability settings, Keywords AI addresses the unique challenges of LLM development. \n\n As AI continues to evolve, tools like Keywords AI provide the necessary observability and debugging capabilities to help developers create more robust and efficient LLM applications. By choosing a platform tailored to LLM development, teams can streamline their workflows, improve productivity, and ultimately deliver better AI-powered products to their users.",
       },
     ],
+  },
+  {
+    id: 1,
+    timestamp: "September 12, 2024",
+    slug: "/blog/o1-preview-vs-claude-3-5-sonnet",
+    title: "o1-preview vs. claude-3.5-sonnet: Comparing top LLMs",
+    cover: {
+      id: 1,
+      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/o1-preview/cover.png"
+    },
+    type: "MODEL",
+    author: {
+      name: "Hendrix",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/hendrix.png",
+        props: {
+          variant: "circle"
+        }
+      }
+    },
+    paragraphs: [
+      {
+        id: 1,
+        text: "Today (Sep 12, 2024), OpenAI unveiled its latest language model, o1-preview. This advanced model is engineered to dedicate more time to processing before generating responses, enabling it to tackle complex tasks and solve challenging problems in science, coding, and mathematics with enhanced capabilities. \n\n In this blog post, we'll thoroughly analyze o1-preview and compare it to Claude 3.5 Sonnet, which was previously considered one of the most advanced models available.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/o1-preview/openai.jpg",
+          props: {
+            variant: "md",
+          },
+          caption: "From OpenAI",
+          captionURL: "https://openai.com/index/introducing-openai-o1-preview/",
+        },
+      },
+      {
+        id: 2,
+        primary_title: "Comparison Methodology",
+        text: "Our analysis utilizes [Keywords AI's LLM playground](https://www.keywordsai.co), a platform that supports over 200 language models and offers function-calling capabilities. We'll explore the following aspects: \n- Basic comparison \n- Benchmark comparison \n- Processing speed \n- Performance comparison \n- Suggested use cases ",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/o1-preview/playground.jpg",
+          props: {
+            variant: "md",
+          },
+          caption: "LLM playground",
+          captionURL: "https://www.keywordsai.co",
+        },
+      },
+      {
+        id: 3,
+        primary_title: "Basic Comparison",
+        text: "**Note:** o1-preview doesn’t support Streaming, function calling, and system messages.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/o1-preview/basic.jpg",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 3,
+        primary_title: "Benchmark Comparison",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/o1-preview/benchmark.jpg",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 4,
+        text: "O1-preview outperforms Claude 3.5 Sonnet across all benchmarks. The smallest gap is in MMLU (general knowledge). GPQA Diamond, testing graduate-level reasoning, shows a significant performance difference. The MATH benchmark reveals the largest gap, highlighting o1-preview's advanced mathematical capabilities. These results indicate o1-preview's substantial improvements in complex reasoning and problem-solving across various domains.",
+      },
+      {
+        id: 5,
+        primary_title: "Speed Comparison",
+        text: "O1-preview takes longer to think and respond than other LLMs. While direct speed comparisons may not be entirely fair, testing o1-preview's speed is crucial. This information helps developers better understand o1-preview's capabilities and determine if it's suitable for their projects. \n\n Note: As o1-preview doesn't support streaming, we disabled streaming for both models. Consequently, time to first token (TTFT) couldn't be measured.",
+
+      },
+      {
+        id: 5,
+        text: "**Latency** \n\n Our tests, involving hundreds of requests per model, revealed significant differences. Claude 3.5 Sonnet averages 18.3s/request, whereas o1-preview takes 39.4s/request. O1-preview's significantly longer latency is due to its extended thinking and reasoning process.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/o1-preview/latency.jpg",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 6,
+        text: "**Throughput (Tokens per second)** \n\n Despite higher latency, o1-preview shows superior throughput. O1-preview generates 92.94 tokens/second, while Claude 3.5 Sonnet produces 74.87 tokens/second. This indicates that o1-preview's longer generation time is primarily due to its initial processing phase rather than token generation speed.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/o1-preview/speed.jpg",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 7,
+        primary_title: "Performance comparison",
+        text: "We conducted evaluation tests on the [Keywords AI platform](https://keywordsai.co). The evaluation comprised three parts: \n- **Coding Task**: Both models successfully completed frontend and backend development tasks. O1-preview demonstrated superior performance with longer contexts, identifying and resolving bugs more efficiently in the first attempt. It also exhibited a more thorough code analysis capability. \n- **Logical Reasoning**: O1-preview excels in reasoning tasks. Its thinking process closely mimics human cognition. While Claude 3.5 Sonnet performs well on most problems, o1-preview consistently solves complex reasoning challenges, including International Mathematical Olympiad (IMO) level problems. \n- **Writing Task:** Both models perform exceptionally well on writing tasks. They demonstrate the ability to craft genuine, personalized cold emails, as well as concise and meaningful blog posts.",
+      },
+      {
+        id: 8,
+        primary_title: "Suggested Use Cases",
+        text: "**o1-preview** \n- **Best for:** Complex problem-solving in mathematics, coding, and physics. Particularly suited for researchers tackling challenging tasks. \n- **Not suitable for:** AI applications requiring rapid response times or heavily reliant on system prompts. Voice AI applications due to lack of streaming support. \n\n **Claude 3.5 Sonnet** \n- **Best for:** Most AI applications requiring problem-solving capabilities and high-quality content generation. \n- **Not suitable for:** Voice AI applications or projects with strict budget constraints requiring lower operational costs.",
+      },
+      {
+        id: 9,
+        primary_title: "How to integrate o1-preview into your AI apps.",
+        text: "To incorporate o1-preview into your AI applications, simply visit the Keywords AI model page and locate the \"View code\" button. Click this button to copy the provided code snippet, then paste it directly into your codebase. With this straightforward process, you'll be ready to harness the power of o1-preview in your projects, enabling you to tackle complex problems and generate high-quality content with ease.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/o1-preview/model.jpg",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+    ],
   }
   
 ];
