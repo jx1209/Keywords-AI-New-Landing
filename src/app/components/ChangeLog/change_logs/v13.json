@@ -1,0 +1,22 @@
+{
+    "date": "August 29, 2024",
+    "Title": "Caches UI",
+    "snapshot": "https://keywordsai-static.s3.amazonaws.com/landing/changelog/caches.jpg",
+    "introduction": "We've added Caches to our frontend, allowing you to see cache hit counts and the time and cost savings from using the cache. \n\n For more information on Caches, please refer to our [documentation](https://docs.keywordsai.co/features/generation/caches).",
+    "sections": {
+      "New": [
+        {"tag": "Users", "description": "You can now filter by the user in the sidebar and view user-specific data in the dashboard."}
+      ],
+      "Improved": [
+        {"tag": "Threads", "description": "Added an 'Expand all messages' button in the Threads sidebar for easier viewing."},
+        {"tag": "Dashboard", "description": "Updated the dashboard layout to display 4 graphs per row instead of 3."},
+        {"tag": "Logs", "description": "Improved the sidepanel's empty state UI."},
+        {"tag": "Prompts", "description": "Improved the creation & empty state UI"},
+        {"tag": "Playground", "description": "Improved function call UI in the Playground."}
+      ],
+      "Fixed": [
+        {"tag": "Models", "description": "Fixed the bug where the 'View logs' button wasn't working on the Model detail page."}
+      ]
+    }
+  }
+  

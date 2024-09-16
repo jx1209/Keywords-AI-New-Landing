@@ -1,0 +1,18 @@
+{
+    "date": "September 11, 2024",
+    "Title": "BAML integration",
+    "snapshot": "https://keywordsai-static.s3.amazonaws.com/landing/changelog/baml.jpg",
+    "introduction": "We've partnered with Boundary (YC W23)! Now you can build your LLM app using BAML and monitor it with Keywords AI (YC W24). Simply create a Keywords AI client to get started. \n\n BAML is a templating language for writing typed LLM functions, treating prompts as functions. Learn how to integrate: [BAML documentation](https://docs.keywordsai.co/integration/development-frameworks/baml).",
+    "sections": {
+      "New": [
+        {"tag": "Threads", "description": "Added empty state."},
+        {"tag": "Logs", "description": "Added prompt ID column."}
+        
+      ],
+      "Improved": [
+        {"tag": "Datasets", "description": "Improved datasets side panel."}
+
+      ]
+    }
+  }
+  

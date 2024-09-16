@@ -1,0 +1,24 @@
+{
+    "date": "September 7, 2024",
+    "Title": "User intent classification",
+    "snapshot": "https://keywordsai-static.s3.amazonaws.com/landing/changelog/intent_github.jpg",
+    "introduction": "We participated in Mintlify's hackathon this weekend and launched an open-source project for user intent classification. This tool can be used to identify user intents in chatbots or other conversational AI projects. \n\n For more details, please visit our [Github repository](https://github.com/Keywords-AI/keywordsai_eval).",
+    "sections": {
+      "New": [
+        {"tag": "Threads", "description": "Added a 'Logs' column showing the number of logs per thread."},
+        {"tag": "Threads", "description": "Introduced sorting option for threads based on log count."},
+        {"tag": "Logs", "description": "Added refresh and auto-refresh buttons to the Logs page."}
+      ],
+      "Improved": [
+        {"tag": "Settings", "description": "Enhanced notification messages for a better user experience."},
+        {"tag": "Dashboard", "description": "Updated Dashboard refresh and auto-refresh interface."},
+        {"tag": "Logs", "description": "Refined quick filters."},
+        {"tag": "Users", "description": "Improved loading time, it's 2x faster now."}
+
+      ],
+      "Fixed": [
+        {"tag": "Playground", "description": "Resolved an issue where the playground was incorrectly caching identical LLM requests."}
+      ]
+    }
+  }
+  

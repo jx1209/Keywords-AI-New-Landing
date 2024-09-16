@@ -1,9 +1,17 @@
 import { useState } from "react";
-import { LinkedIn, Logo, Twitter, Discord, ProductHunt, DividerLine, Y } from "../Icons";
+import {
+  LinkedIn,
+  Logo,
+  Twitter,
+  Discord,
+  ProductHunt,
+  DividerLine,
+  Y,
+} from "../Icons";
 import { SmallDot } from "../icons-old";
 import "./Footer.css";
 import { IntrimLogo } from "@/app/components/MobileLanding/OtherSVG";
-import { usePathname,useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 export function Footer() {
   const router = useRouter();
   const [isTwitterHovered, setIsTwitterHovered] = useState(false);
@@ -49,7 +57,7 @@ export function Footer() {
                   Backed by
                 </span>
                 <span className="flex items-center gap-xxxs">
-                  <Y size="md"/>
+                  <Y size="md" />
                   <span className="text-center caption gradient-text">
                     Combinator
                   </span>
@@ -114,7 +122,7 @@ export function Footer() {
           <div className="flex flex-col w-[140px] items-start gap-[10px] shrink-0">
             <div className="flex items-center justify-center gap-[10px]">
               <a
-                href="https://keywordsai.co/"
+                href="https://www.keywordsai.co/"
                 // href="#"
                 // target="_blank"
                 rel="noopener noreferrer"
@@ -196,7 +204,7 @@ export function Footer() {
           <div className="flex flex-col w-[140px] items-start gap-[10px] shrink-0">
             <div className="flex items-center justify-center gap-[10px]">
               <a
-                href="https://keywordsai.co/#/privacy-policy"
+                href="https://www.keywordsai.co/#/privacy-policy"
                 rel="noopener noreferrer"
               >
                 <span className="text-gray-4 text-sm-regular hover:text-gray-white">
@@ -217,13 +225,12 @@ export function Footer() {
                 </span>
               </a>
             </div>
-            
           </div>
 
           <div className="flex flex-col w-[140px] items-start gap-[10px] shrink-0">
             <div className="flex items-center justify-center gap-[10px]">
               <a
-                href="https://keywordsai.co/#/pricing"
+                href="https://www.keywordsai.co/pricing"
                 rel="noopener noreferrer"
                 onClick={() => window.scrollTo(0, 0)}
               >
@@ -273,11 +280,7 @@ export function Footer() {
           </div>
           <div className="flex flex-col w-[140px] items-start gap-[10px] shrink-0">
             <div className="flex items-center justify-center gap-[10px]">
-              <a
-                href="/#/changelog"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="/changelog" target="_blank" rel="noopener noreferrer">
                 <span className="text-gray-4 text-sm-regular hover:text-gray-white">
                   Changelog
                 </span>
@@ -319,7 +322,19 @@ export function Footer() {
               </a>
             </div>
           </div>
-          <div className="flex flex-col w-[140px] items-start gap-[10px] shrink-0"></div>
+          <div className="flex flex-col w-[140px] items-start gap-[10px] shrink-0">
+            <div className="flex items-center justify-center gap-[10px]">
+              <a
+                href="https://www.keywordsai.co/blog"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="text-gray-4 text-sm-regular hover:text-gray-white">
+                  Blog
+                </span>
+              </a>
+            </div>
+          </div>
           <div className="flex flex-col w-[140px] items-start gap-[10px] shrink-0">
             <div className="flex items-center justify-center gap-[10px]">
               <a
@@ -427,7 +442,9 @@ export function MobileFooter() {
     <div className="flex flex-row py-xs px-md justify-between items-center self-stretch bg-gray-2">
       <div className="flex flex-row gap-xxs items-center">
         <IntrimLogo />
-        <span className="text-sm-md text-gray-4">The LLM observability platform.</span>
+        <span className="text-sm-md text-gray-4">
+          The LLM observability platform.
+        </span>
       </div>
       <div className="flex items-start flex-row gap-sm">
         <a
