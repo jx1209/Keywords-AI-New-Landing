@@ -143,7 +143,7 @@ export default function Landing() {
               iconSize="sm"
             />
             <Button
-              text="Request a demo"
+              text="Book a demo"
               variant="big-black"
               icon={Right}
               iconSize="sm"

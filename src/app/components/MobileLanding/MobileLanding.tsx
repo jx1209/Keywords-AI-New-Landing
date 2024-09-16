@@ -130,7 +130,7 @@ export function MobileLanding() {
               className="flex flex-col items-center justify-center gap-xxs w-full"
             >
               <Button
-                text="Request a demo"
+                text="Book a demo"
                 variant="r4-primary"
                 // icon={Right}
                 // iconSize="sm"
@@ -308,7 +308,7 @@ export function MobileLanding() {
           className="flex flex-row items-center justify-center gap-sm w-full max-w-[320px]"
         >
           <Button
-            text="Request a demo"
+            text="Book a demo"
             variant="r4-white"
             // icon={Right}
             // iconSize="sm"
