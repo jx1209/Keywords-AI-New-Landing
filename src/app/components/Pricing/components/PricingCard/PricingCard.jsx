@@ -73,7 +73,7 @@ export default function PricingCard({
                 <span className="display-sm "> {price}</span>
                 {plan == "custom" && (
                   <span className="text-sm-regular text-gray-4 py-[3px]">
-                  &nbsp; / month{" "}
+                  {/* &nbsp; / month{" "} */}
                   </span>
                 )}
                 {plan != "custom" && (

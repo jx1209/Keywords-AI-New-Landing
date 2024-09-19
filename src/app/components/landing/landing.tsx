@@ -34,6 +34,8 @@ import {
   ShepherdLogo,
   WonderChatLogo,
   LumonaLogo,
+  GovlyLogo,
+  MomenticLogo,
 } from "@/app/components/landing/TeamsLogo";
 import FeatureSection from "@/app/components/landing/FeatureSection";
 import { AdvantagesSecctions } from "@/app/components/landing/AdvantagesSecctions";
@@ -240,11 +242,32 @@ export default function Landing() {
           itemClass="cursor-pointer w-[154px]"
         > */}
 
-        <div className="flex flex-wrap flex-row w-[935px] max-w-[1200px] justify-center items-start content-start gap-[20px]">
+        <div className="flex flex-wrap flex-row w-[1174px] max-w-[1200px] justify-center items-start content-start gap-[20px]">
           <div
             onClick={() => window.open("https://www.agenthub.dev/", "_blank")}
           >
             <AgentHubLogo />
+          </div>
+          <div
+            onClick={() => window.open("https://www.govly.com/", "_blank")}
+          >
+            <GovlyLogo />
+          </div>
+          <div onClick={() => window.open("https://shepherd.study/", "_blank")}>
+            <ShepherdLogo />
+          </div>
+          <div onClick={() => window.open("https://www.getcrux.ai", "_blank")}>
+            <CruxLogo />
+          </div>
+          <div
+            onClick={() => window.open("https://www.justpaid.io/", "_blank")}
+          >
+            <JustPaidLogo />
+          </div>
+          <div
+            onClick={() => window.open("https://momentic.ai/", "_blank")}
+          >
+            <MomenticLogo />
           </div>
           <div onClick={() => window.open("https://retellai.com/", "_blank")}>
             <div className="p-xxs w-[152px] h-[44px] flex justify-center items-center gap-[10px] ">
@@ -259,17 +282,6 @@ export default function Landing() {
                 />
               </div>
             </div>
-          </div>
-          <div onClick={() => window.open("https://shepherd.study/", "_blank")}>
-            <ShepherdLogo />
-          </div>
-          <div
-            onClick={() => window.open("https://www.justpaid.io/", "_blank")}
-          >
-            <JustPaidLogo />
-          </div>
-          <div onClick={() => window.open("https://www.getcrux.ai", "_blank")}>
-            <CruxLogo />
           </div>
           <div
             onClick={() => window.open("https://www.octolane.com/", "_blank")}
@@ -290,14 +302,14 @@ export default function Landing() {
               </div>
             </div>
           </div>
-          <div onClick={() => window.open("https://www.lawme.ai/", "_blank")}>
-            <LawmeLogo />
+          <div onClick={() => window.open("https://www.lumona.ai/", "_blank")}>
+            <LumonaLogo />
           </div>
           <div onClick={() => window.open("https://wonderchat.io/", "_blank")}>
             <WonderChatLogo />
           </div>
-          <div onClick={() => window.open("https://www.lumona.ai/", "_blank")}>
-            <LumonaLogo />
+          <div onClick={() => window.open("https://www.lawme.ai/", "_blank")}>
+            <LawmeLogo />
           </div>
         </div>
         {/* </Carousel> */}

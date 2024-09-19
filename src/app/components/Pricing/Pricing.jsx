@@ -138,13 +138,12 @@ export function Pricing() {
         "Enterprise"
       ),
       description: "Best for high-growth teams.",
-      price: enterprisePrice,
-      bonus: bonus,
+      price: "Custom",
       featureTitle: "Everything in Team, plus",
       button: (
         <Button
           variant={"r4-black"}
-          text={"Request demo"}
+          text={"Book a demo"}
           className="self-stretch shadow-border shadow-gray-3 rounded-sm bg-gray-2"
           onClick={() =>
             window.open("https://cal.com/keywordsai/demo", "_blank")

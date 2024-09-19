@@ -51,7 +51,7 @@ export function PricingTable() {
     {
       section: "Integrations",
       openai: "OpenAI",
-      anthropic :"Anthropic",
+      anthropic: "Anthropic",
       langchain: "LangChain",
       LlamaIndex: "LlamaIndex",
       vercel: "Vercel",
@@ -171,7 +171,9 @@ export function PricingTable() {
         <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
       ),
       cache: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
+        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
+          <Check fill="fill-gray-4" />
+        </div>
       ),
 
       // manual_cache: (
@@ -380,7 +382,9 @@ export function PricingTable() {
         </div>
       ),
       cache: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
+        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
+          <Check fill="fill-primary" />
+        </div>
       ),
 
       // manual_cache: (
@@ -838,7 +842,7 @@ export function PricingTable() {
             <span className="display-sm text-gray-white">Enterprise</span>
             <Button
               variant="r4-white"
-              text="Request demo"
+              text="Book a demo"
               className="flex-1"
               width="w-full self-stretch"
               onClick={() =>

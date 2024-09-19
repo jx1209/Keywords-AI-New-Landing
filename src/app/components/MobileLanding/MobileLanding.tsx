@@ -29,6 +29,7 @@ import {
   LawmeLogo,
   ShepherdLogo,
   OctolaneLogo,
+  GovlyLogo,
 } from "@/app/components/landing/TeamsLogo";
 import { FeatureSection } from "./FeatureSection";
 import { IntrimLogo, LogoCard } from "./OtherSVG";
@@ -219,6 +220,11 @@ export function MobileLanding() {
             <AgentHubLogo />
           </div>
           <div
+            onClick={() => window.open("https://www.govly.com/", "_blank")}
+          >
+            <GovlyLogo />
+          </div>
+          <div
             onClick={() => window.open("https://www.justpaid.io/", "_blank")}
           >
             <JustPaidLogo />
@@ -230,9 +236,6 @@ export function MobileLanding() {
           </div>
           <div onClick={() => window.open("https://www.getcrux.ai", "_blank")}>
             <CruxLogo />
-          </div>
-          <div onClick={() => window.open("https://shepherd.study/", "_blank")}>
-            <ShepherdLogo />
           </div>
         </div>
         <div className="min-h-[1.2px] shrink-0 [background:linear-gradient(90deg,rgba(255,255,255,0.00)_0%,rgba(0,0,0,0.20)_0%,rgba(143,143,143,0.67)_50%,rgba(0,0,0,0.04)_100%)] w-full max-w-[1200px]" />
