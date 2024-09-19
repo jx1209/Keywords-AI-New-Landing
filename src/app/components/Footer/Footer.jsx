@@ -164,7 +164,7 @@ export function Footer() {
           <div className="flex flex-col w-[140px] items-start gap-[10px] shrink-0">
             <div className="flex items-center justify-center gap-[10px]">
               <a
-                href="https://docs.keywordsai.co/get-started/introduction"
+                href="https://docs.keywordsai.co/get-started/overview"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -268,12 +268,12 @@ export function Footer() {
           <div className="flex flex-col w-[140px] items-start gap-[10px] shrink-0">
             <div className="flex items-center justify-center gap-[10px]">
               <a
-                href="https://docs.keywordsai.co/api-endpoints/proxy-endpoints/chat-completions"
+                href="https://docs.keywordsai.co/get-started/llm-inference"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="text-gray-4 text-sm-regular hover:text-gray-white">
-                  API
+                  LLM proxy
                 </span>
               </a>
             </div>
