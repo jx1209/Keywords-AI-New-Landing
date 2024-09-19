@@ -123,20 +123,7 @@ export function Pricing() {
       rank: 3,
     },
     {
-      title: isYearly ? (
-        <div className="flex items-center gap-xxs">
-          Enterprise
-          <Tag
-            text="-20%"
-            textColor="text-success"
-            border=""
-            borderRadious="rounded-sm"
-            backgroundColor="bg-success/10"
-          />
-        </div>
-      ) : (
-        "Enterprise"
-      ),
+      title: "Enterprise",
       description: "Best for high-growth teams.",
       price: "Custom",
       featureTitle: "Everything in Team, plus",
