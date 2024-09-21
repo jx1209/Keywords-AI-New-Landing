@@ -2152,7 +2152,7 @@ export const blogs: Blog[] = [
         text: "Using Keywords AI's usage dashboard and logs page, I can: \n- Track the actual usage of my product \n- Monitor LLM performance \n- Debug any problematic LLM outputs",
         image: {
           id: 1,
-          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/o1-preview/logs.png",
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/seo-description/logs.png",
           props: {
             variant: "md",
           },
