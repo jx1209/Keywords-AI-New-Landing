@@ -2046,6 +2046,123 @@ export const blogs: Blog[] = [
         },
       },
     ],
+  },
+  {
+    id: 1,
+    timestamp: "September 20, 2024",
+    slug: "/blog/how-i-built-a-free-ai-seo-tool-in-just-2-hours",
+    title: "How I built a free AI SEO tool in just 2 hours",
+    cover: {
+      id: 1,
+      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/seo-description/traffic.png"
+    },
+    type: "GUIDE",
+    author: {
+      name: "Hendrix",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/hendrix.png",
+        props: {
+          variant: "circle"
+        }
+      }
+    },
+    paragraphs: [
+      {
+        id: 1,
+        text: "Check out my AI SEO description generator here: https://seo.keywordsai.co/ \n\n SEO is crucial for startups, focusing on two key strategies: increasing website traffic and adding backlinks. To boost traffic, I developed a free AI SEO description generator in just 2 hours. This tool streamlines the process of creating clear, concise descriptions for blog posts, making them more searchable on Google and other engines. Users can paste content or upload files to generate SEO-friendly descriptions using LLM technology. \n\n This blog post will detail the tools used to build this AI app and how I monitor its performance.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/seo-description/traffic.png",
+          props: {
+            variant: "md",
+          },
+          caption: "Traffic after released the SEO description generator",
+          captionURL: "https://seo.keywordsai.co",
+        },
+      },
+      {
+        id: 2,
+        primary_title: "Website Layout (0.5h)",
+        text: "I leveraged AI to help design the entire website layout. By simply communicating my requirements to Claude-3.5-Sonnet, I received detailed and polished front-end code. \n\n For this project, my specific requirements were: \n- Utilize the App Router from Next.js \n- Include a text area for users to paste their blog content \n- Implement a drag-and-drop zone for file uploads \n- Provide options for users to select their preferred LLM \n- Include \"Generate,\" \"Reset,\" and \"Copy\" buttons \n\n By clearly defining these requirements, the AI was able to quickly generate a functional and user-friendly layout, significantly reducing development time",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/seo-description/cover.png",
+          props: {
+            variant: "md",
+          },
+          caption: "AI SEO description generator",
+          captionURL: "https://seo.keywordsai.co",
+        },
+      },
+      {
+        id: 3,
+        primary_title: "Integrate LLMs into my codebase (1h)",
+        text: "Choosing the right LLM from the thousands available can be challenging. After comparing over 50 LLMs, I selected GPT-4o-mini as the primary, free LLM for all users. However, I also wanted to offer Claude-3.5-Sonnet and GPT-4o as premium options. To efficiently integrate multiple LLMs, I needed an AI gateway that could call different models using the same format. \n\n The solution: Keywords AI's LLM proxy, which supports 200+ LLMs using a unified format and offers additional functionalities. I utilized its OpenAI SDK framework to call these three models. When a user selects their preferred model in the front end, the corresponding model ID is passed to the Keywords AI API.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/seo-description/api.png",
+          props: {
+            variant: "md",
+          },
+          caption: "Keywords AI LLM proxy",
+          captionURL: "https://docs.keywordsai.co/integration/development-frameworks/openai-sdk",
+        },
+      },
+      {
+        id: 3,
+        text: "A key advantage of using Keywords AI is the ability to create and manage prompts on their platform. This feature allows me to test and iterate prompts without modifying any code. I can easily connect my application to the desired prompt by simply passing a prompt ID to the API, streamlining the development process.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/seo-description/prompt.png",
+          props: {
+            variant: "md",
+          },
+          caption: "Prompt management",
+          captionURL: "https://docs.keywordsai.co/features/prompt/prompt-management",
+        },
+      },
+      {
+        id: 4,
+        text: "As Claude-3.5-Sonnet and GPT-4o are more expensive than GPT-4o-mini, I couldn't offer them for free. Instead, I implemented a system allowing users to use their own OpenAI/Anthropic API keys for these premium models. Keywords AI supports this feature through a `customer_credential` parameter, which routes LLM requests through the user's API key. \n\n To accommodate this, I added a text field in the front end where users can input their API keys to access GPT-4o and Claude-3.5-Sonnet. This approach allows me to offer premium options without incurring additional costs.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/seo-description/credential.png",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 5,
+        primary_title: "Deploy the app and monitor it",
+        text: "I deployed my app to Vercel and redirected the domain to [seo.keywordsai.co](http://seo.keywordsai.co/). The entire deployment process was remarkably smooth, demonstrating that anyone can launch an app publicly in under 10 minutes.\n\n After announcing the app on various social media channels, it attracted some initial users. As my goal is to make this tool beneficial for content creators, iterating and improving it has become a daily task. To ensure a positive user experience and guide future developments, monitoring the app's performance is crucial.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/seo-description/dashboard.png",
+          props: {
+            variant: "md",
+          },
+          caption: "LLM usage dashboard",
+          captionURL: "https://www.keywordsai.co",
+        },
+      },
+      {
+        id: 5,
+        text: "Using Keywords AI's usage dashboard and logs page, I can: \n- Track the actual usage of my product \n- Monitor LLM performance \n- Debug any problematic LLM outputs",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/o1-preview/logs.png",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 6,
+        text: "This data-driven approach allows me to: \n- Understand how users are interacting with the tool \n- Identify areas for improvement \n- Ensure the tool remains helpful and efficient \n\n By continuously monitoring and refining the app based on real user data, I can make informed decisions to enhance its functionality and user experience. \n\n Best of all, this product is open-source! You're welcome to self-host it on your own computer. Check out the repository here: [SEO description generator.](https://github.com/Keywords-AI/seo-description-generator)",
+      },
+    ],
   }
   
 ];
