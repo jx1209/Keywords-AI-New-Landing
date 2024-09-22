@@ -266,8 +266,8 @@ export default async function BlogDetail({
                   target="_blank"
                   rel="noopener noreferrer"
                   className={cn(
-                    "caption text-gray-4 items-start max-w-[800px] w-full self-stretch",
-                    paragraph.image.props?.variant === "sm" ? "" : "px-[200px]"
+                    "caption text-gray-4 items-start max-w-[800px] w-full self-stretch ",
+                    paragraph.image.props?.variant === "sm" ? "" : "px-[200px] sm:px-[0px]"
                   )}
                   style={{ textDecoration: "underline" }}
                 >
@@ -285,7 +285,7 @@ export default async function BlogDetail({
           </div> 
         </article> */}
         <div className="h-[1px] bg-gray-2 w-full max-w-[800px]"></div>
-        <div className="flex flex-col w-[800px] items-start gap-sm">
+        <div className="flex flex-col w-[800px] items-start gap-sm sm:max-w-[400px]">
           <span className="display-xs-md text-gray-white ">
             About Keywords AI
           </span>
@@ -294,7 +294,7 @@ export default async function BlogDetail({
           </span>
         </div>
         <div className="h-[1px] bg-gray-2 w-full max-w-[800px]"></div>
-        <div className="flex flex-col items-start gap-lg w-[800px]">
+        <div className="flex flex-col items-start gap-lg w-[800px] sm:max-w-[400px]">
           <span className="display-xs-md text-gray-white">Latest blogs</span>
           {latestBlogs.map((blog) => (
             <Smallcard key={blog.id} blog={blog}></Smallcard>
