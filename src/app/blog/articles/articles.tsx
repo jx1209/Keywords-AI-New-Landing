@@ -2077,7 +2077,7 @@ export const blogs: Blog[] = [
           props: {
             variant: "md",
           },
-          caption: "Traffic after released the SEO description generator",
+          caption: "Traffic after releasing the SEO description generator",
           captionURL: "https://seo.keywordsai.co",
         },
       },
