@@ -47,16 +47,16 @@ const getImageClass = (size: string) => {
   }
 };
 
-function getContent(filePath: string) {
-  try {
-    const source = fs.readFileSync(filePath, "utf8");
-    console.log("Sourcegwrgwrgrwegrwg:", source);
-    return getCompiledServerMdx({ source });
-  } catch (error) {
-    console.error("Error!Error.", error);
-    return null;
-  }
-}
+// function getContent(filePath: string) {
+//   try {
+//     const source = fs.readFileSync(filePath, "utf8");
+//     console.log("Sourcegwrgwrgrwegrwg:", source);
+//     return getCompiledServerMdx({ source });
+//   } catch (error) {
+//     console.error("Error!Error.", error);
+//     return null;
+//   }
+// }
 
 export default async function BlogDetail({
   params,
