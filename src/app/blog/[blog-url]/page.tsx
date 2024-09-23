@@ -3,7 +3,6 @@ import { blogs } from "../articles/articles";
 import { Blog } from "../articles/articles"; // Import the Blog type
 import { Largecard } from "../components/Largecard";
 import fs from "fs";
-import { getCompiledServerMdx } from "@mintlify/mdx";
 import "@mintlify/mdx/dist/styles.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";

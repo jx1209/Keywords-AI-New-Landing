@@ -1,0 +1,19 @@
+{
+    "date": "September 18, 2024",
+    "Title": "Customize Retries on Keywords AI",
+    "snapshot": "https://keywordsai-static.s3.amazonaws.com/landing/changelog/retries.png",
+    "introduction": "Retries feature: When an LLM call fails, our system detects the error and retries the request to prevent failover. \n\n Customize your Retries settings! \n- Set number of retries \n- Define initial retry time in seconds",
+    "sections": {
+      "New": [
+        {"tag": "Playground", "description": "You can now disable streaming in the Playground."},
+        {"tag": "Settings", "description": "Added a new Warning page, you can now customize warnings when any anomalies are detected."},
+        {"tag": "Settings", "description": "You can now use Keywords AI's credential as fallback if your own credentials don't work."}
+        
+      ],
+      "Improved": [
+        {"tag": "Dashboard", "description": "You can now view Top models by TTFT (Time to First Token) in the Dashboard."},
+        {"tag": "Models", "description": "Deprecated gpt-3.5-turbo-0613 and gpt-3.5-turbo-16k-0613"}
+      ]
+    }
+  }
+  

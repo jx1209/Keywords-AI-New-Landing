@@ -1,8 +1,8 @@
 {
-    "date": "September 12, 2024",
-    "Title": "OpenAI o1 family now available on Keywords AI",
-    "snapshot": "https://keywordsai-static.s3.amazonaws.com/landing/changelog/openai.jpg",
-    "introduction": "O1 family is designed to spend more time thinking before they respond. They can reason through complex tasks and solve harder problems than previous models in science, coding, and math.",
+    "date": "September 16, 2024",
+    "Title": "Manage your usage limit and rate limits.",
+    "snapshot": "https://keywordsai-static.s3.amazonaws.com/landing/changelog/limit.png",
+    "introduction": "We've added a new Limits page where you can view your current usage and rate limits. \n\n You can also customized your usage limits for every deployment. \n- Set monthly budget for every deployment \n- Set email alerts when you reach your budget",
     "sections": {
     }
   }
