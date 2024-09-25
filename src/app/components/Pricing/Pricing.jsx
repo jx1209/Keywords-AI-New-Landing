@@ -118,7 +118,6 @@ export function Pricing() {
         // "Advanced model fallback",
         // `Mistral, Anthropic, and ${remaining} more models`,
         // "CTO priority support",
-        
       ],
       plan: "flex_32k",
       rank: 3,
