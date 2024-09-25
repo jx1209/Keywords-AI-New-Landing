@@ -109,7 +109,7 @@ export function Pricing() {
 
       features: [
         // "$100 free LLM credits",
-        "1M logs free",
+        "1M logs free, then $0.1/1k logs",
         "5 seats",
         "Custom evaluations",
         "Founders 24/7 support",
