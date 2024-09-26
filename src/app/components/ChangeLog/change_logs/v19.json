@@ -2,7 +2,7 @@
     "date": "September 26, 2024",
     "Title": "Introducing Lab & Testsets: Efficient LLM evaluation tools",
     "snapshot": "https://keywordsai-static.s3.amazonaws.com/landing/changelog/lab.gif",
-    "introduction": "We've launched Lab & Testsets! 🔬 \n\n 📡 Lab: A spreadsheet-style editor for running prompts and models across multiple test cases. Import testsets for batch inferences to optimize your LLM outputs.\n\n 📊  Testsets: Easily manage and organize test cases. Import a CSV file and edit it like a Google Sheet.",
+    "introduction": "We've launched Lab & Testsets! 🔬 \n\n 📡 Lab: A spreadsheet-style editor for running prompts and models across multiple test cases. Import testsets to easily test, evaluate and optimize your LLM outputs.\n\n 📊  Testsets: Easily manage and organize test cases. Import a CSV file and edit it like a Google Sheet.",
     "sections": {
     }
   }
