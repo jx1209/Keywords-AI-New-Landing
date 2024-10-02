@@ -2163,6 +2163,100 @@ export const blogs: Blog[] = [
         text: "This data-driven approach allows me to: \n- Understand how users are interacting with the tool \n- Identify areas for improvement \n- Ensure the tool remains helpful and efficient \n\n By continuously monitoring and refining the app based on real user data, I can make informed decisions to enhance its functionality and user experience. \n\n Best of all, this product is open-source! You're welcome to self-host it on your own computer. Check out the repository here: [SEO description generator.](https://github.com/Keywords-AI/seo-description-generator)",
       },
     ],
+  },
+  {
+    id: 1,
+    timestamp: "October 2, 2024",
+    slug: "/blog/keywords-ai-september-updates",
+    title: "Keywords AI Update: September 2024",
+    cover: {
+      id: 1,
+      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/september-updates/cover.jpg"
+    },
+    type: "UPDATE",
+    author: {
+      name: "Hendrix",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/hendrix.png",
+        props: {
+          variant: "circle"
+        }
+      }
+    },
+    paragraphs: [
+      {
+        id: 1,
+        text: "We regularly share feature releases on [LinkedIn](https://www.linkedin.com/company/keywordsai) and our [Changelog page](https://www.keywordsai.co/changelog). However, we recognize the value in consolidating these updates in one comprehensive space, along with exclusive insights and resources for our audience.",
+      },
+      {
+        id: 2,
+        primary_title: "Major Updates ✨",
+        text: "**Introducing Lab** \n\n 📡 Lab: A spreadsheet-style editor for running prompts and models across multiple test cases. Import testsets to easily test, evaluate, and optimize your LLM outputs. <span classname='text-md-regular' style='color: #6483F0;'>[Read our guide >](https://docs.keywordsai.co/features/prompt/lab)</span>",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/changelog/lab.gif",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 3,
+        text: "**Manage test cases in Testsets** \n\n 📊 Testsets: Easily manage and organize test cases. Import a CSV file and edit it like a Google Sheet. [Read our guide >](https://docs.keywordsai.co/features/prompt/testsets)",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/september-updates/testsets.png",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 3,
+        text: "**Customize LLM retries** \n\n When an LLM call fails, our system detects the error and retries the request to prevent failover. \n\n You can: \n-  Set the number of retries \n- Define initial retry time in seconds \n\n [Read our guide >](https://platform.keywordsai.co/platform/api/retries)",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/september-updates/retries.png",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 4,
+        primary_title: "News 📰",
+        text: "**Keywords AI @ GitHub HQ!** \n\n Andy demoed Keywords AI at the Awesome AI DevTools event at GitHub HQ, invited by Yujian Tang. Over 300 developers attended, giving us great feedback and new connections. [Watch our demo here >](https://www.youtube.com/watch?v=i9pbGEazWzw)",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/september-updates/github.png",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 5,
+        text: "**Keywords AI demo @ Product Hunt** \n\n We recently had the opportunity to demo Keywords AI at Product Hunt, alongside over 10 other leading AI observability and evaluation tools. It was a great chance to showcase how we stand out in this fast-evolving space. [Watch our demo here >](https://www.youtube.com/watch?v=AP-RYDoMkDc)",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/september-updates/producthunt.png",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 5,
+        primary_title: "Some interesting updates 👀",
+        text: "✅ [BAML integration.](https://docs.keywordsai.co/integration/development-frameworks/baml) Build LLM apps using BAML and monitor them with Keywords AI. \n\n ✅ [Mem0 integration.](https://docs.keywordsai.co/integration/development-frameworks/mem0) Give your AI apps memory. \n\n  ✅ [OpenAI O1 models.](https://x.com/HendrixLiu29208/status/1834625528164491690) Test OpenAI's latest models in our LLM playground. \n\n ✅ [Cost management](https://platform.keywordsai.co/platform/api/limits). Added Limits page where you can edit usage and rate limits. \n\n ✅ [Warning page.](https://platform.keywordsai.co/platform/api/warnings) Customize warnings when any anomalies are detected.   \n\n ✅ [AI SEO description generator.](https://seo.keywordsai.co) Rank higher on Google with AI-powered, SEO-friendly descriptions.",
+      },
+      {
+        id: 6,
+        primary_title: "New blogs 📖",
+        text: "🔔 [Beyond Datadog: Why LLM developers are switching to Keywords AI](https://www.keywordsai.co/blog/keywords-ai-vs-datadog) \n\n  🥇 [o1-preview vs. claude-3.5-sonnet: Comparing top LLMs](https://www.keywordsai.co/blog/o1-preview-vs-claude-3-5-sonnet) \n\n  🧑‍💻 [How I Built a Free AI SEO Tool in Just 2 Hours](https://www.keywordsai.co/blog/how-i-built-a-free-ai-seo-tool-in-just-2-hours)",
+      },
+    ],
   }
   
 ];
