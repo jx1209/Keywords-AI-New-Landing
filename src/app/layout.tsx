@@ -71,6 +71,12 @@ export default function RootLayout({
         integrity="sha384-XPT8q+NKjJxHQpRdXyP/4m1Y5PU0xM19Plbth0o6ngMt6qZutj+gifGISAv1hORr"
         crossOrigin="anonymous"
       />
+      <Script id="vector-script" strategy="afterInteractive">
+        {`
+          !function(e,r){try{if(e.vector)return void console.log("Vector snippet included more than once.");var t={};t.q=t.q||[];for(var o=["load","identify","on"],n=function(e){return function(){var r=Array.prototype.slice.call(arguments);t.q.push([e,r])}},c=0;c<o.length;c++){var a=o[c];t[a]=n(a)}if(e.vector=t,!t.loaded){var i=r.createElement("script");i.type="text/javascript",i.async=!0,i.src="https://cdn.vector.co/pixel.js";var l=r.getElementsByTagName("script")[0];l.parentNode.insertBefore(i,l),t.loaded=!0}}catch(e){console.error("Error loading Vector:",e)}}(window,document);
+          vector.load("0f0ddc2f-310c-4e72-8c15-ee5b54dc5aca");
+        `}
+      </Script>
       <Head>
         <link rel="icon" href="/logo.svg" type="image/svg" sizes="26x26" />
         <Head>
@@ -85,12 +91,6 @@ export default function RootLayout({
             <NavigationLayout>{children}</NavigationLayout>
           </div>
         </body>
-        <Script id="vector-script" strategy="afterInteractive">
-          {`
-              !function(e,r){try{if(e.vector)return void console.log("Vector snippet included more than once.");var t={};t.q=t.q||[];for(var o=["load","identify","on"],n=function(e){return function(){var r=Array.prototype.slice.call(arguments);t.q.push([e,r])}},c=0;c<o.length;c++){var a=o[c];t[a]=n(a)}if(e.vector=t,!t.loaded){var i=r.createElement("script");i.type="text/javascript",i.async=!0,i.src="https://cdn.vector.co/pixel.js";var l=r.getElementsByTagName("script")[0];l.parentNode.insertBefore(i,l),t.loaded=!0}}catch(e){console.error("Error loading Vector:",e)}}(window,document);
-              vector.load("0f0ddc2f-310c-4e72-8c15-ee5b54dc5aca");
-            `}
-        </Script>
       </PHProvider>
     </html>
   );
