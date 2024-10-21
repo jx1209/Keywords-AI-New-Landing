@@ -18,10 +18,14 @@ import log16 from './v16.json'
 import log17 from './v17.json'
 import log18 from './v18.json'
 import log19 from './v19.json'
+import log20 from './v20.json'
+import log21 from './v21.json'
+import log22 from './v22.json'
+import log23 from './v23.json'
 
 // Import all your log files here
 
-const logs = [log19,log18, log17,log16, log15, log14, log13, log12, log11, log10, log9, log8, log7, log6, log5, log4, log3, log2, log1
+const logs = [log23, log22,log21, log20, log19,log18, log17,log16, log15, log14, log13, log12, log11, log10, log9, log8, log7, log6, log5, log4, log3, log2, log1
 ] // Add all imported logs to this array
 
 export default logs

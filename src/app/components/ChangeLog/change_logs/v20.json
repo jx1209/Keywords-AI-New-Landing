@@ -1,0 +1,18 @@
+{
+  "date": "September 30, 2024",
+  "Title": "Prompts 2.0",
+  "snapshot": "https://keywordsai-static.s3.amazonaws.com/landing/changelog/prompts.gif",
+  "introduction": "We've improved our Prompts page, creating a smoother process for deploying optimized prompts to production.",
+  "sections": {
+    "Fixed": [
+      {
+        "tag": "Playground",
+        "description": "Fixed the issue where Playground variants was not working."
+      },
+      {
+        "tag": "Settings",
+        "description": "Corrected the issue where the Billing page did not display the correct unpaid bill."
+      }
+    ]
+  }
+}

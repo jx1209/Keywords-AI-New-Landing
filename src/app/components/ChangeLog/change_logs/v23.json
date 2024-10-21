@@ -1,0 +1,15 @@
+{
+  "date": "October 15, 2024",
+  "Title": "🎈 LLM Caching with Images",
+  "snapshot": "https://keywordsai-static.s3.amazonaws.com/landing/changelog/caches_image.gif",
+"introduction": "You can now cache your LLM requests with images on Keywords AI. \n\n Processing images with LLMs is more expensive than text processing. To help manage costs: \n\n Enable caching and include the image link in your API payload to cache the entire LLM request with an image.",
+
+  "sections": {
+    "Improved": [
+      {
+        "tag": "Playground",
+        "description": "Set default parameter values correctly for different LLMs."
+      }
+    ]
+  }
+}

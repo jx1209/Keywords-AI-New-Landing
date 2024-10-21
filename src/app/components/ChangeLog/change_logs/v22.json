@@ -1,0 +1,31 @@
+{
+  "date": "October 12, 2024",
+  "Title": "⚖️ Evaluations 2.0",
+  "snapshot": "https://keywordsai-static.s3.amazonaws.com/landing/changelog/evaluations.jpg",
+"introduction": "We're thrilled to introduce LLM-as-a-judge Evaluation, now integrated with Relari and ragas. Evaluate performance across various metrics, including Hallucination, Answer relevancy, Customized evaluations, and more. \n\n You can create evaluators to apply RAG-specific evaluations on data collected in Keywords AI. \n\n Check out the docs here: [Evaluations 2.0](https://docs.keywordsai.co/features/evaluation/llm-as-a-judge).",
+
+  "sections": {
+    "New": [
+      {
+        "tag": "Settings",
+        "description": "Free plan users can now add up to 2 members in their organization."
+      },
+      {
+        "tag": "Logs",
+        "description": "You can now create an empty dataset directly from the Logs page."
+      }
+    ],
+    "Improved": [
+      {
+        "tag": "Prompts",
+        "description": "The process of adding tools on the Prompts page is now more streamlined."
+      }
+    ],
+    "Fixed": [
+      {
+        "tag": "Playground",
+        "description": "Fixed an issue where parameters weren't saved from the original log entry."
+      }
+    ]
+  }
+}

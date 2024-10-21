@@ -1,0 +1,41 @@
+{
+  "date": "October 9, 2024",
+  "Title": "👩‍👩‍👦‍👦 New Organization Feature Update",
+  "snapshot": "https://keywordsai-static.s3.amazonaws.com/landing/changelog/team.gif",
+  "introduction": "- Create teams for your projects under one organization for easy switching. \n - Invite teammates to specific teams for better access control.",
+
+  "sections": {
+    "Improved": [
+      {
+        "tag": "Playground",
+        "description": "You can now save messages in the Playground."
+      },
+      {
+        "tag": "Playground",
+        "description": "You can import prompts from Prompts page into the Playground."
+      },
+      {
+        "tag": "Prompts",
+        "description": "You can now select code in the 'View Code' window."
+      },
+      {
+        "tag": "Prompts",
+        "description": "Added tooltips for a better user experience."
+      }
+    ],
+    "Fixed": [
+      {
+        "tag": "Playground",
+        "description": "Fixed an issue where 'tool_choice' did not appear in 'View Code'."
+      },
+      {
+        "tag": "Playground",
+        "description": "Fixed an issue where Reset button didn't work in the Playground."
+      },
+      {
+        "tag": "Lab",
+        "description": "Fixed an issue LLM requests couldn't be run in the lab."
+      }
+    ]
+  }
+}
