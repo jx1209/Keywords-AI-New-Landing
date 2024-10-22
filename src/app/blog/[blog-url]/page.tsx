@@ -61,14 +61,14 @@ const getImageClass = (size: string) => {
 export default async function BlogDetail({
   params,
 }: {
-  params: {
+  params: Promise<{
     "blog-url": string;
-  };
+  }>;
 }) {
   console.log("Current working directory:", process.cwd());
-  const blog = blogs.find(
-    (blog) => blog.slug === "/blog/" + params["blog-url"]
-  );
+  const resolvedParams = await params;
+  const blogUrl = resolvedParams["blog-url"];
+  const blog = blogs.find((blog) => blog.slug === "/blog/" + blogUrl);
   console.log("Blog:", blog);
   // const { slug } = useParams(); // Get the slug parameter from the URL
   // const router = useRouter();
@@ -77,7 +77,7 @@ export default async function BlogDetail({
   // const slug = params?.slug as string
 
   // const contentResult = await getContent(blogFolder);
-  const metadata = await getMetadata(params["blog-url"]);
+  const metadata = await getMetadata(blogUrl);
 
   if (!blog) {
     return <div>Blog not found</div>;
@@ -94,7 +94,7 @@ export default async function BlogDetail({
 
     return latestBlogs;
   };
-  const latestBlogs = getLatestBlogs(params["blog-url"]);
+  const latestBlogs = getLatestBlogs(blogUrl);
 
   return (
     <React.Fragment>

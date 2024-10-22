@@ -87,15 +87,15 @@ export const Y = ({size = "lg"}) => {
       case "md":
         return (
           <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_22073_20161)">
+          <g clipPath="url(#clip0_22073_20161)">
           <path d="M12.4 0.6875H3.6C1.61177 0.6875 0 2.29927 0 4.2875V13.0875C0 15.0757 1.61177 16.6875 3.6 16.6875H12.4C14.3882 16.6875 16 15.0757 16 13.0875V4.2875C16 2.29927 14.3882 0.6875 12.4 0.6875Z" fill="#2E2E33"/>
-          <path d="M12.4007 1.02051H3.60065C1.79652 1.02051 0.333984 2.48304 0.333984 4.28717V13.0872C0.333984 14.8913 1.79652 16.3538 3.60065 16.3538H12.4007C14.2048 16.3538 15.6673 14.8913 15.6673 13.0872V4.28717C15.6673 2.48304 14.2048 1.02051 12.4007 1.02051Z" stroke="url(#paint0_linear_22073_20161)" stroke-width="0.666667"/>
+          <path d="M12.4007 1.02051H3.60065C1.79652 1.02051 0.333984 2.48304 0.333984 4.28717V13.0872C0.333984 14.8913 1.79652 16.3538 3.60065 16.3538H12.4007C14.2048 16.3538 15.6673 14.8913 15.6673 13.0872V4.28717C15.6673 2.48304 14.2048 1.02051 12.4007 1.02051Z" stroke="url(#paint0_linear_22073_20161)" strokeWidth="0.666667"/>
           <path d="M5.02734 5.56641H6.19069L7.96386 8.65209H8.0368L9.81 5.56641H10.9733L8.5108 9.68949V12.3543H7.48993V9.68949L5.02734 5.56641Z" fill="#F9FAFD"/>
           </g>
           <defs>
           <linearGradient id="paint0_linear_22073_20161" x1="8.00065" y1="1.02051" x2="16.3116" y2="1.37807" gradientUnits="userSpaceOnUse">
-          <stop stop-color="white"/>
-          <stop offset="1" stop-color="#D1CAE4"/>
+          <stop stopColor="white"/>
+          <stop offset="1" stopColor="#D1CAE4"/>
           </linearGradient>
           <clipPath id="clip0_22073_20161">
           <rect width="16" height="16" fill="white" transform="translate(0 0.6875)"/>

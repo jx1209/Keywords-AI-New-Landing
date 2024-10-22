@@ -5,9 +5,10 @@ import type { Metadata } from "next";
 export async function generateMetadata({
   params,
 }: {
-  params: { "blog-url": string };
+  params: Promise<{ "blog-url": string }>;
 }): Promise<Metadata> {
-  const filePath = params["blog-url"];
+  const resolvedParams = await params;
+  const filePath = resolvedParams["blog-url"];
   const metadata = await getMetadata(filePath);
   if (!metadata) {
     return {};

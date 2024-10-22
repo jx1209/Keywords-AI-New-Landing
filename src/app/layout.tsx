@@ -14,9 +14,7 @@ import Head from "next/head";
 
 import Script from "next/script";
 
-const PostHogPageView = dynamic(() => import("./PostHogPageView"), {
-  ssr: false,
-});
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -83,15 +81,12 @@ export default function RootLayout({
           <link rel="icon" href="/icon.svg" type="image/svg" sizes="26x26" />
         </Head>
       </Head>
-      <PHProvider>
         <body>
           {/* <body> */}
-          <PostHogPageView />
           <div className="bg-gray-black h-full w-full">
             <NavigationLayout>{children}</NavigationLayout>
           </div>
         </body>
-      </PHProvider>
     </html>
   );
 }
