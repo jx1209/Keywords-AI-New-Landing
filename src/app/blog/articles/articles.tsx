@@ -2262,7 +2262,7 @@ export const blogs: Blog[] = [
     title: "5 Best Practices for LLM Application Monitoring",
     cover: {
       id: 1,
-      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/september-updates/cover.jpg"
+      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/5-best-practices/cover.png"
     },
     type: "GUIDE",
     author: {
