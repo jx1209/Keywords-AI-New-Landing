@@ -36,6 +36,9 @@ import {
   LumonaLogo,
   GovlyLogo,
   MomenticLogo,
+  FirstQuadrantLogo,
+  WaddleLogo,
+  RevisionDojoLogo,
 } from "@/app/components/landing/TeamsLogo";
 import FeatureSection from "@/app/components/landing/FeatureSection";
 import { AdvantagesSecctions } from "@/app/components/landing/AdvantagesSecctions";
@@ -227,49 +230,18 @@ export default function Landing() {
         <div className="flex-col items-center gap-sm self-stretch text-center caption-cap gradient-text">
           POWERING THE WORLD’S BEST AI STARTUPS
         </div>
-        {/* <Carousel
-          swipeable={true}
-          draggable={true}
-          responsive={responsive}
-          infinite={true}
-          autoPlay
-          autoPlaySpeed={3000}
-          customTransition="transform 1000ms ease-in-out"
-          transitionDuration={1000}
-          containerClass="max-w-[1200px] w-full"
-          removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
-          deviceType={deviceType}
-          itemClass="cursor-pointer w-[154px]"
-        > */}
 
         <div className="flex flex-wrap flex-row w-[1174px] max-w-[1200px] justify-center items-start content-start gap-[20px]">
           <div
-            onClick={() => window.open("https://www.agenthub.dev/", "_blank")}
+            onClick={() => window.open("https://www.gumloop.com/", "_blank")}
+            className="cursor-pointer"
           >
             <AgentHubLogo />
           </div>
           <div
-            onClick={() => window.open("https://www.govly.com/", "_blank")}
+            onClick={() => window.open("https://retellai.com/", "_blank")}
+            className="cursor-pointer"
           >
-            <GovlyLogo />
-          </div>
-          <div onClick={() => window.open("https://shepherd.study/", "_blank")}>
-            <ShepherdLogo />
-          </div>
-          <div onClick={() => window.open("https://www.getcrux.ai", "_blank")}>
-            <CruxLogo />
-          </div>
-          <div
-            onClick={() => window.open("https://www.justpaid.io/", "_blank")}
-          >
-            <JustPaidLogo />
-          </div>
-          <div
-            onClick={() => window.open("https://momentic.ai/", "_blank")}
-          >
-            <MomenticLogo />
-          </div>
-          <div onClick={() => window.open("https://retellai.com/", "_blank")}>
             <div className="p-xxs w-[152px] h-[44px] flex justify-center items-center gap-[10px] ">
               <div className="w-full max-w-[1200px]">
                 <Image
@@ -284,11 +256,50 @@ export default function Landing() {
             </div>
           </div>
           <div
-            onClick={() => window.open("https://www.octolane.com/", "_blank")}
+            onClick={() => window.open("https://www.govly.com/", "_blank")}
+            className="cursor-pointer"
           >
-            <OctolaneLogo />
+            <GovlyLogo />
           </div>
-          <div onClick={() => window.open("https://i.inc/", "_blank")}>
+          <div
+            onClick={() => window.open("https://www.tryandai.com/", "_blank")}
+            className="cursor-pointer"
+          >
+            <div className="p-xxs w-[152px] h-[44px] flex justify-center items-center gap-[10px] ">
+              <div className="w-full max-w-[1200px]">
+                <Image
+                  src="/images/AndAI.png"
+                  alt="Retell"
+                  width={1200}
+                  height={675} // Adjust this based on the actual aspect ratio of your image
+                  style={{ width: "100%", height: "auto" }}
+                  className=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            onClick={() => window.open("https://www.justpaid.io/", "_blank")}
+            className="cursor-pointer"
+          >
+            <JustPaidLogo />
+          </div>
+          <div
+            onClick={() => window.open("https://www.gentooai.com/", "_blank")}
+            className="cursor-pointer"
+          >
+            <WaddleLogo />
+          </div>
+          <div
+            onClick={() => window.open("https://firstquadrant.ai/", "_blank")}
+            className="cursor-pointer"
+          >
+            <FirstQuadrantLogo />
+          </div>
+          <div
+            onClick={() => window.open("https://i.inc/", "_blank")}
+            className="cursor-pointer"
+          >
             <div className="p-xxs w-[152px] h-[44px] flex justify-center items-center gap-[10px] ">
               <div className="w-full max-w-[1200px]">
                 <Image
@@ -302,14 +313,31 @@ export default function Landing() {
               </div>
             </div>
           </div>
-          <div onClick={() => window.open("https://www.lumona.ai/", "_blank")}>
+          <div
+            onClick={() => window.open("https://momentic.ai/", "_blank")}
+            className="cursor-pointer"
+          >
+            <MomenticLogo />
+          </div>
+          <div
+            onClick={() => window.open("https://www.octolane.com/", "_blank")}
+            className="cursor-pointer"
+          >
+            <OctolaneLogo />
+          </div>
+          <div
+            onClick={() => window.open("https://www.lumona.ai/", "_blank")}
+            className="cursor-pointer"
+          >
             <LumonaLogo />
           </div>
-          <div onClick={() => window.open("https://wonderchat.io/", "_blank")}>
-            <WonderChatLogo />
-          </div>
-          <div onClick={() => window.open("https://www.lawme.ai/", "_blank")}>
-            <LawmeLogo />
+          <div
+            onClick={() =>
+              window.open("https://www.revisiondojo.com/", "_blank")
+            }
+            className="cursor-pointer"
+          >
+            <RevisionDojoLogo />
           </div>
         </div>
         {/* </Carousel> */}
