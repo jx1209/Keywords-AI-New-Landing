@@ -39,6 +39,7 @@ import {
   FirstQuadrantLogo,
   WaddleLogo,
   RevisionDojoLogo,
+  IIncLogo,
 } from "@/app/components/landing/TeamsLogo";
 import FeatureSection from "@/app/components/landing/FeatureSection";
 import { AdvantagesSecctions } from "@/app/components/landing/AdvantagesSecctions";
@@ -224,7 +225,7 @@ export default function Landing() {
     };
     return (
       <div
-        aria-label="frame 631"
+        aria-label="Collaboration section"
         className="flex-col py-xxxl px-sm sm:p-lg items-center gap-xl self-stretch  bg-black_gradient  flex-nowrap"
       >
         <div className="flex-col items-center gap-sm self-stretch text-center caption-cap gradient-text">
@@ -239,21 +240,16 @@ export default function Landing() {
             <AgentHubLogo />
           </div>
           <div
+            className="w-[152px] h-[44px] flex justify-center items-center cursor-pointer"
             onClick={() => window.open("https://retellai.com/", "_blank")}
-            className="cursor-pointer"
           >
-            <div className="p-xxs w-[152px] h-[44px] flex justify-center items-center gap-[10px] ">
-              <div className="w-full max-w-[1200px]">
-                <Image
-                  src="/images/retell.png"
-                  alt="Retell"
-                  width={1200}
-                  height={675} // Adjust this based on the actual aspect ratio of your image
-                  style={{ width: "100%", height: "auto" }}
-                  className=""
-                />
-              </div>
-            </div>
+            <Image
+              src="/images/retell.png"
+              alt="Retell"
+              width={1200}
+              height={675} // Adjust this based on the actual aspect ratio of your image
+              style={{ width: "100%", height: "auto" }}
+            />
           </div>
           <div
             onClick={() => window.open("https://www.govly.com/", "_blank")}
@@ -262,21 +258,16 @@ export default function Landing() {
             <GovlyLogo />
           </div>
           <div
+            className="w-[152px] h-[44px] flex justify-center items-center cursor-pointer"
             onClick={() => window.open("https://www.tryandai.com/", "_blank")}
-            className="cursor-pointer"
           >
-            <div className="p-xxs w-[152px] h-[44px] flex justify-center items-center gap-[10px] ">
-              <div className="w-full max-w-[1200px]">
-                <Image
-                  src="/images/AndAI.png"
-                  alt="Retell"
-                  width={1200}
-                  height={675} // Adjust this based on the actual aspect ratio of your image
-                  style={{ width: "100%", height: "auto" }}
-                  className=""
-                />
-              </div>
-            </div>
+            <Image
+              src="/images/AndAI.png"
+              alt="&AI"
+              width={1200}
+              height={675} // Adjust this based on the actual aspect ratio of your image
+              style={{ width: "100%", height: "auto" }}
+            />
           </div>
           <div
             onClick={() => window.open("https://www.justpaid.io/", "_blank")}
@@ -300,18 +291,7 @@ export default function Landing() {
             onClick={() => window.open("https://i.inc/", "_blank")}
             className="cursor-pointer"
           >
-            <div className="p-xxs w-[152px] h-[44px] flex justify-center items-center gap-[10px] ">
-              <div className="w-full max-w-[1200px]">
-                <Image
-                  src="/images/IInc.png"
-                  alt="IInc"
-                  width={1200}
-                  height={675} // Adjust this based on the actual aspect ratio of your image
-                  style={{ width: "100%", height: "auto" }}
-                  className=""
-                />
-              </div>
-            </div>
+            <IIncLogo />
           </div>
           <div
             onClick={() => window.open("https://momentic.ai/", "_blank")}
