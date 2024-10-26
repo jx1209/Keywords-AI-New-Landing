@@ -29,7 +29,15 @@ export function TitleColumn({ sections }: { sections: PricingSection[] }) {
               return (
                 <PricingCell
                   key={key}
-                  text={value}
+                  text={key === "community" ? (
+                    <a className="underline-offset-4 underline decoration-dotted decoration-gray-3 hover:decoration-gray-4" href="https://discord.com/invite/KEanfAafQQ" target="_blank" rel="noopener noreferrer">
+                      {value}
+                    </a>
+                  ) : key === "email" ? (
+                    <a className="underline-offset-4 underline decoration-dotted decoration-gray-3 hover:decoration-gray-4" href="mailto:team@keywordsai.co?subject=Keywords%20AI%20Support&body=Hi%20Keywords%20AI%20team%2C%0A%0A">
+                      {value}
+                    </a>
+                  ) : value}
                   className="w-full"
                   hasCheck={false}
                 />

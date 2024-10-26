@@ -2,7 +2,7 @@ import { PricingCell } from "./PricingCell";
 import { Button } from "@/app/components/Buttons";
 
 interface PricingCellValue {
-  text: string;
+  text: any;
   hasCheck: boolean;
 }
 

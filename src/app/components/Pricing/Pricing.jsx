@@ -70,6 +70,7 @@ export function Pricing() {
       features: [
         // "$10 free LLM credits",
         "1k logs free",
+        "2 prompts",
         "2 seats",
         // "$15 free LLM credits",
         "Community support",
@@ -115,9 +116,9 @@ export function Pricing() {
 
       features: [
         // "$100 free LLM credits",
-        "10k logs free, then $0.1/1k logs",
-        "5 seats",
-        "Custom evaluations",
+        "10k logs free",
+        "5 prompts",
+        "Unlimited seats",
         "Email support",
         // "$99 per additional 1M requests",
         // "Admin roles",
@@ -146,7 +147,7 @@ export function Pricing() {
       description: "Best for high-growth startups.",
       price: teamPrice,
       bonus: bonus,
-      featureTitle: "Everything in Free, plus",
+      featureTitle: "Everything in Basic, plus",
       currentPlan: "View Usage Details",
       // bgColor: "bg-gray-2",
       // border: "shadow-gray-4 shadow-border",
@@ -169,8 +170,8 @@ export function Pricing() {
 
       features: [
         // "$100 free LLM credits",
-        "100k logs free, then $0.1/1k logs",
-        "Unlimited seats",
+        "100k logs free",
+        "Unlimited prompts",
         "Custom evaluations",
         "Private Slack support",
         // "$99 per additional 1M requests",
@@ -200,9 +201,9 @@ export function Pricing() {
       currentPlan: "View Usage Details",
       features: [
         "Unlimited logs",
-        "Unlimited seats",
         "HIPAA & SOC-2 compliance",
         "Uptime SLA",
+        "24/7 support",
       ],
       plan: "custom",
       rank: 4,

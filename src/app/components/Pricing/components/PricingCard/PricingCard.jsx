@@ -43,7 +43,7 @@ export default function PricingCard({
       );
     },
   },
-  features = ["feature 1", "feature 2"],
+  features = [],
 }) {
   const [hover, setHover] = React.useState(false);
 

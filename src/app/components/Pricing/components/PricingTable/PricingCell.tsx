@@ -1,5 +1,15 @@
 import { Check } from "@/app/components/icons-old";
 
+
+interface PricingCellProps {
+  text?: string | React.ReactNode;
+  hasCheck?: boolean;
+  displayCell?: boolean;
+  isHighlighted?: boolean;
+  isSectionTitle?: boolean;
+  className?: string;
+}
+
 export function PricingCell({
   text = "",
   hasCheck = false,
@@ -7,7 +17,7 @@ export function PricingCell({
   isHighlighted = false,
   isSectionTitle = false,
   className = "",
-  }) {
+}: PricingCellProps) {
     const baseClasses = "flex flex-row h-[42px] items-center gap-xxs";
     const borderClasses = displayCell && !isSectionTitle
       ? "shadow-border-b shadow-gray-2"
