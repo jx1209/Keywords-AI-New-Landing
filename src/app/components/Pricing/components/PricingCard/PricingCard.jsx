@@ -19,7 +19,7 @@ export default function PricingCard({
   featureTitle = "Here are the features",
   buttonVar = "r4-primary",
   buttonText = "Try for free",
-  bgColor = "bg-gray-1",
+  bgColor = "bg-gray-black",
   border = "shadow-gray-3 shadow-border",
   priceDescription = "Price Description",
   currentPlan = "Current Plan",
@@ -56,7 +56,7 @@ export default function PricingCard({
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
         className={cn(
-          "flex  px-md pt-md pb-[120px] flex-col items-center gap-xl flex-1 w-full rounded-md min-w-[279px] bg-gray-black"
+          "flex  px-md pt-md pb-[120px] flex-col items-center gap-xl flex-1 w-full rounded-md min-w-[279px]", bgColor
         )}
       >
         <div className="flex flex-col items-start justify-center gap-xxs self-stretch">
@@ -78,7 +78,7 @@ export default function PricingCard({
                 )}
                 {plan != "custom" && (
                   <span className="text-sm-regular text-gray-4 py-[3px]">
-                &nbsp; / month{" "}
+                &nbsp;/ user per month{" "}
                   </span>
                 )}
               </div>

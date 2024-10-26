@@ -1,41 +1,251 @@
 import { Check } from "@/app/components/icons-old";
 import "./PricingTable.css";
 import { Button } from "@/app/components/Buttons";
+import { PricingCell } from "./PricingCell";
+import { PricingColumn } from "./PricingColumn";
+import { TitleColumn } from "./TitleColumn";
+
+
+
 export function PricingTable() {
-  const plans = [
-    { name: "Starter", key: "starter" },
-    { name: "Pro", key: "pro" },
-    { name: "Team", key: "team" },
-  ];
-  const titleByCol = [
-    {
-      section: "API",
-      requests: "Request logs",
-      endpoints: "Unified endpoint",
-      proxy: "Proxy keys",
-      async: "Async logging",
-      test_env: "Test environment",
-      load_balancing: "Load balancing",
-      request_entries: "Request retries",
-      fallback: "Model fallback",
-      self_hosted: "On-prem deployment",
+  const planFeatures = {
+    free: {
+      title: "Free",
+      buttonText: "Get started free",
+      highlighted: false,
+      features: {
+        Platform: {
+          seats: { text: "2 seat", hasCheck: true },
+          dashboard: { hasCheck: true },
+          logs: { text: "1k logs free", hasCheck: true },
+          usage_based: {},
+          analytics: {text: "100 users free", hasCheck: true },
+          playground: { hasCheck: true },
+          prompt_management: {text: "2 prompts free", hasCheck: true },
+          lab: { hasCheck: true },
+          datasets: { hasCheck: true },
+          caches:{ hasCheck: true },
+          key_vault: { hasCheck: true },
+          alerts:{ hasCheck: true },
+          log_ingestion: {text: "60 calls / min", hasCheck: true },
+          fine_tuning: {  },
+          traces: {},
+          sessions: {},
+          evaluators: {},
+        },
+        Security: {
+          role: {  },
+          sso: {  },
+          dpa: {  },
+          hipaa: {  },
+          soc2: {  },
+          pii: {  },
+          self_hosted: {  }
+        },
+        Support: {
+          community: { hasCheck: true },
+          email: {  },
+          slack: {  },
+          founders_text: {  },
+          white_glove: {  },
+          sla: {  }
+        },
+        Data: {
+          retention: { text: "7 days", hasCheck: true },
+          json: {text: "JSON & CSV", hasCheck: true }
+        },
+        Integrations: {
+          openai: { hasCheck: true },
+          anthropic: { hasCheck: true },
+          langchain: { hasCheck: true },
+          llamaindex: { hasCheck: true },
+          vercel: { hasCheck: true }
+        },
+      }
     },
+    basic: {
+      title: "Basic",
+      buttonText: "Get started",
+      highlighted: false,
+      features: {
+        Platform: {
+          seats: { text: "5 seats", hasCheck: true },
+          dashboard: { hasCheck: true },
+          logs: { text: "10k logs free", hasCheck: true },
+          usage_based: {text: "$0.1/1k extra logs", hasCheck: true },
+          analytics: {text: "1k users free", hasCheck: true },
+          playground: { hasCheck: true },
+          prompt_management: {text: "5 prompts free", hasCheck: true },
+          lab: { hasCheck: true },
+          datasets: { hasCheck: true },
+          caches: { hasCheck: true },
+          key_vault: { hasCheck: true },
+          alerts: { hasCheck: true },
+          log_ingestion: {text: "600 calls / min", hasCheck: true },
+          fine_tuning: {  },
+          traces: { },
+          sessions: {},
+          evaluators: { },
+        },
+        Security: {
+          role: { hasCheck: true },
+          sso: {  },
+          dpa: {},
+          hipaa: {  },
+          soc2: {  },
+          pii: {  },
+          self_hosted: {}
+        },
+        Support: {
+          community: { hasCheck: true },
+          email: { hasCheck: true },
+          slack: {  },
+          founders_text: {  },
+          white_glove: {  },
+          sla: {  }
+        },
+        Data: {
+          retention: { text: "30 days", hasCheck: true },
+          json: {text: "JSON & CSV", hasCheck: true }
+        },
+        Integrations: {
+          openai: { hasCheck: true },
+          anthropic: { hasCheck: true },
+          langchain: { hasCheck: true },
+          llamaindex: { hasCheck: true },
+          vercel: { hasCheck: true }
+        }
+      }
+    },
+    team: {
+      title: "Team",
+      buttonText: "Get started",
+      highlighted: true,
+      features: {
+        Platform: {
+          seats: { text: "Unlimited", hasCheck: true },
+          dashboard: { hasCheck: true },
+          logs: {text: "100k logs free", hasCheck: true },
+          usage_based: {text: "$0.1/1k extra logs", hasCheck: true },
+          analytics: {text: "10k users free", hasCheck: true },
+          playground: { hasCheck: true },
+          prompt_management: {text: "Unlimited", hasCheck: true },
+          lab: { hasCheck: true },
+          datasets: { hasCheck: true },
+          caches: { hasCheck: true },
+          key_vault: { hasCheck: true },
+          alerts: { hasCheck: true },
+          log_ingestion: {text: "6,000 calls / min", hasCheck: true },
+          evaluators: { hasCheck: true },
+          traces: { },
+          sessions: { },
+          fine_tuning: {},
+        },
+        Security: {
+          role: { hasCheck: true },
+          sso: {},
+          dpa: {},
+          hipaa: {},
+          soc2: { },
+          pii: {},
+          self_hosted: { }
+        },
+        Support: {
+          community: { hasCheck: true },
+          email: { hasCheck: true },
+          slack: { hasCheck: true },
+          founders_text: { },
+          white_glove: {  },
+          sla: { }
+        },
+        Data: {
+          retention: { text: "90 days", hasCheck: true },
+          json: {text: "JSON & CSV", hasCheck: true }
+        },
+        Integrations: {
+          openai: { hasCheck: true },
+          anthropic: { hasCheck: true },
+          langchain: { hasCheck: true },
+          llamaindex: { hasCheck: true },
+          vercel: { hasCheck: true }
+        }
+      }
+    },
+    enterprise: {
+      title: "Enterprise",
+      buttonText: "Request a trial",
+      highlighted: false,
+      features: {
+        Platform: {
+          seats: { text: "Unlimited", hasCheck: true },
+          dashboard: { hasCheck: true },
+          logs: {text: "100k logs free", hasCheck: true },
+          usage_based: {text: "Volume discount", hasCheck: true },
+          analytics: {text: "Unlimited", hasCheck: true },
+          playground: { hasCheck: true },
+          prompt_management: {text: "Unlimited", hasCheck: true },
+          lab: { hasCheck: true },
+          datasets: { hasCheck: true },
+          caches: { hasCheck: true },
+          key_vault: { hasCheck: true },
+          alerts: { hasCheck: true },
+          log_ingestion: {text: "Unlimited", hasCheck: true },
+          evaluators: { hasCheck: true },
+          traces: { hasCheck: true },
+          sessions: { hasCheck: true },
+          fine_tuning: { hasCheck: true },
+        },
+        Security: {
+          role: { hasCheck: true },
+          sso: { hasCheck: true },
+          dpa: { hasCheck: true },
+          hipaa: { hasCheck: true },
+          soc2: { hasCheck: true },
+          pii: { hasCheck: true },
+          self_hosted: { hasCheck: true }
+        },
+        Support: {
+          community: { hasCheck: true },
+          email: { hasCheck: true },
+          slack: { hasCheck: true },
+          founders_text: { hasCheck: true },
+          white_glove: { hasCheck: true },
+          sla: { hasCheck: true }
+        },
+        Data: {
+          retention: { text: "Unlimited", hasCheck: true },
+          json: {text: "JSON & CSV", hasCheck: true }
+        },
+        Integrations: {
+          openai: { hasCheck: true },
+          anthropic: { hasCheck: true },
+          langchain: { hasCheck: true },
+          llamaindex: { hasCheck: true },
+          vercel: { hasCheck: true }
+        }
+      }
+    }
+  };
+
+  const titleByCol = [
     {
       section: "Platform",
       seats: "Seats",
-      dashboard: "Usage dashboard",
-      log_management: "Log management",
+      dashboard: "Dashboard",
+      logs: "Request logging",
+      usage_based: "Usage based pricing",
       analytics: "User analytics",
+      playground: "Playground",
       prompt_management: "Prompt management",
-      playground: "Model playground",
+      lab: "Lab",
       datasets: "Datasets",
-      webhooks: "Webhook",
-      eval: "Custom evaluations",
-      classification: "Topic classification",
-      // manual_cache: "Manual caching",
-      // semantic_cache: "Semantic caching",
-      cache: "Caching",
-      // prompt_opt: "Prompt optimization",
+      caches: "Caches",
+      key_vault: "Key Vault",
+      alerts: "Alerts",
+      log_ingestion: "Log ingestion",
+      evaluators: "Evaluators",
+      traces: "Traces",
+      sessions: "Sessions",
       fine_tuning: "Fine-tuning",
     },
     {
@@ -45,875 +255,63 @@ export function PricingTable() {
       dpa: "DPA",
       hipaa: "HIPAA compliance",
       soc2: "SOC-2 compliance",
-      // saml: "SAML",
       pii: "PII removal",
+      self_hosted: "On-prem deployment"
+    },
+    {
+      section: "Support",
+      community: "Community Discord",
+      email: "Email support",
+      slack: "Private Slack",
+      founders_text: "24/7 support",
+      white_glove: "Dedicated onboarding",
+      sla: "SLA"
+    },
+    {
+      section: "Data",
+      retention: "Data retention",
+      json: "Data export"
     },
     {
       section: "Integrations",
       openai: "OpenAI",
       anthropic: "Anthropic",
       langchain: "LangChain",
-      LlamaIndex: "LlamaIndex",
-      vercel: "Vercel",
-    },
-    {
-      section: "Support",
-      priority: "Support",
-      white_glove: "White-glove integration",
-      sla: "Uptime SLA",
-    },
-
-    {
-      section: "Data",
-      retention: "Data retention",
-      json: "Dataset collection",
+      llamaindex: "LlamaIndex",
+      vercel: "Vercel"
     },
   ];
 
-  const starterByCol = [
-    {
-      section: "Infrastructure",
-      requests: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-          <span className="text-gray-4">&nbsp;{"10k logs free"}</span>
-        </div>
-      ),
-      endpoints: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-          <span className="text-gray-4">&nbsp;{"All models (200+)"}</span>
-        </div>
-      ),
-      proxy: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-          <span className="text-gray-4">&nbsp;{"1"}</span>
-        </div>
-      ),
-      async: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-        </div>
-      ),
-      test_env: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-        </div>
-      ),
-      load_balancing: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-        </div>
-      ),
-
-      request_entries: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-        </div>
-      ),
-      fallback: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-        </div>
-      ),
-      self_hosted: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-    },
-    {
-      section: "Platform",
-      seats: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-          <span className="text-gray-4">&nbsp;{"2 seats"}</span>
-        </div>
-      ),
-      dashboard: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-        </div>
-      ),
-      log_management: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-        </div>
-      ),
-      analytics: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-        </div>
-      ),
-      prompt_management: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-        </div>
-      ),
-      playground: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-        </div>
-      ),
-      datasets: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-        </div>
-      ),
-      webhooks: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-        </div>
-      ),
-      classification: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-      eval: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-      cache: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-        </div>
-      ),
-
-      // manual_cache: (
-      //   <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      // ),
-      // semantic_cache: (
-      //   <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      // ),
-      // prompt_opt: (
-      //   <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      // ),
-
-      fine_tuning: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-    },
-    {
-      section: "Security",
-      role: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-      sso: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-      dpa: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-      hipaa: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-      soc2: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-      pii: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-    },
-
-    {
-      section: "Integrations",
-      openai: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-        </div>
-      ),
-      anthropic: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-        </div>
-      ),
-      langchain: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-gray-4" />
-        </div>
-      ),
-      LlamaIndex: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-gray-4" />
-        </div>
-      ),
-      vercel: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-gray-4" />
-        </div>
-      ),
-    },
-
-    {
-      section: "Support",
-      priority: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-          <span className="text-gray-4">&nbsp;{"Community"}</span>
-        </div>
-      ),
-      white_glove: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-      sla: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-    },
-
-    {
-      section: "Data",
-      retention: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-          <span className="text-gray-4">&nbsp;{"7 days"}</span>
-        </div>
-      ),
-      json: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-gray-4" />
-          <span className="text-gray-4">&nbsp;{"JSON & CSV export"}</span>
-        </div>
-      ),
-    },
-  ];
-
-  const proByCol = [
-    {
-      section: "Infrastructure",
-      requests: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-          <span className="text-gray-white">&nbsp;{"1M logs free"}</span>
-        </div>
-      ),
-      endpoints: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-          <span className="text-gray-white">&nbsp;{"All models (200+)"}</span>
-        </div>
-      ),
-      proxy: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-          <span className="text-gray-white">&nbsp;{"10"}</span>
-        </div>
-      ),
-      async: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      test_env: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      load_balancing: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-
-      request_entries: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      fallback: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      self_hosted: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-    },
-    {
-      section: "Platform",
-      seats: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-          <span className="text-gray-white">&nbsp;{"5 seats"}</span>
-        </div>
-      ),
-      dashboard: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      log_management: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      analytics: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      prompt_management: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      playground: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      datasets: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      webhooks: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      classification: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      eval: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      cache: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-
-      // manual_cache: (
-      //   <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-      //     {" "}
-      //     <Check fill="fill-primary" />
-      //   </div>
-      // ),
-      // semantic_cache: (
-      //   <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      // ),
-      // prompt_opt: (
-      //   <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      // ),
-
-      fine_tuning: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-    },
-    {
-      section: "Security",
-      role: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      sso: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-      dpa: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-      hipaa: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-      soc2: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-      pii: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-    },
-
-    {
-      section: "Integrations",
-      openai: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      anthropic: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      langchain: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      LlamaIndex: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      vercel: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-    },
-
-    {
-      section: "Support",
-      priority: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-          <span className="text-gray-white">&nbsp;{"Slack"}</span>
-        </div>
-      ),
-      white_glove: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      sla: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2"></div>
-      ),
-    },
-
-    {
-      section: "Data",
-      retention: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-          <span className="text-gray-white">&nbsp;{"60 days"}</span>
-        </div>
-      ),
-      json: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-          <span className="text-gray-white">&nbsp;{"JSON & CSV export"}</span>
-        </div>
-      ),
-    },
-  ];
-
-  const customByCol = [
-    {
-      section: "Infrastructure",
-      requests: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-          <span className="text-gray-white">&nbsp;{"Unlimited"}</span>
-        </div>
-      ),
-      endpoints: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-          <span className="text-gray-white">&nbsp;{"All models (200+)"}</span>
-        </div>
-      ),
-      proxy: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-          <span className="text-gray-white">&nbsp;{"Unlimited"}</span>
-        </div>
-      ),
-      async: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      test_env: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      load_balancing: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-
-      request_entries: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      fallback: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      self_hosted: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-primary" />
-        </div>
-      ),
-    },
-    {
-      section: "Platform",
-      seats: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-          <span className="text-gray-white">&nbsp;{"Unlimited"}</span>
-        </div>
-      ),
-      dashboard: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      log_management: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      analytics: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      prompt_management: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      playground: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      datasets: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      webhooks: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      classification: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      eval: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      cache: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-
-      // manual_cache: (
-      //   <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-      //     {" "}
-      //     <Check fill="fill-primary" />
-      //   </div>
-      // ),
-      // semantic_cache: (
-      //   <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-      //     {" "}
-      //     <Check fill="fill-primary" />
-      //   </div>
-      // ),
-      // prompt_opt: (
-      //   <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-      //     {" "}
-      //     <Check fill="fill-primary" />
-      //   </div>
-      // ),
-
-      fine_tuning: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-primary" />
-        </div>
-      ),
-    },
-    {
-      section: "Security",
-      role: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      dpa: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      hipaa: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      soc2: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      sso: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      pii: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-primary" />
-        </div>
-      ),
-    },
-
-    {
-      section: "Integrations",
-      openai: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      anthropic: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      langchain: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      LlamaIndex: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      vercel: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-        </div>
-      ),
-    },
-
-    {
-      section: "Support",
-      priority: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-          <span className="text-gray-white">&nbsp;{"Founders 24/7 text"}</span>
-        </div>
-      ),
-      white_glove: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-primary" />
-        </div>
-      ),
-      sla: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          {" "}
-          <Check fill="fill-primary" />
-        </div>
-      ),
-    },
-
-    {
-      section: "Data",
-      retention: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-          <span className="text-gray-white">&nbsp;{"Unlimited"}</span>
-        </div>
-      ),
-      json: (
-        <div className="flex flex-row h-[42px] items-center gap-xxs self-stretch shadow-border-b shadow-gray-2">
-          <Check fill="fill-primary" />
-          <span className="text-gray-white">&nbsp;{"JSON & CSV export"}</span>
-        </div>
-      ),
-    },
-  ];
+  // Transform the features object into the format needed by PricingColumn
+  const transformFeatures = (features) => {
+    return Object.entries(features).map(([section, items]) => ({
+      section,
+      ...items,
+    }));
+  };
 
   return (
     <div className="flex flex-col max-w-[1000px] items-center gap-md w-full">
       <div className="flex flex-row max-w-[1000px] gap-md items-end self-stretch">
-        <div className="flex flex-col py-md items-start gap-md flex-1 w-full">
-          <div className="flex flex-row h-[84px] py-xxs items-end gap-[10px] self-stretch"></div>
-          {titleByCol.map((feature, index) => (
-            <div
-              key={index}
-              className="flex flex-col justify-end items-start w-full"
-            >
-              <div className="flex flex-row h-[42px] items-center gap-xxs w-full">
-                <span className="text-md-md text-gray-white">
-                  {feature.section}
-                </span>
-              </div>
-              {Object.keys(feature).map((key) => {
-                if (key !== "section") {
-                  return (
-                    <div
-                      key={key}
-                      className="flex flex-row h-[42px] items-center gap-xxs shadow-border-b shadow-gray-2 w-full"
-                    >
-                      <span className="text-md-regular text-gray-4">{`${feature[key]}`}</span>
-                    </div>
-                  );
-                }
-                return null;
-              })}
-            </div>
-          ))}
-        </div>
-        <div className="flex flex-col py-md items-start gap-md flex-1 self-stretch">
-          <div className="flex flex-col items-start gap-sm self-stretch">
-            <span className="display-sm text-gray-white">Free</span>
-            <Button
-              variant="r4-white"
-              text="Get started"
-              className="flex-1"
-              width="w-full"
-              onClick={
-                () =>
-                  (window.location.href =
-                    "https://platform.keywordsai.co/login") // should direct to the pricing page in the platform later
-              }
-            />
-          </div>
-          {starterByCol.map((feature, index) => (
-            <div
-              key={index}
-              className="flex flex-col justify-end items-start w-full"
-            >
-              <div className="flex flex-row h-[42px] items-center gap-xxs w-full"></div>
-              {Object.keys(feature).map((key) => {
-                if (key !== "section") {
-                  return feature[key];
-                }
-                return null;
-              })}
-            </div>
-          ))}
-        </div>
-        <div className="flex flex-col py-md items-start gap-md flex-1  bg-gray-2 shadow-border shadow-gray-3 rounded-md p-md">
-          <div className="flex flex-col items-start gap-sm self-stretch">
-            <span className="display-sm text-gray-white">Team</span>
-            <Button
-              variant="r4-primary"
-              text="Get started"
-              className="flex-1 self-stretch"
-              width="w-full"
-              onClick={
-                () =>
-                  (window.location.href =
-                    "https://platform.keywordsai.co/login") // should direct to the pricing page in the platform later
-              }
-            />
-          </div>
-          {proByCol.map((feature, index) => (
-            <div
-              key={index}
-              className="flex flex-col justify-end items-start w-full"
-            >
-              <div className="flex flex-row h-[42px] items-center gap-xxs w-full"></div>
-              {Object.keys(feature).map((key) => {
-                if (key !== "section") {
-                  return feature[key];
-                }
-                return null;
-              })}
-            </div>
-          ))}
-        </div>
-        <div className="flex flex-col py-md items-start gap-md flex-1 self-stretch">
-          <div className="flex flex-col items-start gap-sm self-stretch">
-            <span className="display-sm text-gray-white">Enterprise</span>
-            <Button
-              variant="r4-white"
-              text="Book a demo"
-              className="flex-1"
-              width="w-full self-stretch"
-              onClick={() =>
-                window.open("https://cal.com/keywordsai/demo", "_blank")
-              }
-            />
-          </div>
-          {customByCol.map((feature, index) => (
-            <div
-              key={index}
-              className="flex flex-col justify-end items-start w-full"
-            >
-              <div className="flex flex-row h-[42px] items-center gap-xxs w-full"></div>
-              {Object.keys(feature).map((key) => {
-                if (key !== "section") {
-                  return feature[key];
-                }
-                return null;
-              })}
-            </div>
-          ))}
-        </div>
+        <TitleColumn sections={titleByCol} />
+
+        {Object.entries(planFeatures).map(([key, plan]) => (
+          <PricingColumn
+            key={key}
+            title={plan.title}
+            buttonText={plan.buttonText}
+            cells={transformFeatures(plan.features)}
+            highlighted={plan.highlighted}
+            onButtonClick={() => {
+              const url =
+                plan.title === "Enterprise"
+                  ? "https://cal.com/keywordsai/demo"
+                  : "https://platform.keywordsai.co/login";
+              window.location.href = url;
+            }}
+          />
+        ))}
       </div>
     </div>
-    // <table className="w-full max-w-[1000px] border-collapse items-center gap-md" >
-    //   <thead className="border-collapse">
-    //     <tr className="h-[80px] grid grid-cols-4 border-gray-3">
-    //       <th></th>
-    //       {plans.map((plan, index) => (
-    //         <div className="flex flex-col gap-xs items-start flex-1 border-collapse w-full">
-    //           <th
-    //             className=" display-sm "
-    //             key={index}
-    //           >
-    //             {plan.name}
-    //           </th>
-    //             {buttons[0][plan.key]}
-    //         </div>
-    //       ))}
-    //     </tr>
-    //   </thead>
-    //   <tbody className="border-collapse">
-    //     {features.map((feature, index) => (
-    //       <tr
-    //         key={index}
-    //         className="h-[60px] grid grid-cols-4 border-b border-gray-3"
-    //       >
-    //         {Object.keys(feature).map((key, subIndex) => {
-    //           if (key !== "title") {
-    //             return (
-    //               <td
-    //                 className="text-md-regular flex items-center self-stretch justify-center"
-    //                 key={subIndex}
-    //               >
-    //                 {feature[key]}
-    //               </td>
-    //             );
-    //           } else {
-    //             return (
-    //               <td
-    //                 className="text-md-medium flex items-center self-stretch flex-1  border-gray-3"
-    //                 key={subIndex}
-    //               >
-    //                 {feature.title}
-    //               </td>
-    //             );
-    //           }
-    //         })}
-    //       </tr>
-    //     ))}
-    //   </tbody>
-    // </table>
   );
 }
