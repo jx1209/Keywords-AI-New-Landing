@@ -17,6 +17,7 @@ interface PricingColumnProps {
   cells: PricingSection[];
   highlighted?: boolean;
   onButtonClick: () => void;
+  checkHighlighted?: boolean;
 }
 
 export function PricingColumn({
@@ -24,6 +25,7 @@ export function PricingColumn({
   buttonText,
   cells,
   highlighted = false,
+  checkHighlighted=false,
   onButtonClick,
 }: PricingColumnProps) {
   const columnClasses = `flex flex-col py-md items-start gap-md flex-1 self-stretch ${
@@ -54,6 +56,7 @@ export function PricingColumn({
             text={section.section}
             displayCell={false}
             isHighlighted={highlighted}
+            checkHighlighted={checkHighlighted}
             className="w-full"
           />
           {Object.entries(section).map(([key, value]) => {
@@ -64,6 +67,7 @@ export function PricingColumn({
                 text={value.text}
                 hasCheck={value.hasCheck}
                 isHighlighted={highlighted}
+                checkHighlighted={checkHighlighted}
                 className="w-full"
               />
             );

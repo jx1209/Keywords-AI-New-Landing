@@ -13,6 +13,7 @@ export function PricingTable() {
       title: "Free",
       buttonText: "Get started free",
       highlighted: false,
+      checkHighlighted: false,
       features: {
         Platform: {
           seats: { text: "2 seats", hasCheck: true },
@@ -63,15 +64,16 @@ export function PricingTable() {
         },
       }
     },
-    basic: {
-      title: "Basic",
+    pro: {
+      title: "Pro",
       buttonText: "Get started",
       highlighted: false,
+      checkHighlighted: false,
       features: {
         Platform: {
           seats: { text: "Unlimited", hasCheck: true },
           logs: { text: "10,000 included", hasCheck: true },
-          usage_based: {text: "$0.10 / 1k more", hasCheck: true },
+          usage_based: {text: "$0.25 / 1k more", hasCheck: true },
           analytics: {text: "1,000", hasCheck: true },
           prompt_management: {text: "5", hasCheck: true },
           dashboard: { hasCheck: true },
@@ -121,6 +123,7 @@ export function PricingTable() {
       title: "Team",
       buttonText: "Get started",
       highlighted: true,
+      checkHighlighted: true,
       features: {
         Platform: {
           seats: { text: "Unlimited", hasCheck: true },
@@ -175,6 +178,7 @@ export function PricingTable() {
       title: "Enterprise",
       buttonText: "Request a trial",
       highlighted: false,
+      checkHighlighted: true,
       features: {
         Platform: {
           seats: { text: "Unlimited", hasCheck: true },
@@ -299,15 +303,17 @@ export function PricingTable() {
         {Object.entries(planFeatures).map(([key, plan]) => (
           <PricingColumn
             key={key}
+
             title={plan.title}
             buttonText={plan.buttonText}
             cells={transformFeatures(plan.features)}
             highlighted={plan.highlighted}
+            checkHighlighted={plan.checkHighlighted}
             onButtonClick={() => {
               const url =
                 plan.title === "Enterprise"
                   ? "https://cal.com/keywordsai/demo"
-                  : "https://platform.keywordsai.co/login";
+                  : "https://platform.keywordsai.co/platform/api/plans";
               window.location.href = url;
             }}
           />

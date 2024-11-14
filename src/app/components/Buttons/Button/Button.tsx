@@ -275,7 +275,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         justification = justification || "justify-start";
 
         break;
-
       case "r4-black":
         iconPosition = iconPosition || "right";
         bgColor = bgColor || "bg-gray-1";
@@ -295,7 +294,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         iconFill = iconFill || "fill-gray-4";
         iconHoverFill = iconHoverFill || "fill-gray-4";
         justification = justification || "justify-center";
-
         break;
       case "text":
         iconPosition = iconPosition || "left";
@@ -376,7 +374,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         padding = padding || "py-xxs px-sm";
         iconFill = iconFill || "fill-gray-4";
         iconHoverFill = iconHoverFill || "fill-gray-white";
-
+        justification = justification || "justify-center";
         break;
       case "big-black":
         bgColor = bgColor || "bg-gray-black";

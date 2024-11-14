@@ -8,7 +8,7 @@ interface Props {
   backgroundColor?: string;
   onClick?: () => void;
   className?: string;
-  borderRadious?: string;
+  borderRadius?: string;
   padding?: string;
 }
 
@@ -19,7 +19,7 @@ export function Tag({
   backgroundColor = "bg-gray-2",
   textColor = "text-gray-4",
   className = "flex-row",
-  borderRadious,
+  borderRadius,
   padding = "px-xxs py-xxxs",
   onClick,
 }: Props) {
@@ -28,7 +28,7 @@ export function Tag({
       className={cn(
         " gap-xxxs  rounded-full  items-center whitespace-nowrap max-w-[400px]",
         padding,
-        borderRadious,
+        borderRadius,
         border,
         backgroundColor,
         className

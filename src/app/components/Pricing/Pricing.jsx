@@ -25,11 +25,16 @@ import {
   WaddleLogo,
   RevisionDojoLogo,
   IIncLogo,
+  RetellLogoSmall,
+  OctolaneSmall,
+  FirstQuadrantSmall,
+  JustpaidSmall,
 } from "@/app/components/landing/TeamsLogo";
 import Image from "next/image";
+import CompanyCard from "./components/PricingCard/CompanyCard";
 export function Pricing() {
   const [isYearly, setIsYearly] = useState(true);
-  const [basicPrice, setBasicPrice] = useState("$12");
+  const [basicPrice, setBasicPrice] = useState("$7");
   const [teamPrice, setTeamPrice] = useState("$42");
   const [enterprisePrice, setEnterprisePrice] = useState("$3999");
   const [bonus, setBonus] = useState("Billed annually");
@@ -39,7 +44,7 @@ export function Pricing() {
   }, []);
   const handleSwitchChange = (checked) => {
     setIsYearly(checked);
-    setBasicPrice(checked ? "$12 " : "$14");
+    setBasicPrice(checked ? "$7" : "$9");
     setTeamPrice(checked ? "$42 " : "$49");
     setEnterprisePrice(checked ? "$3999" : "$4999");
     setBonus(checked ? "Billed annually" : "Billed monthly");
@@ -55,24 +60,26 @@ export function Pricing() {
       bonus: "Free forever",
       button: (
         <Button
-          variant={"r4-black"}
-          text={"Get started free"}
-          className="self-stretch shadow-border shadow-gray-3 rounded-sm bg-gray-2"
-          onClick={
-            () =>
-              (window.location.href =
-                "https://platform.keywordsai.co/platform/api/plans") // should direct to the pricing page in the platform later
+          variant={"big-black"}
+          width="w-full"
+          textClassName="text-sm-md"
+          justification="justify-center"
+          text={"Try for free"}
+          borderColor="shadow-border shadow-gray-3"
+          bgColor="bg-gray-2"
+          borderRadius="rounded-xl"
+          padding="py-[10px]"
+          onClick={() =>
+            window.open("https://platform.keywordsai.co/platform/api/plans")
           }
-          type="button"
         />
       ),
+      hasDemo: false,
       currentPlan: "View Usage Details",
       features: [
         // "$10 free LLM credits",
         "1k logs free",
-        "2 prompts",
         "2 seats",
-        // "$15 free LLM credits",
         "Community support",
       ],
       plan: "starter",
@@ -80,40 +87,41 @@ export function Pricing() {
     },
     {
       title: isYearly ? (
-        <div className="flex  items-center gap-xxs">
-          Basic
-          <Tag
-            text="-14%"
-            textColor="text-primary"
-            border=""
-            borderRadious="rounded-sm"
-            backgroundColor="bg-primary/10"
-          />
-        </div>
+        <div className="flex  items-center gap-xxs">Pro</div>
       ) : (
-        "Basic"
+        "Pro"
       ),
       description: "Best for indie hackers.",
       price: basicPrice,
-      bonus: bonus,
+      bonus: isYearly ? (
+        <div className="flex  items-center gap-xxs">
+          {bonus}
+          <p className="text-primary caption-md">-22%</p>
+        </div>
+      ) : (
+        <div className="flex  items-center gap-xxs">{bonus}</div>
+      ),
       featureTitle: "Everything in Free, plus",
       currentPlan: "View Usage Details",
       // bgColor: "bg-gray-2",
       // border: "shadow-gray-4 shadow-border",
       button: (
         <Button
-          variant={"r4-black"}
+          variant={"big-black"}
+          textClassName="text-sm-md"
+          width="w-full"
+          justification="justify-center"
           text={"Try for free"}
-          className="self-stretch shadow-border shadow-gray-3 rounded-sm bg-gray-2"
-          onClick={
-            () =>
-              (window.location.href =
-                "https://platform.keywordsai.co/platform/api/plans") // should direct to the pricing page in the platform later
+          borderColor="shadow-border shadow-gray-3"
+          bgColor="bg-gray-2"
+          borderRadius="rounded-xl"
+          padding="py-[10px]"
+          onClick={() =>
+            window.open("https://platform.keywordsai.co/platform/api/plans")
           }
-          type="button"
         />
       ),
-
+      hasDemo: false,
       features: [
         // "$100 free LLM credits",
         "10k logs free",
@@ -130,48 +138,55 @@ export function Pricing() {
       rank: 3,
     },
     {
-      title: isYearly ? (
-        <div className="flex  items-center gap-xxs">
+      title: (
+        <div className="flex items-center gap-xxs">
           Team
           <Tag
-            text="-14%"
+            text="Recommended"
             textColor="text-primary"
             border=""
-            borderRadious="rounded-sm"
+            borderRadius="rounded-sm"
             backgroundColor="bg-primary/10"
           />
         </div>
-      ) : (
-        "Team"
       ),
       description: "Best for high-growth startups.",
       price: teamPrice,
-      bonus: bonus,
-      featureTitle: "Everything in Basic, plus",
+      bonus: isYearly ? (
+        <div className="flex  items-center gap-xxs">
+          {bonus}
+          <p className="text-primary caption-md">-14%</p>
+        </div>
+      ) : (
+        <div className="flex  items-center gap-xxs">{bonus}</div>
+      ),
+      featureTitle: "Everything in Pro, plus",
       currentPlan: "View Usage Details",
       // bgColor: "bg-gray-2",
       // border: "shadow-gray-4 shadow-border",
       button: (
         <Button
-          variant={"r4-white"}
+          variant={"big-black"}
           text={"Try for free"}
-          bgColor="bg-gray-white"
-          textColor="text-gray-black"
-          className="self-stretch items-center justify-center gap-xxs"
+          textClassName="text-sm-md"
+          textColor="text-gray-white"
           width="w-full"
-          onClick={
-            () =>
-              (window.location.href =
-                "https://platform.keywordsai.co/platform/api/plans") // should direct to the pricing page in the platform later
+          justification="justify-center"
+          bgColor="bg-primary-2"
+          hoverColor="bg-primary"
+          borderRadius="rounded-xl"
+          padding="py-[10px]"
+          onClick={() =>
+            window.open("https://platform.keywordsai.co/platform/api/plans")
           }
-          type="button"
         />
       ),
-
+      hasDemo: true,
       features: [
         // "$100 free LLM credits",
         "100k logs free",
         "Unlimited prompts",
+        "Custom evaluations",
         "Custom evaluations",
         "Private Slack support",
         // "$99 per additional 1M requests",
@@ -180,7 +195,7 @@ export function Pricing() {
         // `Mistral, Anthropic, and ${remaining} more models`,
         // "CTO priority support",
       ],
-      plan: "flex_32k",
+      plan: "team",
       rank: 3,
     },
     {
@@ -190,17 +205,26 @@ export function Pricing() {
       featureTitle: "Everything in Team, plus",
       button: (
         <Button
-          variant={"r4-black"}
+          variant={"big-black"}
+          width="w-full"
+          justification="justify-center"
           text={"Request a trial"}
-          className="self-stretch shadow-border shadow-gray-3 rounded-sm bg-gray-2"
+          textClassName="text-sm-md"
+          borderColor="shadow-border shadow-gray-3"
+          bgColor="bg-gray-2"
+          borderRadius="rounded-xl"
+          padding="py-[10px]"
           onClick={() =>
             window.open("https://cal.com/keywordsai/demo", "_blank")
           }
         />
       ),
+      hasDemo: true,
       currentPlan: "View Usage Details",
       features: [
         "Unlimited logs",
+        "Unlimited logs",
+        "HIPAA & SOC-2 compliance",
         "HIPAA & SOC-2 compliance",
         "Uptime SLA",
         "24/7 support",
@@ -209,32 +233,64 @@ export function Pricing() {
       rank: 4,
     },
   ];
-
+  const companyCards = [
+    {
+      company: "JustPaid",
+      text: (
+        <p className="text-gray-4 text-sm-md">
+          <span className="text-gray-white text-sm-md">100M+ </span>
+          LLM requests logged. Ensuring
+          <span className="text-gray-white text-sm-md"> 99.99% uptime </span>
+          across all LLM systems.
+        </p>
+      ),
+      logo: <JustpaidSmall />,
+    },
+    {
+      company: "Octolane",
+      text: (
+        <p className="text-gray-4 text-sm-md">
+          <span className="text-gray-white text-sm-md">100M+ </span>
+          LLM requests logged. Ensuring
+          <span className="text-gray-white text-sm-md"> 99.99% uptime </span>
+          across all LLM systems.
+        </p>
+      ),
+      logo: <OctolaneSmall />,
+    },
+    {
+      company: "First Quadrant",
+      text: (
+        <p className="text-gray-4 text-sm-md">
+          <span className="text-gray-white text-sm-md">100M+ </span>
+          LLM requests logged. Ensuring
+          <span className="text-gray-white text-sm-md"> 99.99% uptime </span>
+          across all LLM systems.
+        </p>
+      ),
+      logo: (
+        <div className=" h-[20px] flex justify-center items-center">
+          <FirstQuadrantSmall />
+        </div>
+      ),
+    },
+    {
+      company: "Retell AI",
+      text: (
+        <p className="text-gray-4 text-sm-md">
+          <span className="text-gray-white text-sm-md">100M+ </span>
+          LLM requests logged. Ensuring
+          <span className="text-gray-white text-sm-md"> 99.99% uptime </span>
+          across all LLM systems.
+        </p>
+      ),
+      logo: <RetellLogoSmall />,
+    },
+  ];
   return (
     <Page>
-      {/* <Helmet>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@keywordsai" />
-        <meta name="twitter:title" content="Keywords AI" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Keywords AI - Build better AI products with complete observability"
-        />
-        <meta
-          property="og:description"
-          content="Keywords AI makes it easy to ship AI applications.Every feature you need to build, deploy, and monitor your AI product. Keywords AI is the new way to build software with LLMs."
-        />
-        <meta property="og:url" content="https://keywordsai.co" />
-        <meta property="og:site_name" content="Keywords AI" />
-        <meta
-          name="description"
-          content="Keywords AI makes it easy to ship AI applications.Every feature you need to build, deploy, and monitor your AI product. Keywords AI is the new way to build software with LLMs."
-        />
-      </Helmet> */}
       {/* upper container */}
-      <div className="flex-col px-xl pt-xxl pb-xxxl items-center gap-xl self-stretch">
+      <div className="w-full flex-col px-xl pt-xxl pb-xxxl items-center gap-xl self-stretch">
         {/* section title */}
         <div className="flex flex-col max-w-[1000px] items-center gap-xs">
           <p className="display-lg text-center text-gray-white ">
@@ -264,20 +320,29 @@ export function Pricing() {
                 text="-14%"
                 textColor="text-primary"
                 border=""
-                borderRadious="rounded-sm"
+                borderRadius="rounded-sm"
                 backgroundColor="bg-primary/10"
               />
             )}
           </div>
-          <div className="flex max-w-[1380px] items-start content-start gap-y-md gap-x-sm flex-wrap">
+          <div className=" max-w-[1200px] flex w-full items-end justify-start gap-y-xs gap-x-md flex-wrap">
             {cards.map((card, index) => (
               <PricingCard
                 {...card}
                 price={card.price}
                 key={index}
-                bgColor={card.description === "Best for high-growth startups." ? 'bg-gray-2' : 'bg-gray-black'}
+                bgColor={
+                  card.description === "Best for high-growth startups."
+                    ? "bg-gray-2"
+                    : "bg-gray-black"
+                }
               />
             ))}
+            <div className="w-full flex items-start justify-start gap-md">
+              {companyCards.map((companyCard, index) => (
+                <CompanyCard {...companyCard} key={index} />
+              ))}
+            </div>
           </div>
         </div>
       </div>

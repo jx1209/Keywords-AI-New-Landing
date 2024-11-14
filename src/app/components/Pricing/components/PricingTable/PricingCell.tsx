@@ -7,6 +7,7 @@ interface PricingCellProps {
   displayCell?: boolean;
   isHighlighted?: boolean;
   isSectionTitle?: boolean;
+  checkHighlighted?: boolean;
   className?: string;
 }
 
@@ -15,6 +16,7 @@ export function PricingCell({
   hasCheck = false,
   displayCell = true,
   isHighlighted = false,
+  checkHighlighted=false,
   isSectionTitle = false,
   className = "",
 }: PricingCellProps) {
@@ -31,7 +33,7 @@ export function PricingCell({
     return (
       <div className={`${baseClasses} ${borderClasses} ${className}`}>
         {hasCheck && (
-          <Check fill={isHighlighted ? "fill-primary" : "fill-gray-4"} />
+          <Check fill={checkHighlighted ? "fill-primary" : "fill-gray-4"} />
         )}
         {displayCell && text ? (
           <span className={textClasses}>{text}</span>
