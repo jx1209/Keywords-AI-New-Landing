@@ -47,8 +47,7 @@ export const blogs: Blog[] = [
   {
     id: 1,
     timestamp: "March 25, 2024",
-    title:
-      "Claude Haiku can substitute GPT-4 in 95% of AI tasks at 4% cost",
+    title: "Claude Haiku can substitute GPT-4 in 95% of AI tasks at 4% cost",
     slug: "/blog/claude-haiku-vs-gpt-4",
     type: "MODEL",
     cover: {
@@ -950,44 +949,45 @@ export const blogs: Blog[] = [
       description: "",
     },
     paragraphs: [
-      {id: 1,
-        text: "Previously, we discussed [methods to prevent LLM hallucinations](https://keywordsai.co/#/blog/how-to-stop-llm-hallucinations), highlighting three main strategies: advanced prompting, retrieval-augmented generation (RAG), and fine-tuning. In this blog, we'll focus on fine-tuning large language models (LLMs) and guide you through creating a custom dataset for this purpose."
+      {
+        id: 1,
+        text: "Previously, we discussed [methods to prevent LLM hallucinations](https://keywordsai.co/#/blog/how-to-stop-llm-hallucinations), highlighting three main strategies: advanced prompting, retrieval-augmented generation (RAG), and fine-tuning. In this blog, we'll focus on fine-tuning large language models (LLMs) and guide you through creating a custom dataset for this purpose.",
       },
       {
-        id:2,
+        id: 2,
         primary_title: "What is LLM fine-tuning?",
-        text: "Fine-tuning large language models (LLMs) involves training a pre-existing model, like GPT-3, on a smaller, specific dataset to make it better at specialized tasks. This process uses the model's existing knowledge, saving time and resources compared to training a model from scratch.\n\n By fine-tuning, we can adapt a general model to specific needs. For example, GPT-3 can be fine-tuned with medical reports to help it understand and generate accurate medical content. This makes the model more useful for particular applications, improving its performance in specialized areas while retaining its broad language skills."
+        text: "Fine-tuning large language models (LLMs) involves training a pre-existing model, like GPT-3, on a smaller, specific dataset to make it better at specialized tasks. This process uses the model's existing knowledge, saving time and resources compared to training a model from scratch.\n\n By fine-tuning, we can adapt a general model to specific needs. For example, GPT-3 can be fine-tuned with medical reports to help it understand and generate accurate medical content. This makes the model more useful for particular applications, improving its performance in specialized areas while retaining its broad language skills.",
       },
       {
         id: 3,
         primary_title: "When to fine-tune",
-        text: "Fine-tuning is particularly useful in several situations:\n\n - **Specializing in a Specific Domain:** When you need the model to handle specialized content, like legal documents, medical reports, or technical jargon, fine-tuning helps the model become proficient in that area. \n- **Improving Task Performance:** Fine-tuning the model with relevant data improves performance and output quality if you're working on a specific task, such as generating creative writing or translating languages. \n- **Customizing Outputs:** Fine-tuning allows you to adjust the model’s tone, style, or level of detail to match your specific needs, such as creating a distinct voice for content or ensuring appropriate formality in communication. \n- **Adapting to Changing Data:** When the data distribution shifts over time, fine-tuning helps the model stay accurate and relevant, ensuring it performs well with new data. \n- **Enhancing Privacy and Fairness:** Fine-tuning can focus on improving privacy and security for applications that handle sensitive information. Additionally, it can help mitigate biases by using balanced datasets to train the model, promoting fairness. \n\n In essence, fine-tuning is beneficial when you must tailor a general model to meet specific requirements, enhance its task performance, customize its outputs, adapt to new data, or improve its handling of privacy and fairness issues."
+        text: "Fine-tuning is particularly useful in several situations:\n\n - **Specializing in a Specific Domain:** When you need the model to handle specialized content, like legal documents, medical reports, or technical jargon, fine-tuning helps the model become proficient in that area. \n- **Improving Task Performance:** Fine-tuning the model with relevant data improves performance and output quality if you're working on a specific task, such as generating creative writing or translating languages. \n- **Customizing Outputs:** Fine-tuning allows you to adjust the model’s tone, style, or level of detail to match your specific needs, such as creating a distinct voice for content or ensuring appropriate formality in communication. \n- **Adapting to Changing Data:** When the data distribution shifts over time, fine-tuning helps the model stay accurate and relevant, ensuring it performs well with new data. \n- **Enhancing Privacy and Fairness:** Fine-tuning can focus on improving privacy and security for applications that handle sensitive information. Additionally, it can help mitigate biases by using balanced datasets to train the model, promoting fairness. \n\n In essence, fine-tuning is beneficial when you must tailor a general model to meet specific requirements, enhance its task performance, customize its outputs, adapt to new data, or improve its handling of privacy and fairness issues.",
       },
       {
-        id:4,
+        id: 4,
         primary_title: "Steps of Fine-Tuning",
-        text: "There are key steps for developers to fine-tune a Large Language Model (LLM):\n\n - **Select a Pre-Trained Model:** Previously, GPT-3 was the primary choice for fine-tuning due to its performance and limited alternatives. However, as of mid-2024, numerous models are available, each with its own strengths. Options now include Mistral-7B, Cohere Command-R, Meta LLaMA 2, and GPT-4. \n- **Prepare your custom dataset:** Gather a dataset relevant to your specific task or domain. Once you have the raw data, preprocess it by cleaning and organizing it. This includes splitting the dataset into training and testing sets to ensure the model can learn effectively and be appropriately evaluated. \n- **Fine-tuning:** Choose a fine-tuning platform to train your model or opt to train it in-house, depending on your resources and requirements. \n- **Validation:** Fine-tuning a model is an ongoing process. Continuously monitor its performance using accuracy, loss, and precision metrics. Adjust parameters as needed to optimize the model for your specific task, ensuring it meets your desired performance standards."
+        text: "There are key steps for developers to fine-tune a Large Language Model (LLM):\n\n - **Select a Pre-Trained Model:** Previously, GPT-3 was the primary choice for fine-tuning due to its performance and limited alternatives. However, as of mid-2024, numerous models are available, each with its own strengths. Options now include Mistral-7B, Cohere Command-R, Meta LLaMA 2, and GPT-4. \n- **Prepare your custom dataset:** Gather a dataset relevant to your specific task or domain. Once you have the raw data, preprocess it by cleaning and organizing it. This includes splitting the dataset into training and testing sets to ensure the model can learn effectively and be appropriately evaluated. \n- **Fine-tuning:** Choose a fine-tuning platform to train your model or opt to train it in-house, depending on your resources and requirements. \n- **Validation:** Fine-tuning a model is an ongoing process. Continuously monitor its performance using accuracy, loss, and precision metrics. Adjust parameters as needed to optimize the model for your specific task, ensuring it meets your desired performance standards.",
       },
       {
-        id:4,
+        id: 4,
         primary_title: "Methods for fine-tuning LLMs",
-        text: "Fine-tuning a Large Language Model (LLM) involves a supervised learning process where labeled examples adjust the model’s weights to enhance its proficiency in specific tasks. Here are some notable techniques used in fine-tuning: \n\n **Full Fine-Tuning (Instruction Fine-Tuning)** \n\n Instruction fine-tuning, or full fine-tuning, updates all the model's weights to improve its performance across various tasks. This technique involves training the model on examples that guide its responses to specific queries. The dataset used is tailored to the task at hand, such as summarization or translation. Full fine-tuning creates a new version of the model with enhanced capabilities, but it requires significant memory and computational resources, similar to pre-training, to store and process gradients, optimizers, and other components during training. \n\n **Parameter-Efficient Fine-Tuning (PEFT)** Parameter-efficient fine-tuning (PEFT) is more resource-efficient than full fine-tuning. It addresses the challenge of high memory and computational requirements by updating only a subset of the model's parameters and \"freezing\" the rest. This reduces the number of trainable parameters, making memory requirements more manageable and preventing catastrophic forgetting, where the model loses previously learned information. PEFT maintains the original LLM weights, ensuring the retention of general knowledge while fine-tuning for specific tasks. Techniques like Low-Rank Adaptation (LoRA) and Quantized LoRA (QLoRA) are popular and effective methods within PEFT, significantly reducing the number of trainable parameters and optimizing the fine-tuning process."
+        text: "Fine-tuning a Large Language Model (LLM) involves a supervised learning process where labeled examples adjust the model’s weights to enhance its proficiency in specific tasks. Here are some notable techniques used in fine-tuning: \n\n **Full Fine-Tuning (Instruction Fine-Tuning)** \n\n Instruction fine-tuning, or full fine-tuning, updates all the model's weights to improve its performance across various tasks. This technique involves training the model on examples that guide its responses to specific queries. The dataset used is tailored to the task at hand, such as summarization or translation. Full fine-tuning creates a new version of the model with enhanced capabilities, but it requires significant memory and computational resources, similar to pre-training, to store and process gradients, optimizers, and other components during training. \n\n **Parameter-Efficient Fine-Tuning (PEFT)** Parameter-efficient fine-tuning (PEFT) is more resource-efficient than full fine-tuning. It addresses the challenge of high memory and computational requirements by updating only a subset of the model's parameters and \"freezing\" the rest. This reduces the number of trainable parameters, making memory requirements more manageable and preventing catastrophic forgetting, where the model loses previously learned information. PEFT maintains the original LLM weights, ensuring the retention of general knowledge while fine-tuning for specific tasks. Techniques like Low-Rank Adaptation (LoRA) and Quantized LoRA (QLoRA) are popular and effective methods within PEFT, significantly reducing the number of trainable parameters and optimizing the fine-tuning process.",
       },
       {
-        id:5,
+        id: 5,
         primary_title: "How to have your own golden dataset?",
-        text: "Having the right dataset is crucial for effective fine-tuning. However, selecting the most appropriate one can be challenging. Here are two methods to obtain a suitable dataset:"
+        text: "Having the right dataset is crucial for effective fine-tuning. However, selecting the most appropriate one can be challenging. Here are two methods to obtain a suitable dataset:",
       },
       {
-        id:6,
-        text: "**Pick an existing dataset** \n\n There are numerous existing datasets available for developers to use in fine-tuning models. You can choose one based on your specific use case. Here are some high-quality examples: \n\n - [Nectar](https://huggingface.co/datasets/berkeley-nest/Nectar) \n- [SlimOrca](https://huggingface.co/datasets/Open-Orca/SlimOrca) \n- [openhermes](https://huggingface.co/datasets/teknium/openhermes)"
+        id: 6,
+        text: "**Pick an existing dataset** \n\n There are numerous existing datasets available for developers to use in fine-tuning models. You can choose one based on your specific use case. Here are some high-quality examples: \n\n - [Nectar](https://huggingface.co/datasets/berkeley-nest/Nectar) \n- [SlimOrca](https://huggingface.co/datasets/Open-Orca/SlimOrca) \n- [openhermes](https://huggingface.co/datasets/teknium/openhermes)",
       },
       {
-        id:7,
-        text: "**Customize a Dataset Based on Your Specific Needs** \n\n Sometimes, existing datasets won’t meet your specific requirements, or you may want to transition from using public models to a custom model for tasks like developing a specialized chatbot for your website or a unique coding assistant for your AI product. In such cases, you need to create a customized dataset using your own data. This involves collecting and labeling relevant data for your use case, ensuring it aligns perfectly with your tasks and objectives. "
+        id: 7,
+        text: "**Customize a Dataset Based on Your Specific Needs** \n\n Sometimes, existing datasets won’t meet your specific requirements, or you may want to transition from using public models to a custom model for tasks like developing a specialized chatbot for your website or a unique coding assistant for your AI product. In such cases, you need to create a customized dataset using your own data. This involves collecting and labeling relevant data for your use case, ensuring it aligns perfectly with your tasks and objectives. ",
       },
       {
-        id:8,
+        id: 8,
         text: "**Example**\n\n  You can use [Keywords AI](https://keywordsai.co) to collect and analyze your LLM logs, tagging them for easy filtering. Once your request logs are recorded, you can edit them to create a dataset for fine-tuning models. \n\n For example, you can search for logs related to math and gather them into a new dataset. You can then edit and delete logs as needed to ensure your dataset is optimized for the best performance.",
         image: {
           id: 1,
@@ -998,8 +998,8 @@ export const blogs: Blog[] = [
             variant: "lg",
           },
         },
-      }, 
-    ]
+      },
+    ],
   },
   {
     id: 9,
@@ -1022,40 +1022,41 @@ export const blogs: Blog[] = [
       description: "",
     },
     paragraphs: [
-      {id: 1,
-        text: "With the rapid advancements in artificial intelligence, new language models are emerging every week, each offering unique strengths and capabilities. Navigating this ever-evolving landscape can be challenging, especially when identifying the best large language model (LLM) for specific use cases.\n\nIn this blog, we will explore the top 5 LLMs for 5 different fields. After spending a weekend testing over 100 LLMs and considering our users' preferences and use cases, along with data from Huggingface, we have compiled a comprehensive guide to help you choose the right LLM for your needs."
+      {
+        id: 1,
+        text: "With the rapid advancements in artificial intelligence, new language models are emerging every week, each offering unique strengths and capabilities. Navigating this ever-evolving landscape can be challenging, especially when identifying the best large language model (LLM) for specific use cases.\n\nIn this blog, we will explore the top 5 LLMs for 5 different fields. After spending a weekend testing over 100 LLMs and considering our users' preferences and use cases, along with data from Huggingface, we have compiled a comprehensive guide to help you choose the right LLM for your needs.",
       },
       {
-        id:2,
+        id: 2,
         primary_title: "Coding",
-        text: "- **Claude 3.5 Sonnet:** Anthropic’s latest flagship model, leading [the LMSYS Arena Leaderboard’s Coding category](https://chat.lmsys.org/). It surpasses every existing LLMs, becoming our team's primary coding assistant, replacing GPT-4o. \n- **GPT-4-Turbo-2024-04-09:** OpenAI's top choice for coding, solving most problems efficiently. Its drawback is the pricing, which is double that of GPT-4o.\n- **GPT-4o-2024-05-13:** OpenAI's flagship model, though slightly less proficient in coding than GPT-4-Turbo. It solves most daily coding issues but tends to repeat code. However, its speed makes it ideal for AI coding assistants. \n- **Gemini 1.5 Pro:** Google's latest, highly capable model for coding. Comparable to GPT-4o in performance, its limited public availability restricts high-volume usage. \n- **Claude 3 Opus:** Anthropic’s previous flagship model is on par with GPT-4-Turbo in performance but is currently too expensive to recommend. ($15 / 1M input tokens, $75 / 1M output tokens)"
+        text: "- **Claude 3.5 Sonnet:** Anthropic’s latest flagship model, leading [the LMSYS Arena Leaderboard’s Coding category](https://chat.lmsys.org/). It surpasses every existing LLMs, becoming our team's primary coding assistant, replacing GPT-4o. \n- **GPT-4-Turbo-2024-04-09:** OpenAI's top choice for coding, solving most problems efficiently. Its drawback is the pricing, which is double that of GPT-4o.\n- **GPT-4o-2024-05-13:** OpenAI's flagship model, though slightly less proficient in coding than GPT-4-Turbo. It solves most daily coding issues but tends to repeat code. However, its speed makes it ideal for AI coding assistants. \n- **Gemini 1.5 Pro:** Google's latest, highly capable model for coding. Comparable to GPT-4o in performance, its limited public availability restricts high-volume usage. \n- **Claude 3 Opus:** Anthropic’s previous flagship model is on par with GPT-4-Turbo in performance but is currently too expensive to recommend. ($15 / 1M input tokens, $75 / 1M output tokens)",
       },
       {
         id: 3,
         primary_title: "Content Creation",
-        text: "- **Claude 3.5 Sonnet:** Anthropic’s premier model excels in generating high-quality content. It was one of the top performers in script writing, demonstrating strong capabilities in producing detailed and coherent drafts. **Best for: script writing, storytelling, and creative content.** \n- **Llama 3 70b Instruct:** Meta’s open-source LLM, Llama-3–70b, is currently the best open-source LLM available. It is known for its thorough outlines, ability to learn from reference texts, and high-quality text generation. Llama-3–70b’s nuanced responses and attention to detail make it stand out among competitors. **Best for: blog writing, detailed articles, and technical documentation.** \n- **GPT-4o-2024-05-13:** OpenAI's most powerful LLM for content creation. It generates high-quality content and understands prompts clearly. It shines particularly when integrated with ChatGPT, allowing users to utilize a wide range of tools for enhanced functionality. **Best for: versatile content creation and email writing.** \n- **Gemini 1.5 Pro:** A top contender from Google, Gemini 1.5 Pro performed exceptionally well in script writing, matching the capabilities of Llama-3–70b and Claude-3-Sonnet. Its nuanced responses and attention to detail make it a strong choice for content creation tasks. **Best for: comprehensive reports, story development, and academic writing.** \n- **Mistral Large:** Another strong performer in the content creation field, Mistral Large offers robust capabilities in generating quality content. Though not as widely recognized as some competitors, it produces coherent, detailed text. **Best for: general content creation, marketing copy, and social media posts.**"
+        text: "- **Claude 3.5 Sonnet:** Anthropic’s premier model excels in generating high-quality content. It was one of the top performers in script writing, demonstrating strong capabilities in producing detailed and coherent drafts. **Best for: script writing, storytelling, and creative content.** \n- **Llama 3 70b Instruct:** Meta’s open-source LLM, Llama-3–70b, is currently the best open-source LLM available. It is known for its thorough outlines, ability to learn from reference texts, and high-quality text generation. Llama-3–70b’s nuanced responses and attention to detail make it stand out among competitors. **Best for: blog writing, detailed articles, and technical documentation.** \n- **GPT-4o-2024-05-13:** OpenAI's most powerful LLM for content creation. It generates high-quality content and understands prompts clearly. It shines particularly when integrated with ChatGPT, allowing users to utilize a wide range of tools for enhanced functionality. **Best for: versatile content creation and email writing.** \n- **Gemini 1.5 Pro:** A top contender from Google, Gemini 1.5 Pro performed exceptionally well in script writing, matching the capabilities of Llama-3–70b and Claude-3-Sonnet. Its nuanced responses and attention to detail make it a strong choice for content creation tasks. **Best for: comprehensive reports, story development, and academic writing.** \n- **Mistral Large:** Another strong performer in the content creation field, Mistral Large offers robust capabilities in generating quality content. Though not as widely recognized as some competitors, it produces coherent, detailed text. **Best for: general content creation, marketing copy, and social media posts.**",
       },
       {
-        id:4,
+        id: 4,
         primary_title: "Translation",
-        text: "- **Claude 3.5 Sonnet:** This model is widely used by many AI language translators due to its excellent performance across most languages and cost-effectiveness. **Best for: Spanish, German, and general multilingual translations.** \n- **GPT-4o-2024-05-13:** OpenAI's powerful model supports multiple languages and excels particularly in translating Chinese, French, German, and Spanish. **Best for: Chinese, French, German, and Spanish translations, especially where speed and accuracy are crucial.** \n- **Gemini Pro:** Known for its strong performance in French translations, Gemini Pro is also a reliable choice for other languages. **Best for: French translations and versatile multilingual tasks.** \n- **Llama 3 70b Instruct:** Meta’s open-source LLM supports multiple languages, with notable proficiency in Spanish. **Best for: Spanish translations and open-source multilingual projects.** \n- **Gemini 1.5 Pro:** This model excels in translating Chinese, French, and German, making it a top choice for these languages. **Best for: Chinese, French, and German translations, particularly in professional and technical contexts.**"
+        text: "- **Claude 3.5 Sonnet:** This model is widely used by many AI language translators due to its excellent performance across most languages and cost-effectiveness. **Best for: Spanish, German, and general multilingual translations.** \n- **GPT-4o-2024-05-13:** OpenAI's powerful model supports multiple languages and excels particularly in translating Chinese, French, German, and Spanish. **Best for: Chinese, French, German, and Spanish translations, especially where speed and accuracy are crucial.** \n- **Gemini Pro:** Known for its strong performance in French translations, Gemini Pro is also a reliable choice for other languages. **Best for: French translations and versatile multilingual tasks.** \n- **Llama 3 70b Instruct:** Meta’s open-source LLM supports multiple languages, with notable proficiency in Spanish. **Best for: Spanish translations and open-source multilingual projects.** \n- **Gemini 1.5 Pro:** This model excels in translating Chinese, French, and German, making it a top choice for these languages. **Best for: Chinese, French, and German translations, particularly in professional and technical contexts.**",
       },
       {
-        id:5,
+        id: 5,
         primary_title: "Long Text Summarization",
-        text: "- **Claude 3.5 Sonnet:** With a large context window of 200K, this model matches the performance of Opus but at a quarter of the cost. Its max output token limit is 4096 tokens. **Best for: summarizing extensive documents and articles where cost-effectiveness is important.** \n- **GPT-4o-2024-05-13:** Featuring a 100K context window, GPT-4o is exceptionally fast and consistently accurate, rarely hallucinating. **Best for: reliable and speedy summarization of lengthy texts with minimal errors.** \n- **Command R+:** The top choice for local deployment, Command R+ excels at structuring and organizing summaries. It effectively splits layers of abstraction and formats topics coherently. **Best for: local summarization tasks requiring detailed and well-structured outputs.** \n- **Gemini 1.5 Pro:** With a 100K context length and incredible speed, Gemini 1.5 Pro can summarize thousands of pages within a minute. **Best for: rapid summarization of very large documents, such as multi-thousand-page PDFs.** \n- **Gemini 1.5 Flash:** Google’s cost-effective and extremely fast model, though not as reliable as Gemini 1.5 Pro. **Best for: quick summarization tasks where cost and speed are prioritized over reliability.**"
+        text: "- **Claude 3.5 Sonnet:** With a large context window of 200K, this model matches the performance of Opus but at a quarter of the cost. Its max output token limit is 4096 tokens. **Best for: summarizing extensive documents and articles where cost-effectiveness is important.** \n- **GPT-4o-2024-05-13:** Featuring a 100K context window, GPT-4o is exceptionally fast and consistently accurate, rarely hallucinating. **Best for: reliable and speedy summarization of lengthy texts with minimal errors.** \n- **Command R+:** The top choice for local deployment, Command R+ excels at structuring and organizing summaries. It effectively splits layers of abstraction and formats topics coherently. **Best for: local summarization tasks requiring detailed and well-structured outputs.** \n- **Gemini 1.5 Pro:** With a 100K context length and incredible speed, Gemini 1.5 Pro can summarize thousands of pages within a minute. **Best for: rapid summarization of very large documents, such as multi-thousand-page PDFs.** \n- **Gemini 1.5 Flash:** Google’s cost-effective and extremely fast model, though not as reliable as Gemini 1.5 Pro. **Best for: quick summarization tasks where cost and speed are prioritized over reliability.**",
       },
       {
-        id:6,
+        id: 6,
         primary_title: "Document Processing",
-        text: "- **Claude 3.5 Sonnet:** This model excels in extracting detailed information from complex documents, handling intricate data with impressive precision. Its performance in processing financial data and other detailed documents stands out. **Best for: detailed financial data extraction, complex document analysis, and precise information retrieval.** \n- **GPT-4o-2024-05-13:** GPT-4o is a robust model for document processing, offering a wide range of capabilities. It effectively summarizes reports and extracts key information, although it may occasionally miss some details in more intricate tasks. **Best for: general document processing, summarizing reports, and extracting key information from standard documents.** \n- **Claude 3 Haiku:** Priced attractively, Haiku offers the best value among visual language models. It provides low-cost outputs with commendable performance, particularly suitable for tasks requiring visual language processing. **Best for: cost-effective document analysis, visual data processing, and tasks requiring multimodal capabilities.** \n- **Qwen-VL:** As a leading open-source model, Qwen-VL excels in extracting text from images and providing insightful responses. It supports high-definition images and various aspect ratios, making it highly versatile. **Best for: image-based text extraction, detailed image analysis, and open-source projects needing robust multimodal processing.** \n- **Gemini 1.5 Flash: While cost-effective and extremely fast, Gemini 1.5 Flash may have some accuracy trade-offs. Best for: rapid document processing tasks where speed and cost are prioritized over absolute precision.**"
+        text: "- **Claude 3.5 Sonnet:** This model excels in extracting detailed information from complex documents, handling intricate data with impressive precision. Its performance in processing financial data and other detailed documents stands out. **Best for: detailed financial data extraction, complex document analysis, and precise information retrieval.** \n- **GPT-4o-2024-05-13:** GPT-4o is a robust model for document processing, offering a wide range of capabilities. It effectively summarizes reports and extracts key information, although it may occasionally miss some details in more intricate tasks. **Best for: general document processing, summarizing reports, and extracting key information from standard documents.** \n- **Claude 3 Haiku:** Priced attractively, Haiku offers the best value among visual language models. It provides low-cost outputs with commendable performance, particularly suitable for tasks requiring visual language processing. **Best for: cost-effective document analysis, visual data processing, and tasks requiring multimodal capabilities.** \n- **Qwen-VL:** As a leading open-source model, Qwen-VL excels in extracting text from images and providing insightful responses. It supports high-definition images and various aspect ratios, making it highly versatile. **Best for: image-based text extraction, detailed image analysis, and open-source projects needing robust multimodal processing.** \n- **Gemini 1.5 Flash: While cost-effective and extremely fast, Gemini 1.5 Flash may have some accuracy trade-offs. Best for: rapid document processing tasks where speed and cost are prioritized over absolute precision.**",
       },
       {
-        id:7,
+        id: 7,
         primary_title: "How to Try Out These Models",
-        text: "You can easily explore and test all of these models on Keywords AI’s LLM Playground. This platform allows you to experiment with different language models and seamlessly integrate them into your AI applications, enhancing your projects with the best-suited LLM for your needs."
+        text: "You can easily explore and test all of these models on Keywords AI’s LLM Playground. This platform allows you to experiment with different language models and seamlessly integrate them into your AI applications, enhancing your projects with the best-suited LLM for your needs.",
       },
-    ]
+    ],
   },
   {
     id: 10,
@@ -1078,11 +1079,12 @@ export const blogs: Blog[] = [
       description: "",
     },
     paragraphs: [
-      {id: 1,
-        text: "As large language model (LLM) products continue proliferating, managing their rate limits becomes increasingly critical for developers. Rate limits for LLMs define the number of requests a user or client can make to the model within a specified timeframe. With the growing demand for these powerful tools, developers face the challenge of ensuring their applications can handle high traffic without running into rate limit constraints. Addressing this issue is essential to prevent customer-facing errors and maintain a seamless user experience. Understanding and enhancing your LLM rate limit is key to optimizing performance and reliability. \n\nIn this blog, we’ll delve into how you can enhance your LLM rate limit and avoid LLM downtime, ensuring optimal performance and reliability for your applications."
+      {
+        id: 1,
+        text: "As large language model (LLM) products continue proliferating, managing their rate limits becomes increasingly critical for developers. Rate limits for LLMs define the number of requests a user or client can make to the model within a specified timeframe. With the growing demand for these powerful tools, developers face the challenge of ensuring their applications can handle high traffic without running into rate limit constraints. Addressing this issue is essential to prevent customer-facing errors and maintain a seamless user experience. Understanding and enhancing your LLM rate limit is key to optimizing performance and reliability. \n\nIn this blog, we’ll delve into how you can enhance your LLM rate limit and avoid LLM downtime, ensuring optimal performance and reliability for your applications.",
       },
       {
-        id:2,
+        id: 2,
         primary_title: "Rate Limits of Leading LLM Providers",
         text: "**OpenAI**\n\n OpenAI offers 6 tiers for users, ranging from a free tier to tier 5, each with varying rate limits based on your spending. For instance, if your monthly expenditure is between $500 and $1,000, the rate limit for flagship models like gpt-4o will be 5,000 requests per minute (5,000 RPM).",
         image: {
@@ -1105,7 +1107,7 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id:4,
+        id: 4,
         text: "**Gemini**\n\n Despite Gemini’s impressive performance for AI products, its rate limits are relatively low. The top model, Gemini 1.5 Pro, supports only 360 requests per minute (RPM), but its tokens per minute (TPM) is significantly higher than those of OpenAI and Anthropic.",
         image: {
           id: 1,
@@ -1116,8 +1118,9 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id:5,
-        primary_title: "Strategies to Enhance LLM Rate Limits Without Additional Costs",
+        id: 5,
+        primary_title:
+          "Strategies to Enhance LLM Rate Limits Without Additional Costs",
         text: "**Load balancing between models**\n\n Load balancing between models involves distributing your LLM requests across multiple models proportionally. By utilizing different LLMs with similar performance levels, you can effectively manage and optimize your rate limits. This approach ensures that no single model is overwhelmed, thereby reducing the likelihood of hitting rate limits and maintaining smooth operations. \n\nFor instance, Keywords AI’s load balancing feature allows you to easily control your LLM rate limits by distributing requests among various models. You can use models like Anthropic Haiku, Gemini 1.5 Flash, and GPT-3.5-turbo simultaneously, specifying their weights to balance the load efficiently. \n\nIn the example below, 50% of your requests are directed to Claude 3 Haiku, while 25% go to GPT-3.5-turbo and Gemini 1.5 Flash each:\n\n ",
         image: {
           id: 1,
@@ -1128,7 +1131,7 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id:6,
+        id: 6,
         primary_title: "Load balancing between API keys",
         text: "Sometimes, you may prefer not to distribute your API requests across different models and instead want a single LLM to handle all your requests. In such cases, load balancing between API keys from a single provider is the best solution.\n\n To achieve this, you need to create multiple accounts with a single provider and generate API keys for each account. Then, navigate to the Keywords AI Credential page to add your credentials and specify weights for each deployment.",
         image: {
@@ -1140,7 +1143,7 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id:7,
+        id: 7,
         text: "You can also add load balancing for any other providers you use on the platform, ensuring optimal management of your rate limits across various credentials. ",
         image: {
           id: 1,
@@ -1151,11 +1154,11 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id:8,
+        id: 8,
         primary_title: "Additional Strategies to Enhance Your LLM Rate Limits",
         text: "Besides the two primary methods, there are several other ways to enhance your LLM rate limits: \n- **Request Higher Rate Limits from Providers:** If you have a substantial spending history with a provider, you can request them to manually increase your rate limits. This option is viable but typically requires significant expenditure for approval. \n- **Use OpenAI’s Batch API:** For use cases that do not require synchronous processing, OpenAI’s asynchronous Batch API is an excellent option. It offers higher rate limits and is more cost-effective than synchronous processing. However, responses can take up to 24 hours, making it unsuitable for real-time applications. \n- **Build Your Own Load Balancing Solution:** If data privacy is a concern, building your own load balancing solution might be the best route. While this approach ensures full control over your data, it requires significant effort and technical expertise. Leveraging third-party packages can help streamline this process, but it will still demand considerable time and resources.",
       },
-    ]
+    ],
   },
   {
     id: 11,
@@ -1178,12 +1181,13 @@ export const blogs: Blog[] = [
       description: "",
     },
     paragraphs: [
-      {id: 1,
+      {
+        id: 1,
         primary_title: "Intro",
-        text: "On July 18, 2024, OpenAI released GPT-4o Mini, a new, intelligent small model. OpenAI claims that GPT-4o Mini matches the speed of GPT-3.5 Turbo while being significantly smarter and more cost-effective. This means future LLMs will be cheaper and smarter, making cost reduction less of a sustainable business strategy. \n\n Could GPT-4o Mini become the go-to choice for AI companies and developers seeking a balance of cost, speed, and performance? In this blog, I’ll present the test results of GPT-4o Mini show you what’s the best small model for you."
+        text: "On July 18, 2024, OpenAI released GPT-4o Mini, a new, intelligent small model. OpenAI claims that GPT-4o Mini matches the speed of GPT-3.5 Turbo while being significantly smarter and more cost-effective. This means future LLMs will be cheaper and smarter, making cost reduction less of a sustainable business strategy. \n\n Could GPT-4o Mini become the go-to choice for AI companies and developers seeking a balance of cost, speed, and performance? In this blog, I’ll present the test results of GPT-4o Mini show you what’s the best small model for you.",
       },
       {
-        id:2,
+        id: 2,
         primary_title: "Basic Comparison",
         image: {
           id: 1,
@@ -1198,7 +1202,7 @@ export const blogs: Blog[] = [
         text: "GPT-4o Mini stands out with its cost-effectiveness, extended context window, and ability to handle both text and images, making it a strong contender against its competitors. It offers a compelling balance of price, performance, and versatility, positioning it as an attractive option for AI developers and companies.",
       },
       {
-        id:4,
+        id: 4,
         primary_title: "Speed comparison",
         text: "**Latency**\n\n ",
         image: {
@@ -1210,11 +1214,11 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id:5,
+        id: 5,
         text: "From the graph, we can conclude that GPT-3.5 Turbo and Claude-3 Haiku have the lowest latency, making them the fastest in response time. GPT-4o Mini performs better than Gemini-1.5 Flash but lags behind the top two models.",
       },
       {
-        id:6,
+        id: 6,
         text: "**TTFT (Time to first token)**\n\n ",
         image: {
           id: 1,
@@ -1225,11 +1229,11 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id:7,
+        id: 7,
         text: "Gemini-1.5 Flash has an incredible TTFT, clocking in at under 0.2 seconds. This is particularly impressive and highlights its efficiency for applications requiring rapid initial responses. However, GPT-4o Mini has the longest TTFT, indicating it may not be suitable for voice AI applications where immediate feedback is critical.",
       },
       {
-        id:8,
+        id: 8,
         text: "**Throughput (Tokens per second)** ",
         image: {
           id: 1,
@@ -1240,11 +1244,11 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id:9,
+        id: 9,
         text: "GPT-4o Mini is on par with GPT-3.5 Turbo, both delivering around 80 tokens per second. Claude-3 Haiku, however, leads the pack with a throughput of 165 tokens per second, making it the fastest model in terms of token generation speed.\n\n In terms of speed, GPT-4o Mini shows competitive latency and throughput but falls behind in TTFT compared to its rivals. While it performs well in latency and token generation, its slower TTFT suggests it may not yet be ideal for applications where immediate responses are crucial, such as voice AI. However, its overall performance indicates it is still a strong contender in the market, particularly for tasks where latency and throughput are more critical than initial response time.",
       },
       {
-        id:10,
+        id: 10,
         primary_title: "Performance comparison",
         image: {
           id: 1,
@@ -1255,7 +1259,7 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id:11,
+        id: 11,
         text: "According to OpenAI's official model evaluation scores, GPT-4o Mini outperforms all other small models and is second only to GPT-4o.\n\n  We also conducted evaluation tests on the [Keywords AI platform](https://www.keywordsai.co). The evaluation comprised three parts: \n- **Coding Task:** We used the four models to debug the frontend development of Keywords AI. Both Claude-3 Haiku and GPT-4o Mini solved most bugs in zero shots and all bugs within three shots. \n- **Document Processing:** We provided large documents (around 100 pages) for the models to process. Gemini-1.5 Flash had the fastest processing speed with good performance. Claude-3 Haiku and GPT-4o Mini demonstrated the best performance, showing minimal hallucinations throughout the process. \n- **Logical Reasoning:** Claude-3 Haiku and GPT-4o Mini excelled in this task, easily solving complex problems across multiple domains. \n\n The evaluation metrics results are as follows:",
         image: {
           id: 1,
@@ -1266,20 +1270,20 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id:12,
+        id: 12,
         text: "GPT-4o Mini excels in multiple evaluation metrics, showcasing its superior performance in context precision, faithfulness, readability, and relevance. It particularly stands out in coding tasks and logical reasoning, making it a robust choice for diverse applications.",
       },
       {
-        id:13,
+        id: 13,
         primary_title: "Conclusion",
         text: "In this comprehensive analysis, we have evaluated the performance, speed, and cost of several leading language models, including Claude-3 Haiku, GPT-4o Mini, GPT-3.5 Turbo, and Gemini 1.5 Flash. Each model brings unique strengths to the table, making them suitable for different applications.",
       },
       {
-        id:14,
+        id: 14,
         primary_title: "Recommendations:",
         text: "**GPT-4o mini:** \n- **Best For:** Developers and AI companies seeking a balance of cost, speed, and performance. \n- **Strengths:** Superior context precision, faithfulness, and relevance. It performs exceptionally well in coding tasks and logical reasoning, making it an excellent choice for complex problem-solving and technical applications.\n\n **Claude-3 Haiku:** \n- **Best For:** Applications requiring fast response times and high throughput. \n- **Strengths:** Lowest latency and highest throughput among the tested models. Excels in coding tasks and logical reasoning, providing reliable performance with minimal hallucinations in document processing. \n\n **GPT-3.5 Turbo:**   \n- **Recommendation:** Switch to GPT-4o Mini. \n- **Reasons:** GPT-4o Mini offers a longer output length, a more recent knowledge cutoff, and overall improved performance. It's a more cost-effective and advanced choice for most applications, making it a better investment in the long term. \n\n**Gemini 1.5 Flash:** \n- **Best For:** Scenarios requiring the fastest TTFT and high processing speed for large documents. \n- **Strengths:** Incredible TTFT, making it ideal for applications where immediate response is critical. Strong performance in document processing, though it has a higher latency compared to others. \n\n In conclusion, while GPT-4o Mini emerges as a robust and versatile model, the choice ultimately depends on your specific needs and priorities. Evaluate your requirements based on cost, speed, and performance to select the most suitable model for your applications.",
       },
-    ]
+    ],
   },
   {
     id: 12,
@@ -1302,11 +1306,12 @@ export const blogs: Blog[] = [
       description: "",
     },
     paragraphs: [
-      {id: 1,
-        text: "Last September, [Andy](https://www.linkedin.com/in/hanheli/) came across a paper that introduced the concept of [FrugalGPT](https://arxiv.org/abs/2305.05176). This paper presented a method for reducing the cost of using Large Language Models (LLMs) while maintaining comparable performance by leveraging various smaller models.\n\n Inspired by FrugalGPT, we quickly turned theory into practice. [Raymond](https://www.linkedin.com/in/yunrui-huang/) developed a Minimum Viable Product (MVP) for an LLM router in just one week, followed by a front-end implementation the next week. Remarkably, we secured our first customer by week three. \n\n This blog post will guide you through our journey of building the LLM router MVP and provide insights on how you can create your own."
+      {
+        id: 1,
+        text: "Last September, [Andy](https://www.linkedin.com/in/hanheli/) came across a paper that introduced the concept of [FrugalGPT](https://arxiv.org/abs/2305.05176). This paper presented a method for reducing the cost of using Large Language Models (LLMs) while maintaining comparable performance by leveraging various smaller models.\n\n Inspired by FrugalGPT, we quickly turned theory into practice. [Raymond](https://www.linkedin.com/in/yunrui-huang/) developed a Minimum Viable Product (MVP) for an LLM router in just one week, followed by a front-end implementation the next week. Remarkably, we secured our first customer by week three. \n\n This blog post will guide you through our journey of building the LLM router MVP and provide insights on how you can create your own.",
       },
       {
-        id:2,
+        id: 2,
         primary_title: "What is FrugalGPT?",
         text: "**FrugalGPT** is a framework designed to reduce the costs of using Large Language Models (LLMs) while maintaining or improving performance. It employs three strategies: \n- **Prompt Adaptation:** Reducing the length of prompts to save costs. \n- **LLM Approximation:** Using cheaper models or caching responses to approximate expensive LLMs. \n- **LLM Cascade:** Sequentially querying different LLMs, starting with cheaper ones and only using expensive models if necessary. \n\n FrugalGPT can significantly cut costs (up to 98%) and even enhance accuracy by up to 4% compared to using a single LLM like GPT-4.",
         image: {
@@ -1322,36 +1327,37 @@ export const blogs: Blog[] = [
       {
         id: 3,
         primary_title: "Initial concept of the LLM router",
-        text: "After thoroughly reviewing the FrugalGPT paper, Andy recognized its potential to significantly reduce costs for AI startups and developers. This was particularly relevant to us, as our one-stop job search copilot consumed substantial daily resources on OpenAI. \n\n Our investigation led us to focus on LLM approximation, which we found to be the most practical and efficient strategy for our use case. To rapidly gather user feedback, we created a simplified LLM router integrating only GPT-3.5 Turbo and GPT-4. \n\n At the time, the cost difference between these models was substantial: \n- GPT-4: $30 (input) and $60 (output) per million tokens \n- GPT-3.5 Turbo: $0.5 (input) and $1.5 (output) per million tokens \n\nThis stark contrast highlighted the importance of efficient model selection. After all, you wouldn't want your AI application to use the expensive GPT-4 for simple responses like \"Hello\"! "
+        text: 'After thoroughly reviewing the FrugalGPT paper, Andy recognized its potential to significantly reduce costs for AI startups and developers. This was particularly relevant to us, as our one-stop job search copilot consumed substantial daily resources on OpenAI. \n\n Our investigation led us to focus on LLM approximation, which we found to be the most practical and efficient strategy for our use case. To rapidly gather user feedback, we created a simplified LLM router integrating only GPT-3.5 Turbo and GPT-4. \n\n At the time, the cost difference between these models was substantial: \n- GPT-4: $30 (input) and $60 (output) per million tokens \n- GPT-3.5 Turbo: $0.5 (input) and $1.5 (output) per million tokens \n\nThis stark contrast highlighted the importance of efficient model selection. After all, you wouldn\'t want your AI application to use the expensive GPT-4 for simple responses like "Hello"! ',
       },
       {
-        id:4,
-        primary_title: "Developing the MVP: Architecture and Classification System",
-        text: "Our LLM router concept utilizes an embedding model (text-embedding-3-small from OpenAI) to classify input, generate a vector score, and select the most suitable LLM based on that score. To enhance the router's model selection capability, we first established our evaluation and model ranking framework. \n\n **Model Ranking System:** \n\n We defined models and their characteristics in our backend:\n\n ```  gpt_4 = ModelParam(model_name=\"gpt-4\", speed=48, max_context_window=8192, model_size=170, mmlu_score=86.4, mt_bench_score=8.96, big_bench_score=83, input_cost=30,output_cost=60, rate_limit=10000, function_call=1)  ```  \n\n ```gpt_3_5_turbo = ModelParam(model_name=\"gpt-3.5-turbo\", speed=150,  max_context_window=4096, model_size=20, mmlu_score=70,  mt_bench_score=7.94, big_bench_score=71.6, input_cost=0.5, output_cost=0.1,function_call=1)```",
+        id: 4,
+        primary_title:
+          "Developing the MVP: Architecture and Classification System",
+        text: 'Our LLM router concept utilizes an embedding model (text-embedding-3-small from OpenAI) to classify input, generate a vector score, and select the most suitable LLM based on that score. To enhance the router\'s model selection capability, we first established our evaluation and model ranking framework. \n\n **Model Ranking System:** \n\n We defined models and their characteristics in our backend:\n\n ```  gpt_4 = ModelParam(model_name="gpt-4", speed=48, max_context_window=8192, model_size=170, mmlu_score=86.4, mt_bench_score=8.96, big_bench_score=83, input_cost=30,output_cost=60, rate_limit=10000, function_call=1)  ```  \n\n ```gpt_3_5_turbo = ModelParam(model_name="gpt-3.5-turbo", speed=150,  max_context_window=4096, model_size=20, mmlu_score=70,  mt_bench_score=7.94, big_bench_score=71.6, input_cost=0.5, output_cost=0.1,function_call=1)```',
       },
       {
-        id:5,
+        id: 5,
         primary_title: "Classification Categories",
         text: '**1. Difficulty Levels:** \n\n ```difficulty_details = { "1": "This query is just as a greeting or the most basic human interaction.", "2": "This is a simple question that can be answered with a single sentence.", "3": "This question requires a few sentences to answer, probably some logic or reasoning, basic coding question, or short JSON parsing.", "4": "This question requires a paragraph to answer, requires a fair amount of logic and reasoning, coding algorithm, or long JSON parsing.", "5": "This question requires a long answer, intricated logic or reasoning, complicated coding questions, or complicated nested JSON parsing."}   ```',
       },
       {
-        id:6,
+        id: 6,
         text: '**2. Task Categories:** \n\n ```category_details = { "Writing": "Engaging in narrative and creative text generation.", "Questions": "Responding to inquiries across various topics.", "Math": "Performing calculations and interpreting data.", "Roleplay": "Engaging in simulated dialogues and scenarios.", "Analysis": "Performing sentiment analysis, summarization, and entity recognition.","Creativity": "Generating ideas and concepts in arts and design.", "Coding": "This task requires coding assistants and code generation.", "Education": "Developing learning materials and providing explanations.", "Research": "Conducting online research and compiling information.", "Translation": "Translating text across multiple languages."}```',
       },
       {
-        id:7,
+        id: 7,
         text: '**3. Input Formats:** \n\n ```format_details = { "PlainText": "Standard unformatted text responses.", "StructuredData": "JSON, XML, and YAML output for structured data formats.", "CodeScript": "Generation of source code and executable scripts.", "ListOutput": "Bullet points and numbered list formats.", "InteractiveText": "Q&A style and other interactive text elements.","Customized": "Custom instructions and unique output formats."}```',
       },
 
       {
-        id:8,
+        id: 8,
         text: '**4. Expertise Areas:** \n\n ```expertise_details = { "STEM": "Covering science, technology, engineering, mathematics topics.", "Humanities": "Specializing in literature, history, philosophy, arts.", "Business": "Expertise in economics, management, marketing.", "Health": "Providing healthcare and medical knowledge.", "Legal": "Insights into law, politics, and governance.", "Education": "Specializing in teaching and learning techniques.", "Environment": "Focus on ecology, geography, and environmental science.", "Tech": "Information technology, computer science, AI specialization.","Arts": "Covering music, visual arts, and entertainment.","Social": "Understanding of sociology, psychology, anthropology."}```',
       },
       {
         id: 9,
-        text: "Check out the full code for the LLM router here: [LLM Router Code](https://medium.com/ai-advances/a-yc-startups-first-project-an-llm-router-with-code-4e8a66363b94)"
-      }      
-    ]
+        text: "Check out the full code for the LLM router here: [LLM Router Code](https://medium.com/ai-advances/a-yc-startups-first-project-an-llm-router-with-code-4e8a66363b94)",
+      },
+    ],
   },
   {
     id: 13,
@@ -1374,12 +1380,13 @@ export const blogs: Blog[] = [
       description: "",
     },
     paragraphs: [
-      {id: 1,
+      {
+        id: 1,
         primary_title: "Intro",
-        text: "This week has been bustling with activity in the open-source AI community. Meta unveiled its new flagship model, Llama 3.1 405B, along with its smaller counterparts, the 70B and 8B models. Not to be outdone, Mistral quickly followed suit by releasing its latest top-tier model, the Mistral Large 2, boasting an impressive 123B parameters. \n\n In this blog, we'll dive deep into a comparison of these two powerhouse models and offer recommendations to help you choose the one that best suits your needs."
+        text: "This week has been bustling with activity in the open-source AI community. Meta unveiled its new flagship model, Llama 3.1 405B, along with its smaller counterparts, the 70B and 8B models. Not to be outdone, Mistral quickly followed suit by releasing its latest top-tier model, the Mistral Large 2, boasting an impressive 123B parameters. \n\n In this blog, we'll dive deep into a comparison of these two powerhouse models and offer recommendations to help you choose the one that best suits your needs.",
       },
       {
-        id:2,
+        id: 2,
         primary_title: "Basic Comparison",
         text: "Both the Llama 3.1 405B and Mistral Large 2 models are open-source, making them accessible for hosting on your desktop or through an AI gateway. For our analysis, we utilized [Keywords AI](https://www.keywordsai.co), a platform that allows seamless integration with over 200 LLMs using a unified format.",
         image: {
@@ -1393,7 +1400,6 @@ export const blogs: Blog[] = [
       {
         id: 3,
         text: "While both models offer substantial parameter counts, context windows, and max output tokens, the Llama 3.1 405B stands out with its significantly higher parameter count. However, the Mistral Large 2 has a later knowledge cutoff date, potentially offering more up-to-date information. Pricing structures are similar for input tokens but differ for output tokens, with Mistral Large 2 being more expensive.",
-
       },
       {
         id: 4,
@@ -1407,7 +1413,7 @@ export const blogs: Blog[] = [
         text: "Llama 3.1 405B generally leads in MMLU and GSM8K, indicating strong performance in multi-task language understanding and grade school math problems. However, Mistral Large 2 excels in the HumanEval benchmark, demonstrating superior coding capabilities. The MBPP Plus scores show a closer competition, with Llama 3.1 405B slightly ahead.",
       },
       {
-        id:5,
+        id: 5,
         primary_title: "Speed comparison",
         text: "**Latency**\n\n ",
         image: {
@@ -1419,11 +1425,11 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id:6,
+        id: 6,
         text: "In terms of latency, Mistral Large 2 and Llama 3.1 405B perform at comparable levels. Our tests, consisting of hundreds of requests for each model, revealed that Mistral Large 2 has an average latency of 20.642 seconds, while Llama 3.1 405B averages at 25.47 seconds. Despite these differences, the overall generation times for both models are quite similar, indicating no significant disparity in performance.",
       },
       {
-        id:7,
+        id: 7,
         text: "**TTFT (Time to first token)**\n\n ",
         image: {
           id: 1,
@@ -1434,11 +1440,11 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id:8,
+        id: 8,
         text: "The Time to First Token (TTFT) for Mistral Large 2 and Llama 3.1 405B is remarkably similar. Mistral Large 2 averages a TTFT of 0.5446 seconds, while Llama 3.1 405B comes in at 0.5282 seconds. Both models have TTFTs of around 0.5 seconds, which, while slower than GPT-4o and Claude 3.5 Sonnet, still represents a good performance level.",
       },
       {
-        id:9,
+        id: 9,
         text: "**Throughput (Tokens per second)** ",
         image: {
           id: 1,
@@ -1449,11 +1455,11 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id:10,
+        id: 10,
         text: "The throughput for Mistral Large 2 and Llama 3.1 405B is relatively modest, with Mistral Large 2 achieving 27.465 tokens per second and Llama 3.1 405B reaching 26.395 tokens per second. This throughput, around 25 tokens per second, is significantly slower than that of GPT-4o and Claude 3.5 Sonnet. However, it is comparable to models like Claude 3 Opus and GPT-4. \n\n In terms of speed, both Mistral Large 2 and Llama 3.1 405B deliver similar performance levels across various metrics. Their latency is comparable, with Mistral Large 2 slightly ahead at 20.642 seconds versus Llama 3.1 405B's 25.47 seconds. The Time to First Token (TTFT) for both models hovers around 0.5 seconds, demonstrating their efficiency despite being marginally slower than some of the latest offerings like GPT-4o and Claude 3.5 Sonnet. When it comes to throughput, both models perform at around 25 tokens per second, aligning them more closely with models like Claude 3 Opus and GPT-4. Overall, while neither model leads the pack in speed, they maintain competitive performance levels that are suitable for many applications..",
       },
       {
-        id:11,
+        id: 11,
         primary_title: "Performance comparison",
         image: {
           id: 1,
@@ -1464,25 +1470,25 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id:12,
+        id: 12,
         text: "We conducted evaluation tests on the [Keywords AI platform](https://www.keywordsai.co). The evaluation comprised three parts: \n- **Coding Task:** Both models were tested on debugging the frontend development of Keywords AI. Their understanding of coding was comparable, but Mistral Large 2 exhibited a slightly smarter problem-solving approach in certain instances compared to Llama 3.1 405B. \n- **Document Processing:** Large documents (around 100 pages) were provided to the models for information extraction. Both models demonstrated strong capabilities in this area. However, their slower processing speeds make them less ideal for handling large documents efficiently. \n- **Logical Reasoning:** Llama 3.1 405B outperformed Mistral Large 2 in logical reasoning tasks. Mistral Large 2 made some incorrect explanations and provided wrong answers, whereas Llama 3.1 405B consistently delivered accurate and reliable responses",
       },
       {
-        id:13,
+        id: 13,
         primary_title: "Conclusion",
         text: "In conclusion, our evaluations reveal distinct strengths and weaknesses for both Mistral Large 2 and Llama 3.1 405B. Mistral Large 2 demonstrated smarter problem-solving abilities in coding tasks, while Llama 3.1 405B excelled in logical reasoning. Both models performed well in document processing but are hampered by slower processing speeds, making them less suitable for extensive document handling. Overall, these tests highlight that each model has unique advantages, and the best choice depends on the specific requirements of your use case.",
       },
       {
-        id:14,
+        id: 14,
         primary_title: "Model recommendations:",
         text: "**Llama 3.1 405B:** \n- **Best For:** Logical reasoning tasks, complex problem-solving, and applications requiring high parameter counts for nuanced understanding and detailed responses. \n- **Not suitable for:** Tasks requiring fast processing speeds, such as real-time document processing or applications where throughput is critical. Additionally, due to its large parameter size, hosting the 405B model can be prohibitively expensive for individual users. \n\n **Mistral Large 2:** \n- **Best For:** Coding tasks, especially those requiring intelligent problem-solving and debugging. It also performs well in scenarios where slightly faster latency is beneficial. \n- **Not suitable for:** Tasks requiring precise logical reasoning and accuracy, as well as applications demanding high throughput for large-scale document processing.",
       },
       {
-        id:15,
+        id: 15,
         primary_title: "Where to try these open-source models?",
         text: "Self-hosting open-source models has its own strengths, offering complete control and customization. However, it can be inconvenient for developers who want a simpler and more streamlined way to experiment with these models. \n\n Consider using Keywords AI, a platform that allows you to access and test over 200 LLMs using a consistent format. With Keywords AI, you can try all the trending models with a simple API call or use the [model playground](https://docs.keywordsai.co/features/prompt/model-playground) to test them instantly.",
       },
-    ]
+    ],
   },
   {
     id: 14,
@@ -1505,13 +1511,14 @@ export const blogs: Blog[] = [
       description: "",
     },
     paragraphs: [
-      {id: 1,
-        text: "AI has become the hottest topic for startups and investors, largely due to the rapid development of Large Language Models (LLMs). Major providers like OpenAI, Anthropic, and Google are releasing new models almost monthly, leading to a surge in LLM-based applications. Alongside this growth, numerous tools have emerged to help developers build LLM products more quickly and easily. Developers can now use OpenAI's Assistant API to create AI assistants, LangChain to construct AI agents, and various frameworks to develop autopilots. \n\n However, most tools in the market focus solely on enabling developers to build LLM products, without offering any reliability assistance. As a result, developers often need to rely on third-party services or create their own reliability setups to ensure their LLM apps maintain high uptime and reliability. \n\n In this blog, we'll explore three key reliability setups that LLM developers are often overlooking. We'll discuss how to implement these setups or build your own solutions quickly and effectively."
+      {
+        id: 1,
+        text: "AI has become the hottest topic for startups and investors, largely due to the rapid development of Large Language Models (LLMs). Major providers like OpenAI, Anthropic, and Google are releasing new models almost monthly, leading to a surge in LLM-based applications. Alongside this growth, numerous tools have emerged to help developers build LLM products more quickly and easily. Developers can now use OpenAI's Assistant API to create AI assistants, LangChain to construct AI agents, and various frameworks to develop autopilots. \n\n However, most tools in the market focus solely on enabling developers to build LLM products, without offering any reliability assistance. As a result, developers often need to rely on third-party services or create their own reliability setups to ensure their LLM apps maintain high uptime and reliability. \n\n In this blog, we'll explore three key reliability setups that LLM developers are often overlooking. We'll discuss how to implement these setups or build your own solutions quickly and effectively.",
       },
       {
-        id:2,
+        id: 2,
         primary_title: "LLM App Reliability: Key Metrics",
-        text: "To measure an LLM application's reliability, developers should focus on three crucial metrics: \n\n **Uptime:** Critical for all products, not just LLM applications. Uptime directly impacts user retention. If an application experiences significant downtime, users will likely abandon it. The current industry standard for LLM application uptime should be at least 99.95%." ,
+        text: "To measure an LLM application's reliability, developers should focus on three crucial metrics: \n\n **Uptime:** Critical for all products, not just LLM applications. Uptime directly impacts user retention. If an application experiences significant downtime, users will likely abandon it. The current industry standard for LLM application uptime should be at least 99.95%.",
         image: {
           id: 1,
           url: "/images/blog_Images/blog14/cover.png",
@@ -1532,7 +1539,8 @@ export const blogs: Blog[] = [
             variant: "md",
           },
           caption: "Keywords AI usage dashboard",
-          captionURL: "https://docs.keywordsai.co/features/monitoring/analytics",
+          captionURL:
+            "https://docs.keywordsai.co/features/monitoring/analytics",
         },
       },
       {
@@ -1545,12 +1553,11 @@ export const blogs: Blog[] = [
           },
           caption: "User analytics",
           captionURL: "https://docs.keywordsai.co/features/user/user-data",
-
         },
         text: "**User churn rate:** With thousands of new LLM applications entering the market daily, competition is intensifying rapidly. Developers may see a surge in users one day, only to lose them the next. Monitoring user activity and understanding the churn rate is essential for any developer aiming for long-term success.",
       },
       {
-        id:5,
+        id: 5,
         primary_title: "Reliability setup",
         text: "**Implementing an alert system**\n\n An alert system is crucial for all products, including LLM applications, regardless of whether they operate in real-time. Timely notifications allow for swift problem resolution. Consider the following components: \n- Uptime monitoring platforms: Set up an uptime page for your apps to track availability and enhance credibility for potential users. For example, [Better Stack](https://betterstack.com/) offers a simple sign-up process for a unique uptime page and provides downtime notifications. \n- All-in-one alert system: This goes beyond simple system status monitoring, addressing LLM-specific issues like provider outages, API errors (400/404), and webhook failures. You can build your own using frameworks like Django for email notifications, or utilize specialized services like [Keywords AI's all-in-one alert system](https://docs.keywordsai.co/features/monitoring/subscribe-alerts) for customizable LLM-specific alerts.",
         image: {
@@ -1560,12 +1567,12 @@ export const blogs: Blog[] = [
             variant: "md",
           },
           caption: "LLM alert system",
-          captionURL: "https://docs.keywordsai.co/features/monitoring/subscribe-alerts",
-
+          captionURL:
+            "https://docs.keywordsai.co/features/monitoring/subscribe-alerts",
         },
       },
       {
-        id:6,
+        id: 6,
         primary_title: "Setup fallbacks",
         text: "Fallback is crucial when you encounter errors from your primary model. It allows you to switch to another model seamlessly, without users experiencing any errors. This is vital for ensuring a great user experience - nobody wants to waste time on AI apps that constantly generate errors. For instance, if you're using OpenAI's API to call models like GPT-4o or GPT-4 Turbo, you might notice frequent incidents and elevated error rates. Your job is to handle all of this in your backend, ensuring users never see these errors. \n\n Ways to implement a fallback system: \n- Build your own: Integrate models from different providers. If you're using Google's Gemini 1.5 Flash, consider also integrating Claude 3 Haiku and GPT-4 Mini into your product. They offer similar performance! The quickest way is to use an LLM gateway to access these models with a consistent format. Check out [the LLM gateway provider](https://docs.keywordsai.co/integration/supported-models). Then you could try to catch the exceptions and then switch to other models. \n- Choose a third-party fallback system: While you could build everything in your backend, it might take many hours of work. Alternatively, [the fallback system on Keywords AI](https://docs.keywordsai.co/features/generation/fallbacks) is super simple. Just add your desired fallback models on their website, and they'll handle all LLM outages for you. It takes just 1 minute to set up and ensures 0 seconds of downtime.",
         image: {
@@ -1575,31 +1582,32 @@ export const blogs: Blog[] = [
             variant: "md",
           },
           caption: "LLM fallback system",
-          captionURL: "https://docs.keywordsai.co/features/generation/fallbacks",
-
+          captionURL:
+            "https://docs.keywordsai.co/features/generation/fallbacks",
         },
       },
       {
-        id:7,
+        id: 7,
         primary_title: "Increase LLM rate limits",
         text: "No one can predict when a surge in demand will occur, but being prepared for this possibility is crucial. As a developer or startup founder, you should always dream big and have a robust plan in place to handle sudden spikes in usage. Here are two effective strategies to increase your LLM rate limits: \n- If you have a substantial spending history with a provider, you can request a manual increase in your rate limits. While this option is viable, it typically requires significant expenditure and can be a slow process. Waiting for provider approval can result in downtime and potential loss of users. Therefore, while this method is viable, it shouldn't be your only line of defense. \n- Load Balancing LLM Requests: A more dynamic and efficient approach is to load balance your LLM requests across different models or accounts. This method is straightforward and can be implemented with just a few lines of code. By distributing requests among various models or creating multiple accounts, you can handle large volumes of traffic seamlessly. For a detailed guide on how to implement load balancing, check out our article: [How to Increase Your LLM Rate Limits for Free!](https://www.keywordsai.co/blog/increase-llm-rate-limits).",
       },
       {
-        id:8,
+        id: 8,
         primary_title: "Monitor your users.",
         text: "While this isn't directly related to reliability setups, it's crucial for developers to understand the importance of user monitoring in maintaining a reliable LLM application. Knowing your users' behavior and inputs (with their permission plz) and tracking your application's responses ensures output quality and enhances overall reliability. \n\n  Key monitoring aspects include user inputs and application responses (with user permission), total number of users, number of active users, individual user usage statistics, and cost per user. Implementing user monitoring offers several benefits: it ensures output quality, identifies potential issues or areas for improvement, helps optimize resource allocation, and provides insights for product development. \n\n There are numerous user analytics tools and internal solutions available to gain insights into user sessions. For a comprehensive solution, consider platforms like [Keywords AI's User feature](https://docs.keywordsai.co/features/user/user-data), which allows you to track various user metrics in one place.",
       },
       {
-        id:9,
+        id: 9,
         primary_title: "Conclusion",
-        text: "In the rapidly evolving LLM landscape, reliability is key to standing out. By implementing a robust alert system, setting up fallbacks, and strategically increasing rate limits, developers can ensure their applications remain stable and user-friendly even under unexpected conditions. These setups, combined with effective user monitoring, form the backbone of a resilient LLM application. \n\n While implementing these reliability measures may require initial effort, the long-term benefits are substantial. A reliable LLM application not only retains users but also builds trust and credibility in a competitive field. As you continue to develop your LLM products, prioritizing these reliability setups will position you for success, enabling your application to scale efficiently and adapt to the dynamic challenges of the AI industry."
+        text: "In the rapidly evolving LLM landscape, reliability is key to standing out. By implementing a robust alert system, setting up fallbacks, and strategically increasing rate limits, developers can ensure their applications remain stable and user-friendly even under unexpected conditions. These setups, combined with effective user monitoring, form the backbone of a resilient LLM application. \n\n While implementing these reliability measures may require initial effort, the long-term benefits are substantial. A reliable LLM application not only retains users but also builds trust and credibility in a competitive field. As you continue to develop your LLM products, prioritizing these reliability setups will position you for success, enabling your application to scale efficiently and adapt to the dynamic challenges of the AI industry.",
       },
-    ]
+    ],
   },
   {
     id: 15,
     timestamp: "Auguest 14, 2024",
-    title: "Innovative LLM solutions: Keywords AI CEO Andy Li discusses product impact",
+    title:
+      "Innovative LLM solutions: Keywords AI CEO Andy Li discusses product impact",
     slug: "https://www.websiteplanet.com/blog/interview-keywordsai/",
     type: "INTERVIEW",
     author: {
@@ -1624,7 +1632,7 @@ export const blogs: Blog[] = [
     title: "What is a LPU and why it's faster than GPUs?",
     cover: {
       id: 1,
-      url: "/images/blog_Images/blog15/cover.jpg"
+      url: "/images/blog_Images/blog15/cover.jpg",
     },
     type: "GUIDE",
     author: {
@@ -1633,12 +1641,12 @@ export const blogs: Blog[] = [
         id: 1,
         url: "/images/blog_Images/hendrix.png",
         props: {
-          variant: "circle"
-        }
-      }
+          variant: "circle",
+        },
+      },
     },
     meta: {
-      description: ""
+      description: "",
     },
     paragraphs: [
       {
@@ -1653,42 +1661,42 @@ export const blogs: Blog[] = [
           props: {
             variant: "md",
           },
-        }
+        },
       },
       {
         id: 2,
         primary_title: "Try Groq models on Keywords AI",
-        text: "Keywords AI support all groq models, including Llama 3.1 405B, Llama 3.1 70B, and Llama 3.1 8B. You can easily access these models through the Keywords AI platform, allowing you to test and deploy them in your applications. Check out the [Keywords AI](https://docs.keywordsai.co/integration/supported-models) for more information on how to use Groq models."
+        text: "Keywords AI support all groq models, including Llama 3.1 405B, Llama 3.1 70B, and Llama 3.1 8B. You can easily access these models through the Keywords AI platform, allowing you to test and deploy them in your applications. Check out the [Keywords AI](https://docs.keywordsai.co/integration/supported-models) for more information on how to use Groq models.",
       },
       {
         id: 3,
         primary_title: "How LPUs Work",
-        text: "LPUs are built to address two main bottlenecks in LLM processing: 1. Compute density 2. Memory bandwidth\n\nThe architecture of LPUs sets them apart from traditional processors:\n- Single-core Architecture: Unlike multi-core processors, LPUs use a single-core design. This simplifies processing and reduces coordination overhead.\n- Synchronous Networking: Even in large-scale deployments, LPUs maintain synchronous communication, ensuring efficient data flow.\n- Sequential Processing: LPUs excel at sequential tasks, which is ideal for language processing where context and order are crucial.\n- Optimized Memory Access: LPUs feature near-instant memory access, reducing latency in data retrieval and processing."
+        text: "LPUs are built to address two main bottlenecks in LLM processing: 1. Compute density 2. Memory bandwidth\n\nThe architecture of LPUs sets them apart from traditional processors:\n- Single-core Architecture: Unlike multi-core processors, LPUs use a single-core design. This simplifies processing and reduces coordination overhead.\n- Synchronous Networking: Even in large-scale deployments, LPUs maintain synchronous communication, ensuring efficient data flow.\n- Sequential Processing: LPUs excel at sequential tasks, which is ideal for language processing where context and order are crucial.\n- Optimized Memory Access: LPUs feature near-instant memory access, reducing latency in data retrieval and processing.",
       },
       {
         id: 4,
         primary_title: "Why LPUs Are Faster",
-        text: "Several factors contribute to the superior speed of LPUs:\n- Specialized Design: LPUs are purpose-built for language tasks, eliminating unnecessary components found in general-purpose processors.\n- Reduced Bottlenecks: By addressing compute density and memory bandwidth issues, LPUs remove major performance bottlenecks.\n- Efficient Data Handling: The synchronous, sequential nature of LPUs allows for more efficient handling of language data.\n- High Accuracy at Lower Precision: LPUs maintain high accuracy even when operating at lower precision levels, allowing for faster processing without significant quality loss.\n- Auto-compilation: LPUs can auto-compile LLMs with over 50 billion parameters, streamlining the deployment of large models."
+        text: "Several factors contribute to the superior speed of LPUs:\n- Specialized Design: LPUs are purpose-built for language tasks, eliminating unnecessary components found in general-purpose processors.\n- Reduced Bottlenecks: By addressing compute density and memory bandwidth issues, LPUs remove major performance bottlenecks.\n- Efficient Data Handling: The synchronous, sequential nature of LPUs allows for more efficient handling of language data.\n- High Accuracy at Lower Precision: LPUs maintain high accuracy even when operating at lower precision levels, allowing for faster processing without significant quality loss.\n- Auto-compilation: LPUs can auto-compile LLMs with over 50 billion parameters, streamlining the deployment of large models.",
       },
       {
         id: 5,
         primary_title: "The Benefits of LPUs",
-        text: "Speed\nRecent tests have shown impressive results:\n- Llama-3 70B ran at over 250 tokens per second\n- Mixtral achieved nearly 500 tokens per second per user\n\nFor context, this means a user could potentially generate a 4,000-word essay in just over a minute.\n\nEfficiency\nLPUs offer:\n- Higher processing speeds\n- Improved throughput\n- Better precision\n\nThese benefits make LPUs particularly valuable for industries like finance, government, and technology, where rapid and accurate data processing is crucial."
+        text: "Speed\nRecent tests have shown impressive results:\n- Llama-3 70B ran at over 250 tokens per second\n- Mixtral achieved nearly 500 tokens per second per user\n\nFor context, this means a user could potentially generate a 4,000-word essay in just over a minute.\n\nEfficiency\nLPUs offer:\n- Higher processing speeds\n- Improved throughput\n- Better precision\n\nThese benefits make LPUs particularly valuable for industries like finance, government, and technology, where rapid and accurate data processing is crucial.",
       },
       {
         id: 6,
         primary_title: "LPUs vs. GPUs",
-        text: "While LPUs excel at inference tasks, GPUs still lead in model training. Both have their strengths:\n\n- LPUs: Optimal for applying trained models to new data\n- GPUs: Best for the initial training of AI models\n\nThe future may see LPUs and GPUs working together, each focusing on their strengths."
+        text: "While LPUs excel at inference tasks, GPUs still lead in model training. Both have their strengths:\n\n- LPUs: Optimal for applying trained models to new data\n- GPUs: Best for the initial training of AI models\n\nThe future may see LPUs and GPUs working together, each focusing on their strengths.",
       },
       {
         id: 7,
         primary_title: "The Origins of LPU",
-        text: "Jonathan Ross, who started the Tensor Processing Unit (TPU) project at Google, founded Groq in 2016. The company's innovative approach involved developing software and compilers before designing the hardware, resulting in a highly optimized system.\n\nThe Software-First Approach\n\nGroq's innovative approach to developing LPUs involved:\n\n1. Focusing on software and compiler development before hardware design.\n2. Ensuring optimal communication between chips.\n3. Creating a system where software guides inter-chip communication.\n\nThis software-first strategy resulted in a highly optimized system that outperforms traditional setups in speed, cost efficiency, and energy consumption."
+        text: "Jonathan Ross, who started the Tensor Processing Unit (TPU) project at Google, founded Groq in 2016. The company's innovative approach involved developing software and compilers before designing the hardware, resulting in a highly optimized system.\n\nThe Software-First Approach\n\nGroq's innovative approach to developing LPUs involved:\n\n1. Focusing on software and compiler development before hardware design.\n2. Ensuring optimal communication between chips.\n3. Creating a system where software guides inter-chip communication.\n\nThis software-first strategy resulted in a highly optimized system that outperforms traditional setups in speed, cost efficiency, and energy consumption.",
       },
       {
         id: 8,
         primary_title: "Conclusion",
-        text: "Language Processing Units represent a significant advancement in AI hardware. By combining architectural innovations with a software-optimized approach, LPUs achieve remarkable speeds in language processing tasks. As we enter a new era of LLMs, technologies like LPUs will play a crucial role in pushing the boundaries of what's possible in natural language processing and generation."
+        text: "Language Processing Units represent a significant advancement in AI hardware. By combining architectural innovations with a software-optimized approach, LPUs achieve remarkable speeds in language processing tasks. As we enter a new era of LLMs, technologies like LPUs will play a crucial role in pushing the boundaries of what's possible in natural language processing and generation.",
       },
     ],
   },
@@ -1699,7 +1707,7 @@ export const blogs: Blog[] = [
     title: "Top LLM dev tools for AI developers",
     cover: {
       id: 1,
-      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/top_tools/cover.png"
+      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/top_tools/cover.png",
     },
     type: "GUIDE",
     author: {
@@ -1708,9 +1716,9 @@ export const blogs: Blog[] = [
         id: 1,
         url: "/images/blog_Images/hendrix.png",
         props: {
-          variant: "circle"
-        }
-      }
+          variant: "circle",
+        },
+      },
     },
     paragraphs: [
       {
@@ -1720,7 +1728,7 @@ export const blogs: Blog[] = [
       {
         id: 2,
         primary_title: "Langchain: Building AI Products",
-        text: "LangChain is a powerful framework built around LLMs, designed to accelerate AI development. It offers a range of capabilities for creating chatbots, Generative Question-Answering (GQA) systems, summarization tools, and more. \n\n **Key Features** \n\n LangChain's core concept is \"chaining\" different components to create advanced LLM use cases. These components include: \n- **Prompt Templates:** Pre-designed templates for various prompt types, including chatbot-style and ELI5 question-answering \n- **LLMs:** Integration with large language models like GPT-4 and Claude-3.5 Sonnet. \n- **Agents:** LLM-powered decision-making tools that can use web search, calculators, and other resources in a logical operation loop. \n- **Memory:** Both short-term and long-term memory capabilities. \n\n Keywords AI is fully Langchain compatible! Check out Keywords AI [Langchain integration](https://docs.keywordsai.co/integration/development-frameworks/langchain) for more details.",
+        text: 'LangChain is a powerful framework built around LLMs, designed to accelerate AI development. It offers a range of capabilities for creating chatbots, Generative Question-Answering (GQA) systems, summarization tools, and more. \n\n **Key Features** \n\n LangChain\'s core concept is "chaining" different components to create advanced LLM use cases. These components include: \n- **Prompt Templates:** Pre-designed templates for various prompt types, including chatbot-style and ELI5 question-answering \n- **LLMs:** Integration with large language models like GPT-4 and Claude-3.5 Sonnet. \n- **Agents:** LLM-powered decision-making tools that can use web search, calculators, and other resources in a logical operation loop. \n- **Memory:** Both short-term and long-term memory capabilities. \n\n Keywords AI is fully Langchain compatible! Check out Keywords AI [Langchain integration](https://docs.keywordsai.co/integration/development-frameworks/langchain) for more details.',
         image: {
           id: 1,
           url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/top_tools/langchain.jpg",
@@ -1740,7 +1748,8 @@ export const blogs: Blog[] = [
           id: 1,
           url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/top_tools/keywords-ai.jpg",
           caption: "Keywords AI LLM dashboard",
-          captionURL: "https://docs.keywordsai.co/features/monitoring/analytics",
+          captionURL:
+            "https://docs.keywordsai.co/features/monitoring/analytics",
           props: {
             variant: "md",
           },
@@ -1779,7 +1788,7 @@ export const blogs: Blog[] = [
     title: "What is LLM monitoring?",
     cover: {
       id: 1,
-      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/what-is-llm-monitoring/cover.jpg"
+      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/what-is-llm-monitoring/cover.jpg",
     },
     type: "GUIDE",
     author: {
@@ -1788,9 +1797,9 @@ export const blogs: Blog[] = [
         id: 1,
         url: "/images/blog_Images/hendrix.png",
         props: {
-          variant: "circle"
-        }
-      }
+          variant: "circle",
+        },
+      },
     },
     paragraphs: [
       {
@@ -1800,12 +1809,12 @@ export const blogs: Blog[] = [
       {
         id: 2,
         primary_title: "What is LLM Monitoring?",
-        text: "LLM monitoring is the comprehensive process of overseeing, evaluating, and gaining insights into the performance and activities of Large Language Models in real-time. It encompasses both traditional monitoring aspects (tracking key metrics) and observability (understanding the system's internal workings).\n\n This approach enables developers, data scientists, and operations teams to: \n- Track performance metrics \n- Ensure accuracy and relevance of LLM outputs \n- Identify and troubleshoot issues \n- Gain deep insights into the LLM's decision-making processes \n- Maintain security and reliability "
+        text: "LLM monitoring is the comprehensive process of overseeing, evaluating, and gaining insights into the performance and activities of Large Language Models in real-time. It encompasses both traditional monitoring aspects (tracking key metrics) and observability (understanding the system's internal workings).\n\n This approach enables developers, data scientists, and operations teams to: \n- Track performance metrics \n- Ensure accuracy and relevance of LLM outputs \n- Identify and troubleshoot issues \n- Gain deep insights into the LLM's decision-making processes \n- Maintain security and reliability ",
       },
       {
         id: 2,
         primary_title: "Why is LLM Monitoring Important?",
-        text: "\n- **Ensuring Accuracy and Relevance**: LLMs can sometimes produce inaccurate or irrelevant responses, a phenomenon known as \"hallucination.\" Monitoring helps detect these instances, allowing for timely interventions and improvements. \n- **Maintaining Performance**: By tracking metrics such as response time, throughput, and error rates, teams can ensure that their LLM applications are performing optimally, which is crucial for maintaining a positive user experience. \n- **Enhancing Reliability**: LLM applications can face downtime due to various reasons, such as provider outages, hitting rate limits, or delayed alerts. Monitoring helps prevent and quickly address these issues. \n- **Optimizing LLM costs:** By monitoring LLM performance, you can identify the most cost-effective model for your applications and utilize features like LLM caching to reduce expenses. \n- **Debugging and Troubleshooting:** Many LLM applications involve complex chains of operations. Monitoring provides visibility into these processes, making it easier to identify and resolve issues.",
+        text: '\n- **Ensuring Accuracy and Relevance**: LLMs can sometimes produce inaccurate or irrelevant responses, a phenomenon known as "hallucination." Monitoring helps detect these instances, allowing for timely interventions and improvements. \n- **Maintaining Performance**: By tracking metrics such as response time, throughput, and error rates, teams can ensure that their LLM applications are performing optimally, which is crucial for maintaining a positive user experience. \n- **Enhancing Reliability**: LLM applications can face downtime due to various reasons, such as provider outages, hitting rate limits, or delayed alerts. Monitoring helps prevent and quickly address these issues. \n- **Optimizing LLM costs:** By monitoring LLM performance, you can identify the most cost-effective model for your applications and utilize features like LLM caching to reduce expenses. \n- **Debugging and Troubleshooting:** Many LLM applications involve complex chains of operations. Monitoring provides visibility into these processes, making it easier to identify and resolve issues.',
       },
       {
         id: 3,
@@ -1826,7 +1835,7 @@ export const blogs: Blog[] = [
     title: "Beyond Datadog: Why LLM developers are switching to Keywords AI",
     cover: {
       id: 1,
-      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/datadog/cover.png"
+      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/datadog/cover.png",
     },
     type: "GUIDE",
     author: {
@@ -1835,9 +1844,9 @@ export const blogs: Blog[] = [
         id: 1,
         url: "/images/blog_Images/hendrix.png",
         props: {
-          variant: "circle"
-        }
-      }
+          variant: "circle",
+        },
+      },
     },
     paragraphs: [
       {
@@ -1883,7 +1892,8 @@ export const blogs: Blog[] = [
             variant: "md",
           },
           caption: "LLM playground",
-          captionURL: "https://docs.keywordsai.co/features/prompt/model-playground",
+          captionURL:
+            "https://docs.keywordsai.co/features/prompt/model-playground",
         },
       },
       {
@@ -1896,7 +1906,8 @@ export const blogs: Blog[] = [
             variant: "md",
           },
           caption: "Prompt management",
-          captionURL: "https://docs.keywordsai.co/features/prompt/prompt-management",
+          captionURL:
+            "https://docs.keywordsai.co/features/prompt/prompt-management",
         },
       },
       {
@@ -1924,7 +1935,7 @@ export const blogs: Blog[] = [
     title: "o1-preview vs. claude-3.5-sonnet: Comparing top LLMs",
     cover: {
       id: 1,
-      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/o1-preview/cover.png"
+      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/o1-preview/cover.png",
     },
     type: "MODEL",
     author: {
@@ -1933,9 +1944,9 @@ export const blogs: Blog[] = [
         id: 1,
         url: "/images/blog_Images/hendrix.png",
         props: {
-          variant: "circle"
-        }
-      }
+          variant: "circle",
+        },
+      },
     },
     paragraphs: [
       {
@@ -1996,7 +2007,6 @@ export const blogs: Blog[] = [
         id: 6,
         primary_title: "Speed Comparison",
         text: "O1-preview takes longer to think and respond than other LLMs. While direct speed comparisons may not be entirely fair, testing o1-preview's speed is crucial. This information helps developers better understand o1-preview's capabilities and determine if it's suitable for their projects. \n\n Note: As o1-preview doesn't support streaming, we disabled streaming for both models. Consequently, time to first token (TTFT) couldn't be measured.",
-
       },
       {
         id: 7,
@@ -2033,7 +2043,7 @@ export const blogs: Blog[] = [
       {
         id: 11,
         primary_title: "How to integrate o1-preview into your AI apps.",
-        text: "To incorporate o1-preview into your AI applications, simply visit the Keywords AI model page and locate the \"View code\" button. Click this button to copy the provided code snippet, then paste it directly into your codebase. With this straightforward process, you'll be ready to harness the power of o1-preview in your projects, enabling you to tackle complex problems and generate high-quality content with ease.",
+        text: 'To incorporate o1-preview into your AI applications, simply visit the Keywords AI model page and locate the "View code" button. Click this button to copy the provided code snippet, then paste it directly into your codebase. With this straightforward process, you\'ll be ready to harness the power of o1-preview in your projects, enabling you to tackle complex problems and generate high-quality content with ease.',
         image: {
           id: 1,
           url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/o1-preview/model.jpg",
@@ -2051,7 +2061,7 @@ export const blogs: Blog[] = [
     title: "How I built a free AI SEO tool in just 2 hours",
     cover: {
       id: 1,
-      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/seo-description/traffic.png"
+      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/seo-description/traffic.png",
     },
     type: "GUIDE",
     author: {
@@ -2060,9 +2070,9 @@ export const blogs: Blog[] = [
         id: 1,
         url: "/images/blog_Images/hendrix.png",
         props: {
-          variant: "circle"
-        }
-      }
+          variant: "circle",
+        },
+      },
     },
     paragraphs: [
       {
@@ -2081,7 +2091,7 @@ export const blogs: Blog[] = [
       {
         id: 2,
         primary_title: "Website Layout (0.5h)",
-        text: "I leveraged AI to help design the entire website layout. By simply communicating my requirements to Claude-3.5-Sonnet, I received detailed and polished front-end code. \n\n For this project, my specific requirements were: \n- Utilize the App Router from Next.js \n- Include a text area for users to paste their blog content \n- Implement a drag-and-drop zone for file uploads \n- Provide options for users to select their preferred LLM \n- Include \"Generate,\" \"Reset,\" and \"Copy\" buttons \n\n By clearly defining these requirements, the AI was able to quickly generate a functional and user-friendly layout, significantly reducing development time",
+        text: 'I leveraged AI to help design the entire website layout. By simply communicating my requirements to Claude-3.5-Sonnet, I received detailed and polished front-end code. \n\n For this project, my specific requirements were: \n- Utilize the App Router from Next.js \n- Include a text area for users to paste their blog content \n- Implement a drag-and-drop zone for file uploads \n- Provide options for users to select their preferred LLM \n- Include "Generate," "Reset," and "Copy" buttons \n\n By clearly defining these requirements, the AI was able to quickly generate a functional and user-friendly layout, significantly reducing development time',
         image: {
           id: 1,
           url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/seo-description/cover.png",
@@ -2103,7 +2113,8 @@ export const blogs: Blog[] = [
             variant: "md",
           },
           caption: "Keywords AI LLM proxy",
-          captionURL: "https://docs.keywordsai.co/integration/development-frameworks/openai-sdk",
+          captionURL:
+            "https://docs.keywordsai.co/integration/development-frameworks/openai-sdk",
         },
       },
       {
@@ -2116,7 +2127,8 @@ export const blogs: Blog[] = [
             variant: "md",
           },
           caption: "Prompt management",
-          captionURL: "https://docs.keywordsai.co/features/prompt/prompt-management",
+          captionURL:
+            "https://docs.keywordsai.co/features/prompt/prompt-management",
         },
       },
       {
@@ -2168,7 +2180,7 @@ export const blogs: Blog[] = [
     title: "Keywords AI Update: September 2024",
     cover: {
       id: 1,
-      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/september-updates/cover.jpg"
+      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/september-updates/cover.jpg",
     },
     type: "UPDATE",
     author: {
@@ -2177,9 +2189,9 @@ export const blogs: Blog[] = [
         id: 1,
         url: "/images/blog_Images/hendrix.png",
         props: {
-          variant: "circle"
-        }
-      }
+          variant: "circle",
+        },
+      },
     },
     paragraphs: [
       {
@@ -2262,7 +2274,7 @@ export const blogs: Blog[] = [
     title: "5 Best Practices for LLM Application Monitoring",
     cover: {
       id: 1,
-      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/5-best-practices/cover.png"
+      url: "https://keywordsai-static.s3.amazonaws.com/landing/blog/5-best-practices/cover.png",
     },
     type: "GUIDE",
     author: {
@@ -2271,9 +2283,9 @@ export const blogs: Blog[] = [
         id: 1,
         url: "/images/blog_Images/hendrix.png",
         props: {
-          variant: "circle"
-        }
-      }
+          variant: "circle",
+        },
+      },
     },
     paragraphs: [
       {
@@ -2326,7 +2338,7 @@ export const blogs: Blog[] = [
           props: {
             variant: "md",
           },
-        }
+        },
       },
       {
         id: 8,
@@ -2342,7 +2354,7 @@ export const blogs: Blog[] = [
           props: {
             variant: "md",
           },
-        }
+        },
       },
       {
         id: 10,
@@ -2354,9 +2366,105 @@ export const blogs: Blog[] = [
           props: {
             variant: "md",
           },
-        }
+        },
       },
     ],
-  }
-  
+  },
+  {
+    id: 24,
+    timestamp: "November 16, 2024",
+    slug: "/blog/llm-logging-with-vercel-ai-sdk",
+    title: "LLM logging with Vercel AI SDK",
+    cover: {
+      id: 1,
+      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/vercel_sdk/cover.png",
+    },
+    type: "GUIDE",
+    author: {
+      name: "Hendrix",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/hendrix.png",
+        props: {
+          variant: "circle",
+        },
+      },
+    },
+    paragraphs: [
+      {
+        id: 1,
+        text: "OpenAI dominates the AI market, with Anthropic and Gemini also gaining popularity. Developers need these models to build reliable AI products.Using OpenAI or Anthropic's basic SDKs can be challenging. Frameworks like LangChain and Vercel AI SDK simplify development and handle complex workflows.",
+      },
+      {
+        id: 2,
+        text: "Vercel's AI SDK provides a unified API for text generation, structured data, and tool calls with LLMs. It also offers a modern UI, streamlining app creation.However, it lacks observability tools for LLM apps, making performance monitoring and debugging difficult.",
+      },
+      {
+        id: 3,
+        text: "Once your app's basic functionalities are set up, monitoring and improving performance becomes crucial. [Keywords AI](https://www.keywordsai.co/) fills this gap.",
+      },
+      {
+        id: 4,
+        text: "In this blog, we'll show how to implement LLM logging in production in just 5 minutes using a simple AI app.",
+      },
+      {
+        id: 5,
+        primary_title:
+          "Installing the AI SDK and Importing It into Your Codebase",
+        text: "Using Vercel's starter code, you can quickly create a local project. Begin by importing the Anthropic framework to leverage Anthropic models in your app.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/vercel_sdk/install.jpg",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 6,
+        text: "To make the app functional, implement two functions in your `api/route.ts` file: \n\n 1.**Import Anthropic Framework**: Set up the Anthropic client by importing the necessary modules and configuring the API keys. \n\n 2.**Call Anthropic Models**: Create a function that handles requests to the Anthropic API, enabling your app to generate AI responses.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/vercel_sdk/function_calls.jpg",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 7,
+        text: "With these functions added, run your app to view the frontend and assess its performance. \n\n The app is working! What's next?",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/vercel_sdk/sample_app.gif",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 8,
+        primary_title: "Track the performance and improve it",
+        text: "**Keywords AI** is an LLM monitoring and evaluation platform that enables you to monitor, debug, and enhance your AI app's performance. By integrating with the AI SDK, you can add monitoring capabilities with just a few lines of code changes. \n\n Steps to Integrate Keywords AI: \n\n **Generate an API Key**: Visit [Keywords AI](https://platform.keywordsai.co/) and obtain your API key. \n\n **Update Your Code**: \n- Replace the `baseURL` with `https://api.keywordsai.co/api/anthropic/v1`. \n- Replace the `apiKey` with your Keywords AI API key. \n\n Now, you can monitor your AI app directly through Keywords AI.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/vercel_sdk/monitor_example.gif",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 9,
+        primary_title: "Full Code Snippet:",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/vercel_sdk/full_code.jpg",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+    ],
+  },
 ];
