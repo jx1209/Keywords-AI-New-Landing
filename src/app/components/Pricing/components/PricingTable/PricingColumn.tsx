@@ -1,3 +1,5 @@
+import { Check } from "@/app/components/icons-old";
+
 import { PricingCell } from "./PricingCell";
 import { Button } from "@/app/components/Buttons";
 
@@ -25,13 +27,13 @@ export function PricingColumn({
   buttonText,
   cells,
   highlighted = false,
-  checkHighlighted=false,
+  checkHighlighted = false,
   onButtonClick,
 }: PricingColumnProps) {
   const columnClasses = `flex flex-col py-md items-start gap-md flex-1 self-stretch ${
     highlighted ? "bg-gray-2 shadow-border shadow-gray-3 rounded-md p-md" : ""
   }`;
-  
+
   return (
     <div className={columnClasses}>
       {/* Header */}
@@ -45,7 +47,28 @@ export function PricingColumn({
           onClick={onButtonClick}
         />
       </div>
-  
+      {title === "Free" && (
+        <div className="text-md-regular text-gray-4 w-1/5 flex items-center h-[36px] min-w-[187px]  gap-xxs">
+          <Check fill="fill-gray-4" />
+          Free forever
+        </div>
+      )}
+      {title === "Pro" && (
+        <div className="text-md-regular text-gray-4 w-1/5 flex items-center h-[36px] min-w-[187px] gap-xxs">
+          <Check fill="fill-gray-4" />2 weeks free
+        </div>
+      )}
+      {title === "Team" && (
+        <div className="text-md-regular text-gray-white w-1/5 flex items-center h-[36px] min-w-[187px] gap-xxs">
+          <Check fill="fill-primary" />2 weeks free
+        </div>
+      )}
+      {title === "Enterprise" && (
+        <div className="text-md-regular text-gray-4 w-1/5 flex items-center h-[36px] min-w-[187px] gap-xxs">
+          <Check fill="fill-primary" />1 month free
+        </div>
+      )}
+
       {/* Cells */}
       {cells.map((section, index) => (
         <div
@@ -59,6 +82,9 @@ export function PricingColumn({
             checkHighlighted={checkHighlighted}
             className="w-full"
           />
+          {/* {title === "Free" && (
+
+          )} */}
           {Object.entries(section).map(([key, value]) => {
             if (key === "section") return null;
             return (

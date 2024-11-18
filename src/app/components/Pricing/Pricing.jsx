@@ -32,6 +32,7 @@ import {
 } from "@/app/components/landing/TeamsLogo";
 import Image from "next/image";
 import CompanyCard from "./components/PricingCard/CompanyCard";
+import SmallPricingCard from "./components/SmallPricingCard";
 export function Pricing() {
   const [isYearly, setIsYearly] = useState(true);
   const [basicPrice, setBasicPrice] = useState("$7");
@@ -287,6 +288,47 @@ export function Pricing() {
       logo: <RetellLogoSmall />,
     },
   ];
+
+  const pricingCards = [
+    {
+      plan: "free",
+      displayPlan: "Free",
+      monthlyPrice: 0,
+      yearlyPrice: 0,
+      onClick: () => {
+        window.open(`https://platform.keywordsai.co/platform/api/plans`);
+      },
+    },
+    {
+      plan: "pro",
+      displayPlan: "Pro",
+      monthlyPrice: 9,
+      yearlyPrice: 7,
+      yearlyDiscount: 22,
+      onClick: () => {
+        window.open(`https://platform.keywordsai.co/platform/api/plans`);
+      },
+    },
+    {
+      plan: "team",
+      displayPlan: "Team",
+      monthlyPrice: 49,
+      yearlyPrice: 42,
+      yearlyDiscount: 14,
+      onClick: () => {
+        window.open(`https://platform.keywordsai.co/platform/api/plans`);
+      },
+    },
+    {
+      plan: "enterprise",
+      displayPlan: "Enterprise",
+      monthlyPrice: "Custom",
+      yearlyPrice: "Custom",
+      onClick: () => {
+        window.open("https://cal.com/keywordsai/demo", "_blank");
+      },
+    },
+  ];
   return (
     <Page>
       {/* upper container */}
@@ -338,11 +380,11 @@ export function Pricing() {
                 }
               />
             ))}
-            <div className="w-full flex items-start justify-start gap-md">
+            {/* <div className="w-full flex items-start justify-start gap-md">
               {companyCards.map((companyCard, index) => (
                 <CompanyCard {...companyCard} key={index} />
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -515,9 +557,28 @@ export function Pricing() {
       </div>
       {/* pricing table */}
       <div className="flex flex-col px-xl pt-xxxl pb-[240px] gap-xl items-center self-stretch w-full">
-        <PricingTable />
-        {/* 
+        <div className="flex-col gap-0 max-w-[1200px] w-full">
+          <div className="flex flex-row w-full gap-sm items-start self-stretch sticky -top-lg bg-gray-1">
+            <div className="flex flex-row min-w-[240px] flex-1 items-start self-stretch" />
+            {pricingCards.map((card) => (
+              <SmallPricingCard
+                key={card.plan}
+                plan={card.plan}
+                displayPlan={card.displayPlan}
+                monthlyPrice={card.monthlyPrice}
+                yearlyPrice={card.yearlyPrice}
+                yearlyDiscount={card.yearlyDiscount}
+                isYearly={isYearly}
+                currentPlan={card.plan}
+                handleSwitchChange={handleSwitchChange}
+                onClick={card.onClick}
+              />
+            ))}
+          </div>
+          <PricingTable />
+          {/* 
           <PricingTable /> */}
+        </div>
       </div>
     </Page>
   );

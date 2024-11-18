@@ -25,10 +25,10 @@ export function PricingCell({
       ? "shadow-border-b shadow-gray-2"
       : "";
     const textClasses = isSectionTitle
-      ? "text-gray-white"
+      ? "text-gray-white text-md-medium"
       : isHighlighted
-      ? "text-gray-white"
-      : "text-gray-4";
+      ? "text-gray-white text-md-regular"
+      : "text-gray-4 text-md-regular";
   
     return (
       <div className={`${baseClasses} ${borderClasses} ${className}`}>
