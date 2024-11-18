@@ -2471,7 +2471,7 @@ export const blogs: Blog[] = [
     id: 25,
     timestamp: "November 18, 2024",
     slug: "/blog/introducing-our-new-pricing-plans",
-    title: "Introducing Our New Pricing Plans",
+    title: "Introducing our new pricing plans",
     cover: {
       id: 1,
       url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/new_pricing/cover.jpg",
