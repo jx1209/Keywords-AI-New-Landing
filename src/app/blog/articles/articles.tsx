@@ -2467,4 +2467,81 @@ export const blogs: Blog[] = [
       },
     ],
   },
+  {
+    id: 25,
+    timestamp: "November 18, 2024",
+    slug: "/blog/introducing-our-new-pricing-plans",
+    title: "Introducing Our New Pricing Plans",
+    cover: {
+      id: 1,
+      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/new_pricing/cover.jpg",
+    },
+    type: "GUIDE",
+    author: {
+      name: "Hendrix",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/hendrix.png",
+        props: {
+          variant: "circle",
+        },
+      },
+    },
+    paragraphs: [
+      {
+        id: 1,
+        text: "**TL;DR**: \n\n - **Team plan**: $299/month → $49 per seat/month \n- **New Pro plan**: $9 per seat/month \n- **Free plan**: Now includes 2,000 free logs/month",
+      },
+      {
+        id: 2,
+        primary_title: "What's the Difference Between These Plans?",
+        text: "We’ve revamped our pricing to better serve different user groups. With the addition of the Pro plan, Keywords AI now offers 4 options: \n- **Free plan** \n- **Pro plan** \n- **Team plan** \n- **Enterprise plan** (if you’re curious about this, [click here](https://cal.com/keywordsai/demo)) \n\n **Plan details:**",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/new_pricing/plans.jpg",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 3,
+        text: "\\* why is 412? 🤔",
+      },
+      {
+        id: 4,
+        primary_title: "How to Choose the Right Plan",
+        text: "**Start with the Free Plan** \n\n We recommend beginning with our **Free Plan**. No credit card is required, and you can experience most of our core features within the free usage limit of **2,000 logs per month**. You can also invite one team member to collaborate and explore the platform's teamwork capabilities. \n\n **For Indie hackers: Pro Plan** \n\n If you're an indie hacker, the **new Pro Plan** at **$9 per seat/month** is ideal. It includes **10,000 logs**, enough to test your product prototype or even engage with initial customers. If you exceed 10,000 logs, our usage-based pricing ensures you only pay for what you use. \n\n **For Early-stage startups: Team Plan** \n\n For startups with high LLM usage or those managing multiple projects, the new **Team Plan** at **$49 per seat/month** is the best choice. It offers more free logs each month and more affordable usage pricing. You can also create multiple teams to monitor different projects separately. \n\n The Team Plan is the all-in-one solution for teams aiming to scale quickly. Enjoy benefits like: \n- **Best pricing** \n- **Competitive usage pricing** \n- **Unlimited prompts** \n- **Unlimited team members** \n- **Unlimited user analytics** \n\n Choose the Team Plan for the best experience on the platform!",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/new_pricing/pricing_card.jpg",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+
+      {
+        id: 5,
+        primary_title: "Why We Changed Our Pricing Plans",
+        text: "We received a lot of feedback from users, especially some independent developers. They love our product but couldn't afford the $299 monthly subscription at their initial stages. While they agreed that the $299 plan is fair—given its features and 1 million free logs per month—their usage didn't come close to these limits. It was hard for them to justify purchasing a product that exceeded their budget. \n\n After careful consideration, we decided to introduce an additional plan tailored for these developers. This is why we launched our **Pro Plan**. For the price of a cup of coffee, they can access a dedicated product to help monitor, debug, and improve their AI apps. \n\n Similarly, with the new Team Plan, we wanted to give users the flexibility to choose how much they are willing to pay. They might not need extensive monitoring but have a team that needs to conduct prompt experiments or collaborate on prompts. With this plan, they only pay for seat fees instead of log fees.",
+      },
+      {
+        id: 6,
+        primary_title: "What About Existing Customers on the Old Team Plan?",
+        text: "We will continue to support the old Team Plan, now renamed Team Plus. Customers on this plan have the option to migrate to the new Team Plan—just reach out to us, and we'll help you make the switch in just five minutes. If you prefer, you can stay on your current plan; nothing will change unless you decide to switch.",
+      },
+      {
+        id: 7,
+        primary_title:
+          "What Happens If You Exceed Your Usage Limit as an LLM Proxy User?",
+        text: "Don’t worry! None of your LLM requests will fail if you go beyond your usage limit. We will simply mask the additional logs on the frontend. You can unlock them anytime by upgrading to the appropriate plan.",
+      },
+      {
+        id: 8,
+        primary_title: "What's next?",
+        text: "[Check out our new plans](https://www.keywordsai.co/pricing) and choose the one that's right for you. Start your 14-day free trial today! \n\n If you have any questions or feedback, feel free to chat with us. We're here to help!",
+      },
+    ],
+  },
 ];
