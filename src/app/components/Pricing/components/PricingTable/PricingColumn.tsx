@@ -87,16 +87,16 @@ export function PricingColumn({
           )} */}
           {Object.entries(section).map(([key, value]) => {
             if (key === "section") return null;
-            return (
-              <PricingCell
-                key={key}
-                text={value.text}
-                hasCheck={value.hasCheck}
-                isHighlighted={highlighted}
-                checkHighlighted={checkHighlighted}
-                className="w-full"
-              />
-            );
+            // return (
+            //   <PricingCell
+            //     key={key}
+            //     text={value.text}
+            //     hasCheck={value.hasCheck}
+            //     isHighlighted={highlighted}
+            //     checkHighlighted={checkHighlighted}
+            //     className="w-full"
+            //   />
+            // );
           })}
         </div>
       ))}
