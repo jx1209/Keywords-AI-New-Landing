@@ -143,4 +143,16 @@
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
+   <url>
+      <loc>https://keywordsai.co/blog/llm-logging-with-langchain</loc>
+      <lastmod>2024-11-21</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://keywordsai.co/blog/llm-logging-with-vercel</loc>
+      <lastmod>2024-11-21</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
 </urlset>

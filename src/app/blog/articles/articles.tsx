@@ -2476,7 +2476,7 @@ export const blogs: Blog[] = [
       id: 1,
       url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/new_pricing/cover.jpg",
     },
-    type: "GUIDE",
+    type: "UPDATE",
     author: {
       name: "Hendrix",
       image: {
@@ -2541,6 +2541,110 @@ export const blogs: Blog[] = [
         id: 8,
         primary_title: "What's next?",
         text: "[Check out our new plans](https://www.keywordsai.co/pricing) and choose the one that's right for you. Start your 14-day free trial today! \n\n If you have any questions or feedback, feel free to chat with us. We're here to help!",
+      },
+    ],
+  },
+  {
+    id: 26,
+    timestamp: "November 16, 2024",
+    slug: "/blog/llm-logging-with-langchain",
+    title: "LLM logging with LangChain",
+    cover: {
+      id: 1,
+      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/langchain_SDK/cover.png",
+    },
+    type: "GUIDE",
+    author: {
+      name: "Hendrix",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/hendrix.png",
+        props: {
+          variant: "circle",
+        },
+      },
+    },
+    paragraphs: [
+      {
+        id: 1,
+        text: "OpenAI dominates the AI market, with Anthropic and Gemini also gaining popularity. Developers need these models to build reliable AI products.Using OpenAI or Anthropic's basic SDKs can be challenging. Frameworks like LangChain and Vercel AI SDK simplify development and handle complex workflows.",
+      },
+      {
+        id: 2,
+        text: "LangChain is an open-source framework for building applications based on large language models (LLMs). It allows developers to flexibly adapt language models to specific business contexts by defining the necessary steps to achieve desired outcomes.",
+      },
+      {
+        id: 3,
+        text: "At the heart of LangChain are **chains**, which link various AI components to deliver context-aware responses. A chain is a sequence of automated actions that transform a user's query into the model's output. Developers can use chains for tasks like: \n- Connecting to diverse data sources \n- Generating unique content \n- Translating multiple languages \n- Answering user queries",
+      },
+      {
+        id: 4,
+        text: "In this blog, we'll show how to monitor the performance of AI applications built with LangChain using the Keywords AI LangChain integration.",
+      },
+      {
+        id: 5,
+        primary_title:
+          "Step 1: Install the LangChain SDK",
+        text: "To begin using LangChain for your AI application, you'll need to install the Python SDK and import the necessary models. While detailed tutorials are available on the [LangChain website](https://langchain.com/), here's a quick guide to get you started. \n\n First, install the LangChain package using pip, if you plan to use OpenAI models, install the OpenAI package as well:",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/langchain_SDK/install.jpg",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 6,
+        primary_title: "Step 2 Call OpenAI models",
+        text: "To interact with an LLM using LangChain, you can use the `ChatOpenAI` function. Simply specify the model name and provide your API key. In this example, we'll use an API key from [Keywords AI](https://www.keywordsai.co/) to access the models. \n\n Here's how you can set it up in your Python script:",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/langchain_SDK/first_step.jpg",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 7,
+        primary_title: "Step 3: Track the performance and improve it",
+        text: "**Keywords AI** is an LLM monitoring and evaluation platform that enables you to monitor, debug, and enhance your AI app's performance. By integrating with the AI SDK, you can add monitoring capabilities with just a few lines of code changes. \n\n Steps to Integrate Keywords AI: \n\n **Generate an API Key**: Visit [Keywords AI](https://platform.keywordsai.co/) and obtain your API key. \n\n **Update Your Code**: \n- Replace the `baseURL` with `https://api.keywordsai.co/api/`. \n- Replace the `apiKey` with your Keywords AI API key. \n\n Now, you can monitor your AI app directly through Keywords AI.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/vercel_sdk/monitor_example.gif",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 8,
+        primary_title: "Step 4: Enable user analytics",
+        text: "To monitor user interactions within your AI application, you can assign a unique customer ID to each user. By passing this customer ID using the `customer_id` parameter, you can log and track user activities through Keywords AI.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/langchain_SDK/users.jpg",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 9,
+        text: "By including the `customer_id` parameter, you can: \n- **Track individual user interactions**: Monitor how each user engages with your AI application. \n- **Analyze user behavior**: Gain insights into usage patterns to improve your service. \n- **Enhance user experience**: Identify and address issues specific to individual users. \n\n Once you've passed the customer IDs to Keywords AI, you can begin monitoring your users directly on the [Keywords AI platform](https://www.keywordsai.co/). This enables you to maintain oversight of your application's usage and performance from a user-centric perspective.",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/langchain_SDK/user_monitoring.jpg",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 10,
+        primary_title: "Conclusion",
+        text: "By integrating LangChain with Keywords AI, you can effortlessly build and monitor AI applications. Assigning customer IDs and leveraging Keywords AI's platform enables you to track user activities and enhance your application's performance. Start using Keywords AI with LangChain today to gain valuable insights and improve your AI products.",
       },
     ],
   },

@@ -1,6 +1,6 @@
 {
   "timestamp": "November 16, 2024",
-  "type": "GUIDE",
+  "type": "UPDATE",
   "subtitle": "",
   "title": "LLM logging with Vercel AI SDK",
   "description": "Learn how to implement LLM logging with Vercel AI SDK and Keywords AI in just 5 minutes. Monitor, debug, and enhance your AI app's performance effectively.",
