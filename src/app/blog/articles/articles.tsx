@@ -2506,7 +2506,7 @@ export const blogs: Blog[] = [
       },
       {
         id: 3,
-        text: "\\* why is 412? 🤔",
+        text: "\\* why 412? 🤔",
       },
       {
         id: 4,
