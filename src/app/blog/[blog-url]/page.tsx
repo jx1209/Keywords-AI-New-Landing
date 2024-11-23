@@ -28,6 +28,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ButtonWrapper } from "./buttonwrapper";
 // import { MarkdownRenderer } from "./markdownRender";
+import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
 
 const getImageClass = (size: string) => {
@@ -164,16 +165,36 @@ export default async function BlogDetail({
                   code(props) {
                     const { children, className, node, ...rest } = props;
                     const match = /language-(\w+)/.exec(className || "");
+                    
+                    // Handle backtick code blocks
+                    if (String(children).startsWith('`') && String(children).endsWith('`')) {
+                      return (
+                        <code className="bg-gray-3 px-2 py-1 rounded text-sm font-mono" {...rest}>
+                          {String(children).slice(1, -1)} {/* Remove backticks */}
+                        </code>
+                      );
+                    }
+                    
+                    // Handle regular code blocks
                     return match ? (
                       <SyntaxHighlighter
                         PreTag="div"
                         language={match[1]}
                         style={dark}
+                        className="rounded-lg my-4" // Add rounded corners and margin
+                        customStyle={{
+                          padding: '1.5rem',
+                          backgroundColor: '#1E1E1E', // Dark background
+                          fontSize: '0.9rem',
+                          lineHeight: '1.5',
+                          overflow: 'auto',
+                          maxHeight: '600px' // Limit maximum height
+                        }}
                       >
                         {String(children).replace(/\n$/, "")}
                       </SyntaxHighlighter>
                     ) : (
-                      <code className={"bg-gray-3"} {...props}>
+                      <code className="bg-gray-3 px-2 py-1 rounded text-sm font-mono" {...rest}>
                         {children}
                       </code>
                     );
@@ -190,6 +211,23 @@ export default async function BlogDetail({
                       </li>
                     );
                   },
+                  table: ({ node, ...props }) => (
+                    <div className="overflow-x-auto w-full">
+                      <table className="w-full my-8 border-collapse min-w-[600px]" {...props} />
+                    </div>
+                  ),
+                  th: ({ node, ...props }) => (
+                    <th 
+                      className="text-md-regular text-gray-white p-6 text-left border-b border-gray-2 whitespace-nowrap" 
+                      {...props} 
+                    />
+                  ),
+                  td: ({ node, ...props }) => (
+                    <td 
+                      className="text-md-regular text-gray-white p-6 border-b border-gray-2 whitespace-normal" 
+                      {...props} 
+                    />
+                  ),
                   p: ({ node, ...props }) => {
                     // Exclude captions under images from being styled with text-gray-white
                     // const isCaption =
@@ -232,6 +270,7 @@ export default async function BlogDetail({
                 }}
                 remarkPlugins={[gfm]}
                 rehypePlugins={[rehypeRaw]}
+                remarkPlugins={[remarkGfm]}
               >
                 {paragraph.text}
               </ReactMarkdown>
