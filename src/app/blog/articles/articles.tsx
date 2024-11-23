@@ -2652,7 +2652,7 @@ export const blogs: Blog[] = [
     id: 27,
     timestamp: "November 22, 2024",
     slug: "/blog/how-to-optimize-llm-performance-in-startups",
-    title: "How to Optimize LLM Performance in Startups",
+    title: "How to optimize LLM performance in startups",
     cover: {
       id: 1,
       url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/optimize_llm-performance/cover.png",
