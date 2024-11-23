@@ -268,9 +268,8 @@ export default async function BlogDetail({
                     </a>
                   ),
                 }}
-                remarkPlugins={[gfm]}
+                remarkPlugins={[gfm, remarkGfm]}
                 rehypePlugins={[rehypeRaw]}
-                remarkPlugins={[remarkGfm]}
               >
                 {paragraph.text}
               </ReactMarkdown>
