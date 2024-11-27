@@ -2758,4 +2758,94 @@ export const blogs: Blog[] = [
       }
     ],
   },
+  {
+    id: 28,
+    timestamp: "November 26, 2024",
+    slug: "/blog/claude-3-5-sonnet-vs-claude-3-5-haiku",
+    title: "Claude 3.5 Haiku vs. Sonnet: Speed or Power? A Comprehensive Comparison",
+    cover: {
+      id: 1,
+      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/haiku_vs_sonnet/cover.png",
+    },
+    type: "MODEL",
+    author: {
+      name: "Hendrix",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/hendrix.png",
+        props: {
+          variant: "circle",
+        },
+      },
+    },
+    paragraphs: [
+      {
+        id: 1,
+        text: "Anthropic's latest release, Claude 3.5 Haiku, promises to combine speed with enhanced capabilities. While maintaining similar speed to its predecessor, it shows significant improvements across various benchmarks, even outperforming the previous flagship model, Claude 3 Opus, in several areas. \n\n This comparison between Claude 3.5 Haiku and Claude 3.5 Sonnet aims to help you make an informed choice: whether to prioritize speed and cost efficiency with Haiku, or opt for Sonnet's superior performance capabilities.",
+      },
+      {
+        id: 2,
+        primary_title: "Comparison methodology",
+        text: "Our analysis utilizes Keywords AI's LLM playground, a platform that supports over 200 language models and offers function-calling capabilities. We'll explore the following aspects:\n- Basic comparison \n-Benchmark comparison \n- Processing speed \n- Evaluation metrics  \n- Suggested use cases",
+      },
+      {
+        id: 3,
+        primary_title: "Basic comparison",
+        text: "|  | **Claude 3.5 Haiku** | **Claude 3.5 Sonnet** |\n| --- | --- | --- |\n| Input | $1.00 / 1M tokens | $3.00 / 1M tokens |\n| Output | $5.00 / 1M tokens | $15.00 / 1M tokens |\n| Context window | 200K | 200K |\n| Max output tokens | 8192 | 8192 |\n| Supported inputs | Text and Images | Text and Images |\n| Function calling | Yes | Yes |\n| Knowledge cutoff date | July 2024 | April 2024 |",
+      },
+      {
+        id: 4,
+        primary_title: "Benchmark comparison",
+        text: "|  | **Claude 3.5 Haiku** | **Claude 3.5 Sonnet** |\n| --- | --- | --- |\n| **MMLU Pro** | 65.0 | 78.0 |\n| **GPQA Diamond** | 41.6 | 65.0 |\n| **MATH** | 69.4 | 78.3 |\n| **HumanEval** | 88.1 | 93.7 | \n\n Claude 3.5 Sonnet demonstrates consistently higher performance across all benchmarks. The most notable gap appears in GPQA Diamond, where Sonnet (65.0%) outperforms Haiku (41.6%) by 23.4 percentage points. Both models show strong capabilities in code generation (HumanEval), though Sonnet maintains its edge with 93.7% versus Haiku's 88.1%. These results indicate that while both models are capable, Sonnet offers superior performance for complex tasks.",
+      },
+      {
+        id: 5,
+        primary_title: "Speed comparison",
+        text: "**Generation time** \n\nOur extensive testing, conducted across multiple requests, shows minimal difference in latency between the two models. Claude 3.5 Haiku demonstrates slightly faster performance at 13.98s/request, while Claude 3.5 Sonnet follows closely at 14.17s/request. The difference of merely 0.19 seconds suggests that both models offer comparable response times, with Haiku having a marginal edge in overall processing speed.",
+        image: {
+          id: 1,
+          props: {
+            variant: "md",
+          },
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/haiku_vs_sonnet/generation_time.png",
+        },
+      },
+      {
+        id: 6,
+        text: "**Speed (Tokens per second)** \n\n The throughput comparison reveals similar token generation capabilities between both models. Claude 3.5 Haiku leads slightly with 52.54 tokens per second, while Claude 3.5 Sonnet generates 50.88 tokens per second. The minimal difference of approximately 1.65 tokens per second suggests that both models maintain comparable efficiency in text generation speed, with Haiku showing a slight advantage in raw output speed.",
+        image: {
+          id: 1,
+          props: {
+            variant: "md",
+          },
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/haiku_vs_sonnet/speed.png",
+        },
+      },
+      {
+        id: 7,
+        text: "**TTFT (Time to first token)** \n\n The Time to First Token (TTFT) metric shows a notable difference between the two models. Claude 3.5 Haiku demonstrates significantly faster initial response with a TTFT of 0.36 seconds, while Claude 3.5 Sonnet takes 0.64 seconds to generate its first token. This indicates that Haiku is almost twice as fast in beginning its responses, making it particularly suitable for applications where immediate feedback is crucial and quick interactions are prioritized.",
+        image: {
+          id: 1,
+          props: {
+            variant: "md",
+          },
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/haiku_vs_sonnet/ttft.png",
+        },
+      },
+      {
+        id: 8,
+        text: "Based on our tests, Claude 3.5 Haiku shows slightly better speed performance across all metrics. While the latency difference is minimal (13.98s vs 14.17s), Haiku has a faster first response time (0.36s vs 0.64s) and slightly higher throughput (52.54 vs 50.88 tokens/s). If speed is your primary concern, especially for real-time applications or chat-like interfaces, Haiku would be the better choice. However, the differences are small enough that you should also consider other factors like accuracy and capability when making your decision.",
+      },
+       {
+        id: 9,
+        primary_title: "Performance comparison",
+        text: "We conducted evaluation tests on the [Keywords AI, an LLM evals and prompt management platform](https://www.keywordsai.co). The evaluation comprised 5 parts: \n\n - **Coding Task**: While both models handle basic coding tasks well, Sonnet demonstrates superior capabilities in complex scenarios. Haiku performs adequately for simple frontend/backend tasks but tends to hallucinate when generating code exceeding 150 lines. Sonnet manages difficult problems more effectively and maintains accuracy with longer code blocks. \n- **Logical Reasoning**: Sonnet shows consistently strong performance across various reasoning challenges. Haiku, while capable, occasionally struggles with more complex problems, showing some limitations in advanced reasoning tasks. \n- **Writing Task**: Both models produce quality content, but Sonnet edges ahead with more natural, human-like writing and better prompt comprehension. Its outputs tend to be more nuanced and contextually appropriate. \n- **Hallucination**: Both models generally maintain factual accuracy. However, Haiku shows a higher tendency to hallucinate when dealing with tricky questions or longer inputs/outputs. Sonnet demonstrates more reliable consistency across various scenarios. \n- **Answer Relevancy**: While both models typically provide context-appropriate responses, Haiku occasionally produces more verbose outputs. Sonnet maintains better focus and conciseness while addressing the core requirements.",
+      },
+      {
+        id: 10,
+        primary_title: "Model Recommendations",
+        text: "**Claude 3.5 Sonnet** \n\n - **Best for:** Complex reasoning tasks, professional coding projects, and high-quality content creation. Ideal for applications requiring high accuracy and sophisticated problem-solving. \n- **Not suitable for:** Applications with strict speed requirements or projects with tight budget constraints, as it's slightly slower and likely more expensive. \n\n **Claude 3.5 Haiku** \n\n - **Best for:** Quick interactions, simple coding tasks, and applications requiring faster response times. Good for chatbots and real-time applications where speed is crucial. \n- **Not suitable for:** Complex programming projects exceeding 150 lines of code, advanced reasoning tasks, or applications where consistent accuracy is critical for longer outputs.",
+      },
+    ],
+  },
 ];
