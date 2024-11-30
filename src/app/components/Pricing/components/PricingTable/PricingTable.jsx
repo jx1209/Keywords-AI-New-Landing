@@ -818,10 +818,10 @@ export function PricingTable() {
           Free forever
         </div>
         <div className="text-md-regular text-gray-white w-1/5 flex items-center h-[42px] px-sm gap-xxs">
-          <Check fill="fill-gray-4" />2 weeks free
+          <Check fill="fill-gray-4" />7 days free
         </div>
         <div className="text-md-regular text-gray-white w-1/5 flex items-center h-[42px] px-sm gap-xxs bg-gray-2">
-          <Check fill="fill-primary" />2 weeks free
+          <Check fill="fill-primary" />7 days free
         </div>{" "}
         <div className="text-md-regular text-gray-white w-1/5 flex items-center h-[42px] px-sm gap-xxs">
           <Check fill="fill-gray-4" />1 month free

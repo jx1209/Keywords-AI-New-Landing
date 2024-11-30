@@ -55,12 +55,12 @@ export function PricingColumn({
       )}
       {title === "Pro" && (
         <div className="text-md-regular text-gray-4 w-1/5 flex items-center h-[36px] min-w-[187px] gap-xxs">
-          <Check fill="fill-gray-4" />2 weeks free
+          <Check fill="fill-gray-4" />7 days free
         </div>
       )}
       {title === "Team" && (
         <div className="text-md-regular text-gray-white w-1/5 flex items-center h-[36px] min-w-[187px] gap-xxs">
-          <Check fill="fill-primary" />2 weeks free
+          <Check fill="fill-primary" />7 days free
         </div>
       )}
       {title === "Enterprise" && (
