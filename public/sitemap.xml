@@ -115,4 +115,17 @@
       <loc>https://keywordsai.co/blog/what-is-langchain-is-langchain-worth-it</loc>
       <priority>1.0</priority>
    </url>
+   <url>
+      <loc>https://keywordsai.co/llm-library</loc>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://keywordsai.co/llm-library/gpt-4o</loc>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://keywordsai.co/llm-library/gpt-4o-mini</loc>
+      <priority>1.0</priority>
+   </url>
+
 </urlset>
