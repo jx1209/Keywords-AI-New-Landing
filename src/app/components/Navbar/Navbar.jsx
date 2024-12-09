@@ -195,9 +195,10 @@ export function Navbar() {
                 text="Models"
                 variant="header"
                 textClickedColor="text-gray-4"
-                onClick={() =>
-                  window.open("https://platform.keywordsai.co/platform/models")
-                }
+                onClick={() => {
+                  router.push("/llm-library");
+                  window.scrollTo(0, 0);
+                }}
               />
               <Button
                 text="Blog"
