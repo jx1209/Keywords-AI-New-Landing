@@ -207,7 +207,6 @@ export function Navbar() {
                   router.push("/blog");
                   window.scrollTo(0, 0);
                 }}
-
                 // active={location.pathname == "/pricing"}
               />
               <Button

@@ -3055,4 +3055,84 @@ export const blogs: Blog[] = [
       }
     ],
   },
+  {
+    id: 31,
+    timestamp: "December 9, 2024",
+    slug: "/blog/what-to-expect-from-gpt-5-speculation-and-innovation",
+    title: "What to expect from GPT-5: speculation and innovation",
+    cover: {
+      id: 1,
+      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/gpt-5/cover.png",
+    },
+    type: "GUIDE",
+    author: {
+      name: "Alex",
+      image: {
+        id: 1,
+        url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/alex.png",
+        props: {
+          variant: "circle",
+        },
+      },
+    },
+    paragraphs: [
+      {
+        id: 1,
+        primary_title: "TL;DR",
+        text: "- Expected launch: Early 2025, built on Project Orion \n- Enhanced reasoning with Chain of Thought & response ranking \n- True multimodal capabilities (seamless image/audio/video processing) \n- Better accuracy and reduced hallucinations \n- Higher costs due to advanced capabilities",
+      },
+      {
+        id: 2,
+        text: "The AI community is eagerly anticipating OpenAI's GPT-5, the next iteration of their groundbreaking language model. Expected in early 2025, GPT-5 intends to build upon GPT-4's capabilities, potentially revolutionizing how we interact with technology. While concrete details remain scarce, here's a look at what we might expect, based on current trends and OpenAI's research direction.",
+        image: {
+          id: 1,
+          props: {
+            variant: "md",
+          },
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/gpt-5/revolution.png",
+        },
+      },
+      {
+        id: 3,
+        primary_title: "Project Orion: Forging a new path",
+        text: "GPT-5's development is closely tied to Project Orion, an initiative to surpass GPT-4's limitations. A key aspect of Orion is the utilization of synthetic data, mainly sourced from a system called o1, formerly codenamed \"Strawberry\" . This approach aims to strengthen reasoning abilities, improve performance on domain-specific tasks, and bolster overall intelligence by providing a richer and more diverse training dataset.\n\nA simplified analogy for o1's function is that it would process specialized information, such as a research paper on drug discovery, and then generate a large, structured dataset suitable for training a large language model (LLM) like Project Orion. This enhanced dataset would then use Orion to address complex problems within that specific domain (e.g., biochemistry, genetics).",
+      },
+      {
+        id: 4,
+        primary_title: "Expected advancements in GPT-5",
+        text: "**Enhanced reasoning**\n\nGPT-5 is expected to leverage techniques like Chain of Thought prompting (inherited from o1-preview) and response ranking to significantly improve its logical reasoning capabilities. The former guides the LLM to explain its reasoning process step-by-step, like solving a math problem by showing the intermediate calculations, leading to more accurate and insightful problem-solving. Response ranking involves generating multiple potential responses to a given prompt and then using a separate mechanism to rank those responses based on their quality, relevance, and coherence.\n\n**True multimodality**\n\nOne of the most exciting prospects of GPT-5 is its possibly seamless multimodal capabilities. While there has been incremental improvement in GPT-4 turbo and GPT-4o, it still shows a deficiency in how it integrates and processes different forms of data like images, audio, and videos. GPT-5 is expected to remove these barriers, enabling more fluid interactions with mixed media. Users will be able to provide inputs in images, or videos, and GPT-5 will process them together, responding with richer and contextually aware outputs.\n\n\n**Improved confidence measures**\n\nPrevalent LLMs are still struggling to conceptualize modern science and professional expertise. This knowledge gap can lead to inaccurate or fabricated responses, often referred to as hallucinations, when the model generates responses and contains unfamiliar information. Integrating methods such as logprobs, fine-tuning, or positive framing could provide valuable insights into GPT-5's confidence levels for each response. The breakthrough will be crucial for users, especially when researchers rely on the results from GPT-5.",
+        image: {
+          id: 1,
+          props: {
+            variant: "md",
+          },
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/gpt-5/o1-vs-gpt-5.png",
+        },
+      },
+      {
+        id: 5,
+        primary_title: "Expected pricing: The cost of progress",
+        text: "As with all advancements in technology, GPT-5 will definitely come with a higher operational cost than its predecessor, GPT-4. With its increased capabilities, the resources required to run GPT-5 will likely come at a price. With higher computational demands, API pricing also faces a potential increase. Developers and businesses should be required to maintain a more robust infrastructure for enterprise users and anticipate a higher budget overall.\n\nThis graph provides cost references for recent model API usage and explores potential pricing:",
+        image: {
+          id: 1,
+          props: {
+            variant: "md",
+          },
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/gpt-5/pricing.png",
+          caption: "Check out 250+ models and pricing here",
+          captionURL: "https://www.keywordsai.co/llm-library",
+        },
+      },
+      {
+        id: 6,
+        primary_title: "GPT-5 vs. GPT-4: An evolutionary leap?",
+        text: "Initially in Apr 2023, OpenAI stated it wouldn't train a GPT-4 successor due to AI safety concerns. However, Altman did advocate for long-term development saying [\"OpenAI would get the world to pay attention to the progress, to take AGI seriously, to think about what systems and structures and governance we want in place before we're under the gun and have to make a rash decision.\"](https://lexfridman.com/sam-altman-2-transcript#chapter11_leap_to_gpt_5) GPT-5 may represent a step within a larger plan to achieve Artificial General Intelligence (AGI) while prioritizing the alignment of AI capabilities with human values and safety protocols throughout the process.\n\nWhile OpenAI promises substantial improvements, it's unclear whether it will represent as dramatic a leap as seen between GPT-3 and GPT-4. GPT-4 introduced significant advancements in reasoning and natural language understanding. GPT-5's focus seems to be on refining these capabilities and making them more versatile. However, increased complexity might lead to slightly slower response times, a typical trade-off for unprecedented features.",
+      },
+      {
+        id: 7,
+        primary_title: "A glimpse into the future",
+        text: "History demonstrates recurring patterns: Early computers amazed people by performing calculations at speeds far beyond those of humans. Later, when a computer defeated the best Go player, humans again lost in an intellectual battlefield. Now, GPT's natural language generation capabilities are the latest iteration of this phenomenon.\n\nAs OpenAI continues to refine Project Orion and develop new methods to train these models, the possibilities for GPT-5 seem endless. While there will undoubtedly be challenges, particularly in terms of cost and computational requirements, the potential for transformative advancements in various sectors—from healthcare to entertainment to enterprise applications—is immense. Whether GPT-5 arrives in early 2025 or the end of 2025, it is clear that the next generation of AI will redefine how we interact with technology. The wait will undoubtedly be worth it."
+      }
+    ],
+  },
 ];
