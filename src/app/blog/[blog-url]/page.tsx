@@ -117,7 +117,10 @@ export default async function BlogDetail({
                 <span className="caption text-gray-4">
                   {String(metadata?.type)}
                 </span>
-                <span className="display-lg-600 w-full text-center text-gray-white">
+                <span className="display-lg-600 w-full text-center text-gray-white sm:hidden">
+                  {String(metadata?.title)}
+                </span>
+                <span className="display-sm w-full text-gray-white sm:block hidden text-left">
                   {String(metadata?.title)}
                 </span>
               </div>
