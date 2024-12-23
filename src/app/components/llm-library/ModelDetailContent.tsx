@@ -45,7 +45,7 @@ export function ModelDetailContent({ modelName }: { modelName: string }) {
             {model.provider.provider_name}
           </span>
         </div>
-        <h2 className="text-gray-white display-lg">{model.display_name}</h2>
+        <h1 className="text-gray-white display-lg">{model.display_name} features</h1>
 
       </div>
       <div className="flex items-start gap-xl w-full max-w-[1200px]">
