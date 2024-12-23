@@ -57,7 +57,7 @@ export function ModelDetailContent({ modelName }: { modelName: string }) {
           <AccordionItem value="context-window" className="border-0 px-[24px] py-[24px]">
             <AccordionTrigger>
               <span className="text-gray-white display-xs">
-                What is {model.display_name || model.model_name}'s context
+                What is {model.display_name || model.model_name}&apos;s context
                 window?
               </span>
             </AccordionTrigger>
