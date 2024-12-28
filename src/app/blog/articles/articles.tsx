@@ -3169,11 +3169,11 @@ export const blogs: Blog[] = [
       {
         id: 3,
         primary_title: "The Paradigms of CoT Prompting",
-        text: "- **Zero-Shot-CoT:** Just add \"Let's think step by step\" to your question. This helps the AI break down big problems into smaller, easier parts. It's like showing your work in math class instead of just giving the final answer. \n- **Auto-CoT:** This is an automatic way to make the AI explain its thinking. It works by: 1. Grouping similar questions together. 2. Picking one example from each group. 3. Using these examples to help the AI learn how to explain its answers for new questions.",
+        text: "1. **Zero-Shot-CoT:** Just add \"Let's think step by step\" to your question. This helps the AI break down big problems into smaller, easier parts. It's like showing your work in math class instead of just giving the final answer. \n 2. **Auto-CoT:** This is an automatic way to make the AI explain its thinking. It works by: 1. Grouping similar questions together. 2. Picking one example from each group. 3. Using these examples to help the AI learn how to explain its answers for new questions.",
       },
       {
         id: 4,
-        text: "Let's picture the CoT paradigms using this example: \"A farmer has 48 apples. He sells 20 and divides the remaining apples equally among 4 baskets. How many apples are in each basket?\" \n\n- Zero-Shot-CoT:\n\nMethod: Provide a generic prompt like \"Let's think step by step\" with no specific examples. Relies solely on the LLM's inherent reasoning abilities.\n\nExample Response: \"The farmer starts with 48 apples. He sells 20, so 48 - 20 = 28 apples remain. These are divided into 4 baskets, so 28 / 4 = 7 apples per basket.\"\n\nOutcome: Simple to implement, but can lead to errors if the LLM doesn't grasp the necessary reasoning steps.\n\n- Auto-CoT:\n\nMethod: The LLM automatically generates its own demonstrations by clustering similar questions and using prompts to create reasoning chains, automating the demonstration creation process.\n\nAuto-generated Demonstration: \"A baker has 30 cookies. She sells 12 and divides the rest equally among 3 boxes. How many cookies are in each box? First, 30 - 12 = 18 cookies remain. Then, 18 / 3 = 6 cookies per box.\"\n\nExample Response (Farmer Problem): \"Following the example, first we subtract the sold apples: 48 - 20 = 28. Then, we divide by the number of baskets: 28 / 4 = 7. So, there are 7 apples in each basket.\"\n\nOutcome: Offers more guidance and typically improves accuracy, though implementation can be more complex.",
+        text: "Let's picture the CoT paradigms using this example: \"A farmer has 48 apples. He sells 20 and divides the remaining apples equally among 4 baskets. How many apples are in each basket?\" \n\n- **Zero-Shot-CoT:**\n\n**Method:** Provide a generic prompt like \"Let's think step by step\" with no specific examples. Relies solely on the LLM's inherent reasoning abilities.\n\n**Example Response:** \"The farmer starts with 48 apples. He sells 20, so 48 - 20 = 28 apples remain. These are divided into 4 baskets, so 28 / 4 = 7 apples per basket.\"\n\n**Outcome:** Simple to implement, but can lead to errors if the LLM doesn't grasp the necessary reasoning steps.\n\n- **Auto-CoT:**\n\n**Method:** The LLM automatically generates its own demonstrations by clustering similar questions and using prompts to create reasoning chains, automating the demonstration creation process.\n\n**Auto-generated Demonstration:** \"A baker has 30 cookies. She sells 12 and divides the rest equally among 3 boxes. How many cookies are in each box? First, 30 - 12 = 18 cookies remain. Then, 18 / 3 = 6 cookies per box.\"\n\n**Example Response (Farmer Problem):** \"Following the example, first we subtract the sold apples: 48 - 20 = 28. Then, we divide by the number of baskets: 28 / 4 = 7. So, there are 7 apples in each basket.\"\n\n**Outcome:** Offers more guidance and typically improves accuracy, though implementation can be more complex.",
       },
       {
         id: 5,
@@ -3203,6 +3203,72 @@ export const blogs: Blog[] = [
         id: 8,
         primary_title: "Conclusion",
         text: "OpenAI's O1 models are considered groundbreaking, potentially revolutionizing complex, multi-step AI applications similar to how GPT-4 spurred advancements in language processing. These models represent a shift towards deliberate, goal-oriented reasoning, ideal for intricate planning tasks. Although early in development, they foreshadow future AI systems where such reasoning models collaborate with faster execution models. For prompt engineering advice and workflow integration guidance, experts are available to provide tailored support to researchers and users."
+      }
+    ],
+  },
+  {
+    id: 33,
+    timestamp: "December 27, 2024",
+    slug: "/blog/top-7-llm-debugging-challenges-and-solutions",
+    title: "Top 7 LLM debugging challenges and solutions",
+    cover: {
+      id: 1,
+      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/top-7-debugging-challenges/cover.png",
+    },
+    type: "GUIDE",
+    author: {
+      name: "Hendrix",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/hendrix.png",
+        props: {
+          variant: "circle",
+        },
+      },
+    },
+    paragraphs: [
+      {
+        id: 1,
+        text: "Debugging Large Language Models (LLMs) is tricky. Here's what you need to know: \n1. Fixing made-up info \n2. Improving prompts \n3. Speeding up performance \n4. Correcting context errors \n5. Reducing bias \n6. Enhancing security \n7. Managing growth",
+      },
+      {
+        id: 2,
+        primary_title: "What is LLM Debugging?",
+        text: "LLM debugging finds and fixes errors in large language model apps. It's crucial for building AI that's accurate, fast, and fair. \n\n **Definition and Purpose** \n\n LLM debugging goes beyond regular code fixes. It's about making AI models give correct, useful answers. The main goals? \n- Fix wrong info \n- Speed up responses \n- Remove unfair bias \n\nHere's a real-world example: In March 2023, a big bank's AI chatbot gave bad financial advice. Their stock dropped 2%. Good debugging could've stopped this costly mistake.",
+      },
+      {
+        id: 3,
+        text: "**Main Parts of LLM Debugging**\n\nLLM debugging has four key components:\n\n1. Error tracking: Find where and why the model messes up.\n\n2. Performance checking: Make sure it runs fast and smooth.\n\n3. Bias testing: Look for unfair treatment of different groups.\n\n4. Security testing: Guard against misuse or attacks.",
+      },
+      {
+        id: 4,
+        primary_title: "7 Big LLM Debugging Problems and How to Fix Them",
+        text: "1. **Fixing Made-Up Information**\n\nLLMs can spit out wrong or nonsensical info. It's called \"hallucinations\". Why? The model's guessing game and its training data quality. How to tackle this:\n- Check facts against trusted sources\n- Use specialized models for niche tasks\n- Try RAG to tap into verified databases \n\n2. **Making Better Prompts**\n\n Bad prompts = useless responses. To improve:\n- Refine step-by-step\n- Track changes with tools\n- Try chain-of-thought prompting\n\n3. **Dealing with Slower Performance**\n\nLLMs can crawl. To speed up:\n- Keep an eye on performance\n- Use GPUs for inference\n- Cache with libraries like functools\n\n4. **Fixing Context Mistakes**\n\nLLMs can misread context. To fix:\n- Clear up vague inputs\n- Boost context retention\n- Tweak text chunking\n\n5. **Reducing Bias and Unfairness**\n\nBiased outputs? Not good. To fight it:\n- Use diverse training data\n- Add fairness rules in training\n- Use bias detection tools\n\n6. **Improving Security**\n\nLLMs face risks like prompt injection attacks. To beef up security:\n- Encrypt sensitive data\n- Use access controls\n- Do regular security checks\n\n7. **Managing Growth and Resources**\n\nScaling LLMs? You need smart resource management:\n- Try distributed computing\n- Optimize model structures\n- Use cloud platforms with auto-scaling",
+      },
+      {
+        id: 5,
+        text: "| Technique | What It Does | When to Use It |\n| --- | --- | --- |\n| Prompt Engineering | Tweaks prompts for better answers | First optimization step |\n| RAG | Adds external data for context | For context issues |\n| Fine-tuning | Adapts the model for specific tasks | For niche domain work |",
+      },
+      {
+        id: 6,
+        primary_title: "Tools for LLM Debugging",
+        text: "Debugging LLMs can be tricky. But don't worry - there are tools to help. Let's look at some top options: \n\n **[Keywords AI](https://www.keywordsai.co): Your All-in-One Solution**",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/top-7-debugging-challenges/keywords_ai.png",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 7,
+        text: "Keywords AI is like a Swiss Army knife for LLM debugging. Here's what it offers: \n\n- One API for 200+ LLMs \n- Detailed logs for every request \n- Dashboard with 20+ metrics \n- Model playground for testing \n\nIt's perfect if you want to simplify your LLM workflow. \n\n **Other Cool Tools** \n\n| Tool | What It Does | Best For |\n| --- | --- | --- |\n| Helicone | Logs, tracks, caches | Saving money |\n| Phoenix | Traces, evaluates, manages datasets | Comparing performance |\n| OpenLLMetry | Monitors in real-time, tests quality | Checking output |",
+      },
+      {
+        id: 8,
+        primary_title: "Tips for Better LLM Debugging",
+        text: "Debugging LLMs doesn't have to be a headache. Here's how to keep your AI applications running smoothly: \n\n**Use Verbose and Debug Modes** \n\nWant to peek under the hood? Try this: \n\n- Turn on **Verbose Mode** for key event update \n\n- Enable **Debug Mode** for a full event log \n\nIn Jupyter or Python, just use `set_verbose(True)` and `set_debug(True)` to get detailed logs. \n\n**Implement Tracing** \n\nFor complex apps, tracing is your friend. LangSmith Tracing helps you log and visualize events, making it easier to spot issues. \n\n**Create a Knowledge Base** \n\nBuild a go-to guide for common issues. Include: \n\n- Detailed error descriptions \n- Steps to reproduce issues \n- Verified solutions and fixes \n\nThis saves time and helps your team learn from past challenges. \n\n**Isolate and Reproduce Bugs** \n\nFound a bug? Here's what to do: \n\n1. Isolate it with minimal code \n- Strip away unnecessary components \n- Focus on core functionality \n\n2. Make and test assumptions \n- Document your hypotheses \n- Test one variable at a time \n\n3. Repeat until fixed \n- Keep iterating systematically \n- Document successful fixes"
       }
     ],
   },

@@ -202,18 +202,24 @@ export default async function BlogDetail({
                       </code>
                     );
                   },
-                  li: ({ node, ...props }) => {
-                    return (
-                      <li style={{ marginBottom: "8px" }}>
-                        <span style={{ color: "white", marginRight: "8px" }}>
-                          •
-                        </span>
-                        <span className="text-gray-white text-md-regular">
-                          {props.children}
-                        </span>
-                      </li>
-                    );
-                  },
+                  ol: ({ ...props }) => (
+                    <ol className="list-decimal pl-4 text-gray-white text-md-regular [&>li]:mb-2" {...props} />
+                  ),
+                  ul: ({ ...props }) => (
+                    <ul className="list-disc pl-4 text-gray-white text-md-regular [&>li]:mb-2" {...props} />
+                  ),
+                  // li: ({ node, ...props }) => {
+                  //   return (
+                  //     <li style={{ marginBottom: "8px" }}>
+                  //       <span style={{ color: "white", marginRight: "8px" }}>
+                  //         •
+                  //       </span>
+                  //       <span className="text-gray-white text-md-regular">
+                  //         {props.children}
+                  //       </span>
+                  //     </li>
+                  //   );
+                  // },
                   table: ({ node, ...props }) => (
                     <div className="overflow-x-auto w-full">
                       <table className="w-full my-8 border-collapse min-w-[600px]" {...props} />
@@ -240,7 +246,7 @@ export default async function BlogDetail({
                     const textStyle = { color: "text-gray-white" };
 
                     return (
-                      <p className={`text-md-regular ${textStyle}`}>
+                      <p className={`text-md-regular ${textStyle} mb-1`}>
                         {props.children}
                       </p>
                     );
