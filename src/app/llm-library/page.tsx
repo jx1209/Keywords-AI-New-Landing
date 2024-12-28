@@ -5,11 +5,11 @@ import { Library } from "../components/llm-library/library";
 
 export const metadata: Metadata = {
   title: '250+ AI models | Curated by Keywords AI',
-  description: 'Explore 250+ AI models and LLMs in our comprehensive database. Access detailed information to find the best LLMs suited to your needs. Start your search now!',
+  description: 'Comprehensive directory of 250+ AI models and large language models (LLMs) and their capabilities. Compare details, pricing, benchmarks, and more.',
   openGraph: {
     type: 'website',
     title: '250+ AI models | Curated by Keywords AI',
-    description: 'Explore 250+ AI models and LLMs in our comprehensive database. Access detailed information to find the best LLMs suited to your needs. Start your search now!',
+    description: 'Comprehensive directory of 250+ AI models and large language models (LLMs) and their capabilities. Compare details, pricing, benchmarks, and more.',
     url: 'https://keywordsai.co/llm-library',
     siteName: 'Keywords AI',
     images: [

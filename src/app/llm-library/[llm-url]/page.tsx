@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: {
   const modelName = decodeURIComponent(resolvedParams["llm-url"]);
   
   return {
-    title: `${modelName} | AI Model Details | Keywords AI`,
+    title: `${modelName} Model Card | Keywords AI`,
     description: `Learn about ${modelName}, including pricing, context window, and capabilities. Find detailed specifications and try it in our playground.`,
     openGraph: {
       type: 'website',
