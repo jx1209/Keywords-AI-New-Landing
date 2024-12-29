@@ -54,7 +54,7 @@ export function ModelDetailContent({ modelName }: { modelName: string }) {
           collapsible 
           className="w-full border border-gray-3 rounded-sm divide-y divide-gray-3"
         >
-          <AccordionItem value="context-window" className="border-0 px-[24px] py-[24px]">
+          <AccordionItem value="context-window" className="border-0 px-[24px] py-[0px]">
             <AccordionTrigger>
               <span className="text-gray-white display-xs">
                 What is {model.display_name || model.model_name}&apos;s context
@@ -73,7 +73,7 @@ export function ModelDetailContent({ modelName }: { modelName: string }) {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="max-output" className="px-[24px] py-[24px]">
+          <AccordionItem value="max-output" className="px-[24px] py-[0px]">
             <AccordionTrigger>
               <span className="text-gray-white display-xs">
                 What is the maximum output length for{" "}
@@ -92,7 +92,7 @@ export function ModelDetailContent({ modelName }: { modelName: string }) {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="pricing" className="px-[24px] py-[24px]">
+          <AccordionItem value="pricing" className="px-[24px] py-[0px]">
             <AccordionTrigger>
               <span className="text-gray-white display-xs">
                 How is {model.display_name || model.model_name} priced?
@@ -113,7 +113,7 @@ export function ModelDetailContent({ modelName }: { modelName: string }) {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="vision" className="px-[24px] py-[24px]">
+          <AccordionItem value="vision" className="px-[24px] py-[0px]">
             <AccordionTrigger>
               <span className="text-gray-white display-xs">
                 Does {model.display_name || model.model_name} support vision
@@ -131,7 +131,7 @@ export function ModelDetailContent({ modelName }: { modelName: string }) {
             </AccordionContent>
           </AccordionItem>
 
-            <AccordionItem value="function-calls" className="px-[24px] py-[24px]">
+            <AccordionItem value="function-calls" className="px-[24px] py-[0px]">
             <AccordionTrigger>
               <span className="text-gray-white display-xs">
                 Can {model.display_name || model.model_name} perform tool
