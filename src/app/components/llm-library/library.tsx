@@ -123,7 +123,7 @@ export const Library = () => {
                 {model.provider.provider_name}
               </span>
               <span className="text-gray-white text-md-regular truncate pr-xs">
-                {model.model_name}
+                {model.display_name}
               </span>
               <span className="text-gray-white text-md-regular truncate">
                 $
