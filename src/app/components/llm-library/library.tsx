@@ -70,7 +70,7 @@ export const Library = () => {
         <h1 className="text-gray-4 max-w-[1200px] w-full display-lg text-center">
           <span className="text-gray-white">250+</span> AI models
         </h1>
-        <h2 className="text-gray-4 text-sm text-center">Comprehensive directory of 250+ AI models and large language models (LLMs) and their capabilities.<br/>Compare details, pricing, benchmarks, and more.</h2>
+        <h2 className="text-gray-4 text-sm text-center">Comprehensive directory of 250+ AI models and large language models (LLMs) and their capabilities. <br/> Compare details, pricing, benchmarks, and more.</h2>
       </div>
       <div className="flex flex-col items-start max-h-[800px] max-w-[1200px] w-full gap-sm">
         <div className="w-[320px] flex items-center px-sm bg-gray-2 rounded-sm h-[36px]">
@@ -123,7 +123,7 @@ export const Library = () => {
                 {model.provider.provider_name}
               </span>
               <span className="text-gray-white text-md-regular truncate pr-xs">
-                {model.model_name}
+                {model.display_name}
               </span>
               <span className="text-gray-white text-md-regular truncate">
                 $
