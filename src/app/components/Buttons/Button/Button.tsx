@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import "./Button.css";
 import { forwardRef, useEffect, useState } from "react";
 import React from "react";
@@ -82,7 +82,7 @@ interface ButtonProps {
   isMouseDown?: boolean;
   size?: string;
   target?: string;
-  rel?: string; 
+  rel?: string;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -124,7 +124,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       hover,
       isMouseDown,
       ...props
-
     },
     ref
   ) => {
@@ -353,8 +352,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         textClassName = textClassName || "text-md-medium";
         textHoverColor = textHoverColor || "text-gray-white";
         textClickedColor = textClickedColor || "text-gray-white";
-        borderRadius = borderRadius || "rounded-[400px]";
-        padding = padding || "py-xs px-md";
+        borderRadius = borderRadius || "rounded-md";
+        padding = padding || "py-[10px] px-[20px]";
         iconFill = iconFill || "fill-gray-black";
         iconHoverFill = iconHoverFill || "fill-gray-white";
         borderHoverColor = borderHoverColor || "shadow-border shadow-gray-4";
@@ -378,7 +377,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         break;
       case "big-black":
         bgColor = bgColor || "bg-gray-black";
-        hoverColor = hoverColor || "bg-gray-3";
+        hoverColor = hoverColor || "bg-gray-2";
         borderColor = borderColor || "shadow-transparent";
         borderHoverColor = borderHoverColor || "shadow-transparent";
         clickedColor = clickedColor || "bg-gray-3";
@@ -386,8 +385,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         textColor = textColor || "text-gray-4";
         textHoverColor = textHoverColor || "text-gray-white";
         textClickedColor = textClickedColor || "text-gray-white";
-        borderRadius = borderRadius || "rounded-[400px]";
-        padding = padding || "py-xs px-md";
+        borderRadius = borderRadius || "rounded-md";
+        padding = padding || "py-[10px] px-[20px]";
         iconFill = iconFill || "fill-gray-4";
         iconHoverFill = iconHoverFill || "fill-gray-white";
 
@@ -429,7 +428,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         clickedColor = clickedColor || "bg-gray-3";
         textColor = disabled ? "text-gray-3" : textColor || "text-gray-4";
         textHoverColor = disabled ? "" : textHoverColor || "text-gray-white";
-        textClickedColor = disabled ? "" : textClickedColor || "text-gray-white";
+        textClickedColor = disabled
+          ? ""
+          : textClickedColor || "text-gray-white";
         borderRadius = borderRadius || "rounded-sm";
         padding = padding || "py-xxs px-xs";
         iconFill = disabled ? "fill-gray-3" : iconFill || "fill-gray-4";
@@ -594,6 +595,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   }
 );
 
-Button.displayName = 'Button';
+Button.displayName = "Button";
 
 export { Button };

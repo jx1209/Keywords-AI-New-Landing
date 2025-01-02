@@ -1,8 +1,5 @@
-import Landing from "./components/landing/landing";
-import type { Metadata } from 'next'
-
-
+import Landing2025 from "./components/landing/Landing2025";
 
 export default function Page() {
-  return <Landing/>
+  return <Landing2025 />;
 }
