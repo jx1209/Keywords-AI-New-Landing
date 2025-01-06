@@ -11,5 +11,5 @@
 
 .landing-card-outer {
     background: var(--resend-com-linear-nero-nero, linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.00) 100%));
-    @apply p-[1px] rounded-0 z-0;
+    @apply p-[1px] z-0;
 }
