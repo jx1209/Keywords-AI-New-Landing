@@ -131,6 +131,24 @@ export function ModelDetailContent({ modelName }: { modelName: string }) {
             </AccordionContent>
           </AccordionItem>
 
+          <AccordionItem value="audio" className="px-[24px] py-[24px]">
+            <AccordionTrigger className="py-[0px]">
+              <span className="text-gray-white display-xs">
+                Does {model.display_name || model.model_name} support audio
+                functionality?
+              </span>
+            </AccordionTrigger>
+            <AccordionContent className="pt-xxs">
+              <p className="text-gray-4 text-md-regular">
+                {model.audio_support === 1 ? (
+                  `Yes, ${model.display_name || model.model_name} supports audio functionality.`
+                ) : (
+                  `No, ${model.display_name || model.model_name} does not support audio functionality.`
+                )}
+              </p>
+            </AccordionContent>
+          </AccordionItem>
+
             <AccordionItem value="function-calls" className="px-[24px] py-[24px]">
             <AccordionTrigger className="py-[0px]">
               <span className="text-gray-white display-xs">
