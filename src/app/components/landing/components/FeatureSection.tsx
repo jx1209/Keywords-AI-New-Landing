@@ -36,8 +36,8 @@ export default function FeatureSection({
 
       <div className="grid grid-cols-2 w-full">
         {cards?.map((card, index) => (
-          <div className="flex p-[1px] shadow-border shadow-gray-2">
-            <div key={index} className="flex flex-col p-lg gap-xxs w-full">
+          <div key={index} className="flex p-[1px] shadow-border shadow-gray-2">
+            <div className="flex flex-col p-lg gap-xxs w-full">
               <p className="text-gray-white display-xs">{card.text}</p>
               {card.graphic && card.graphic}
             </div>
