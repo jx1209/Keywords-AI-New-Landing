@@ -54,8 +54,8 @@ export function ModelDetailContent({ modelName }: { modelName: string }) {
           collapsible 
           className="w-full border border-gray-3 rounded-sm divide-y divide-gray-3"
         >
-          <AccordionItem value="context-window" className="border-0 px-[24px] py-[24px] ">
-            <AccordionTrigger className="py-0">
+          <AccordionItem value="context-window" className="border-0 px-[24px] py-[24px]">
+            <AccordionTrigger className="py-[0px]">
               <span className="text-gray-white display-xs">
                 What is {model.display_name || model.model_name}&apos;s context
                 window?
@@ -74,7 +74,7 @@ export function ModelDetailContent({ modelName }: { modelName: string }) {
           </AccordionItem>
 
           <AccordionItem value="max-output" className="px-[24px] py-[24px]">
-            <AccordionTrigger className="py-0">
+            <AccordionTrigger className="py-[0px]">
               <span className="text-gray-white display-xs">
                 What is the maximum output length for{" "}
                 {model.display_name || model.model_name}?
@@ -93,7 +93,7 @@ export function ModelDetailContent({ modelName }: { modelName: string }) {
           </AccordionItem>
 
           <AccordionItem value="pricing" className="px-[24px] py-[24px]">
-            <AccordionTrigger className="py-0">
+            <AccordionTrigger className="py-[0px]">
               <span className="text-gray-white display-xs">
                 How is {model.display_name || model.model_name} priced?
               </span>
@@ -114,7 +114,7 @@ export function ModelDetailContent({ modelName }: { modelName: string }) {
           </AccordionItem>
 
           <AccordionItem value="vision" className="px-[24px] py-[24px]">
-            <AccordionTrigger className="py-0">
+            <AccordionTrigger className="py-[0px]">
               <span className="text-gray-white display-xs">
                 Does {model.display_name || model.model_name} support vision
                 inputs?
@@ -131,8 +131,26 @@ export function ModelDetailContent({ modelName }: { modelName: string }) {
             </AccordionContent>
           </AccordionItem>
 
+          <AccordionItem value="audio" className="px-[24px] py-[24px]">
+            <AccordionTrigger className="py-[0px]">
+              <span className="text-gray-white display-xs">
+                Does {model.display_name || model.model_name} support audio
+                functionality?
+              </span>
+            </AccordionTrigger>
+            <AccordionContent className="pt-xxs">
+              <p className="text-gray-4 text-md-regular">
+                {model.audio_support === 1 ? (
+                  `Yes, ${model.display_name || model.model_name} supports audio functionality.`
+                ) : (
+                  `No, ${model.display_name || model.model_name} does not support audio functionality.`
+                )}
+              </p>
+            </AccordionContent>
+          </AccordionItem>
+
             <AccordionItem value="function-calls" className="px-[24px] py-[24px]">
-            <AccordionTrigger className="py-0">
+            <AccordionTrigger className="py-[0px]">
               <span className="text-gray-white display-xs">
                 Can {model.display_name || model.model_name} perform tool
                 calling (functions)?

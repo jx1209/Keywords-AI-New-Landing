@@ -1,3 +1,4 @@
+const gray1 = "#151519";
 const gray3 = "#2E2E33";
 const gray4 = "#B1B3BC";
 
@@ -121,8 +122,9 @@ export default {
     "border-tlr": `inset 1px 0 0 0 ${gray3},inset -1px 0 0 0 ${gray3},inset 0 1px 0 0 ${gray3}`,
   },
   backgroundImage: {
+    "landing-card": `linear-gradient(0deg, ${gray1} 0%, black 100%), linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%)`,
     highlight:
-      "linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.20) 0%, rgba(143, 143, 143, 0.67) 50%, rgba(0, 0, 0, 0.04) 100%))",
+      "linear-gradient(90deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.20) 0%, rgba(143, 143, 143, 0.67) 50%, rgba(0, 0, 0, 0.04) 100%))",
   },
   screens: {
     sm: { max: "680px" },
