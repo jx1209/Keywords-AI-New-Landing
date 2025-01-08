@@ -117,12 +117,12 @@ export default async function BlogDetail({
                 <span className="caption text-gray-4">
                   {String(metadata?.type)}
                 </span>
-                <span className="display-lg-600 w-full text-center text-gray-white sm:hidden">
+                <h1 className="display-lg-600 w-full text-center text-gray-white sm:hidden">
                   {String(metadata?.title)}
-                </span>
-                <span className="display-sm w-full text-gray-white sm:block hidden text-left">
+                </h1>
+                <h1 className="display-sm w-full text-gray-white sm:block hidden text-left">
                   {String(metadata?.title)}
-                </span>
+                </h1>
               </div>
               {String(metadata?.subtitle) && (
                 <span className="display-xs text-gray-4 text-center">
@@ -153,15 +153,17 @@ export default async function BlogDetail({
                   <Link
                     href={paragraph.primary_title_url}
                     className="display-xs-md text-gray-white underline"
-                    target="_blank" // Open link in a new tab
-                    rel="noopener noreferrer" // Recommended for security
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    {paragraph.primary_title}
+                    <h2 className="display-xs-md text-gray-white underline">
+                      {paragraph.primary_title}
+                    </h2>
                   </Link>
                 ) : (
-                  <span className="display-xs-md text-gray-white">
+                  <h2 className="display-xs-md text-gray-white">
                     {paragraph.primary_title}
-                  </span>
+                  </h2>
                 ))}
               <ReactMarkdown
                 components={{

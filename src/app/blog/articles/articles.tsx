@@ -3272,4 +3272,91 @@ export const blogs: Blog[] = [
       }
     ],
   },
+  {
+    id: 34,
+    timestamp: "January 7, 2025",
+    slug: "/blog/top-10-llm-research-papers",
+    title: "My top 10 LLM research papers in 2024",
+    cover: {
+      id: 1,
+      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/best-llm-research-paper/cover.png",
+    },
+    type: "GUIDE",
+    author: {
+        name: "Raymond",
+      image: {
+        id: 1,
+        url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/raymond.png",
+        props: {
+          variant: "circle",
+        },
+      },
+    },
+    paragraphs: [
+      {
+        id: 1,
+        text: "In January 2024, we launched **Keywords AI**, initially as an LLM monitoring platform. To provide truly professional and credible support to our customers, I realized I needed to deepen my expertise in the rapidly evolving field of LLMs. \n\n So, I set a simple but ambitious goal at the start of the year: **read at least one research paper every week**. What started as a personal commitment turned into a transformative journey—not only for me but for Keywords AI. The insights I gained helped us improve our LLM observability platform and even inspired us to evolve into a **full-stack LLM engineering platform**. \n\n By the end of 2024, I had read **61 research papers** — all of which left me with new ideas and deeper insights. I’ve recorded these papers on my Notion page, and I’ll share the full list at the end of this blog. \n\n In this first part, I want to spotlight the **Top 10 LLM research papers** I read in 2024. These papers stood out for their impact, creativity, or relevance, and I’ll summarize why each one is worth your time. Let’s dive in!"
+      },
+      {
+        id: 2,
+        primary_title: "No.10: A Survey of Prompt Engineering Methods in Large Language Models for Different NLP Tasks",
+        primary_title_url: "https://arxiv.org/abs/2407.12994",
+        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Provides an organized overview of various prompt engineering techniques for a wide range of NLP tasks.\n- Highlights the performance improvements from different prompting methods.\n\n**Weaknesses**:\n\n- Adds little novelty beyond reviewing existing methods.\n- Ethical and societal considerations are not discussed in detail, especially regarding biases in prompt engineering."
+      },
+      {
+        id: 3,
+        primary_title: "No.9: Conversational Prompt Engineering",
+        primary_title_url: "https://arxiv.org/abs/2408.04560",
+        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Proposes a novel Conversational Prompt Engineering (CPE) framework that simplifies the creation of personalized prompts.\n- User-friendly and practical for repetitive enterprise tasks like summarization.\n\n**Weaknesses**:\n\n- Evaluation lacks diversity in datasets and use cases.\n- Ethical considerations, especially related to potential biases in conversational models, are minimally discussed."
+      },
+      {
+        id: 4,
+        primary_title: "No.8: LLMs-as-Judges: A Comprehensive Survey on LLM-based Evaluation Methods",
+        primary_title_url: "https://arxiv.org/abs/2412.05579",
+        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Provides a comprehensive and structured survey of LLMs as evaluators, an emerging paradigm with significant potential.\n- Highlights challenges and opportunities in using LLMs for flexible and scalable evaluation.\n\n**Weaknesses**:\n\n- Focuses more on summarizing the field than contributing novel insights.\n- Ethical concerns about bias in LLM-based evaluation are underexplored."
+      },
+      {
+        id: 5,
+        primary_title: "No.7: The Survey of Retrieval-Augmented Text Generation in Large Language Models",
+        primary_title_url: "https://arxiv.org/abs/2404.10981",
+        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Provides a comprehensive survey of Retrieval-Augmented Generation (RAG), a critical topic for improving LLM outputs.\n- Organizes existing research into clear phases (pre-retrieval, retrieval, post-retrieval, generation).\n\n**Weaknesses**:\n\n- Novel contributions are limited as it primarily reviews existing work.\n- Ethical and societal implications of RAG are not thoroughly discussed."
+      },
+      {
+        id: 6,
+        primary_title: "No.6: More Agents Is All You Need",
+        primary_title_url: "https://arxiv.org/abs/2402.05120",
+        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Introduces a scalable \"Agent Forest\" method for LLM performance improvement.\n- Comprehensive experiments across multiple benchmarks.\n\n**Weaknesses**:\n\n- Lacks detailed exploration of ethical concerns and societal impacts.\n- Methodological contributions are interesting but not groundbreaking."
+      },
+      {
+        id: 7,
+        primary_title: "No.5: Does Prompt Formatting Have Any Impact on LLM Performance?",
+        primary_title_url: "https://arxiv.org/abs/2411.10541",
+        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Explores a highly relevant question of how prompt formatting affects LLM performance across tasks and models.\n- Provides valuable insights into sensitivity and robustness of different LLMs to formatting changes.\n\n**Weaknesses**:\n\n- Limited exploration of potential remedies or best practices for mitigating format sensitivity.\n- Ethical concerns, such as fairness in evaluations, are not deeply examined."
+      },
+      {
+        id: 8,
+        primary_title: "No.4: AIOS: LLM Agent Operating System",
+        primary_title_url: "https://arxiv.org/abs/2403.16971",
+        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Proposes a well-structured operating system (AIOS) to manage LLM agent resources efficiently.\n- Strong practical implications for improving multi-agent LLM systems.\n\n**Weaknesses**:\n\n- Experimental validation is somewhat limited in scope.\n- Ethical considerations and broader societal impacts are not deeply explored."
+      },
+      {
+        id: 9,
+        primary_title: "No.3: Scaling Synthetic Data Creation with 1,000,000,000 Personas",
+        primary_title_url: "https://arxiv.org/abs/2406.20094",
+        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Introduces Persona Hub, a large-scale approach to synthetic data generation using LLMs, which is highly innovative and scalable.\n- Demonstrates versatility in applications like mathematical reasoning and game design.\n\n**Weaknesses**:\n\n- Ethical considerations, such as risks of misuse, are mentioned but not deeply explored.\n- Limited discussion on the potential biases introduced by synthetic data at this scale."
+      },
+      {
+        id: 10,
+        primary_title: "No.2: SynCode: LLM Generation with Grammar Augmentation",
+        primary_title_url: "https://arxiv.org/abs/2403.01632",
+        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Proposes a novel framework (SynCode) that ensures syntactically correct LLM output.\n- Strong experimental results demonstrating significant error reductions in generated outputs.\n\n**Weaknesses**:\n\n- Some aspects of reproducibility, like details on hardware and configurations, are insufficient.\n- Limited discussion of societal implications of reliable code generation."
+      },
+      {
+        id: 11,
+        primary_title: "No.1: A Comprehensive Study of Knowledge Editing for Large Language Models",
+        primary_title_url: "https://arxiv.org/abs/2401.01286",
+        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Novel benchmark (KnowEdit) and categorization for knowledge editing.\n- Practical contribution with the EasyEdit framework.\n- Relevance to dynamic knowledge update needs in LLMs.\n\n**Weaknesses**:\n\n- Limited depth in theoretical justification and ethical considerations.\n- Experimentation could be more diverse and statistically robust."
+      }
+    ],
+  },
 ];
