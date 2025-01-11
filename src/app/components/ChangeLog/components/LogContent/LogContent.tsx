@@ -10,6 +10,8 @@ import {
   TagRocket,
   TagLogo,
   TagDatasets,
+  TagPrompts,
+  TagSettings,
 } from "@/app/components/Icons";
 import { Tag } from "@/app/components/Tag/Tag";
 import Accordion from "@/app/components/Sections/Accordion";
@@ -34,6 +36,10 @@ export function TagIconHelper(flag: string) {
       return <TagLogo />;
     case "Datasets":
       return <TagDatasets />;
+    case "Prompts":
+      return <TagPrompts />;
+    case "Settings":
+      return <TagSettings />;
     default:
       return <TagRocket />;
   }
@@ -84,12 +90,12 @@ export function LogSection({ sectionContent, sectionName }: LogSectionProps) {
                   className="flex pl-sm items-start gap-xxxs self-stretch"
                 >
                   <p className="inline-block text-gray-white">·</p>
-                  <p className="text-gray-white text-md-regular">
-                    <div className="inline-block mr-xxxs">
+                  <div className="text-gray-white text-md-regular">
+                    <span className="inline-block mr-xxxs">
                       <Tag icon={TagIconHelper(item.tag)} text={item.tag} />
-                    </div>
+                    </span>
                     {item.description}
-                  </p>
+                  </div>
                 </div>
               ))}
             </div>

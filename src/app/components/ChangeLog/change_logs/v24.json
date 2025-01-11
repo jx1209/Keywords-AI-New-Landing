@@ -1,0 +1,26 @@
+{
+  "date": "January 11, 2025",
+  "Title": "Image support in Prompts",
+  "snapshot": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/image-in-prompts.png",
+"introduction": "You can now upload images to your prompts. Choose an LLM that supports images and you can now use images in your prompts. This allows your prompts can have more variety and have more use cases.",
+
+  "sections": {
+      "New": [
+        {"tag": "Prompts", "description": "You can now add a custom slug to Prompt ID to improve code readability."},
+        {"tag": "API", "description": "You can now enable prompt caching for your API requests with Anthropic models."},
+        {"tag": "API", "description": "New parameter added. Use `override_config:` to override or append the default config for your prompt."},
+        {"tag": "Logs", "description": "Added a new Prompt Name column to the Logs. You can now see the name of the prompt that was used to generate the log."},
+        {"tag": "Other", "description": "A new AI Models library in public! You can find any LLM model and see their capabilities and pricing."}
+      ],
+      "Improved": [
+        {"tag": "Settings", "description": "Improved the UI/UX of Credentials. You can now add and manage your credentials in a more intuitive way."},
+        {"tag": "Playground", "description": "Improved the UI/UX of using existing prompts in Playground."}
+      ],
+      "Fixed": [
+        {"tag": "Prompts", "description": "Fixed a bug where Prompt ID was not being displayed."},
+        {"tag": "Prompts", "description": "Fixed a bug where a prompt can't be run on the Prompts page."},
+        {"tag": "Playground", "description": "Fixed a bug where `Stop generation` button was not working."},
+        {"tag": "Playground", "description": "Fixed a bug where Playground glitch on long generation."}
+      ]
+    }
+}

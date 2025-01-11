@@ -139,5 +139,9 @@
       <loc>https://keywordsai.co/blog/top-10-llm-research-papers</loc>
       <priority>1.0</priority>
    </url>
+   <url>
+      <loc>https://keywordsai.co/blog/best-llms</loc>
+      <priority>1.0</priority>
+   </url>
 
 </urlset>

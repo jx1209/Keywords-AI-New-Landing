@@ -4,7 +4,7 @@ import { FeatureTick } from "@/app/components/icons-old";
 import cn from "src/utilities/ClassMerge";
 import { Tag } from "../tag";
 import { Button } from "@/app/components/Buttons";
-import { Right, RightArrow } from "@/app/components/Icons";
+import { Right, RightBigArrow } from "@/app/components/Icons";
 
 const ranking = {
   flex_8k: 1,
@@ -93,7 +93,7 @@ export default function PricingCard({
               variant="text"
               text="Book a demo"
               gap="gap-xxs"
-              icon={RightArrow}
+              icon={RightBigArrow}
               iconFill="fill-gray-white"
               iconPosition="right"
               textColor="text-gray-white"
