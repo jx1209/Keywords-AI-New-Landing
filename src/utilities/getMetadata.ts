@@ -12,6 +12,7 @@ interface BlogStructureMetaData {
   author?: string;
   authors?: string[];
   type: string;
+  h1?: string;
 }
 export async function getMetadata(
   filePath: string

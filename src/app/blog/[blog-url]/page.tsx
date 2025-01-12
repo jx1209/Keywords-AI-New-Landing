@@ -114,14 +114,11 @@ export default async function BlogDetail({
           >
             <div className="flex flex-col items-center gap-sm self-stretch">
               <div className="flex flex-col w-full items-center gap-xxs">
-                <span className="caption text-gray-4">
+                <span className="caption text-gray-4 text-center sm:text-left w-full">
                   {String(metadata?.type)}
                 </span>
-                <h1 className="display-lg-600 w-full text-center text-gray-white sm:hidden">
-                  {String(metadata?.title)}
-                </h1>
-                <h1 className="display-sm w-full text-gray-white sm:block hidden text-left">
-                  {String(metadata?.title)}
+                <h1 className="display-lg-600 w-full text-center text-gray-white sm:text-left sm:display-sm">
+                  {String(metadata?.h1 || metadata?.title)}
                 </h1>
               </div>
               {String(metadata?.subtitle) && (
@@ -204,6 +201,9 @@ export default async function BlogDetail({
                       </code>
                     );
                   },
+                  strong: ({ node, ...props }) => (
+                    <strong className="font-semibold text-lg" {...props} />
+                  ),
                   ol: ({ ...props }) => (
                     <ol className="list-decimal pl-4 text-blog text-blog-body [&>li]:mb-2" {...props} />
                   ),
@@ -271,7 +271,7 @@ export default async function BlogDetail({
                   a: ({ href, children }) => (
                     <a
                       href={href}
-                      className="text-blog underline"
+                      className="text-primary hover:text-primary-2"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
