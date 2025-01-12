@@ -48,10 +48,16 @@ export const Library = () => {
     }
   };
 
-  const filteredModels = models.filter((model) =>
-    model.model_name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    model.provider.provider_name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredModels = models
+    // First filter out models with provider prefix in model_name
+    .filter(model => 
+      !(model.model_name.startsWith('openai/') || model.model_name.startsWith('anthropic/'))
+    )
+    // Then apply the existing search filter
+    .filter((model) =>
+      model.model_name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      model.provider.provider_name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
 
   const sortedModels = [...filteredModels].sort((a, b) => {
     if (!sortField || !sortDirection) return 0;
