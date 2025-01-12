@@ -205,10 +205,10 @@ export default async function BlogDetail({
                     );
                   },
                   ol: ({ ...props }) => (
-                    <ol className="list-decimal pl-4 text-gray-white text-md-regular [&>li]:mb-2" {...props} />
+                    <ol className="list-decimal pl-4 text-blog text-blog-body [&>li]:mb-2" {...props} />
                   ),
                   ul: ({ ...props }) => (
-                    <ul className="list-disc pl-4 text-gray-white text-md-regular [&>li]:mb-2" {...props} />
+                    <ul className="list-disc pl-4 text-blog text-blog-body [&>li]:mb-2" {...props} />
                   ),
                   // li: ({ node, ...props }) => {
                   //   return (
@@ -229,13 +229,13 @@ export default async function BlogDetail({
                   ),
                   th: ({ node, ...props }) => (
                     <th 
-                      className="text-md-regular text-gray-white p-6 text-left border-b border-gray-2 whitespace-nowrap" 
+                      className="text-md-regular text-blog p-6 text-left border-b border-gray-2 whitespace-nowrap" 
                       {...props} 
                     />
                   ),
                   td: ({ node, ...props }) => (
                     <td 
-                      className="text-md-regular text-gray-white p-6 border-b border-gray-2 whitespace-normal" 
+                      className="text-md-regular text-blog p-6 border-b border-gray-2 whitespace-normal" 
                       {...props} 
                     />
                   ),
@@ -245,10 +245,10 @@ export default async function BlogDetail({
                     //   node?.children.length === 1 &&
                     //   node?.children?[0].type === "image";
                     // const textStyle = isCaption ? {} : { color: "text-gray-white" };
-                    const textStyle = { color: "text-gray-white" };
+                      const textStyle = { color: "text-blog" };
 
                     return (
-                      <p className={`text-md-regular ${textStyle} mb-1`}>
+                      <p className={`text-blog-body ${textStyle} mb-1`}>
                         {props.children}
                       </p>
                     );
@@ -271,7 +271,7 @@ export default async function BlogDetail({
                   a: ({ href, children }) => (
                     <a
                       href={href}
-                      className="text-gray-white underline"
+                      className="text-blog underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

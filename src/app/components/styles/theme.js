@@ -55,6 +55,7 @@ export default {
         4: gray4,
         5: "#282A30",
       },
+      blog: "#dbdbdb",
       box: "#1D1D1D",
       resend: {
         64: "rgba(239, 245, 255, 0.69)",

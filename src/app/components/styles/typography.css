@@ -71,6 +71,16 @@
   font-style: normal;
 }
 
+
+.text-blog-body {
+  @apply text-blog;
+  font-family: Inter, "Messina Sans", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .text-md {
   @apply text-gray-white font-inter;
   font-size: 16px;
