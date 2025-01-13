@@ -3356,6 +3356,11 @@ export const blogs: Blog[] = [
         primary_title: "No.1: A Comprehensive Study of Knowledge Editing for Large Language Models",
         primary_title_url: "https://arxiv.org/abs/2401.01286",
         text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Novel benchmark (KnowEdit) and categorization for knowledge editing.\n- Practical contribution with the EasyEdit framework.\n- Relevance to dynamic knowledge update needs in LLMs.\n\n**Weaknesses**:\n\n- Limited depth in theoretical justification and ethical considerations.\n- Experimentation could be more diverse and statistically robust."
+      },
+      {
+        id: 12,
+        primary_title:"Full List of Papers",
+        text: "You can find the full list of papers I read here: [2024 LLM research papers](https://docs.google.com/spreadsheets/d/1ksWcwuZ5a6Dm9gPetpPjZt1NCnMi9WXynsHUx8eB5Ps). \n\nHappy coding and experimenting! \n\nRaymond"
       }
     ],
   },
