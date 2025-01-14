@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import FinderCard from "../components/AcceleratorGrantFinder/FinderCard";
+
 
 export const metadata: Metadata = {
   title: "250+ AI models | Curated by Keywords AI",
@@ -30,15 +32,11 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col items-center gap-xl self-stretch pt-[140px] px-sm pb-[120px] ">
-      <h1 className="text-gray-4 max-w-[1200px] w-full display-lg text-center">
-        Accelerator Grant Finder
+      <h1 className="text-gray-1 max-w-[1200px] self-stretch w-full display-lg font-semibold text-center">
+        Accelerators & AI Grants Finder
       </h1>
-      {/* {<FinderCard/>} */}
-    {/* // - Grant finder folder in the components folder
-         -- Finder file
-            - call card to for loop the data
-         -- component - card {FinderCard.tsx} */}
-    </div>
 
+      <FinderCard />
+    </div>
   );
 }
