@@ -31,8 +31,8 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="flex flex-col items-center gap-xl self-stretch pt-[140px] px-sm pb-[120px] ">
-      <h1 className="text-gray-1 max-w-[1200px] self-stretch w-full display-lg font-semibold text-center">
+    <div className="flex flex-col items-center gap-xl pt-[140px] px-sm pb-[120px] ">
+      <h1 className="text-gray-1 max-w-[1200px] w-full display-lg font-semibold text-center">
         Accelerators & AI Grants Finder
       </h1>
 
