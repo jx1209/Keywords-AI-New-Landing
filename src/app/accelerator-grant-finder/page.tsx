@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
+import accels_grants from './accelerators-grants.json';
 import FinderCard from "../components/AcceleratorGrantFinder/FinderCard";
 
-
 export const metadata: Metadata = {
-  title: "250+ AI models | Curated by Keywords AI",
+  title: "Accelerators & AI Grants Finder | Curated by Keywords AI",
   description:
     "Comprehensive directory of 250+ AI models and large language models (LLMs) and their capabilities. Compare details, pricing, benchmarks, and more.",
   openGraph: {
     type: "website",
-    title: "250+ AI models | Curated by Keywords AI",
+    title: "Accelerators & AI Grants Finder | Curated by Keywords AI",
     description:
       "Comprehensive directory of 250+ AI models and large language models (LLMs) and their capabilities. Compare details, pricing, benchmarks, and more.",
-    url: "https://keywordsai.co/llm-library",
+    url: "https://keywordsai.co/accelerator-grant-finder",
     siteName: "Keywords AI",
     images: [
       {
@@ -35,8 +35,24 @@ export default function Page() {
       <h1 className="text-gray-1 max-w-[1200px] w-full display-lg font-semibold text-center">
         Accelerators & AI Grants Finder
       </h1>
-
-      <FinderCard />
+      <div className="mx-auto w-full max-w-[1200px] px-4">
+        <div className="grid grid-cols-3 w-full gap-[60px]">
+          {accels_grants.map((accel_grant) => {
+            return (
+              <div className="w-full" key={accel_grant.Name}>
+                <FinderCard 
+                  name={accel_grant.Name}
+                  type={accel_grant.Type}
+                  amount={accel_grant.Funding}
+                  description={accel_grant["One-line description"]}
+                  cover={accel_grant.Cover}
+                  website={accel_grant.Website}
+                />
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }
