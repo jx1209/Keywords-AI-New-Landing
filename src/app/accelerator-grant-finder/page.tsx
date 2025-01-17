@@ -47,6 +47,9 @@ export default function Page() {
                   description={accel_grant["One-line description"]}
                   cover={accel_grant.Cover}
                   website={accel_grant.Website}
+                  perks={accel_grant.Perks}
+                  deadline={accel_grant["Application deadline"]}
+                  qualifications={accel_grant.Qualifications}
                 />
               </div>
             );
