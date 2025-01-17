@@ -35,7 +35,7 @@ export default function Page() {
       <h1 className="text-gray-1 max-w-[1200px] w-full display-lg font-semibold text-center">
         Accelerators & AI Grants Finder
       </h1>
-      <div className="mx-auto w-full max-w-[1200px] px-4">
+      <div className="mx-auto w-full max-w-[1200px] px-10">
         <div className="grid grid-cols-3 w-full gap-[60px]">
           {accels_grants.map((accel_grant) => {
             return (
