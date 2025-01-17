@@ -47,7 +47,7 @@ export default function AcceleratorGrantDetails() {
     }
 
     return (
-        <div className="flex flex-col pt-[140px] pb-[120px] mx-[270px]">
+        <div className="flex flex-col pt-[140px] pb-[120px] px-sm mx-auto">
             <div className="flex flex-col gap-[8px]">
                 <h1 className="text-gray-1 text-[44px] font-[600] leading-[56px] max-w-[1200px] w-full display-lg">
                     {agDetails.name}
@@ -83,12 +83,21 @@ export default function AcceleratorGrantDetails() {
                     </div>
                 </div>
             </div>
-            <Button
+            <div className="flex flex-row gap-[8px]">
+                <Button
                     variant="r4-primary"
                     text="Apply Now"
-                    className="flex mt-[60px] mr-auto min-w-[60px] justify-center gap-[8px] text-[16px] leading-[24px]"
+                    className="flex mt-[60px] min-w-[60px] justify-center gap-[8px] text-[16px] leading-[24px]"
                     onClick={() => window.open(agDetails.website)}
             />
+            <Button
+                    variant="r4-gray-2"
+                    text="View More Information"
+                    className="flex mt-[60px] min-w-[60px] justify-center gap-[8px] text-[16px] leading-[24px]"
+                    onClick={() => window.open(agDetails.website)}
+            />
+            </div>
+            
         </div>
         
     );
