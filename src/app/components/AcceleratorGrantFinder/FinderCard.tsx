@@ -32,7 +32,7 @@ export default function FinderCard({ name, type, amount, description, cover, web
                     <span className="text-[16px] leading-[24px] font-medium">{amount}</span>
                 </div>
                 <div className="flex min-h-[72px] items-start gap-[10px] self-stretch mt-[4px] mb-[16px]">
-                    <span className="text-[#b1b3bc] text-[16px] leading-[24px] line-clamp-3 overflow-hidden">{description}</span>
+                    <span className="text-[#b1b3bc] text-[16px] leading-[24px]">{description}</span>
                 </div>
                 <div className="flex flex-row flex-wrap items-start self-stretch w-full gap-2 mb-[24px]">
                     {types.map((t, index) => (
