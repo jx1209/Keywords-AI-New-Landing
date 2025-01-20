@@ -1,0 +1,20 @@
+[
+    {
+      "Name": "Y Combinator",
+      "Type": "Accelerator, Investment",
+      "Website": "https://www.ycombinator.com/",
+      "Perk": "$500k funding on 2 separate safes: $125,000 on a post-money safe in return for 7%, $375,000 on an uncapped safe with a Most Favored Nation (“MFN”) provision; each founder is assigned a dedicated group partner who has mentored hundreds of YC companies; free credits or significant discounts on hosting, banking, cap table management, back office, and much more; access to over 9000 YC alumni through private social network Bookface; access to YC Investor Database which has profiles and reviews for more than 50,000 startup investors",
+      "Application deadline": "02/11/2025",
+      "Qualifications": "Open to any startup",
+      "One-line description": "A venture capital firm and startup accelerator that helps early-stage entrepreneurs."
+    },
+    {
+      "Name": "Anthology Fund",
+      "Type": "Investment",
+      "Website": "https://menlovc.com/anthology-fund/",
+      "Perk": "over $100k funding; $25k Anthropic credits; regular access to the Anthropic team; quarterly deep dives with Menlo and Anthropic leaders and developer relations team; biannual demo days hosted by the Menlo partners and Anthropic leaders; credits from Menlo Ventures’ companies; fractional workspace access in Menlo Ventures’ SF and Menlo Park offices",
+      "Application deadline": "N/A",
+      "Qualifications": "Pre-Seed, Seed, or Series A; prefer to invest in companies based in the U.S.",
+      "One-line description": "A $100 million venture capital fund launched by Menlo Ventures and Anthropic designed to invest in and accelerate the growth of early-stage startups."
+    }
+  ]

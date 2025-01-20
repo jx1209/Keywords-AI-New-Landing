@@ -1,0 +1,24 @@
+{
+  "date": "January 17, 2025",
+  "Title": "Load Balancing 2.0",
+  "snapshot": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/load_balancing_v2.png",
+  "introduction": "We've completely redesigned our Load Balancing system to help you efficiently manage and distribute LLM requests across multiple models. This optimization enables better performance and cost reduction. Learn more in our documentation: [Load Balancing](https://docs.keywordsai.co/features/generation/load-balancing)",
+
+  "sections": {
+    "New": [
+      {"tag": "Prompts", "description": "Implemented filtering capabilities for Prompts, including filters for title, commit time, update time, and favorites"},
+      {"tag": "Prompts", "description": "Introduced prompt labels for better organization and management"},
+      {"tag": "Models", "description": "Integrated O1 model into the platform"},
+      {"tag": "Models", "description": "Added support for Inference.net as a new LLM provider"}
+    ],
+    "Improved": [
+      {"tag": "Dashboard", "description": "Improved Users graph loading performance by 5x"},
+      {"tag": "Caches", "description": "Improved Caches to display detailed request information"},
+      {"tag": "Playground", "description": "Added support for saving prompts with `tool_choice` parameter from Playground to Prompts"}
+    ],
+    "Fixed": [
+      {"tag": "Dashboard", "description": "Resolved an issue where timeframe changes affected active filter display"},
+      {"tag": "Settings", "description": "Fixed a bug where joining a team was not working."}
+    ]
+  }
+}
