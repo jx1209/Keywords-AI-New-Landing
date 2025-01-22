@@ -2871,7 +2871,7 @@ export const blogs: Blog[] = [
     paragraphs: [
       {
         id: 1,
-        text: "AI agents are becoming the next big thing in tech. Y Combinator recently highlighted how vertical AI agents - specialized AI tools focusing on specific business tasks - could become 10 times bigger than traditional SaaS companies. Why? Because these AI agents can automate complex business tasks more efficiently than ever before. \n\n The numbers speak for themselves. According to [MarketsAndMarkets](https://www.marketsandmarkets.com/Market-Reports/ai-agents-market-15761548.html), the AI agents market is worth $5.1 billion in 2024 and is expected to reach $47.1 billion by 2030. The best part? You no longer need to be an AI expert to build an AI agent. Thanks to new platforms and frameworks, anyone can create their own AI agent, even without coding experience. \n\n In this blog, we'll explore the top 7 platforms and frameworks that are making AI agent development accessible to everyone: \n- CrewAI: An open-source framework designed for building AI teams where each agent has specific roles and responsibilities. \n- Autogen: Microsoft's solution for creating multiple AI agents that can work together to solve complex problems. \n- Dify: A user-friendly platform with visual tools for building AI applications, perfect for both developers and non-technical users. \n- LangGraph: A LangChain extension that helps create stateful, multi-agent systems with advanced planning capabilities. \n- Swarm: OpenAI's experimental framework for simple and lightweight multi-agent orchestration. \n- LlamaIndex: A data framework that helps connect large language models with various data sources efficiently. \n- LangChain: A popular framework for building complex AI applications by connecting different language models and tools. \n\n Let's dive deeper into each platform and see which one is right for your needs.",
+        text: "AI agents are becoming the next big thing in tech. Y Combinator recently highlighted how vertical AI agents - specialized AI tools focusing on specific business tasks - could become 10 times bigger than traditional SaaS companies. Why? Because these AI agents can automate complex business tasks more efficiently than ever before. \n\n The numbers speak for themselves. According to [MarketsAndMarkets](https://www.marketsandmarkets.com/Market-Reports/ai-agents-market-15761548.html), the AI agents market is worth $5.1 billion in 2024 and is expected to reach $47.1 billion by 2030. The best part? You no longer need to be an AI expert to build an AI agent. Thanks to new platforms and frameworks, anyone can create their own AI agent, even without coding experience. \n\n In this blog, we'll explore the top 7 platforms and frameworks that are making AI agent development accessible to everyone: \n- Lyzr AI: A low-code agent framework for building Private & Secure GenAI applications faster. \n- Autogen: Microsoft's solution for creating multiple AI agents that can work together to solve complex problems. \n- Dify: A user-friendly platform with visual tools for building AI applications, perfect for both developers and non-technical users. \n- LangGraph: A LangChain extension that helps create stateful, multi-agent systems with advanced planning capabilities. \n- Swarm: OpenAI's experimental framework for simple and lightweight multi-agent orchestration. \n- LlamaIndex: A data framework that helps connect large language models with various data sources efficiently. \n- LangChain: A popular framework for building complex AI applications by connecting different language models and tools. \n\n Let's dive deeper into each platform and see which one is right for your needs.",
       },
       {
         id: 2,
@@ -2880,7 +2880,23 @@ export const blogs: Blog[] = [
       },
       {
         id: 3,
-        primary_title: "1. CrewAI:",
+        primary_title: "1. Lyzr AI:",
+        primary_title_url: "https://www.lyzr.ai/",
+        image: {
+          id: 1,
+          props: {
+            variant: "md",
+          },
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/top_7_agent_platforms/lyzr-ai.png",
+        },
+      },
+      {
+        id: 4,
+        text: "Lyzr is a low-code agent framework with an agentic approach to building generative AI applications. Its fully integrated agents come with pre-built RAG (Retrieval-Augmented Generation) pipelines, allowing you to build and launch AI-powered solutions within minutes. With Lyzr, you can create chatbots, knowledge search engines, data analysis tools, RAG-powered apps, and multi-agent workflow automations—all with minimal effort. \n\n**Key Features:** \n- **Locally Deployable SDKs:** Install and run Lyzr on your own cloud infrastructure to maintain complete data control. \n- **Private APIs:** Keep your generative AI applications behind your company's firewall, ensuring strong data governance. \n- **AI Management System (AIMS):** A central control hub to manage agents, monitor logs, build with AI studios, and track AI usage. \n- **Lyzr Automata:** A multi-agent automation framework that focuses on workflow efficiency. Create multiple agents each with specific tasks and goals, running them independently or in parallel. \n- **Pre-Built RAG Pipelines:** Easily implement retrieval-augmented generation for more contextually accurate AI responses. \n- **Minimal Learning Curve:** A low-code approach makes it accessible to developers and enterprise teams alike. \n\n**Best For:** \n- Developers seeking a simple yet powerful framework to quickly build AI apps \n- CTOs and CPOs wanting to integrate generative AI features into existing applications without exposing data externally \n- CIOs requiring 100% data privacy and security, with the ability to locally host AI solutions \n- Enterprises looking for easy management of multiple agents and comprehensive AI analytics \n\n**Not Suitable For:** \n- Hobbyists or very small projects that do not need enterprise-level data privacy or compliance \n- Teams unwilling to manage their own infrastructure or cloud resources",
+      },
+      {
+        id: 5,
+        primary_title: "2. CrewAI:",
         primary_title_url: "https://www.crewai.com/",
         image: {
           id: 1,
@@ -2891,12 +2907,12 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id: 4,
+        id: 6,
         text: "CrewAI is an open-source framework that enables developers to create advanced multi-agent AI systems with ease. It focuses on building teams of AI agents, each assigned specific roles and responsibilities, to work collaboratively on complex tasks. This role-based approach mirrors human organizational structures, making it effective for projects that require diverse expertise and coordinated efforts. \n\n**Key Features:** \n- **Role-Based Agent Design:** Create AI agents with specific roles, goals, and backstories to simulate a team with varied skills. \n- **Dynamic Task Planning and Delegation:** Agents can plan tasks and delegate them among themselves based on their capabilities. \n- **Inter-Agent Communication:** Supports advanced communication between agents to share information and coordinate actions. \n- **Flexible Memory Systems:** Offers customizable memory options like short-term, long-term, and shared memory for better decision-making. \n- **Hierarchical Team Structures:** Allows organizing agents in series, parallel, or hierarchical setups for scalable collaboration. \n- **Adaptive Execution Mechanisms:** Enables agents to adapt their actions based on changing environments or new information. \n- **Extensible Tools Framework:** Provides options to extend agent functionalities through integration with various tools and APIs. \n\n**Best for:** \n- Companies needing to automate complex workflows requiring multiple specialized tasks \n- Developers building sophisticated AI systems that require team coordination \n- Projects involving multi-step processes like content creation or financial analysis \n- Organizations looking to simulate human team dynamics in AI systems \n\n**Not suitable for:** \n- Simple automation tasks that don't require multiple agents \n- Projects with limited computational resources \n- Teams without technical expertise in AI development \n- Small-scale operations with straightforward workflows",
       },
       {
-        id: 5,
-        primary_title: "2. Autogen:",
+        id: 7,
+        primary_title: "3. Autogen:",
         primary_title_url: "https://microsoft.github.io/autogen/",
         image: {
           id: 1,
@@ -2907,12 +2923,12 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id: 6,
+        id: 8,
         text: "AutoGen is Microsoft's open-source framework for building and managing autonomous AI agents. It specializes in creating multi-agent systems where different AI agents can work together, communicate, and handle complex tasks independently, making it particularly powerful for enterprise-level applications. \n\n **Key Features:** \n- **Multi-Agent Architecture:** Supports the development of systems where multiple AI agents work together to solve complex problems. \n- **Customizable Conversational Agents:** Allows for the creation of agents with specific roles and behaviors that can interact through conversations. \n- **Integration with Large Language Models (LLMs):** Seamlessly connects with various LLMs to enhance the agents' language understanding and generation capabilities. \n- **Code Generation and Execution:** Enables agents to generate and execute code, which is beneficial for automating tasks like code reviews and prototyping. \n- **Flexible Human-in-the-Loop Functionality:** Provides options for human oversight and intervention, allowing a balance between automation and control. \n\n Best for: \n- Software development teams needing AI assistance in coding and review \n- Organizations requiring sophisticated data analysis pipelines \n- Companies building advanced customer service automation \n- Development teams working on complex, multi-step AI processes \n\n Not suitable for: \n- Small-scale projects that don't require multiple agents \n- Organizations with limited AI expertise or resources \n- Applications requiring real-time processing \n- Projects with strict budget constraints due to potential high costs with powerful models",
       },
       {
-        id: 7,
-        primary_title: "3. Dify:",
+        id: 9,
+        primary_title: "4. Dify:",
         primary_title_url: "https://dify.ai/",
         image: {
           id: 1,
@@ -2923,12 +2939,12 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id: 8,
+        id: 10,
         text: "Dify is an open-source platform designed to simplify the development of LLM-based applications. It provides a comprehensive suite of tools for building AI workflows, managing prompts, and integrating various language models, making it easier for both developers and non-technical users to create production-ready AI applications. \n\n**Key Features:** \n- **Visual Workflow Builder:** Provides a visual canvas to design and test robust AI workflows, allowing users to leverage model integration and prompt crafting without deep technical expertise. \n- **Extensive Model Support:** Supports seamless integration with hundreds of proprietary and open-source LLMs, including GPT, Mistral, Llama3, and any models compatible with the OpenAI API. \n- **Prompt IDE:** Includes an intuitive interface for crafting prompts, comparing model performances, and enhancing applications with additional features like text-to-speech. \n- **Retrieval-Augmented Generation (RAG) Pipeline:** Offers capabilities for document ingestion and retrieval, supporting various formats like PDFs and PowerPoint presentations. \n- **Agent Framework:** Allows users to define agents using LLM Function Calling or ReAct and integrate over 50 built-in tools such as Google Search, DALL·E, Stable Diffusion, and WolframAlpha. \n- **LLMOps Management:** Provides observability features for monitoring application logs and performance, enabling continuous improvement based on real-world data. \n- **Backend-as-a-Service APIs:** Offers APIs for all its features, making integration into existing business logic seamless. \n- **Flexible Deployment Options:** Available as a cloud service with zero setup or as a self-hosted Community Edition for deeper customization and control. \n\nBest for: \n- Companies looking to build production-ready AI applications quickly \n- Teams needing visual tools for AI workflow development \n- Organizations requiring strong RAG capabilities \n- Businesses wanting to integrate multiple AI models into their applications \n- Projects requiring both cloud and self-hosted options \n\nNot suitable for: \n- Projects requiring highly specialized AI solutions \n- Teams with limited AI knowledge who need extensive guidance \n- Applications requiring complex custom algorithms \n- Organizations with very limited technical resources",
       },
        {
-        id: 9,
-        primary_title: "4. LangGraph:",
+        id: 11,
+        primary_title: "5. LangGraph:",
         primary_title_url: "https://www.langchain.com/langgraph",
         image: {
           id: 1,
@@ -2939,12 +2955,12 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id: 10,
+        id: 12,
         text: "LangGraph is an extension of LangChain that helps developers build complex, stateful AI applications using large language models (LLMs). It is designed for creating interactive AI systems that involve planning, reflection, and coordination among multiple agents.\n\n**Key Features:**\n\n- **Stateful Interactions:** Allows AI applications to maintain state throughout interactions and workflows.\n- **Multi-Agent Coordination:** Supports communication and collaboration between multiple AI agents in a system.\n- **Integration with LangChain:** Works seamlessly with LangChain's components and tools for building AI applications.\n- **Graph-Based Workflows:** Utilizes graph structures to represent agent interactions and execution flows.\n- **Flexible Execution Paths:** Supports both cyclic and acyclic execution flows for dynamic workflows.\n- **Error Handling Mechanisms:** Includes built-in features for handling errors and retrying tasks when needed.\n- **Customizable Nodes and Edges:** Allows developers to customize elements within the graph to suit specific requirements.\n- **Advanced Planning Capabilities:** Offers tools for planning and reflection to enhance AI decision-making processes.\n\nBest for:\n\n- Teams building complex, interactive AI systems\n- Projects requiring sophisticated multi-agent coordination\n- Applications needing deep domain knowledge integration\n- Developers working on self-improving AI systems\n- Organizations already using LangChain\n\nNot suitable for:\n\n- Simple chatbot or automation projects\n- Teams new to AI development\n- Applications requiring minimal agent interaction\n- Projects with tight resource constraints due to potential high token consumption\n- Use cases where agent self-talk could be problematic",
       },
       {
-        id: 11,
-        primary_title: "5. Swarm:",
+        id: 13,
+        primary_title: "6. Swarm:",
         primary_title_url: "https://github.com/openai/swarm",
         image: {
           id: 1,
@@ -2955,12 +2971,12 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id: 12,
+        id: 14,
         text: "OpenAI Swarm is an experimental, lightweight framework for orchestrating multiple AI agents. It focuses on simplicity and transparency, providing an easy way to create and manage multi-agent systems with minimal code, though it's currently recommended for development and educational purposes rather than production use.\n\n**Key Features:**\n\n- **Agent Handoff Mechanism:** Enables agents to transfer conversations or tasks to other agents smoothly during a session.\n- **Lightweight and Scalable Design:** Built with minimal complexity, making it easy to test, manage, and scale to handle many users.\n- **Customizable Agents with Roles and Functions:** Allows developers to define agents with specific instructions, roles, and a set of functions to perform.\n- **Context Variables for State Sharing:** Uses context variables to maintain and share information across agents without retaining state between calls.\n- **Client-Side Execution for Privacy:** Runs primarily on the client side, enhancing data privacy by not retaining information between interactions.\n- **Educational Resources and Examples:** Provides sample use cases and examples to help developers understand and build multi-agent applications.\n\nBest for:\n\n- Developers wanting to quickly prototype multi-agent systems\n- Educational projects exploring AI agent interactions\n- Teams needing simple agent orchestration\n- Projects requiring client-side processing for privacy\n- Applications with basic agent handoff requirements\n\nNot suitable for:\n\n- Production-level applications requiring stability\n- Complex projects needing advanced error handling\n- Systems requiring sophisticated agent behaviors\n- Applications needing vector database integration\n- Projects requiring extensive control over agent interactions",
       },
       {
-        id: 13,
-        primary_title: "6. LlamaIndex:",
+        id: 15,
+        primary_title: "7. LlamaIndex:",
         primary_title_url: "https://www.llamaindex.ai/",
         image: {
           id: 1,
@@ -2971,12 +2987,12 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id: 14,
+        id: 16,
         text: "LlamaIndex is a data framework designed to bridge the gap between LLMs and various data sources. It provides developers with tools to effectively connect and query different types of data, making it easier to build LLM-powered applications with rich context and knowledge.\n\n**Key Features:**\n\n- **Seamless Data Integration:** Connects LLMs with diverse data sources, including different file formats and databases.\n- **Efficient Data Retrieval:** Provides an interface for querying data, enhancing the responses generated by LLMs with relevant context.\n- **Versatile Application Support:** Facilitates building applications like question-answering systems, chatbots, virtual agents, web apps, and recommendation systems.\n\nBest for:\n\n- Teams building Q&A systems over large document collections\n- Developers creating knowledge-based chatbots\n- Projects requiring efficient data retrieval for LLMs\n- Organizations building full-stack AI applications\n- Companies developing AI-powered recommendation systems\n\nNot suitable for:\n\n- Projects with simple data needs\n- Applications requiring real-time data processing\n- Teams without basic LLM knowledge\n- Small-scale applications with limited data requirements",
       },
       {
-        id: 15,
-        primary_title: "7. LangChain:",
+        id: 17,
+        primary_title: "8. LangChain:",
         primary_title_url: "https://www.langchain.com/",
         image: {
           id: 1,
@@ -2987,18 +3003,18 @@ export const blogs: Blog[] = [
         },
       },
       {
-        id: 16,
+        id: 18,
         text: "LangChain is a robust framework that streamlines the development of applications powered by large language models (LLMs), allowing developers to build complex AI solutions more efficiently.\n\n**Key Features:**\n\n- **Modular and Extensible Architecture:** Offers a flexible framework where developers can easily add or modify components to suit their needs.\n- **Unified Interface for Multiple LLMs:** Provides a single interface to integrate with various language models like OpenAI and Hugging Face.\n- **Pre-Built Components Library:** Includes a rich set of tools such as prompts, parsers, and vector stores to expedite development.\n- **Agent Functionality:** Enables the creation of agents capable of handling complex tasks and interacting with external data sources and APIs.\n- **Advanced Memory Management:** Maintains context over long conversations, which is essential for building chatbots and applications requiring stateful interactions.\n\nBest for:\n\n- Developers building complex AI applications requiring multiple LLMs\n- Projects needing sophisticated document analysis and processing\n- Teams creating context-aware chatbots and assistants\n- Applications requiring integration with various external tools and APIs\n- Research projects involving multiple data sources\n\nNot suitable for:\n\n- Large-scale enterprise solutions requiring high stability\n- Projects with strict budget constraints due to API costs\n- Applications requiring consistent performance at scale\n- Teams needing production-ready solutions without modification\n- High-traffic applications with strict rate limit requirements",
       },
       {
-        id: 17,
+        id: 19,
         primary_title: "Choosing the right AI agent platform",
-        text: "When selecting an AI agent platform or framework, consider these key factors:\n\n**Development Stage**\n\n- For experimentation and learning: OpenAI Swarm, CrewAI\n- For production-ready applications: Dify, LlamaIndex\n- For enterprise-level solutions: LangChain, AutoGen\n\n**Technical Expertise Required**\n\n- Low (Non-technical users): Dify\n- Medium (Basic programming): CrewAI, OpenAI Swarm\n- High (Advanced developers): LangChain, LangGraph, AutoGen\n\n**Platform Comparison**\n\n| Platform   | Best For                    | Key Strength              | Technical Level | Production Ready? |\n| ---------- | --------------------------- | ------------------------- | --------------- | ---------------- |\n| CrewAI     | Multi-agent collaboration   | Role-based architecture   | Medium          | Yes              |\n| AutoGen    | Complex workflows           | Multi-agent orchestration | High            | Yes              |\n| Dify       | RAG applications            | Visual workflow design    | Low             | Yes              |\n| LangGraph  | Stateful agent systems      | Graph-based interactions  | High            | No               |\n| Swarm      | Simple agent prototypes     | Lightweight design        | Medium          | No               |\n| LlamaIndex | Data-intensive applications | Data integration         | Medium          | Yes              |\n| LangChain  | Flexible agent development  | Modular architecture     | High            | Partial          |",
+        text: "When selecting an AI agent platform or framework, consider these key factors:\n\n**Development Stage**\n\n- For experimentation and learning: OpenAI Swarm, CrewAI\n- For production-ready applications: Dify, LlamaIndex, Lyzr\n- For enterprise-level solutions: LangChain, AutoGen\n\n**Technical Expertise Required**\n\n- Low (Non-technical users): Dify, Lyzr\n- Medium (Basic programming): CrewAI, OpenAI Swarm\n- High (Advanced developers): LangChain, LangGraph, AutoGen\n\n**Platform Comparison**\n\n| Platform   | Best For                    | Key Strength              | Technical Level | Production Ready? |\n| ---------- | --------------------------- | ------------------------- | --------------- | ---------------- |\n| Lyzr       | Teams of all sizes   | No code + low code builder| Low to Medium   | Yes              |\n| CrewAI     | Multi-agent collaboration   | Role-based architecture   | Medium          | Yes              |\n| AutoGen    | Complex workflows           | Multi-agent orchestration | High            | Yes              |\n| Dify       | RAG applications            | Visual workflow design    | Low             | Yes              |\n| LangGraph  | Stateful agent systems      | Graph-based interactions  | High            | No               |\n| Swarm      | Simple agent prototypes     | Lightweight design        | Medium          | No               |\n| LlamaIndex | Data-intensive applications | Data integration         | Medium          | Yes              |\n| LangChain  | Flexible agent development  | Modular architecture     | High            | Partial          |",
       },
       {
-        id: 18,
+        id: 20,
         primary_title: "Final Recommendations:",
-        text: "**For Beginners:**\n\n- Start with Dify if you need a visual interface\n- Try OpenAI Swarm for simple prototypes\n\n**For Medium-Scale Projects:**\n\n- Use CrewAI for team-based agent systems\n- Consider LlamaIndex for data-heavy applications\n\n**For Enterprise Solutions:**\n\n- Implement AutoGen for complex workflows\n- Choose LangChain for flexible, customizable solutions",
+        text: "**For Beginners:**\n\n- Start with Lyzr AI if you need a visual interface\n- Try OpenAI Swarm for simple prototypes\n\n**For Medium-Scale Projects:**\n\n- Use Lyzr AI for team-based agent systems\n- Consider LlamaIndex for data-heavy applications\n\n**For Enterprise Solutions:**\n\n- Implement AutoGen for complex workflows\n- Choose LangChain for flexible, customizable solutions",
       }
     ],
   },
