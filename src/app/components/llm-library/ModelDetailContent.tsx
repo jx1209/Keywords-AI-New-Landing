@@ -38,9 +38,9 @@ export function ModelDetailContent({ modelName }: { modelName: string }) {
 
   return (
     <div className="flex flex-col items-center self-stretch">
-      <div className="flex justify-center items-center gap-xxs self-stretch bg-[#7590F2] mt-[65px] w-full">
-        <span className="text-gray-white text-[18px] leading-[28px]">Not sure which model is right for you? Check out our latest blog:</span>
-        <a href="https://www.keywordsai.co/blog/best-llms" className="text-gray-white text-[18px] leading-[28px] underline">The best LLMs for 2025</a>
+      <div className="flex justify-center items-center gap-xxs self-stretch bg-primary-2 mt-[60px] w-full py-xxxs">
+        <span className="text-gray-white text-lg">Not sure which model is right for you? Check out our latest blog:</span>
+        <a href="https://www.keywordsai.co/blog/best-llms" className="text-gray-white text-lg underline">The best LLMs for 2025</a>
       </div>
       <div className="flex flex-col items-center self-stretch pt-[75px] px-sm pb-[120px] gap-xl">
         <div className="flex flex-col items-center gap-xxs w-full">
