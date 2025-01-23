@@ -18,16 +18,23 @@ export default function FinderCard({ name, type, amount, description, cover, web
 
     return (
         <div className="flex justify-center w-full">
-            <div className="flex flex-col w-[326px] p-[16px] items-center bg-gray-2 border rounded-lg border-gray-3">
+            <div 
+                onClick={handleAccelGrantClick}
+                className="flex flex-col w-[326px] p-[16px] items-center bg-gray-2 border rounded-lg border-gray-3 cursor-pointer transform transition-transform duration-200 hover:scale-101"
+            >
                 <img className="flex justify-center items-center self-stretch h-[108px] rounded-[8px] object-cover" src={cover} alt="Accel/Grant Logo Placeholder"/>
                 <div className="flex justify-between items-center self-stretch mt-[8px] min-h-[56px]">
                     <div className="flex items-center gap-2">
                         <span className="text-[20px] leading-[28px] text-[#f9fafd] font-medium">{name}</span>
-                        <Button
-                            icon={Redirect}
-                            onClick={handleAccelGrantClick}
-                            className="flex-shrink-0"
-                        />
+                        <div onClick={(e) => {
+                            e.stopPropagation();
+                            window.open(website);
+                        }}>
+                            <Button
+                                icon={Redirect}
+                                className="flex-shrink-0"
+                            />
+                        </div>
                     </div>
                     <span className="text-[16px] leading-[24px] font-medium">{amount}</span>
                 </div>
@@ -45,7 +52,7 @@ export default function FinderCard({ name, type, amount, description, cover, web
                     variant="r4-primary"
                     text="Apply Now"
                     className="flex p-[8px] justify-center items-center gap-[8px] self-stretch text-[16px] leading-[24px]"
-                    onClick={() => window.open(website)}
+                    onClick={handleAccelGrantClick}
                 />
             </div>
         </div>
