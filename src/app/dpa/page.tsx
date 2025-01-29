@@ -9,9 +9,9 @@ export default function Dpa() {
     date: "Updated 01/29/2025",
     content: (
       <p className="Dpa text-sm-regular text-gray-4">
-        To use our API services, you're required to accept the Keywords AI Data
+        To use our API services, you&apos;re required to accept the Keywords AI Data
         Processing Agreement (DPA), available via the button below. By agreeing
-        to our Terms of Service, you're also automatically consenting to our
+        to our Terms of Service, you&apos;re also automatically consenting to our
         DPA, eliminating the need for a separate signature.
       </p>
     ),
