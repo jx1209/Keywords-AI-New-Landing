@@ -204,7 +204,7 @@ export function Footer() {
           <div className="flex flex-col w-[140px] items-start gap-[10px] shrink-0">
             <div className="flex items-center justify-center gap-[10px]">
               <a
-                href="https://www.keywordsai.co/#/privacy-policy"
+                href="https://www.keywordsai.co/privacy-policy"
                 rel="noopener noreferrer"
               >
                 <span className="text-gray-4 text-sm-regular hover:text-gray-white">
@@ -256,7 +256,7 @@ export function Footer() {
           <div className="flex flex-col w-[140px] items-start gap-[10px] shrink-0">
             <div className="flex items-center justify-center gap-[10px]">
               <a
-                href="https://keywordsai.co/#/terms-of-use"
+                href="https://www.keywordsai.co/tou"
                 rel="noopener noreferrer"
               >
                 <span className="text-gray-4 text-sm-regular hover:text-gray-white">
@@ -302,7 +302,7 @@ export function Footer() {
           </div>
           <div className="flex flex-col w-[140px] items-start gap-[10px] shrink-0">
             <div className="flex items-center justify-center gap-[10px]">
-              <a href="https://keywordsai.co/#/dpa" rel="noopener noreferrer">
+              <a href="https://www.keywordsai.co/dpa" rel="noopener noreferrer">
                 <span className="text-gray-4 text-sm-regular hover:text-gray-white">
                   DPA
                 </span>
