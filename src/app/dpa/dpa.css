@@ -1,0 +1,18 @@
+.Dpa p,
+.Dpa ul {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    list-style: disc;
+    list-style-position: inside;
+}
+
+.Dpa ol {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    list-style: decimal;
+    list-style-position: inside;
+}
+
+.Dpa td {
+    @apply border border-gray-white p-6;
+}
