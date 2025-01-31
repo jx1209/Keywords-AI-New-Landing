@@ -85,7 +85,7 @@
         "Application deadline": "01/26/2025",
         "Qualifications": "Should have a research-driven AI business idea, shouldn't have incorporated your company yet, no other parallel funding of project should be running, main focus is supporting research-driven ideas but may still apply even if not, if applying for scholarship funded team member needs to have a permanent residency within the Federal Republic of Germany, working besides funding is allowed up to 5 hours a week (part-time is allowed if split funding)",
         "One-line description": "A program offering funding and support for researchers to turn AI ideas into startups.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/hessian-ai.png"
     },
     {
         "Name": "AI2 Incubator",
@@ -96,7 +96,7 @@
         "Application deadline": "N/A",
         "Qualifications": "Should be early stage, seeking clear leadership qualities, product vision, and experience taking an idea and turning it into a product",
         "One-line description": "A Seattle-based incubator that helps entrepreneurs create AI-first startups.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/ai-2-incubator.png"
     },
     {
         "Name": "Betaworks' AI Camp",
@@ -107,7 +107,7 @@
         "Application deadline": "Deadline passed",
         "Qualifications": "Seeking teams that are actively selecting and adapting to the foundation layer capabilities; should focus on evident value; should deliver value quickly and are aligned with well-defined users; should focus on implementation that best serves users; should have positioning that allows for focused data collection and application; reflect deep understanding of unaddressed pain points of users; leverage deeagentic systems coupled with new business models",
         "One-line description": "A cohort-based program empowering early-stage founders to build AI-powered products.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/betaworks-ai.png"
     },
     {
         "Name": "AI Grant",
@@ -118,7 +118,7 @@
         "Application deadline": "Deadline passed",
         "Qualifications": "Focus is on pre-seed/seed-stage startups, demos are a big plus",
         "One-line description": "A nonprofit research lab in San Francisco that funds cutting-edge AI research.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/ai-grant.png"
     },
     {
         "Name": "Paddle AI Launchpad",
@@ -129,7 +129,7 @@
         "Application deadline": "Deadline passed",
         "Qualifications": "Should be AI-focused; should have minimal viable product (beyond ideation); should show clear signs of market traction and potential for growth",
         "One-line description": "A six-week Paddle program that helps aspiring founders build and scale AI-driven software.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/paddle-ai.png"
     },
     {
         "Name": "Llama Impact Grants",
@@ -140,7 +140,7 @@
         "Application deadline": "Deadline passed",
         "Qualifications": "Must be affiliated with a valid business, non-profit organization, academic institution, or research institute in operation for at least one year; Llama should be a fundamental component of the project or product; should measurably address social impact and evaluate technical feasibility of project; should demonstrate an understanding of the target market",
         "One-line description": "A Meta funding program for projects leveraging its open-source AI model, Llama.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/llama-impact.png"
     },
     {
         "Name": "SPC Founder Fellowship",
