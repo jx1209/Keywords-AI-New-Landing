@@ -6,15 +6,15 @@
 
   "sections": {
     "New": [
-      {"tag": "Prompts", "description": "Implemented filtering capabilities for Prompts, including filters for title, commit time, update time, and favorites"},
-      {"tag": "Prompts", "description": "Introduced prompt labels for better organization and management"},
-      {"tag": "Models", "description": "Integrated O1 model into the platform"},
-      {"tag": "Models", "description": "Added support for Inference.net as a new LLM provider"}
+      {"tag": "Prompts", "description": "Implemented filtering capabilities for Prompts, including filters for title, commit time, update time, and favorites."},
+      {"tag": "Prompts", "description": "Introduced prompt labels for better organization and management."},
+      {"tag": "Models", "description": "Integrated O1 model into the platform."},
+      {"tag": "Models", "description": "Added support for Inference.net as a new LLM provider."}
     ],
     "Improved": [
-      {"tag": "Dashboard", "description": "Improved Users graph loading performance by 5x"},
-      {"tag": "Caches", "description": "Improved Caches to display detailed request information"},
-      {"tag": "Playground", "description": "Added support for saving prompts with `tool_choice` parameter from Playground to Prompts"}
+      {"tag": "Dashboard", "description": "Improved Users graph loading performance by 5x."},
+      {"tag": "Caches", "description": "Improved Caches to display detailed request information."},
+      {"tag": "Playground", "description": "Added support for saving prompts with `tool_choice` parameter from Playground to Prompts."}
     ],
     "Fixed": [
       {"tag": "Dashboard", "description": "Resolved an issue where timeframe changes affected active filter display"},
