@@ -8,7 +8,7 @@
         "Application deadline": "02/11/2025",
         "Qualifications": "Open to any startup",
         "One-line description": "A venture capital firm and startup accelerator that supports early-stage entrepreneurs.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/yc.png"
     },
     {
         "Name": "Anthology Fund",
@@ -19,7 +19,7 @@
         "Application deadline": "N/A",
         "Qualifications": "For Pre-Seed, Seed, or Series A; prefer to invest in companies based in the U.S.",
         "One-line description": "A $100 million fund from Menlo Ventures and Anthropic fueling early-stage startup growth.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/anthology.png"
     },
     {
         "Name": "Grayscale VC",
@@ -30,7 +30,7 @@
         "Application deadline": "N/A",
         "Qualifications": "N/A",
         "One-line description": "A VC firm focused on early-stage companies building DevInfra and SaaS products.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/grayscale.png"
     },
     {
         "Name": "Together AI Studio",
@@ -41,7 +41,7 @@
         "Application deadline": "N/A",
         "Qualifications": "For any founder working in AI; specialize in early investments, often at the pre product stage; looking for mission-driven teams addressing a proven pain point with a unique, defensible solution; should have a clear vision and approach",
         "One-line description": "A venture-building program helping exceptional AI founders go from idea to scale.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/together-ai.png"
     },
     {
         "Name": "Upekkha",
@@ -52,7 +52,7 @@
         "Application deadline": "N/A",
         "Qualifications": "For B2B SaaS startups that have early revenue; $25k program fee",
         "One-line description": "A startup accelerator specifically dedicated to growing SaaS companies.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/upekkha.png"
     },
     {
         "Name": "NASA SBIR/STTR Program",
@@ -62,8 +62,8 @@
         "Perks": "Up to $150k in Phase I, up to $850k in Phase II, up to nearly $3M or more through Post Phase II opportunities",
         "Application deadline": "03/10/2025 5PM ET",
         "Qualifications": "For entrepreneurs, startups, or small businesses with less than 500 employees",
-        "One-line description": "A NASA-backed funding program helping small businesses and research institutions develop mission-critical tech.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "One-line description": "A funding program helping small businesses and research institutions develop mission-critical tech.",
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/nasa-sbir.png"
     },
     {
         "Name": "America's Seed Fund (NSF)",
@@ -74,7 +74,7 @@
         "Application deadline": "N/A",
         "Qualifications": "https://www.sbir.gov/sites/default/files/elig_size_compliance_guide_0.pdf",
         "One-line description": "An NSF-powered initiative that helps startups and small businesses bring ideas to market.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/american-seed.png"
     },
     {
         "Name": "Hessian AI LAISF",
@@ -85,7 +85,7 @@
         "Application deadline": "01/26/2025",
         "Qualifications": "Should have a research-driven AI business idea, shouldn't have incorporated your company yet, no other parallel funding of project should be running, main focus is supporting research-driven ideas but may still apply even if not, if applying for scholarship funded team member needs to have a permanent residency within the Federal Republic of Germany, working besides funding is allowed up to 5 hours a week (part-time is allowed if split funding)",
         "One-line description": "A program offering funding and support for researchers to turn AI ideas into startups.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/hessian-ai.png"
     },
     {
         "Name": "AI2 Incubator",
@@ -96,7 +96,7 @@
         "Application deadline": "N/A",
         "Qualifications": "Should be early stage, seeking clear leadership qualities, product vision, and experience taking an idea and turning it into a product",
         "One-line description": "A Seattle-based incubator that helps entrepreneurs create AI-first startups.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/ai-2-incubator.png"
     },
     {
         "Name": "Betaworks' AI Camp",
@@ -107,7 +107,7 @@
         "Application deadline": "Deadline passed",
         "Qualifications": "Seeking teams that are actively selecting and adapting to the foundation layer capabilities; should focus on evident value; should deliver value quickly and are aligned with well-defined users; should focus on implementation that best serves users; should have positioning that allows for focused data collection and application; reflect deep understanding of unaddressed pain points of users; leverage deeagentic systems coupled with new business models",
         "One-line description": "A cohort-based program empowering early-stage founders to build AI-powered products.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/betaworks-ai.png"
     },
     {
         "Name": "AI Grant",
@@ -118,7 +118,7 @@
         "Application deadline": "Deadline passed",
         "Qualifications": "Focus is on pre-seed/seed-stage startups, demos are a big plus",
         "One-line description": "A nonprofit research lab in San Francisco that funds cutting-edge AI research.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/ai-grant.png"
     },
     {
         "Name": "Paddle AI Launchpad",
@@ -129,7 +129,7 @@
         "Application deadline": "Deadline passed",
         "Qualifications": "Should be AI-focused; should have minimal viable product (beyond ideation); should show clear signs of market traction and potential for growth",
         "One-line description": "A six-week Paddle program that helps aspiring founders build and scale AI-driven software.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/paddle-ai.png"
     },
     {
         "Name": "Llama Impact Grants",
@@ -140,7 +140,7 @@
         "Application deadline": "Deadline passed",
         "Qualifications": "Must be affiliated with a valid business, non-profit organization, academic institution, or research institute in operation for at least one year; Llama should be a fundamental component of the project or product; should measurably address social impact and evaluate technical feasibility of project; should demonstrate an understanding of the target market",
         "One-line description": "A Meta funding program for projects leveraging its open-source AI model, Llama.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/llama-impact.png"
     },
     {
         "Name": "SPC Founder Fellowship",
