@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@keywordsai",
-    title: "Keywords AI",
+    title: "Accelerators & AI Grants Finder | Curated by Keywords AI",
     images: [
       "https://keywordsai-static.s3.amazonaws.com/social_media_images/social_image.png",
     ],
