@@ -2583,8 +2583,7 @@ export const blogs: Blog[] = [
       },
       {
         id: 5,
-        primary_title:
-          "Step 1: Install the LangChain SDK",
+        primary_title: "Step 1: Install the LangChain SDK",
         text: "To begin using LangChain for your AI application, you'll need to install the Python SDK and import the necessary models. While detailed tutorials are available on the [LangChain website](https://langchain.com/), here's a quick guide to get you started. \n\n First, install the LangChain package using pip, if you plan to use OpenAI models, install the OpenAI package as well:",
         image: {
           id: 1,
@@ -2648,7 +2647,7 @@ export const blogs: Blog[] = [
       },
     ],
   },
-{
+  {
     id: 27,
     timestamp: "November 22, 2024",
     slug: "/blog/how-to-optimize-llm-performance-in-startups",
@@ -2703,18 +2702,18 @@ export const blogs: Blog[] = [
         id: 8,
         text: "**3. Ease of Use** \n\n Can you plug it in and go? Look at: \n\n - API compatibility: You can use [an AI gateway](https://docs.keywordsai.co/get-started/llm-inference) to solve this easily. \n - Community support \n\n **4. Performance** \n\n Key metrics to watch: \n\n - Speed (latency) \n - Accuracy \n - Output quality \n\n For chat apps, aim for under 200ms to first token. Users hate waiting.",
       },
-       {
+      {
         id: 9,
         primary_title: "Writing Better Prompts",
-        text: "Want great results from LLMs? It's all about the prompts. Here's how to craft them: \n\n **Be specific and clear** \n\n Vague prompts = vague outputs. Instead of \"What's a good marketing strategy?\", try: \n\n \"Create a social media plan for a SaaS startup targeting small businesses. Include content ideas for Facebook, Twitter, and LinkedIn, posting frequency, and 3 campaign concepts.\" \n\n **Provide context** \n\n Give the LLM some background: \n\n \"You're a financial advisor helping a 35-year-old software engineer with $50k in savings. Recommend an investment strategy for a house down payment in 5 years.\"",
+        text: 'Want great results from LLMs? It\'s all about the prompts. Here\'s how to craft them: \n\n **Be specific and clear** \n\n Vague prompts = vague outputs. Instead of "What\'s a good marketing strategy?", try: \n\n "Create a social media plan for a SaaS startup targeting small businesses. Include content ideas for Facebook, Twitter, and LinkedIn, posting frequency, and 3 campaign concepts." \n\n **Provide context** \n\n Give the LLM some background: \n\n "You\'re a financial advisor helping a 35-year-old software engineer with $50k in savings. Recommend an investment strategy for a house down payment in 5 years."',
       },
       {
         id: 10,
-        text: "**Use examples** \n\n Show, don't just tell. Here's a few-shot learning prompt: \n\n \"Rewrite these sentences to be more engaging: \n\n 1. Original: The meeting is at 2 PM. Rewrite: Let's sync up at 2 PM for a power hour of brainstorming! \n 2. Original: Please submit your report by Friday. Rewrite: Friday's the big day! Can't wait to dive into your report. \n 3. Original: The new policy takes effect next month. Rewrite: [Your rewrite here]\" \n\n **Break down complex tasks** \n\n For tricky problems, go step-by-step: \n\n 1. \"Summarize the key points of this AI ethics research paper.\" \n 2. \"Identify potential ethical concerns for AI startups based on the summary.\" \n 3. \"Suggest 3 practical guidelines for AI startups to address these concerns.\"",
+        text: '**Use examples** \n\n Show, don\'t just tell. Here\'s a few-shot learning prompt: \n\n "Rewrite these sentences to be more engaging: \n\n 1. Original: The meeting is at 2 PM. Rewrite: Let\'s sync up at 2 PM for a power hour of brainstorming! \n 2. Original: Please submit your report by Friday. Rewrite: Friday\'s the big day! Can\'t wait to dive into your report. \n 3. Original: The new policy takes effect next month. Rewrite: [Your rewrite here]" \n\n **Break down complex tasks** \n\n For tricky problems, go step-by-step: \n\n 1. "Summarize the key points of this AI ethics research paper." \n 2. "Identify potential ethical concerns for AI startups based on the summary." \n 3. "Suggest 3 practical guidelines for AI startups to address these concerns."',
       },
       {
         id: 11,
-        text: "**Use output primers** \n\n Guide the LLM to the format you want: \n\n \"Create a product description for our new project management software. Structure: \n\n Headline: \nOne-sentence summary: \nKey features (bullet points): \nPricing: \nCall to action:\" \n\n **Experiment and refine** \n\n Not getting what you need? Tweak your prompts. Adjust wording, add context, or break tasks into smaller steps. \n\n **Collaborate on prompts with the team** \n\n You can use a prompt management tool to collaborate on prompts with the team, which makes easier to iterate on prompt.",
+        text: '**Use output primers** \n\n Guide the LLM to the format you want: \n\n "Create a product description for our new project management software. Structure: \n\n Headline: \nOne-sentence summary: \nKey features (bullet points): \nPricing: \nCall to action:" \n\n **Experiment and refine** \n\n Not getting what you need? Tweak your prompts. Adjust wording, add context, or break tasks into smaller steps. \n\n **Collaborate on prompts with the team** \n\n You can use a prompt management tool to collaborate on prompts with the team, which makes easier to iterate on prompt.',
       },
       {
         id: 12,
@@ -2755,14 +2754,15 @@ export const blogs: Blog[] = [
       {
         id: 20,
         text: "> \"As LLMs become part of business workflows, making sure they're reliable is crucial.\" - Anjali Chaudhary, Engineer-turned-writer \n\n Benchmarks are just one tool. Mix them with ongoing checks and tweaks for best results. \n\n Take **Dataherald**. They cut LLM costs using tools like [**Helicone**](https://www.helicone.ai/) or [**LangSmith**](https://smith.langchain.com/). These tools helped spot waste, leading to big savings. \n\n Bottom line? Use benchmarks to start, but don't stop there. Keep testing and improving to make LLMs work for your startup.",
-      }
+      },
     ],
   },
   {
     id: 28,
     timestamp: "November 26, 2024",
     slug: "/blog/claude-3-5-sonnet-vs-claude-3-5-haiku",
-    title: "Claude 3.5 Haiku vs. Sonnet: Speed or Power? A Comprehensive Comparison",
+    title:
+      "Claude 3.5 Haiku vs. Sonnet: Speed or Power? A Comprehensive Comparison",
     cover: {
       id: 1,
       url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/haiku_vs_sonnet/cover.png",
@@ -2836,7 +2836,7 @@ export const blogs: Blog[] = [
         id: 8,
         text: "Based on our tests, Claude 3.5 Haiku shows slightly better speed performance across all metrics. While the latency difference is minimal (13.98s vs 14.17s), Haiku has a faster first response time (0.36s vs 0.64s) and slightly higher throughput (52.54 vs 50.88 tokens/s). If speed is your primary concern, especially for real-time applications or chat-like interfaces, Haiku would be the better choice. However, the differences are small enough that you should also consider other factors like accuracy and capability when making your decision.",
       },
-       {
+      {
         id: 9,
         primary_title: "Performance comparison",
         text: "We conducted evaluation tests on the [Keywords AI, an LLM evals and prompt management platform](https://www.keywordsai.co). The evaluation comprised 5 parts: \n\n - **Coding Task**: While both models handle basic coding tasks well, Sonnet demonstrates superior capabilities in complex scenarios. Haiku performs adequately for simple frontend/backend tasks but tends to hallucinate when generating code exceeding 150 lines. Sonnet manages difficult problems more effectively and maintains accuracy with longer code blocks. \n- **Logical Reasoning**: Sonnet shows consistently strong performance across various reasoning challenges. Haiku, while capable, occasionally struggles with more complex problems, showing some limitations in advanced reasoning tasks. \n- **Writing Task**: Both models produce quality content, but Sonnet edges ahead with more natural, human-like writing and better prompt comprehension. Its outputs tend to be more nuanced and contextually appropriate. \n- **Hallucination**: Both models generally maintain factual accuracy. However, Haiku shows a higher tendency to hallucinate when dealing with tricky questions or longer inputs/outputs. Sonnet demonstrates more reliable consistency across various scenarios. \n- **Answer Relevancy**: While both models typically provide context-appropriate responses, Haiku occasionally produces more verbose outputs. Sonnet maintains better focus and conciseness while addressing the core requirements.",
@@ -2942,7 +2942,7 @@ export const blogs: Blog[] = [
         id: 10,
         text: "Dify is an open-source platform designed to simplify the development of LLM-based applications. It provides a comprehensive suite of tools for building AI workflows, managing prompts, and integrating various language models, making it easier for both developers and non-technical users to create production-ready AI applications. \n\n**Key Features:** \n- **Visual Workflow Builder:** Provides a visual canvas to design and test robust AI workflows, allowing users to leverage model integration and prompt crafting without deep technical expertise. \n- **Extensive Model Support:** Supports seamless integration with hundreds of proprietary and open-source LLMs, including GPT, Mistral, Llama3, and any models compatible with the OpenAI API. \n- **Prompt IDE:** Includes an intuitive interface for crafting prompts, comparing model performances, and enhancing applications with additional features like text-to-speech. \n- **Retrieval-Augmented Generation (RAG) Pipeline:** Offers capabilities for document ingestion and retrieval, supporting various formats like PDFs and PowerPoint presentations. \n- **Agent Framework:** Allows users to define agents using LLM Function Calling or ReAct and integrate over 50 built-in tools such as Google Search, DALL·E, Stable Diffusion, and WolframAlpha. \n- **LLMOps Management:** Provides observability features for monitoring application logs and performance, enabling continuous improvement based on real-world data. \n- **Backend-as-a-Service APIs:** Offers APIs for all its features, making integration into existing business logic seamless. \n- **Flexible Deployment Options:** Available as a cloud service with zero setup or as a self-hosted Community Edition for deeper customization and control. \n\nBest for: \n- Companies looking to build production-ready AI applications quickly \n- Teams needing visual tools for AI workflow development \n- Organizations requiring strong RAG capabilities \n- Businesses wanting to integrate multiple AI models into their applications \n- Projects requiring both cloud and self-hosted options \n\nNot suitable for: \n- Projects requiring highly specialized AI solutions \n- Teams with limited AI knowledge who need extensive guidance \n- Applications requiring complex custom algorithms \n- Organizations with very limited technical resources",
       },
-       {
+      {
         id: 11,
         primary_title: "5. LangGraph:",
         primary_title_url: "https://www.langchain.com/langgraph",
@@ -3015,7 +3015,7 @@ export const blogs: Blog[] = [
         id: 20,
         primary_title: "Final Recommendations:",
         text: "**For Beginners:**\n\n- Start with Lyzr AI if you need a visual interface\n- Try OpenAI Swarm for simple prototypes\n\n**For Medium-Scale Projects:**\n\n- Use Lyzr AI for team-based agent systems\n- Consider LlamaIndex for data-heavy applications\n\n**For Enterprise Solutions:**\n\n- Implement AutoGen for complex workflows\n- Choose LangChain for flexible, customizable solutions",
-      }
+      },
     ],
   },
   {
@@ -3068,7 +3068,7 @@ export const blogs: Blog[] = [
         id: 6,
         primary_title: "Can I use LangChain with Keywords AI?",
         text: "Yes, you can use LangChain with Keywords AI. In fact, LangChain is one of the frameworks we support. \n\nKeywords AI is a full-stack LLM platform that integrates with LangChain, providing comprehensive features for building, testing, and deploying LLM applications. It offers advanced tracing and logging capabilities, making monitoring and debugging your applications easier. Additionally, Keywords AI supports team development, allowing you to collaborate with your team members to build and improve your applications. You can learn more about how to use LangChain with Keywords AI in this [blog](https://www.keywordsai.co/blog/llm-logging-with-langchain).",
-      }
+      },
     ],
   },
   {
@@ -3147,8 +3147,8 @@ export const blogs: Blog[] = [
       {
         id: 7,
         primary_title: "A glimpse into the future",
-        text: "History demonstrates recurring patterns: Early computers amazed people by performing calculations at speeds far beyond those of humans. Later, when a computer defeated the best Go player, humans again lost in an intellectual battlefield. Now, GPT's natural language generation capabilities are the latest iteration of this phenomenon.\n\nAs OpenAI continues to refine Project Orion and develop new methods to train these models, the possibilities for GPT-5 seem endless. While there will undoubtedly be challenges, particularly in terms of cost and computational requirements, the potential for transformative advancements in various sectors—from healthcare to entertainment to enterprise applications—is immense. Whether GPT-5 arrives in early 2025 or the end of 2025, it is clear that the next generation of AI will redefine how we interact with technology. The wait will undoubtedly be worth it."
-      }
+        text: "History demonstrates recurring patterns: Early computers amazed people by performing calculations at speeds far beyond those of humans. Later, when a computer defeated the best Go player, humans again lost in an intellectual battlefield. Now, GPT's natural language generation capabilities are the latest iteration of this phenomenon.\n\nAs OpenAI continues to refine Project Orion and develop new methods to train these models, the possibilities for GPT-5 seem endless. While there will undoubtedly be challenges, particularly in terms of cost and computational requirements, the potential for transformative advancements in various sectors—from healthcare to entertainment to enterprise applications—is immense. Whether GPT-5 arrives in early 2025 or the end of 2025, it is clear that the next generation of AI will redefine how we interact with technology. The wait will undoubtedly be worth it.",
+      },
     ],
   },
   {
@@ -3180,7 +3180,7 @@ export const blogs: Blog[] = [
       {
         id: 2,
         primary_title: "Explaining the concept",
-        text: "A 2022 Google Research paper, \"Chain of Thought Prompting Elicits Reasoning in Large Language Models,\"(https://arxiv.org/pdf/2201.11903) introduced the concept of Chain-of-Thought (CoT) prompting. The researchers demonstrated that guiding large language models through intermediate reasoning steps, expressed in natural language, significantly boosted their performance on complex tasks. \n\nThese tasks included mathematical problem-solving, logical reasoning, and answering questions that required synthesizing information from multiple sources. This series of intermediate steps, which the authors termed \"chain of thought,\" forms the core of CoT prompting.",
+        text: 'A 2022 Google Research paper, "Chain of Thought Prompting Elicits Reasoning in Large Language Models,"(https://arxiv.org/pdf/2201.11903) introduced the concept of Chain-of-Thought (CoT) prompting. The researchers demonstrated that guiding large language models through intermediate reasoning steps, expressed in natural language, significantly boosted their performance on complex tasks. \n\nThese tasks included mathematical problem-solving, logical reasoning, and answering questions that required synthesizing information from multiple sources. This series of intermediate steps, which the authors termed "chain of thought," forms the core of CoT prompting.',
       },
       {
         id: 3,
@@ -3189,12 +3189,12 @@ export const blogs: Blog[] = [
       },
       {
         id: 4,
-        text: "Let's picture the CoT paradigms using this example: \"A farmer has 48 apples. He sells 20 and divides the remaining apples equally among 4 baskets. How many apples are in each basket?\" \n\n- **Zero-Shot-CoT:**\n\n**Method:** Provide a generic prompt like \"Let's think step by step\" with no specific examples. Relies solely on the LLM's inherent reasoning abilities.\n\n**Example Response:** \"The farmer starts with 48 apples. He sells 20, so 48 - 20 = 28 apples remain. These are divided into 4 baskets, so 28 / 4 = 7 apples per basket.\"\n\n**Outcome:** Simple to implement, but can lead to errors if the LLM doesn't grasp the necessary reasoning steps.\n\n- **Auto-CoT:**\n\n**Method:** The LLM automatically generates its own demonstrations by clustering similar questions and using prompts to create reasoning chains, automating the demonstration creation process.\n\n**Auto-generated Demonstration:** \"A baker has 30 cookies. She sells 12 and divides the rest equally among 3 boxes. How many cookies are in each box? First, 30 - 12 = 18 cookies remain. Then, 18 / 3 = 6 cookies per box.\"\n\n**Example Response (Farmer Problem):** \"Following the example, first we subtract the sold apples: 48 - 20 = 28. Then, we divide by the number of baskets: 28 / 4 = 7. So, there are 7 apples in each basket.\"\n\n**Outcome:** Offers more guidance and typically improves accuracy, though implementation can be more complex.",
+        text: 'Let\'s picture the CoT paradigms using this example: "A farmer has 48 apples. He sells 20 and divides the remaining apples equally among 4 baskets. How many apples are in each basket?" \n\n- **Zero-Shot-CoT:**\n\n**Method:** Provide a generic prompt like "Let\'s think step by step" with no specific examples. Relies solely on the LLM\'s inherent reasoning abilities.\n\n**Example Response:** "The farmer starts with 48 apples. He sells 20, so 48 - 20 = 28 apples remain. These are divided into 4 baskets, so 28 / 4 = 7 apples per basket."\n\n**Outcome:** Simple to implement, but can lead to errors if the LLM doesn\'t grasp the necessary reasoning steps.\n\n- **Auto-CoT:**\n\n**Method:** The LLM automatically generates its own demonstrations by clustering similar questions and using prompts to create reasoning chains, automating the demonstration creation process.\n\n**Auto-generated Demonstration:** "A baker has 30 cookies. She sells 12 and divides the rest equally among 3 boxes. How many cookies are in each box? First, 30 - 12 = 18 cookies remain. Then, 18 / 3 = 6 cookies per box."\n\n**Example Response (Farmer Problem):** "Following the example, first we subtract the sold apples: 48 - 20 = 28. Then, we divide by the number of baskets: 28 / 4 = 7. So, there are 7 apples in each basket."\n\n**Outcome:** Offers more guidance and typically improves accuracy, though implementation can be more complex.',
       },
       {
         id: 5,
         primary_title: "Current progress in CoT research",
-        text: "Current CoT paradigms suffer from a critical dependence on the quality, quantity, and specific characteristics of the provided demonstrations. LLMs are highly sensitive to even minor variations in example presentation, ordering, and labeling, meaning suboptimal examples can severely limit performance. \n\nFurthermore, creating effective demonstrations often necessitates significant human expertise, a costly and time-consuming hurdle, especially for complex domains like mathematics. Finally, Auto-CoT sometimes may struggle to generalize; even structurally similar problems require new demonstrations if the presentation format changes, hindering its adaptability. ​\n\nA High-level Automated Reasoning paradigm in In-Context Learning (HiAR-ICL) improves by shifting from providing specific examples to teaching general reasoning skills. It uses \"thought cards,\" representing abstract reasoning patterns generated by Monte Carlo Tree Search (MCTS), as the new form of \"context.\" These thought cards, composed of fundamental reasoning actions like problem decomposition, guide the LLMs' problem-solving process. \n\nA complexity metric selects the most relevant thought cards for a given problem, and the LLM's solution is then rigorously verified using reward models and consistency checks. Experiments show that HiAR-ICL surpasses existing methods in accuracy and efficiency on complex reasoning tasks. ​The core differences are summarized as follows:",
+        text: 'Current CoT paradigms suffer from a critical dependence on the quality, quantity, and specific characteristics of the provided demonstrations. LLMs are highly sensitive to even minor variations in example presentation, ordering, and labeling, meaning suboptimal examples can severely limit performance. \n\nFurthermore, creating effective demonstrations often necessitates significant human expertise, a costly and time-consuming hurdle, especially for complex domains like mathematics. Finally, Auto-CoT sometimes may struggle to generalize; even structurally similar problems require new demonstrations if the presentation format changes, hindering its adaptability. ​\n\nA High-level Automated Reasoning paradigm in In-Context Learning (HiAR-ICL) improves by shifting from providing specific examples to teaching general reasoning skills. It uses "thought cards," representing abstract reasoning patterns generated by Monte Carlo Tree Search (MCTS), as the new form of "context." These thought cards, composed of fundamental reasoning actions like problem decomposition, guide the LLMs\' problem-solving process. \n\nA complexity metric selects the most relevant thought cards for a given problem, and the LLM\'s solution is then rigorously verified using reward models and consistency checks. Experiments show that HiAR-ICL surpasses existing methods in accuracy and efficiency on complex reasoning tasks. ​The core differences are summarized as follows:',
         image: {
           id: 1,
           props: {
@@ -3213,13 +3213,13 @@ export const blogs: Blog[] = [
       {
         id: 7,
         primary_title: "Example for CoT",
-        text: "o1-preview and o1-mini serve as excellent examples of Chain-of-Thought (CoT) reasoning because they showcase its adaptability across different complexity levels and resource constraints:\n- Structured Reasoning Across Complexities: Both models break down problems into smaller, manageable steps, a core principle of CoT. o1-mini handles simpler, linear reasoning tasks effectively, while o1-preview tackles multifaceted problems requiring multi-step and contextual reasoning.\n- Tailored Application: o1-mini demonstrates CoT's efficiency in resource-constrained environments by focusing on clear, methodical reasoning for less complex tasks. o1 -preview showcases CoT's scalability for advanced reasoning where deep contextual understanding is crucial.\n- Illustrative Trade-offs: The two models highlight inherent CoT trade-offs. While o1-mini prioritizes efficiency for simpler tasks, o1-preview emphasizes depth and complexity handling, illustrating how CoT can be tailored to specific needs.\n- Broad Applicability: Their use in debugging, research, and content creation demonstrates CoT's versatility across domains, from straightforward tasks to intricate problem-solving.\n- Educational Value: o1-mini offers an accessible entry point for understanding CoT's step-by-step approach, while o1-preview demonstrates its potential for advanced applications, inspiring further exploration and development of CoT in specialized fields."
+        text: "o1-preview and o1-mini serve as excellent examples of Chain-of-Thought (CoT) reasoning because they showcase its adaptability across different complexity levels and resource constraints:\n- Structured Reasoning Across Complexities: Both models break down problems into smaller, manageable steps, a core principle of CoT. o1-mini handles simpler, linear reasoning tasks effectively, while o1-preview tackles multifaceted problems requiring multi-step and contextual reasoning.\n- Tailored Application: o1-mini demonstrates CoT's efficiency in resource-constrained environments by focusing on clear, methodical reasoning for less complex tasks. o1 -preview showcases CoT's scalability for advanced reasoning where deep contextual understanding is crucial.\n- Illustrative Trade-offs: The two models highlight inherent CoT trade-offs. While o1-mini prioritizes efficiency for simpler tasks, o1-preview emphasizes depth and complexity handling, illustrating how CoT can be tailored to specific needs.\n- Broad Applicability: Their use in debugging, research, and content creation demonstrates CoT's versatility across domains, from straightforward tasks to intricate problem-solving.\n- Educational Value: o1-mini offers an accessible entry point for understanding CoT's step-by-step approach, while o1-preview demonstrates its potential for advanced applications, inspiring further exploration and development of CoT in specialized fields.",
       },
       {
         id: 8,
         primary_title: "Conclusion",
-        text: "OpenAI's O1 models are considered groundbreaking, potentially revolutionizing complex, multi-step AI applications similar to how GPT-4 spurred advancements in language processing. These models represent a shift towards deliberate, goal-oriented reasoning, ideal for intricate planning tasks. Although early in development, they foreshadow future AI systems where such reasoning models collaborate with faster execution models. For prompt engineering advice and workflow integration guidance, experts are available to provide tailored support to researchers and users."
-      }
+        text: "OpenAI's O1 models are considered groundbreaking, potentially revolutionizing complex, multi-step AI applications similar to how GPT-4 spurred advancements in language processing. These models represent a shift towards deliberate, goal-oriented reasoning, ideal for intricate planning tasks. Although early in development, they foreshadow future AI systems where such reasoning models collaborate with faster execution models. For prompt engineering advice and workflow integration guidance, experts are available to provide tailored support to researchers and users.",
+      },
     ],
   },
   {
@@ -3284,8 +3284,8 @@ export const blogs: Blog[] = [
       {
         id: 8,
         primary_title: "Tips for Better LLM Debugging",
-        text: "Debugging LLMs doesn't have to be a headache. Here's how to keep your AI applications running smoothly: \n\n**Use Verbose and Debug Modes** \n\nWant to peek under the hood? Try this: \n\n- Turn on **Verbose Mode** for key event update \n\n- Enable **Debug Mode** for a full event log \n\nIn Jupyter or Python, just use `set_verbose(True)` and `set_debug(True)` to get detailed logs. \n\n**Implement Tracing** \n\nFor complex apps, tracing is your friend. LangSmith Tracing helps you log and visualize events, making it easier to spot issues. \n\n**Create a Knowledge Base** \n\nBuild a go-to guide for common issues. Include: \n\n- Detailed error descriptions \n- Steps to reproduce issues \n- Verified solutions and fixes \n\nThis saves time and helps your team learn from past challenges. \n\n**Isolate and Reproduce Bugs** \n\nFound a bug? Here's what to do: \n\n1. Isolate it with minimal code \n- Strip away unnecessary components \n- Focus on core functionality \n\n2. Make and test assumptions \n- Document your hypotheses \n- Test one variable at a time \n\n3. Repeat until fixed \n- Keep iterating systematically \n- Document successful fixes"
-      }
+        text: "Debugging LLMs doesn't have to be a headache. Here's how to keep your AI applications running smoothly: \n\n**Use Verbose and Debug Modes** \n\nWant to peek under the hood? Try this: \n\n- Turn on **Verbose Mode** for key event update \n\n- Enable **Debug Mode** for a full event log \n\nIn Jupyter or Python, just use `set_verbose(True)` and `set_debug(True)` to get detailed logs. \n\n**Implement Tracing** \n\nFor complex apps, tracing is your friend. LangSmith Tracing helps you log and visualize events, making it easier to spot issues. \n\n**Create a Knowledge Base** \n\nBuild a go-to guide for common issues. Include: \n\n- Detailed error descriptions \n- Steps to reproduce issues \n- Verified solutions and fixes \n\nThis saves time and helps your team learn from past challenges. \n\n**Isolate and Reproduce Bugs** \n\nFound a bug? Here's what to do: \n\n1. Isolate it with minimal code \n- Strip away unnecessary components \n- Focus on core functionality \n\n2. Make and test assumptions \n- Document your hypotheses \n- Test one variable at a time \n\n3. Repeat until fixed \n- Keep iterating systematically \n- Document successful fixes",
+      },
     ],
   },
   {
@@ -3299,7 +3299,7 @@ export const blogs: Blog[] = [
     },
     type: "GUIDE",
     author: {
-        name: "Raymond",
+      name: "Raymond",
       image: {
         id: 1,
         url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/raymond.png",
@@ -3311,73 +3311,80 @@ export const blogs: Blog[] = [
     paragraphs: [
       {
         id: 1,
-        text: "In January 2024, we launched **Keywords AI**, initially as an LLM monitoring platform. To provide truly professional and credible support to our customers, I realized I needed to deepen my expertise in the rapidly evolving field of LLMs. \n\n So, I set a simple but ambitious goal at the start of the year: **read at least one research paper every week**. What started as a personal commitment turned into a transformative journey—not only for me but for Keywords AI. The insights I gained helped us improve our LLM observability platform and even inspired us to evolve into a **full-stack LLM engineering platform**. \n\n By the end of 2024, I had read **61 research papers** — all of which left me with new ideas and deeper insights. I’ve recorded these papers on my Notion page, and I’ll share the **full list at the end of this blog**. \n\n In this first part, I want to spotlight the **Top 10 LLM research papers** I read in 2024. These papers stood out for their impact, creativity, or relevance, and I’ll summarize why each one is worth your time. Let’s dive in!"
+        text: "In January 2024, we launched **Keywords AI**, initially as an LLM monitoring platform. To provide truly professional and credible support to our customers, I realized I needed to deepen my expertise in the rapidly evolving field of LLMs. \n\n So, I set a simple but ambitious goal at the start of the year: **read at least one research paper every week**. What started as a personal commitment turned into a transformative journey—not only for me but for Keywords AI. The insights I gained helped us improve our LLM observability platform and even inspired us to evolve into a **full-stack LLM engineering platform**. \n\n By the end of 2024, I had read **61 research papers** — all of which left me with new ideas and deeper insights. I’ve recorded these papers on my Notion page, and I’ll share the **full list at the end of this blog**. \n\n In this first part, I want to spotlight the **Top 10 LLM research papers** I read in 2024. These papers stood out for their impact, creativity, or relevance, and I’ll summarize why each one is worth your time. Let’s dive in!",
       },
       {
         id: 2,
-        primary_title: "No. 10: A Survey of Prompt Engineering Methods in Large Language Models for Different NLP Tasks",
+        primary_title:
+          "No. 10: A Survey of Prompt Engineering Methods in Large Language Models for Different NLP Tasks",
         primary_title_url: "https://arxiv.org/abs/2407.12994",
-        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Provides an organized overview of various prompt engineering techniques for a wide range of NLP tasks.\n- Highlights the performance improvements from different prompting methods.\n\n**Weaknesses**:\n\n- Adds little novelty beyond reviewing existing methods.\n- Ethical and societal considerations are not discussed in detail, especially regarding biases in prompt engineering."
+        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Provides an organized overview of various prompt engineering techniques for a wide range of NLP tasks.\n- Highlights the performance improvements from different prompting methods.\n\n**Weaknesses**:\n\n- Adds little novelty beyond reviewing existing methods.\n- Ethical and societal considerations are not discussed in detail, especially regarding biases in prompt engineering.",
       },
       {
         id: 3,
         primary_title: "No. 9: Conversational Prompt Engineering",
         primary_title_url: "https://arxiv.org/abs/2408.04560",
-        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Proposes a novel Conversational Prompt Engineering (CPE) framework that simplifies the creation of personalized prompts.\n- User-friendly and practical for repetitive enterprise tasks like summarization.\n\n**Weaknesses**:\n\n- Evaluation lacks diversity in datasets and use cases.\n- Ethical considerations, especially related to potential biases in conversational models, are minimally discussed."
+        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Proposes a novel Conversational Prompt Engineering (CPE) framework that simplifies the creation of personalized prompts.\n- User-friendly and practical for repetitive enterprise tasks like summarization.\n\n**Weaknesses**:\n\n- Evaluation lacks diversity in datasets and use cases.\n- Ethical considerations, especially related to potential biases in conversational models, are minimally discussed.",
       },
       {
         id: 4,
-        primary_title: "No. 8: LLMs-as-Judges: A Comprehensive Survey on LLM-based Evaluation Methods",
+        primary_title:
+          "No. 8: LLMs-as-Judges: A Comprehensive Survey on LLM-based Evaluation Methods",
         primary_title_url: "https://arxiv.org/abs/2412.05579",
-        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Provides a comprehensive and structured survey of LLMs as evaluators, an emerging paradigm with significant potential.\n- Highlights challenges and opportunities in using LLMs for flexible and scalable evaluation.\n\n**Weaknesses**:\n\n- Focuses more on summarizing the field than contributing novel insights.\n- Ethical concerns about bias in LLM-based evaluation are underexplored."
+        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Provides a comprehensive and structured survey of LLMs as evaluators, an emerging paradigm with significant potential.\n- Highlights challenges and opportunities in using LLMs for flexible and scalable evaluation.\n\n**Weaknesses**:\n\n- Focuses more on summarizing the field than contributing novel insights.\n- Ethical concerns about bias in LLM-based evaluation are underexplored.",
       },
       {
         id: 5,
-        primary_title: "No. 7: The Survey of Retrieval-Augmented Text Generation in Large Language Models",
+        primary_title:
+          "No. 7: The Survey of Retrieval-Augmented Text Generation in Large Language Models",
         primary_title_url: "https://arxiv.org/abs/2404.10981",
-        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Provides a comprehensive survey of Retrieval-Augmented Generation (RAG), a critical topic for improving LLM outputs.\n- Organizes existing research into clear phases (pre-retrieval, retrieval, post-retrieval, generation).\n\n**Weaknesses**:\n\n- Novel contributions are limited as it primarily reviews existing work.\n- Ethical and societal implications of RAG are not thoroughly discussed."
+        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Provides a comprehensive survey of Retrieval-Augmented Generation (RAG), a critical topic for improving LLM outputs.\n- Organizes existing research into clear phases (pre-retrieval, retrieval, post-retrieval, generation).\n\n**Weaknesses**:\n\n- Novel contributions are limited as it primarily reviews existing work.\n- Ethical and societal implications of RAG are not thoroughly discussed.",
       },
       {
         id: 6,
         primary_title: "No. 6: More Agents Is All You Need",
         primary_title_url: "https://arxiv.org/abs/2402.05120",
-        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Introduces a scalable \"Agent Forest\" method for LLM performance improvement.\n- Comprehensive experiments across multiple benchmarks.\n\n**Weaknesses**:\n\n- Lacks detailed exploration of ethical concerns and societal impacts.\n- Methodological contributions are interesting but not groundbreaking."
+        text: '**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Introduces a scalable "Agent Forest" method for LLM performance improvement.\n- Comprehensive experiments across multiple benchmarks.\n\n**Weaknesses**:\n\n- Lacks detailed exploration of ethical concerns and societal impacts.\n- Methodological contributions are interesting but not groundbreaking.',
       },
       {
         id: 7,
-        primary_title: "No. 5: Does Prompt Formatting Have Any Impact on LLM Performance?",
+        primary_title:
+          "No. 5: Does Prompt Formatting Have Any Impact on LLM Performance?",
         primary_title_url: "https://arxiv.org/abs/2411.10541",
-        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Explores a highly relevant question of how prompt formatting affects LLM performance across tasks and models.\n- Provides valuable insights into sensitivity and robustness of different LLMs to formatting changes.\n\n**Weaknesses**:\n\n- Limited exploration of potential remedies or best practices for mitigating format sensitivity.\n- Ethical concerns, such as fairness in evaluations, are not deeply examined."
+        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Explores a highly relevant question of how prompt formatting affects LLM performance across tasks and models.\n- Provides valuable insights into sensitivity and robustness of different LLMs to formatting changes.\n\n**Weaknesses**:\n\n- Limited exploration of potential remedies or best practices for mitigating format sensitivity.\n- Ethical concerns, such as fairness in evaluations, are not deeply examined.",
       },
       {
         id: 8,
         primary_title: "No. 4: AIOS: LLM Agent Operating System",
         primary_title_url: "https://arxiv.org/abs/2403.16971",
-        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Proposes a well-structured operating system (AIOS) to manage LLM agent resources efficiently.\n- Strong practical implications for improving multi-agent LLM systems.\n\n**Weaknesses**:\n\n- Experimental validation is somewhat limited in scope.\n- Ethical considerations and broader societal impacts are not deeply explored."
+        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Proposes a well-structured operating system (AIOS) to manage LLM agent resources efficiently.\n- Strong practical implications for improving multi-agent LLM systems.\n\n**Weaknesses**:\n\n- Experimental validation is somewhat limited in scope.\n- Ethical considerations and broader societal impacts are not deeply explored.",
       },
       {
         id: 9,
-        primary_title: "No. 3: Scaling Synthetic Data Creation with 1,000,000,000 Personas",
+        primary_title:
+          "No. 3: Scaling Synthetic Data Creation with 1,000,000,000 Personas",
         primary_title_url: "https://arxiv.org/abs/2406.20094",
-        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Introduces Persona Hub, a large-scale approach to synthetic data generation using LLMs, which is highly innovative and scalable.\n- Demonstrates versatility in applications like mathematical reasoning and game design.\n\n**Weaknesses**:\n\n- Ethical considerations, such as risks of misuse, are mentioned but not deeply explored.\n- Limited discussion on the potential biases introduced by synthetic data at this scale."
+        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Introduces Persona Hub, a large-scale approach to synthetic data generation using LLMs, which is highly innovative and scalable.\n- Demonstrates versatility in applications like mathematical reasoning and game design.\n\n**Weaknesses**:\n\n- Ethical considerations, such as risks of misuse, are mentioned but not deeply explored.\n- Limited discussion on the potential biases introduced by synthetic data at this scale.",
       },
       {
         id: 10,
-        primary_title: "No. 2: SynCode: LLM Generation with Grammar Augmentation",
+        primary_title:
+          "No. 2: SynCode: LLM Generation with Grammar Augmentation",
         primary_title_url: "https://arxiv.org/abs/2403.01632",
-        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Proposes a novel framework (SynCode) that ensures syntactically correct LLM output.\n- Strong experimental results demonstrating significant error reductions in generated outputs.\n\n**Weaknesses**:\n\n- Some aspects of reproducibility, like details on hardware and configurations, are insufficient.\n- Limited discussion of societal implications of reliable code generation."
+        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Proposes a novel framework (SynCode) that ensures syntactically correct LLM output.\n- Strong experimental results demonstrating significant error reductions in generated outputs.\n\n**Weaknesses**:\n\n- Some aspects of reproducibility, like details on hardware and configurations, are insufficient.\n- Limited discussion of societal implications of reliable code generation.",
       },
       {
         id: 11,
-        primary_title: "No. 1: A Comprehensive Study of Knowledge Editing for Large Language Models",
+        primary_title:
+          "No. 1: A Comprehensive Study of Knowledge Editing for Large Language Models",
         primary_title_url: "https://arxiv.org/abs/2401.01286",
-        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Novel benchmark (KnowEdit) and categorization for knowledge editing.\n- Practical contribution with the EasyEdit framework.\n- Relevance to dynamic knowledge update needs in LLMs.\n\n**Weaknesses**:\n\n- Limited depth in theoretical justification and ethical considerations.\n- Experimentation could be more diverse and statistically robust."
+        text: "**Summary of Strengths and Weaknesses**\n\n**Strengths**:\n\n- Novel benchmark (KnowEdit) and categorization for knowledge editing.\n- Practical contribution with the EasyEdit framework.\n- Relevance to dynamic knowledge update needs in LLMs.\n\n**Weaknesses**:\n\n- Limited depth in theoretical justification and ethical considerations.\n- Experimentation could be more diverse and statistically robust.",
       },
       {
         id: 12,
-        primary_title:"Full List of Papers",
-        text: "You can find the full list of papers I read here: [2024 LLM research papers](https://docs.google.com/spreadsheets/d/1ksWcwuZ5a6Dm9gPetpPjZt1NCnMi9WXynsHUx8eB5Ps). \n\nHappy coding and experimenting! \n\nRaymond"
-      }
+        primary_title: "Full List of Papers",
+        text: "You can find the full list of papers I read here: [2024 LLM research papers](https://docs.google.com/spreadsheets/d/1ksWcwuZ5a6Dm9gPetpPjZt1NCnMi9WXynsHUx8eB5Ps). \n\nHappy coding and experimenting! \n\nRaymond",
+      },
     ],
   },
   {
@@ -3391,7 +3398,7 @@ export const blogs: Blog[] = [
     },
     type: "MODELS",
     author: {
-        name: "Hendrix",
+      name: "Hendrix",
       image: {
         id: 1,
         url: "/images/blog_Images/hendrix.png",
@@ -3403,32 +3410,32 @@ export const blogs: Blog[] = [
     paragraphs: [
       {
         id: 1,
-        text: "Choosing the right language model can transform your workflow. In 2025, new models push the boundaries of coding, content creation, translation, long-context understanding, and document extraction. If you need the best overall model and have the budget, **OpenAI O1** delivers unmatched performance. For a more affordable choice that still excels across most tasks, **Claude 3.5 Sonnet 20241022** is a solid alternative."
+        text: "Choosing the right language model can transform your workflow. In 2025, new models push the boundaries of coding, content creation, translation, long-context understanding, and document extraction. If you need the best overall model and have the budget, **OpenAI O1** delivers unmatched performance. For a more affordable choice that still excels across most tasks, **Claude 3.5 Sonnet 20241022** is a solid alternative.",
       },
       {
         id: 2,
         primary_title: "Best LLMs for Coding in 2025",
-        text: "- [OpenAI O1:](https://www.keywordsai.co/llm-library/o1) This model uses advanced Chain-of-Thought techniques and ranks first in most coding benchmarks. It solves nearly all coding problems but is expensive and slow. It also lacks support for system prompts. \n- [Claude 3.5 Sonnet 20241022:](https://www.keywordsai.co/llm-library/claude-3-5-sonnet-20241022) This Anthropic model excels at hard problems and is fast and affordable. It also offers a large context window. It was leading coding benchmarks before O1’s release. \n- [DeepSeek V3:](https://www.keywordsai.co/llm-library/openrouter-deepseek-deepseek-chat) Trained with fewer resources yet achieves top performance. Ideal for daily coding tasks due to its fast speed and reliable results. \n- [GPT 4o 2024-11-20:](https://www.keywordsai.co/llm-library/gpt-4o-2024-11-20) The best in the GPT series. It matches Sonnet in quality but can be verbose. It is a solid choice for code generation. \n- [Llama 3.1 405B:](https://www.keywordsai.co/llm-library/fireworks_ai-llama-v3p1-405b-instruct) Meta’s largest model. It handles complex coding tasks well but suffers from slow speed. It also lacks integration with major coding assistants."
+        text: "- [OpenAI O1:](https://www.keywordsai.co/llm-library/o1) This model uses advanced Chain-of-Thought techniques and ranks first in most coding benchmarks. It solves nearly all coding problems but is expensive and slow. It also lacks support for system prompts. \n- [Claude 3.5 Sonnet 20241022:](https://www.keywordsai.co/llm-library/claude-3-5-sonnet-20241022) This Anthropic model excels at hard problems and is fast and affordable. It also offers a large context window. It was leading coding benchmarks before O1’s release. \n- [DeepSeek V3:](https://www.keywordsai.co/llm-library/openrouter-deepseek-deepseek-chat) Trained with fewer resources yet achieves top performance. Ideal for daily coding tasks due to its fast speed and reliable results. \n- [GPT 4o 2024-11-20:](https://www.keywordsai.co/llm-library/gpt-4o-2024-11-20) The best in the GPT series. It matches Sonnet in quality but can be verbose. It is a solid choice for code generation. \n- [Llama 3.1 405B:](https://www.keywordsai.co/llm-library/fireworks_ai-llama-v3p1-405b-instruct) Meta’s largest model. It handles complex coding tasks well but suffers from slow speed. It also lacks integration with major coding assistants.",
       },
       {
         id: 3,
         primary_title: "Best LLMs for Content Creation in 2025",
-        text: "- [OpenAI O1:](https://www.keywordsai.co/llm-library/o1) OpenAI's top model for content creation. It produces the highest-quality text across various domains. If you can handle its slow speed and high pricing, it's unbeatable.\n- [Claude 3.5 Sonnet 20241022:](https://www.keywordsai.co/llm-library/claude-3-5-sonnet-20241022) Anthropic's flagship model. It excels in script writing, storytelling, and creative tasks. It's also faster and more affordable than O1.\n- [GPT 4o 2024-11-20:](https://www.keywordsai.co/llm-library/gpt-4o-2024-11-20) The best in the GPT family for writing. It matches Claude in overall performance but can be overly detailed. Still a strong choice for versatile content creation.\n- [Llama 3.1 405B:](https://www.keywordsai.co/llm-library/fireworks_ai-llama-v3p1-405b-instruct) Meta's largest open-source LLM. It delivers detailed, coherent drafts but is slower. Good for deep writing projects if you don't mind the speed.\n- [Gemini 1.5 Pro 002:](https://www.keywordsai.co/llm-library/gemini-gemini-1.5-pro-002) Exceptional at script writing, story development, and academic work. It offers nuanced responses and thorough attention to detail."
+        text: "- [OpenAI O1:](https://www.keywordsai.co/llm-library/o1) OpenAI's top model for content creation. It produces the highest-quality text across various domains. If you can handle its slow speed and high pricing, it's unbeatable.\n- [Claude 3.5 Sonnet 20241022:](https://www.keywordsai.co/llm-library/claude-3-5-sonnet-20241022) Anthropic's flagship model. It excels in script writing, storytelling, and creative tasks. It's also faster and more affordable than O1.\n- [GPT 4o 2024-11-20:](https://www.keywordsai.co/llm-library/gpt-4o-2024-11-20) The best in the GPT family for writing. It matches Claude in overall performance but can be overly detailed. Still a strong choice for versatile content creation.\n- [Llama 3.1 405B:](https://www.keywordsai.co/llm-library/fireworks_ai-llama-v3p1-405b-instruct) Meta's largest open-source LLM. It delivers detailed, coherent drafts but is slower. Good for deep writing projects if you don't mind the speed.\n- [Gemini 1.5 Pro 002:](https://www.keywordsai.co/llm-library/gemini-gemini-1.5-pro-002) Exceptional at script writing, story development, and academic work. It offers nuanced responses and thorough attention to detail.",
       },
       {
         id: 4,
         primary_title: "Best LLMs for Translation in 2025",
-        text: "- [Gemini 1.5 Pro 002:](https://www.keywordsai.co/llm-library/gemini-gemini-1.5-pro-002) Best overall for mainstream languages. It handles nuanced language structures well, making it the top choice for large-scale translation tasks.\n- [OpenAI O1-mini:](https://www.keywordsai.co/llm-library/o1-mini) Best for Spanish and French. It also delivers strong results in German and Korean. Reliable but somewhat expensive for large-scale use.\n- [Claude 3.5 Sonnet 20241022:](https://www.keywordsai.co/llm-library/claude-3-5-sonnet-20241022) Offers balanced performance across many languages. It's cost-effective and maintains accuracy, making it a solid everyday choice.\n- [Llama 3.1 405B Instruct:](https://www.keywordsai.co/llm-library/fireworks_ai-llama-v3p1-405b-instruct) Meta's open-source model. It excels in Spanish translations. Slower than others but still powerful for open-source projects.\n- [GPT 4o 2024-11-20:](https://www.keywordsai.co/llm-library/gpt-4o-2024-11-20) Strong in various languages. Accurate and versatile, though it can be verbose. Good for tasks that need high precision."
+        text: "- [Gemini 1.5 Pro 002:](https://www.keywordsai.co/llm-library/gemini-gemini-1.5-pro-002) Best overall for mainstream languages. It handles nuanced language structures well, making it the top choice for large-scale translation tasks.\n- [OpenAI O1-mini:](https://www.keywordsai.co/llm-library/o1-mini) Best for Spanish and French. It also delivers strong results in German and Korean. Reliable but somewhat expensive for large-scale use.\n- [Claude 3.5 Sonnet 20241022:](https://www.keywordsai.co/llm-library/claude-3-5-sonnet-20241022) Offers balanced performance across many languages. It's cost-effective and maintains accuracy, making it a solid everyday choice.\n- [Llama 3.1 405B Instruct:](https://www.keywordsai.co/llm-library/fireworks_ai-llama-v3p1-405b-instruct) Meta's open-source model. It excels in Spanish translations. Slower than others but still powerful for open-source projects.\n- [GPT 4o 2024-11-20:](https://www.keywordsai.co/llm-library/gpt-4o-2024-11-20) Strong in various languages. Accurate and versatile, though it can be verbose. Good for tasks that need high precision.",
       },
       {
         id: 5,
         primary_title: "Best LLMs for Long Context in 2025",
-        text: "- [OpenAI O1:](https://www.keywordsai.co/llm-library/o1) Nearly zero hallucinations and supports a massive 200K context window. Ideal for handling large documents without losing accuracy.\n- [Claude 3.5 Sonnet 20241022:](https://www.keywordsai.co/llm-library/claude-3-5-sonnet-20241022) Matches O1 with a 200K context window. It's more cost-effective, making it a great choice for extended content analysis.\n- [DeepSeek V3:](https://www.keywordsai.co/llm-library/openrouter-deepseek-deepseek-chat) An open-source option with a 64K context limit. Despite its smaller window, it performs well and is easy to customize.\n- [GPT 4o 2024-11-20:](https://www.keywordsai.co/llm-library/gpt-4o-2024-11-20) Offers a 100K context window. It's reliable for lengthy tasks but can be verbose when handling large volumes of text.\n- [Gemini 1.5 Pro 002:](https://www.keywordsai.co/llm-library/gemini-gemini-1.5-pro-002) Also provides a 100K context window. Known for its speed and stable performance when working with long texts."
+        text: "- [OpenAI O1:](https://www.keywordsai.co/llm-library/o1) Nearly zero hallucinations and supports a massive 200K context window. Ideal for handling large documents without losing accuracy.\n- [Claude 3.5 Sonnet 20241022:](https://www.keywordsai.co/llm-library/claude-3-5-sonnet-20241022) Matches O1 with a 200K context window. It's more cost-effective, making it a great choice for extended content analysis.\n- [DeepSeek V3:](https://www.keywordsai.co/llm-library/openrouter-deepseek-deepseek-chat) An open-source option with a 64K context limit. Despite its smaller window, it performs well and is easy to customize.\n- [GPT 4o 2024-11-20:](https://www.keywordsai.co/llm-library/gpt-4o-2024-11-20) Offers a 100K context window. It's reliable for lengthy tasks but can be verbose when handling large volumes of text.\n- [Gemini 1.5 Pro 002:](https://www.keywordsai.co/llm-library/gemini-gemini-1.5-pro-002) Also provides a 100K context window. Known for its speed and stable performance when working with long texts.",
       },
       {
         id: 6,
         primary_title: "Best LLMs for Extracting Text from Documents in 2025",
-        text: "- [Gemini 1.5 Flash 002:](https://www.keywordsai.co/llm-library/gemini-gemini-1.5-flash-002) Cost-effective and extremely fast. It handles large volumes of documents quickly but may sacrifice some accuracy. Ideal for rapid processing tasks where speed and budget matter most.\n- [Claude 3.5 Sonnet 20241022:](https://www.keywordsai.co/llm-library/claude-3-5-sonnet-20241022) Excels at extracting detailed information from complex files, including financial documents. It offers precise data retrieval and maintains high accuracy even with intricate text.\n- [Qwen-VL-Max-1119:](https://www.keywordsai.co/llm-library/qwen-vl-max-1119) The open-source leader for image-based text extraction. It supports high-resolution images and various aspect ratios, making it a go-to option for visual data processing.\n- [GPT 4o 2024-11-20:](https://www.keywordsai.co/llm-library/gpt-4o-2024-11-20) A robust model for general document processing. It summarizes and extracts key information well, though it can occasionally miss minor details in complex tasks.\n- [Gemini 1.5 Pro 002:](https://www.keywordsai.co/llm-library/gemini-gemini-1.5-pro-002)  An upgraded version of the Flash line. It delivers higher accuracy and strong reliability, making it suitable for advanced tasks that demand precise document analysis."
+        text: "- [Gemini 1.5 Flash 002:](https://www.keywordsai.co/llm-library/gemini-gemini-1.5-flash-002) Cost-effective and extremely fast. It handles large volumes of documents quickly but may sacrifice some accuracy. Ideal for rapid processing tasks where speed and budget matter most.\n- [Claude 3.5 Sonnet 20241022:](https://www.keywordsai.co/llm-library/claude-3-5-sonnet-20241022) Excels at extracting detailed information from complex files, including financial documents. It offers precise data retrieval and maintains high accuracy even with intricate text.\n- [Qwen-VL-Max-1119:](https://www.keywordsai.co/llm-library/qwen-vl-max-1119) The open-source leader for image-based text extraction. It supports high-resolution images and various aspect ratios, making it a go-to option for visual data processing.\n- [GPT 4o 2024-11-20:](https://www.keywordsai.co/llm-library/gpt-4o-2024-11-20) A robust model for general document processing. It summarizes and extracts key information well, though it can occasionally miss minor details in complex tasks.\n- [Gemini 1.5 Pro 002:](https://www.keywordsai.co/llm-library/gemini-gemini-1.5-pro-002)  An upgraded version of the Flash line. It delivers higher accuracy and strong reliability, making it suitable for advanced tasks that demand precise document analysis.",
       },
       {
         id: 7,
@@ -3446,7 +3453,7 @@ export const blogs: Blog[] = [
           id: 1,
           url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/best-llms/playground.png",
         },
-      }
+      },
     ],
   },
   {
@@ -3460,7 +3467,7 @@ export const blogs: Blog[] = [
     },
     type: "MODELS",
     author: {
-        name: "Hendrix",
+      name: "Hendrix",
       image: {
         id: 1,
         url: "/images/blog_Images/hendrix.png",
@@ -3472,7 +3479,7 @@ export const blogs: Blog[] = [
     paragraphs: [
       {
         id: 1,
-        text: "Choosing the right large language model (LLM) API in 2025 can feel overwhelming, especially with so many providers offering different strengths, pricing, and features. In this blog, we’ll introduce the top 10 platforms — highlighting what they do best, how they price their services, and the specific scenarios they’re suited for."
+        text: "Choosing the right large language model (LLM) API in 2025 can feel overwhelming, especially with so many providers offering different strengths, pricing, and features. In this blog, we’ll introduce the top 10 platforms — highlighting what they do best, how they price their services, and the specific scenarios they’re suited for.",
       },
       {
         id: 2,
@@ -3484,7 +3491,7 @@ export const blogs: Blog[] = [
       },
       {
         id: 3,
-        text: "**What is Fireworks AI?** \n\n Fireworks AI is a generative inference platform built for speed, scalability, and production-readiness. Its proprietary FireAttention engine efficiently handles text, image, and audio tasks, while strict HIPAA and SOC2 compliance ensures data stays secure. The platform also offers on-demand deployment and the ability to fine-tune models for specific needs. \n\n **Why should use Fireworks AI?** \n\n Fireworks AI keeps latency impressively low, so your applications feel smooth and responsive. Its hosting infrastructure is highly stable, minimizing downtime and performance issues. Plus, an active and supportive community ensures you can quickly find help and share insights as you build and optimize your AI projects. \n\n **Fireworks AI models** \n\nFireworks AI hosts hundreds of open-source models, including popular text-based options like DeepSeek v3, Llama, and Qwen, as well as image-generation tools like Stable Diffusion. Multi-LoRA capabilities enable swift fine-tuning, so you can easily adapt models to meet your performance needs. \n\n **Fireworks AI pricing** \n\n Pricing is determined by model size and complexity. Smaller models, up to four billion parameters, start at $0.10 per million tokens, while larger or specialized models can run up to $3.00. This transparent structure lets developers manage costs effectively and choose the level of performance they need."
+        text: "**What is Fireworks AI?** \n\n Fireworks AI is a generative inference platform built for speed, scalability, and production-readiness. Its proprietary FireAttention engine efficiently handles text, image, and audio tasks, while strict HIPAA and SOC2 compliance ensures data stays secure. The platform also offers on-demand deployment and the ability to fine-tune models for specific needs. \n\n **Why should use Fireworks AI?** \n\n Fireworks AI keeps latency impressively low, so your applications feel smooth and responsive. Its hosting infrastructure is highly stable, minimizing downtime and performance issues. Plus, an active and supportive community ensures you can quickly find help and share insights as you build and optimize your AI projects. \n\n **Fireworks AI models** \n\nFireworks AI hosts hundreds of open-source models, including popular text-based options like DeepSeek v3, Llama, and Qwen, as well as image-generation tools like Stable Diffusion. Multi-LoRA capabilities enable swift fine-tuning, so you can easily adapt models to meet your performance needs. \n\n **Fireworks AI pricing** \n\n Pricing is determined by model size and complexity. Smaller models, up to four billion parameters, start at $0.10 per million tokens, while larger or specialized models can run up to $3.00. This transparent structure lets developers manage costs effectively and choose the level of performance they need.",
       },
       {
         id: 4,
@@ -3532,7 +3539,7 @@ export const blogs: Blog[] = [
       },
       {
         id: 11,
-        text: "**What Is Hugging Face?**\n\nHugging Face is an open-source platform for building, training, and deploying machine learning models. Often dubbed the \"GitHub for AI,\" it hosts a thriving community and an extensive library of over 100,000 pre-trained models, including popular options like BERT and GPT.\n\n**Why Should You Use Hugging Face?**\n\nWith its large model hub and support for various programming languages and cloud platforms, Hugging Face streamlines AI development. You can quickly find and integrate a model for your use case, though managing inference may require more hands-on setup compared to fully managed services.\n\n**Hugging Face Models**\n\nFrom language to image and beyond, Hugging Face offers a massive catalog of open-source models. Developers can browse, download, and customize them, making the platform a go-to resource for quick experimentation and prototyping.\n\n**Hugging Face Pricing**\n\nHugging Face uses a pay-by-the-hour model for hosting on AWS or GCP infrastructure. You can review detailed pricing and deployment options on the [Hugging Face pricing page](https://huggingface.co/pricing#endpoints).",
+        text: '**What Is Hugging Face?**\n\nHugging Face is an open-source platform for building, training, and deploying machine learning models. Often dubbed the "GitHub for AI," it hosts a thriving community and an extensive library of over 100,000 pre-trained models, including popular options like BERT and GPT.\n\n**Why Should You Use Hugging Face?**\n\nWith its large model hub and support for various programming languages and cloud platforms, Hugging Face streamlines AI development. You can quickly find and integrate a model for your use case, though managing inference may require more hands-on setup compared to fully managed services.\n\n**Hugging Face Models**\n\nFrom language to image and beyond, Hugging Face offers a massive catalog of open-source models. Developers can browse, download, and customize them, making the platform a go-to resource for quick experimentation and prototyping.\n\n**Hugging Face Pricing**\n\nHugging Face uses a pay-by-the-hour model for hosting on AWS or GCP infrastructure. You can review detailed pricing and deployment options on the [Hugging Face pricing page](https://huggingface.co/pricing#endpoints).',
       },
       {
         id: 12,
@@ -3616,9 +3623,147 @@ export const blogs: Blog[] = [
       },
       {
         id: 26,
-        primary_title: "How to get AI observability when using LLM API providers?",
+        primary_title:
+          "How to get AI observability when using LLM API providers?",
         text: "Keywords AI is a full-stack LLM engineering platform that provides observability for your LLM API providers. You can check out our [integrations](https://docs.keywordsai.co/integration/own-api-keys) to find your LLM inference provider and get started.",
       },
+    ],
+  },
+  {
+    id: 37,
+    timestamp: "February 1, 2025",
+    slug: "/blog/top-benchmarks-for-the-best-open-source-coding-llms",
+    title: "Top benchmarks for the best open-source coding LLMs in 2025",
+    cover: {
+      id: 1,
+      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/best-coding-benchmark/cover.png",
+    },
+    type: "MODELS",
+    author: {
+      name: "Hendrix",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/hendrix.png",
+        props: {
+          variant: "circle",
+        },
+      },
+    },
+    paragraphs: [
+      {
+        id: 1,
+        text: "By February 2025, the race to build the best coding-focused large language model (LLM) has never been fiercer. New entrants like DeepSeek R1 and OpenAI o1/o3 are pushing the boundaries of reasoning, while established names such as Anthropic, Google, Meta, and QWen remain major contenders. \n\n With so many models to choose from, developers can feel overwhelmed. \n\n **But how can you choose the best LLM for your coding use case?** \n\n This blog explores the top benchmarks you can use to evaluate coding LLMs and choose the best one for your specific needs..",
+      },
+      {
+        id: 2,
+        text: "**TL;DR** \n\n - **1. [Chatbot Arena Leaderboard](https://lmarena.ai/)** – Popular vote-based rankings across all LLMs, including coding. \n- **2. [HumanEval](https://paperswithcode.com/sota/code-generation-on-humaneval)** – Focuses on functional correctness in code generation. \n- **3. [Big Code Models Leaderboard](https://huggingface.co/spaces/bigcode/bigcode-models-leaderboard)** – Open-source, multilingual code generation benchmarks. \n- **4. [CanAiCode Leaderboard](https://huggingface.co/spaces/mike-ravkine/can-ai-code-results)** – Real-world interview-style coding questions across multiple levels. \n- **5. [The Polyglot Benchmark](https://aider.chat/docs/leaderboards/)** – Evaluates code editing and integration in multiple languages. \n- **6. [StackEval](https://www.prollm.ai/leaderboard/stack-eval?type=conceptual,debugging,implementation,optimization&level=advanced,beginner,intermediate&tag=assembly,bash/shell,c,c%23,c%2B%2B,clojure,dart,delphi,elixir,go,haskell,java,javascript,kotlin,objective-c,perl,php,python,r,ruby,rust,scala,sql,swift,typescript,vba)** – Assesses practical coding assistance quality using StackOverflow questions.",
+      },
+      {
+        id: 3,
+        primary_title: "Chatbot Arena LLM Leaderboard",
+        image: {
+          id: 1,
+          props: {
+            variant: "md",
+          },
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/best-coding-benchmark/chatbotarena.jpg",
+        },
+      },
+      {
+        id: 4,
+        text: "The Chatbot Arena LLM Leaderboard relies on votes from thousands of developers, making it one of the most visited coding LLM resources. Because all rankings are user-generated, it offers valuable insights into what developers find most helpful but can sometimes be skewed by personal preferences or trends. Despite the potential bias, it remains an excellent starting point for anyone wanting a quick overview of coding LLM performance in real-world settings.",
+      },
+      {
+        id: 5,
+        primary_title: "HumanEval",
+        image: {
+          id: 1,
+          props: {
+            variant: "md",
+          },
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/best-coding-benchmark/humaneval.jpg",
+        },
+      },
+      {
+        id: 6,
+        text: "HumanEval is a benchmark dataset designed to evaluate how effectively large language models (LLMs) generate code. It was developed by OpenAI. \n\n Here’s what it does: \n- Compares the performance of different LLMs in code generation \n- Assesses the functional correctness of the generated code \n- Provides a standardized set of challenges for all models to solve \n\n However, HumanEval has some limitations. It shows a significant bias toward a narrow range of programming concepts, leaving many underrepresented or excluded. This can lead to overestimating a model’s performance in real-world coding tasks. \n\nAdditionally, HumanEval includes only a limited number of LLMs, so smaller open-source coding models are often missing from this benchmark."
+      },
+      {
+        id: 7,
+        primary_title: "Big Code Models Leaderboard",
+        image: {
+          id: 1,
+          props: {
+            variant: "md",
+          },
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/best-coding-benchmark/big-code-models.jpg",
+        },
+      },
+      {
+        id: 8,
+        text: "The Big Code Models Leaderboard evaluates the performance of multilingual code generation models using benchmarks like HumanEval and MultiPL-E. It also measures throughput and provides detailed information about the models. \n\n However, this benchmark focuses exclusively on open, pre-trained multilingual code models. These models serve as starting points for further training or customization. \n\n One of its strengths is the comprehensive ranking it provides across various programming languages, offering developers a clear view of how models perform in different coding contexts. \n\n While it’s a valuable resource for open-source multilingual models, it does not include closed-source or specialized models, which may limit its scope for some users."
+      },
+      {
+        id: 9,
+        primary_title: "CanAiCode Leaderboard",
+        image: {
+          id: 1,
+          props: {
+            variant: "md",
+          },
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/best-coding-benchmark/canAI-code.jpg",
+        },
+      },
+      {
+        id: 10,
+        text: "The CanAiCode Leaderboard is a highly useful yet underrated benchmark. It features a wide range of interview questions created by humans and tested by AI, making it highly relevant to real-world scenarios. This benchmark effectively addresses practical problems that developers face in their work.  \n\n The structure is well-organized, with datasets spanning from junior to senior-level difficulty. It includes nearly every coding LLM on the market, such as CodeLlama, DeepSeek-coder, and WizardCoder. \n\n One of its standout features is the detailed results and rankings it provides for Python and JavaScript, offering developers clear insights into model performance in these widely-used languages."
+      },
+      {
+        id: 11,
+        primary_title: "The polyglot benchmark",
+        image: {
+          id: 1,
+          props: {
+            variant: "md",
+          },
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/best-coding-benchmark/polyglot.jpg",
+        },
+      },
+      {
+        id: 12,
+        text: "The Polyglot Benchmark, part of the Aider LLM Leaderboards, tests how well LLMs edit and integrate code across multiple languages. It uses 225 of the most challenging Exercism exercises in C++, Go, Java, JavaScript, Python, and Rust to evaluate models’ ability to write and apply code changes without human intervention. \n\n This benchmark is ideal for developers who need LLMs to handle complex, real-world coding tasks. Unlike earlier Python-focused benchmarks, it offers a broader, more rigorous evaluation. Models like DeepSeek R1 and OpenAI o1 have already been tested, providing insights into their strengths and limitations in advanced coding scenarios."
+      },
+      {
+        id: 13,
+        primary_title: "StackEval",
+        image: {
+          id: 1,
+          props: {
+            variant: "md",
+          },
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/best-coding-benchmark/stackeval.jpg"
+        },
+      },
+      {
+        id: 14,
+        text: "StackEval evaluates an LLM’s ability to function as a coding assistant by testing its responses to real-world coding questions sourced from StackOverflow. It ranks models based on *Acceptance Rate*, which measures how well an answer meets the user’s needs and resolves their issue. \n\n To be acceptable, a response must be accurate, relevant, and complete—providing a viable solution without requiring further edits. For example, if the answer includes a code snippet, it must run flawlessly.",
+        image: {
+          id: 1,
+          props: {
+            variant: "md",
+          },
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/best-coding-benchmark/stackeval-2.jpg"
+        },
+      },
+      {
+        id: 15,
+        text: "The benchmark covers four question types: Conceptual, Debugging, Implementation, and Optimization, with complexity levels ranging from Beginner to Advanced. It also includes 26 programming languages, making it a versatile tool for finding the best coding LLM for any language. \n\n The Chatbot Arena LLM Leaderboard relies on votes from thousands of developers, making it one of the most visited coding LLM resources. Because all rankings are user-generated, it offers valuable insights into what developers find most helpful but can sometimes be skewed by personal preferences or trends. Despite the potential bias, it remains an excellent starting point for anyone wanting a quick overview of coding LLM performance in real-world settings.",
+      },
+      {
+        id: 16,
+        primary_title: "Final thoughts",
+        text: "Choosing the right coding LLM in 2025 requires sifting through a complex array of options. These six benchmarks— ranging from communit-driven vote tallies to more specialized evaluations —offer a clear path to understanding how models perform in different scenarios. By focusing on the benchmarks that align with your specific needs, you can find an LLM that truly excels at the tasks that matter most to you.",
+      }
     ],
   },
 ];

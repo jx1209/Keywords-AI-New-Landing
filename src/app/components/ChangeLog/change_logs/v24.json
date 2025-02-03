@@ -6,21 +6,21 @@
 
   "sections": {
     "New": [
-      {"tag": "Prompts", "description": "Added support for custom slugs in Prompt IDs to improve code readability"},
-      {"tag": "API", "description": "Introduced prompt caching for Anthropic model API requests"},
-      {"tag": "API", "description": "Added `override_config` parameter to modify or append default prompt configurations"},
-      {"tag": "Logs", "description": "Added Prompt Name column to logs for better request tracking"},
-      {"tag": "Other", "description": "Launched public AI Models library showcasing LLM capabilities and pricing"}
+      {"tag": "Prompts", "description": "Added support for custom slugs in Prompt IDs to improve code readability."},
+      {"tag": "API", "description": "Introduced prompt caching for Anthropic model API requests."},
+      {"tag": "API", "description": "Added `override_config` parameter to modify or append default prompt configurations."},
+      {"tag": "Logs", "description": "Added Prompt Name column to logs for better request tracking."},
+      {"tag": "Other", "description": "Launched public AI Models library showcasing LLM capabilities and pricing."}
     ],
     "Improved": [
-      {"tag": "Settings", "description": "Enhanced credential management interface for better usability"},
-      {"tag": "Playground", "description": "Streamlined the experience of using existing prompts in Playground"}
+      {"tag": "Settings", "description": "Enhanced credential management interface for better usability."},
+      {"tag": "Playground", "description": "Streamlined the experience of using existing prompts in Playground."}
     ],
     "Fixed": [
-      {"tag": "Prompts", "description": "Fixed Prompt ID display issue"},
-      {"tag": "Prompts", "description": "Resolved prompt execution error on Prompts page"},
-      {"tag": "Playground", "description": "Fixed non-responsive Stop Generation button"},
-      {"tag": "Playground", "description": "Resolved UI glitches during long text generation"}
+      {"tag": "Prompts", "description": "Fixed Prompt ID display issue."},
+      {"tag": "Prompts", "description": "Resolved prompt execution error on Prompts page."},
+      {"tag": "Playground", "description": "Fixed non-responsive Stop Generation button."},
+      {"tag": "Playground", "description": "Resolved UI glitches during long text generation."}
     ]
   }
 }
