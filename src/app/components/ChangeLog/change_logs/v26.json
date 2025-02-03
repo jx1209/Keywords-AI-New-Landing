@@ -1,0 +1,9 @@
+{
+  "date": "January 24, 2025",
+  "Title": "DeepSeek Integration",
+  "snapshot": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/deepseek_integration.jpg",
+  "introduction": "You can now call DeepSeek models from providers like DeepSeek, Fireworks, Together AI, and OpenRouter. \n\n Switch between models seamlessly with just 1 line of code change using Keywords AI’s [LLM proxy](https://docs.keywordsai.co/get-started/llm-inference) 🥳​",
+
+  "sections": {
+  }
+}

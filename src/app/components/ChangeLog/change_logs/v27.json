@@ -1,0 +1,26 @@
+{
+  "date": "January 31, 2025",
+  "Title": "Traces - track your entire AI workflow",
+  "snapshot": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/traces.png",
+  "introduction": "We're excited to announce the release of Traces, a new feature that allows you to track your entire AI workflow. \n\n You can monitor complex LLM workflows including chains, agents with tools, and advanced prompts in your AI products using Traces.",
+
+  "sections": {
+    "New": [
+      {"tag": "Dashboard", "description": "Added new graphs showing request distribution between Credentials and Deployments"},
+      {"tag": "Logs", "description": "Added shareable links for filtered logs."},
+      {"tag": "Prompts", "description": "Added Prompt ID to filter. You can now filter prompts by Prompt ID."},
+      {"tag": "Models", "description": "Added support for Azure DeepSeek."},
+      {"tag": "Models", "description": "Added Perplexity sonar reasoning."}
+    ],
+    "Improved": [
+      {"tag": "Playground", "description": "Added Developer role to Playground. You can now add developer messages with o1."},
+      {"tag": "Prompts", "description": "Added deployment status in prompt list to show if prompts are deployed."}
+    ],
+    "Fixed": [
+      {"tag": "Logs", "description": "Fixed a bug that prevented completion messages from showing in log pane."},
+      {"tag": "Playground", "description": "Fixed a bug that sometimes showed an empty model in the dropdown."},
+      {"tag": "API", "description": "Updated LangChain integration that modelKwargs is not supported."},
+      {"tag": "Settings", "description": "Fixed a bug that prevented users from editing their profile name."}
+    ]
+  }
+}
