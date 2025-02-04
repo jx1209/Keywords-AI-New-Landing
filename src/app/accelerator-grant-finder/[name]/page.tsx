@@ -1,24 +1,57 @@
 import AGDetailContent from "@/app/components/AcceleratorGrantFinder/AGDetailContent";
-import { Metadata } from "next";
+import accels_grants from '../accelerators-grants.json';
+import type { Metadata } from 'next';
 
 export async function generateMetadata({ params }: {
   params: { name : string }
 }): Promise<Metadata> {
   const resolvedParams = await params;
-  const name = resolvedParams.name;
+  // URL decode the name parameter since it might contain spaces or special characters
+  const name = decodeURIComponent(resolvedParams.name);
+  
+  // Find the matching entry
+  const entry = accels_grants.find((item) => item.Name === name);
+  
+  if (!entry) {
+    console.log(`Entry not found for name: ${name}`); // Debug log
+    // Fallback metadata if entry not found
+    console.log("Entry not found");
+    return {
+      title: `How to apply for ${name}`,
+      description: `Learn the details about ${name} and how to get accepted.`,
+      openGraph: {
+        type: 'website',
+        title: `${name} | Keywords AI`,
+        description: `Learn the details about ${name} and how to get accepted.`,
+        url: `https://keywordsai.co/accelerator-grant-finder/${name}`,
+        siteName: 'Keywords AI',
+        images: [
+          {
+            url: 'https://keywordsai-static.s3.amazonaws.com/social_media_images/social_image.png',
+          },
+        ],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        site: '@keywordsai',
+        title: `${name} | Keywords AI`,
+        images: ['https://keywordsai-static.s3.amazonaws.com/social_media_images/social_image.png'],
+      },
+    }
+  }
 
   return {
     title: `How to apply for ${name}`,
-    description: `Learn the details about ${name} and how to get accepted.`,
+    description: entry["One-line description"],
     openGraph: {
       type: 'website',
       title: `${name} | Keywords AI`,
-      description: `Learn the details about ${name} and how to get accepted.`,
+      description: entry["One-line description"],
       url: `https://keywordsai.co/accelerator-grant-finder/${name}`,
       siteName: 'Keywords AI',
       images: [
         {
-          url: 'https://keywordsai-static.s3.amazonaws.com/social_media_images/social_image.png',
+          url: entry.Cover || 'https://keywordsai-static.s3.amazonaws.com/social_media_images/social_image.png',
         },
       ],
     },
@@ -26,7 +59,8 @@ export async function generateMetadata({ params }: {
       card: 'summary_large_image',
       site: '@keywordsai',
       title: `${name} | Keywords AI`,
-      images: ['https://keywordsai-static.s3.amazonaws.com/social_media_images/social_image.png'],
+      description: entry["One-line description"],
+      images: [entry.Cover || 'https://keywordsai-static.s3.amazonaws.com/social_media_images/social_image.png'],
     },
   }
 }
