@@ -5,12 +5,12 @@ import FinderCard from "../components/AcceleratorGrantFinder/FinderCard";
 export const metadata: Metadata = {
   title: "Accelerators & AI Grants Finder | Curated by Keywords AI",
   description:
-    "Comprehensive directory of 250+ AI models and large language models (LLMs) and their capabilities. Compare details, pricing, benchmarks, and more.",
+    "Explore funding opportunities, accelerators, and grants for AI startups. Get details on programs and eligibility to support your AI innovation.",
   openGraph: {
     type: "website",
     title: "Accelerators & AI Grants Finder | Curated by Keywords AI",
     description:
-      "Comprehensive directory of 250+ AI models and large language models (LLMs) and their capabilities. Compare details, pricing, benchmarks, and more.",
+      "Explore funding opportunities, accelerators, and grants for AI startups. Get details on programs and eligibility to support your AI innovation.",
     url: "https://keywordsai.co/accelerator-grant-finder",
     siteName: "Keywords AI",
     images: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@keywordsai",
-    title: "Keywords AI",
+    title: "Accelerators & AI Grants Finder | Curated by Keywords AI",
     images: [
       "https://keywordsai-static.s3.amazonaws.com/social_media_images/social_image.png",
     ],
@@ -33,7 +33,7 @@ export default function Page() {
   return (
     <div className="flex flex-col items-center gap-xl pt-[140px] px-sm pb-[120px] ">
       <h1 className="text-gray-1 max-w-[1200px] w-full display-lg font-semibold text-center">
-        Accelerators & AI Grants Finder
+        Accelerators & AI grants finder
       </h1>
       <div className="mx-auto w-full max-w-[1200px] px-10">
         <div className="grid grid-cols-3 w-full gap-[60px]">
