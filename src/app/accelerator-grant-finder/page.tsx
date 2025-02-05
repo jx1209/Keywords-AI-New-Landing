@@ -33,7 +33,7 @@ export default function Page() {
   return (
     <div className="flex flex-col items-center gap-xl pt-[140px] px-sm pb-[120px] ">
       <h1 className="text-gray-1 max-w-[1200px] w-full display-lg font-semibold text-center">
-        Accelerators & AI Grants Finder
+        Accelerators & AI grants finder
       </h1>
       <div className="mx-auto w-full max-w-[1200px] px-10">
         <div className="grid grid-cols-3 w-full gap-[60px]">

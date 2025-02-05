@@ -2,14 +2,12 @@ import AGDetailContent from "@/app/components/AcceleratorGrantFinder/AGDetailCon
 import accels_grants from '../accelerators-grants.json';
 import type { Metadata } from 'next';
 
-export async function generateMetadata({ params }: {
-  params: { name : string }
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ "name": string}> }): Promise<Metadata> {
+// export async function generateMetadata({ params }: { params: Promise<{ "llm-url": string}> }): Promise<Metadata> {
   const resolvedParams = await params;
-  // URL decode the name parameter since it might contain spaces or special characters
-  const name = decodeURIComponent(resolvedParams.name);
+  const name = decodeURIComponent(resolvedParams["name"]);
   
-  // Find the matching entry
+  // Find the matching entry  
   const entry = accels_grants.find((item) => item.Name === name);
   
   if (!entry) {
@@ -79,26 +77,28 @@ export interface AGDetails {
 
 export default async function AcceleratorGrantDetails({ 
   params,
-  searchParams,
+  // searchParams,
 }: {
-  params: { name: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: Promise<{ "name": string }>;
+  // searchParams?: { [key: string]: string | string[] | undefined };
 }) {
-  // Await the params before accessing
   const resolvedParams = await params;
-  const name = resolvedParams.name;
+  const name = decodeURIComponent(resolvedParams["name"]);
+  
+  // Find the matching entry from accels_grants
+  const entry = accels_grants.find((item) => item.Name === name);
 
   return (
     <AGDetailContent
       name={name}
-      type=""
-      amount=""
-      description=""
-      cover=""
-      website=""
-      perks=""
-      deadline=""
-      qualifications=""
+      type={entry?.Type || ""}
+      amount={entry?.Funding || ""}
+      description={entry?.["One-line description"] || ""}
+      cover={entry?.Cover || ""}
+      website={entry?.Website || ""}
+      perks={entry?.Perks || ""}
+      deadline={entry?.["Application deadline"] || ""}
+      qualifications={entry?.Qualifications || ""}
     />
   );
 }
