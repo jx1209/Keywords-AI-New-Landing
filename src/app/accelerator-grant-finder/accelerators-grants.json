@@ -151,7 +151,7 @@
         "Application deadline": "Deadline passed",
         "Qualifications": "Idea is not needed to apply but be prepared to discuss markets you find interesting, previous ideas you have considered and discarded, and the insights you find compelling and why",
         "One-line description": "A South Park Commons program backing ambitious entrepreneurs in the earliest idea stage.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/spc-founder-fellowship.png"
     },
     {
         "Name": "Accel Atoms",
@@ -162,7 +162,7 @@
         "Application deadline": "Deadline passed",
         "Qualifications": "Must be a company at pre-seed stage (including idea-stage and pre-product) that has raised under $2M; based in India & Indian-origin founders based anywhere in the world",
         "One-line description": "An Accel initiative helping founders at the 0-to-1 stage build successful ventures.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/accel-atoms.png"
     },
     {
         "Name": "The House AI Accelerator",
@@ -173,7 +173,7 @@
         "Application deadline": "04/12/25 11:59 PT",
         "Qualifications": "Must be Cal alumni, faculty, student, or affiliate entrepreneurs, especially those from underrepresented backgrounds",
         "One-line description": "A program supporting AI startups led by Cal alumni, faculty, and students.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/the-house-ai-accelerator.png"
     },
     {
         "Name": "OpenAI Startup Fund",
@@ -184,7 +184,7 @@
         "Application deadline": "Deadline passed",
         "Qualifications": "Founders from all backgrounds, disciplines, and experience levels are encouraged to apply",
         "One-line description": "A VC firm investing in early-stage AI companies tackling global challenges.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/openai-startup-fund.png"
     },
     {
         "Name": "Conviction Embed",
@@ -195,7 +195,7 @@
         "Application deadline": "Deadline passed",
         "Qualifications": "Looking for early-stage technical teams who build with velocity and pragmatism",
         "One-line description": "A highly selective Conviction program for pre-seed teams building AI-native startups.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/conviction-embed.png"
     },
     {
         "Name": "AWS Generative AI Accelerator",
@@ -206,7 +206,7 @@
         "Application deadline": "Deadline passed",
         "Qualifications": "For seed and pre-seed startups; looking for machine learning startups with technical leads who are leveraging cloud technologies, ideally with an MVP already developed",
         "One-line description": "A 10-week initiative guiding founders to develop generative AI applications worldwide.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/aws-gen-ai-accelerator.png"
     },
     {
         "Name": "Greylock Edge",
@@ -217,7 +217,7 @@
         "Application deadline": "N/A",
         "Qualifications": "For pre-idea, pre-seed and seed founders from inception to product-market fit",
         "One-line description": "A three-month Greylock Partners program for founders from pre-idea to seed stages.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/greylock-edge.png"
     },
     {
         "Name": "Sequoia Capital Arc",
@@ -228,7 +228,7 @@
         "Application deadline": "02/03/2025",
         "Qualifications": "For pre-seed and seed-stage founders actively working on an idea, product and company",
         "One-line description": "A seven-week, hybrid program supporting seed-stage startups to achieve product-market fit.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/sequoia-capital-arc.png"
     },
     {
         "Name": "Lightspeed Launch",
@@ -239,7 +239,7 @@
         "Application deadline": "N/A",
         "Qualifications": "For early-stage founders in the US and EU",
         "One-line description": "An exclusive Lightspeed Venture Partners initiative for early-stage company builders.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/lightspeed-launch.png"
     },
     {
         "Name": "Designer Fund Partnership",
@@ -250,7 +250,7 @@
         "Application deadline": "Deadline passed",
         "Qualifications": "For early stage startups, Pre-seed to Series A; companies working to improve health, climate, or prosperity for all; mission-driven founders who value design; products that are 10x better compared to alternatives; multi-billion dollar addressable markets with poor user experiences",
         "One-line description": "A Designer Fund program backing early-stage tech startups that prioritize great design.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/designer-fund-partnership.png"
     },
     {
         "Name": "Andreessen Horowitz Talent x Opportunity",
@@ -261,7 +261,7 @@
         "Application deadline": "N/A",
         "Qualifications": "For U.S. based businesses; consumer facing technology product in market; outside of traditional venture capital/Silicon Valley network; should be able to show proven traction/growth of business",
         "One-line description": "An a16z initiative identifying and supporting underrepresented, high-potential founders.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/a16z-talent-x-opportunity.png"
     },
     {
         "Name": "Bain & Company Founder's Studio",
@@ -272,7 +272,7 @@
         "Application deadline": "N/A",
         "Qualifications": "For pre-seed and seed-stage founders",
         "One-line description": "A Bain-backed incubator building new disruptive tech ventures from the ground up.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/bain-and-co-founders-studio.png"
     },
     {
         "Name": "Village Global Velocity",
@@ -283,7 +283,7 @@
         "Application deadline": "Deadline passed",
         "Qualifications": "For pre-seed founders who are rapidly ambitious",
         "One-line description": "A bespoke pre-seed program offering capital, community, and networks for new founders.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/village-global-velocity.png"
     },
     {
         "Name": "Afore Capital Founders in Residence",
@@ -294,7 +294,7 @@
         "Application deadline": "N/A",
         "Qualifications": "For pre-seed founders who are self-motivated and ship and iterate with customers daily",
         "One-line description": "An Afore Capital cohort program for idea-stage founders seeking mentorship and funding.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/afore-capital-founders-residence.png"
     },
     {
         "Name": "LAUNCH Accelerator",
@@ -305,7 +305,7 @@
         "Application deadline": "N/A",
         "Qualifications": "For pre-Series A founders with some traction who execute at a high level in markets that are important",
         "One-line description": "A rapid-growth accelerator providing mentorship, workshops, and networking for early-stage startups.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/launch-accelerator.png"
     },
     {
         "Name": "Pear VC PearX",
@@ -316,7 +316,7 @@
         "Application deadline": "Deadline passed",
         "Qualifications": "For any early-stage company",
         "One-line description": "A 14-week Pear VC accelerator designed to boost the success of early-stage companies.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/pear-vc-pear-x.png"
     },
     {
         "Name": "IDEO CoLab Ventures Incubation",
@@ -327,6 +327,6 @@
         "Application deadline": "N/A",
         "Qualifications": "For pre-seed and seed-stage founders",
         "One-line description": "An early-stage fund that invests in and incubates startups, protocols, and digital assets.",
-        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/social_image.png"
+        "Cover": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/accelerator-finder/ideo-colab-ventures-incubation.png"
     }
 ]
