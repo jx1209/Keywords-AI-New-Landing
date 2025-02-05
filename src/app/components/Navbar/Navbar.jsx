@@ -28,6 +28,12 @@ export function Navbar() {
   const pathname = usePathname();
   const resourceItems = [
     {
+      title: "Accelerators & AI Grants Finder",
+      subTitle: "Find and apply for accelerators & grants.",
+      icon: DashboardIcon,
+      link: "https://keywordsai.co/accelerator-grant-finder",
+    },
+    {
       title: "SEO description generator",
       subTitle: "Generate SEO-friendly descriptions.",
       icon: RequestsIcon,
