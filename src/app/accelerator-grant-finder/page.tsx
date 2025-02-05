@@ -5,12 +5,12 @@ import FinderCard from "../components/AcceleratorGrantFinder/FinderCard";
 export const metadata: Metadata = {
   title: "Accelerators & AI Grants Finder | Curated by Keywords AI",
   description:
-    "Comprehensive directory of 250+ AI models and large language models (LLMs) and their capabilities. Compare details, pricing, benchmarks, and more.",
+    "Explore funding opportunities, accelerators, and grants for AI startups. Get details on programs and eligibility to support your AI innovation.",
   openGraph: {
     type: "website",
     title: "Accelerators & AI Grants Finder | Curated by Keywords AI",
     description:
-      "Comprehensive directory of 250+ AI models and large language models (LLMs) and their capabilities. Compare details, pricing, benchmarks, and more.",
+      "Explore funding opportunities, accelerators, and grants for AI startups. Get details on programs and eligibility to support your AI innovation.",
     url: "https://keywordsai.co/accelerator-grant-finder",
     siteName: "Keywords AI",
     images: [
