@@ -47,7 +47,7 @@ export default function AGDetailContent({ name, type, amount, description, cover
     }
 
     return (
-        <div className="flex flex-col pt-[140px] pb-[120px] px-72">
+        <div className="flex flex-col pt-[140px] pb-[120px] max-w-[1200px] mx-auto">
             <div className="flex flex-col gap-[8px]">
                 <h1 className="text-gray-1 text-[44px] font-[600] leading-[56px] max-w-[1200px] w-full display-lg">
                     {agDetails.name}
