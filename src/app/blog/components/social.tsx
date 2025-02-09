@@ -18,7 +18,7 @@ export default function SocialIcons() {
   const handleDiscordLeave = () => setIsDiscordHovered(false);
 
   return (
-    <div className="flex sm:flex-col flex-row items-start gap-sm">
+    <div className="flex flex-row items-start gap-sm">
       <a
         href="https://www.linkedin.com/company/keywordsai"
         target="_blank"
