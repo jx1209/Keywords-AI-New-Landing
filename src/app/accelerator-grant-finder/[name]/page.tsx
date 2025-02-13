@@ -83,22 +83,48 @@ export default async function AcceleratorGrantDetails({
   // searchParams?: { [key: string]: string | string[] | undefined };
 }) {
   const resolvedParams = await params;
-  const name = decodeURIComponent(resolvedParams["name"]);
+  const decodedName = decodeURIComponent(resolvedParams.name).replace(/%2F/g, '/');
+
+  console.log('Decoded Name:', decodedName); // Debug log
+  console.log('Available entries:', accels_grants.map(item => item.Name)); // Debug log
   
   // Find the matching entry from accels_grants
-  const entry = accels_grants.find((item) => item.Name === name);
+  const entry = accels_grants.find((item) => {
+    console.log('Comparing:', item.Name, '===', decodedName); // Debug log
+    return item.Name === decodedName;
+  });
 
+  if (!entry) {
+    console.log(`No entry found for: ${decodedName}`); // Debug log
+    return (
+      <AGDetailContent
+        name={decodedName}
+        type=""
+        amount=""
+        description=""
+        cover=""
+        website=""
+        perks=""
+        deadline=""
+        qualifications=""
+      />
+    );
+  }
+
+  console.log('Found entry:', entry); // Debug log
+
+  // Return the component with the found data
   return (
     <AGDetailContent
-      name={name}
-      type={entry?.Type || ""}
-      amount={entry?.Funding || ""}
-      description={entry?.["One-line description"] || ""}
-      cover={entry?.Cover || ""}
-      website={entry?.Website || ""}
-      perks={entry?.Perks || ""}
-      deadline={entry?.["Application deadline"] || ""}
-      qualifications={entry?.Qualifications || ""}
+      name={entry.Name}
+      type={entry.Type}
+      amount={entry.Funding}
+      description={entry["One-line description"]}
+      cover={entry.Cover}
+      website={entry.Website}
+      perks={entry.Perks}
+      deadline={entry["Application deadline"]}
+      qualifications={entry.Qualifications}
     />
   );
 }

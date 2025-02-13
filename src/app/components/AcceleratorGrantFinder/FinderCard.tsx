@@ -13,7 +13,8 @@ export default function FinderCard({ name, type, amount, description, cover, web
         localStorage.setItem(`accel-grant-${agName}`, JSON.stringify({
             name, type, amount, description, cover, website, perks, deadline, qualifications
         }));
-        router.push(`/accelerator-grant-finder/${agName}`);
+        const encodedName = encodeURIComponent(agName).replace(/\//g, '%2F');
+        router.push(`/accelerator-grant-finder/${encodedName}`);
     };
 
     return (
