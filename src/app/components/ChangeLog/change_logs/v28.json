@@ -1,0 +1,28 @@
+{
+  "date": "February 7, 2025",
+  "Title": "Upload CSV in Testsets and add production logs to a testset",
+  "snapshot": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/testsets.gif",
+  "introduction": "We’ve improved Testsets to:  \n- Easily upload your testset for prompt experiments. \n- Use production logs to directly test your prompt with real-world test cases.",
+
+  "sections": {
+    "New": [
+      {"tag": "Lab", "description": "Revamped Lab to make it easier to create and run prompt experiments."},
+      {"tag": "Prompts", "description": "Redesigned the Overview panel to make it easier to track prompt versions and performance."},
+      {"tag": "Traces", "description": "Added LangGraph integration."},
+      {"tag": "Traces", "description": "Added Vercel AI SDK integration."},
+      {"tag": "Traces", "description": "Group traces across sessions - you can now group traces by assigning a Trace group ID to each trace."},
+      {"tag": "Logs", "description": "You can now view LLM logs with variables directly in the side panel. This makes it easier to separate the original prompt template and the populated version."}
+    ],
+    "Improved": [
+      {"tag": "Traces", "description": "Improved the side panel in Traces; you can now see more details about each trace."},
+      {"tag": "Settings", "description": "Added View Code for Load Balancing."}
+    ],
+    "Fixed": [
+      {"tag": "Prompts", "description": "Fixed a bug where prompt filters were not working."},
+      {"tag": "Playground", "description": "Fixed a bug where calling DeepSeek R1 would call GPT-4."},
+      {"tag": "Playground", "description": "Fixed a bug where sometimes there was no output in the playground."},
+      {"tag": "Models", "description": "Updated o3 parameters."},
+      {"tag": "Labs", "description": "Fixed a bug where users couldn't import a new prompt in Lab."}
+    ]
+  }
+}
