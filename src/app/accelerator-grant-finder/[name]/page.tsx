@@ -115,6 +115,7 @@ export default async function AcceleratorGrantDetails({
 
   // Return the component with the found data
   return (
+    <div className="flex flex-col items-center">
     <AGDetailContent
       name={entry.Name}
       type={entry.Type}
@@ -122,9 +123,10 @@ export default async function AcceleratorGrantDetails({
       description={entry["One-line description"]}
       cover={entry.Cover}
       website={entry.Website}
-      perks={entry.Perks}
-      deadline={entry["Application deadline"]}
-      qualifications={entry.Qualifications}
-    />
+        perks={entry.Perks}
+        deadline={entry["Application deadline"]}
+        qualifications={entry.Qualifications}
+      />
+    </div>
   );
 }
