@@ -1,0 +1,25 @@
+{
+  "date": "February 14, 2025",
+  "Title": "Revamped Testsets table",
+  "snapshot": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/new-testsets.gif",
+  "introduction": "We’ve added Tab and Enter key support to the Testsets table for smoother navigation and improved the overall UX. Now, you can edit your test cases just like in Google Sheets!  \n\n Try it out today! 📝",
+
+  "sections": {
+    "New": [
+      {"tag": "Playground", "description": "Variable support in Playground. You can now bring your prompt with dynamic variables to the model playground."},
+      {"tag": "Logs", "description": "You can create a testset from a log."},
+      {"tag": "Logs", "description": "You can bring a log to the Playground with variables."},
+      {"tag": "Lab", "description": "You can import ideal output in Lab to test your prompt with real-world test cases."}
+    ],
+    "Improved": [
+      {"tag": "Prompts", "description": "Redesigned Activity to make it Linear-like and have a more clear view of activities on prompts."}
+    ],
+    "Fixed": [
+      {"tag": "Logs", "description": "Fixed a issue where the Logs is loading very slow."},
+      {"tag": "Traces", "description": "Fixed a bug where the width of the Waterfall is not calculated correctly."},
+      {"tag": "Prompts", "description": "Fixed a bug where formatting structure is not preserved."},
+      {"tag": "API", "description": "Fixed a bug where can't find a prompt using Prompt API."},
+      {"tag": "Testsets", "description": "Fixed a bug where can't import a CSV file."}
+    ]
+  }
+}
