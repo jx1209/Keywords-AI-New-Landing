@@ -30,19 +30,19 @@ export function PricingColumn({
   checkHighlighted = false,
   onButtonClick,
 }: PricingColumnProps) {
-  const columnClasses = `flex flex-col min-w-[224px] w-[224px] py-md items-start gap-md shrink-0 ${
+  const columnClasses = `flex flex-col py-md items-start gap-md flex-1 self-stretch ${
     highlighted ? "bg-gray-2 shadow-border shadow-gray-3 rounded-md p-md" : ""
   }`;
 
   return (
     <div className={columnClasses}>
       {/* Header */}
-      <div className="flex flex-col items-start gap-sm w-full shrink-0self-stretch">
+      <div className="flex flex-col items-start gap-sm self-stretch">
         <span className="display-sm text-gray-white">{title}</span>
         <Button
           variant={highlighted ? "r4-primary" : "r4-white"}
           text={buttonText}
-          className="w-full shrink-0"
+          className="flex-1"
           width="w-full"
           onClick={onButtonClick}
         />

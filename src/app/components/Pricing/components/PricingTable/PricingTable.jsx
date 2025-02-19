@@ -810,20 +810,20 @@ export function PricingTable() {
   return (
     <div className="flex flex-col">
       <div className="flex self-stretch gap-sm w-full">
-        <div className="text-md-medium text-gray-white min-w-[240px] h-[42px] flex items-center">
+        <div className="text-md-medium text-gray-white w-1/5 min-w-[240px] h-[42px] flex items-center">
           Free trial
         </div>
-        <div className="text-md-regular text-gray-white min-w-[224px] flex items-center h-[42px] px-sm gap-xxs">
+        <div className="text-md-regular text-gray-white w-1/5 flex items-center h-[42px]  px-sm gap-xxs">
           <Check fill="fill-gray-4" />
           Free forever
         </div>
-        <div className="text-md-regular text-gray-white min-w-[224px] flex items-center h-[42px] px-sm gap-xxs">
+        <div className="text-md-regular text-gray-white w-1/5 flex items-center h-[42px] px-sm gap-xxs">
           <Check fill="fill-gray-4" />7 days free
         </div>
-        <div className="text-md-regular text-gray-white min-w-[224px] flex items-center h-[42px] px-sm gap-xxs bg-gray-2">
+        <div className="text-md-regular text-gray-white w-1/5 flex items-center h-[42px] px-sm gap-xxs bg-gray-2">
           <Check fill="fill-primary" />7 days free
         </div>{" "}
-        <div className="text-md-regular text-gray-white min-w-[224px] flex items-center h-[42px] px-sm gap-xxs">
+        <div className="text-md-regular text-gray-white w-1/5 flex items-center h-[42px] px-sm gap-xxs">
           <Check fill="fill-gray-4" />1 month free
         </div>
       </div>
@@ -831,35 +831,35 @@ export function PricingTable() {
       {Object.entries(pricingData).map(([sectionKey, section]) => (
         <div key={sectionKey} className="flex flex-col">
           <div className="flex flex-row gap-sm">
-            <div className="text-md-medium text-gray-white min-w-[240px] h-[42px] flex items-center">
+            <div className="text-md-medium text-gray-white w-1/5 min-w-[240px] h-[42px] flex items-center">
               {section.displayName}
             </div>
-            <div className="h-[42px] bg-gray-1 min-w-[224px]" />
-            <div className="h-[42px] bg-gray-1 min-w-[224px]" />
-            <div className="h-[42px] bg-gray-2 min-w-[224px]" />
-            <div className="h-[42px] bg-gray-1 min-w-[224px]" />
+            <div className="h-[42px] bg-gray-1 w-1/5" />
+            <div className="h-[42px] bg-gray-1 w-1/5" />
+            <div className="h-[42px] bg-gray-2 w-1/5" />
+            <div className="h-[42px] bg-gray-1 w-1/5" />
           </div>
           {Object.entries(section.features).map(([featureKey, feature]) => (
             <div key={featureKey} className="flex flex-row gap-sm">
-              <div className="text-md-regular text-gray-4 flex items-center h-[42px] min-w-[240px] shadow-border-b shadow-gray-2">
+              <div className="text-md-regular text-gray-4 w-1/5 flex items-center h-[42px] min-w-[240px] shadow-border-b shadow-gray-2">
                 {feature.displayName}
               </div>
-              <div className="min-w-[224px]">{renderCell(feature.free, "free")}</div>
-              <div className="min-w-[224px]">{renderCell(feature.pro, "pro")}</div>
-              <div className="min-w-[224px]">
+              <div className="w-1/5">{renderCell(feature.free, "free")}</div>
+              <div className="w-1/5 ">{renderCell(feature.pro, "pro")}</div>
+              <div className="w-1/5 min-w-[224px]">
                 {renderCell(feature.team, "team")}
               </div>
-              <div className="min-w-[224px]">
+              <div className="w-1/5">
                 {renderCell(feature.enterprise, "enterprise")}
               </div>
             </div>
           ))}
           <div className="h-md w-full flex gap-sm">
-            <div className="h-full bg-gray-1 min-w-[240px]" />
-            <div className="h-full bg-gray-1 min-w-[224px]" />
-            <div className="h-full bg-gray-1 min-w-[224px]" />
-            <div className="h-full bg-gray-2 min-w-[224px]" />
-            <div className="h-full bg-gray-1 min-w-[224px]" />
+            <div className="h-full bg-gray-1 w-1/5 min-w-[240px]" />
+            <div className="h-full bg-gray-1 w-1/5" />
+            <div className="h-full bg-gray-1 w-1/5" />
+            <div className="h-full bg-gray-2 w-1/5" />
+            <div className="h-full bg-gray-1 w-1/5" />
           </div>
         </div>
       ))}

@@ -38,7 +38,7 @@ export default function SmallPricingCard({
   return (
     <div
       className={cn(
-        "flex flex-col pt-xs pb-sm px-sm items-start gap-md min-w-[224px] ",
+        "flex flex-col pt-xs pb-sm px-sm items-start gap-md flex-1 ",
         plan === "team" ? "bg-gray-2" : "rounded-md"
       )}
     >

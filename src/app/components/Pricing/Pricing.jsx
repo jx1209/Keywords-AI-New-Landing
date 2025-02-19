@@ -558,26 +558,26 @@ export function Pricing() {
       {/* pricing table */}
       <div className="flex flex-col px-xl pt-xxxl pb-[240px] gap-xl items-center self-stretch w-full">
         <div className="flex-col gap-0 max-w-[1200px] w-full">
-          <div className="overflow-x-auto">
-            <div className="flex flex-row w-full gap-sm items-start self-stretch sticky -top-lg bg-gray-1">
-              <div className="flex flex-row min-w-[240px] flex-1 items-start self-stretch" />
-              {pricingCards.map((card) => (
-                <SmallPricingCard
-                  key={card.plan}
-                  plan={card.plan}
-                  displayPlan={card.displayPlan}
-                  monthlyPrice={card.monthlyPrice}
-                  yearlyPrice={card.yearlyPrice}
-                  yearlyDiscount={card.yearlyDiscount}
-                  isYearly={isYearly}
-                  currentPlan={card.plan}
-                  handleSwitchChange={handleSwitchChange}
-                  onClick={card.onClick}
-                />
-              ))}
-            </div>
-            <PricingTable />
+          <div className="flex flex-row w-full gap-sm items-start self-stretch sticky -top-lg bg-gray-1">
+            <div className="flex flex-row min-w-[240px] flex-1 items-start self-stretch" />
+            {pricingCards.map((card) => (
+              <SmallPricingCard
+                key={card.plan}
+                plan={card.plan}
+                displayPlan={card.displayPlan}
+                monthlyPrice={card.monthlyPrice}
+                yearlyPrice={card.yearlyPrice}
+                yearlyDiscount={card.yearlyDiscount}
+                isYearly={isYearly}
+                currentPlan={card.plan}
+                handleSwitchChange={handleSwitchChange}
+                onClick={card.onClick}
+              />
+            ))}
           </div>
+          <PricingTable />
+          {/* 
+          <PricingTable /> */}
         </div>
       </div>
     </Page>
