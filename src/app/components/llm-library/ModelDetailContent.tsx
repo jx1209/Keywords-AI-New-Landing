@@ -10,22 +10,41 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "../ui/Accordion";
+import { fetchModels } from "@/services/modelService";
 
 export function ModelDetailContent({ modelName }: { modelName: string }) {
   const [model, setModel] = useState<ModelsResponse["models"][0] | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    try {
-      const modelData = localStorage.getItem(`model-${modelName}`);
-      if (modelData) {
-        setModel(JSON.parse(modelData));
+    const loadModel = async () => {
+      try {
+        // First try to get from localStorage
+        const modelData = localStorage.getItem(`model-${modelName}`);
+        if (modelData) {
+          setModel(JSON.parse(modelData));
+          return;
+        }
+
+        // If not in localStorage, fetch from API
+        const response = await fetchModels();
+        const foundModel = response.models.find(
+          m => m.model_name.replace(/[/:]/g, "-") === modelName
+        );
+        
+        if (foundModel) {
+          setModel(foundModel);
+          // Store in localStorage for future use
+          localStorage.setItem(`model-${modelName}`, JSON.stringify(foundModel));
+        }
+      } catch (error) {
+        console.error("Error loading model data:", error);
+      } finally {
+        setIsLoading(false);
       }
-    } catch (error) {
-      console.error("Error loading model data:", error);
-    } finally {
-      setIsLoading(false);
-    }
+    };
+
+    loadModel();
   }, [modelName]);
 
   if (isLoading) {
