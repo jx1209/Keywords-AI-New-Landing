@@ -29,8 +29,8 @@ export default function AGDetailContent({
     const types = type?.split(',').map(t => t.trim());
 
     return (
-        <div className="flex flex-col pt-[140px] pb-[120px] px-sm items-center self-stretch gap-xl">
-            <div className="flex flex-col max-w-[1200px] items-start self-stretch gap-md">
+        <div className="flex flex-col pt-[140px] pb-[120px] max-w-[1200px] w-full items-center gap-xl">
+            <div className="flex flex-col items-start self-stretch gap-md">
                 <div className="flex flex-col items-start gap-xxs self-stretch">
                     <h1 className="self-stretch text-gray-white display-lg">
                         {name}
@@ -50,7 +50,7 @@ export default function AGDetailContent({
                 </div>                    
                 <span className="text-gray-white text-md-regular">{description}</span>
             </div>
-            <div className="flex flex-col max-w-[1200px] items-start self-stretch gap-xxs">
+            <div className="flex flex-col items-start self-stretch gap-xxs">
                 <span className="self-stretch text-gray-white display-xs">Perks:</span>
                 {perks?.split(';').map((perk, index) => (
                     <div key={index} className="flex self-stretch gap-xxxs">
@@ -59,11 +59,11 @@ export default function AGDetailContent({
                     </div>
                 ))}
             </div>
-            <div className="flex flex-col max-w-[1200px] items-start self-stretch gap-xxs">
+            <div className="flex flex-col items-start self-stretch gap-xxs">
                 <span className="self-stretch text-gray-white display-xs">Qualifications:</span>
                 <span className="self-stretch text-gray-white text-md-regular">{qualifications}</span>
             </div>
-            <div className="flex max-w-[1200px] items-center gap-xxs self-stretch">
+            <div className="flex items-center gap-xxs self-stretch">
                 <Button
                     variant="r4-primary"
                     text="Apply Now"

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "Keywords AI",
     images: [
       {
-        url: "https://keywordsai-static.s3.amazonaws.com/social_media_images/social_image.png",
+        url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/grants.png",
       },
     ],
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     site: "@keywordsai",
     title: "Accelerators & AI Grants Finder | Curated by Keywords AI",
     images: [
-      "https://keywordsai-static.s3.amazonaws.com/social_media_images/social_image.png",
+      "https://keywordsai-static.s3.us-east-1.amazonaws.com/social_media_images/grants.png",
     ],
   },
 };

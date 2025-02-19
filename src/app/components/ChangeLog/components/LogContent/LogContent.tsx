@@ -12,6 +12,8 @@ import {
   TagDatasets,
   TagPrompts,
   TagSettings,
+  TagLab,
+  TagTraces,
 } from "@/app/components/Icons";
 import { Tag } from "@/app/components/Tag/Tag";
 import Accordion from "@/app/components/Sections/Accordion";
@@ -38,8 +40,12 @@ export function TagIconHelper(flag: string) {
       return <TagDatasets />;
     case "Prompts":
       return <TagPrompts />;
+    case "Traces":
+      return <TagTraces />;
     case "Settings":
       return <TagSettings />;
+    case "Lab":
+      return <TagLab />;
     default:
       return <TagRocket />;
   }
