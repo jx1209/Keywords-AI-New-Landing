@@ -39,7 +39,8 @@
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.0",
     "tailwind-merge": "^2.5.5",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",
