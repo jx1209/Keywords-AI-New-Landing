@@ -10,48 +10,22 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "../ui/Accordion";
-import { fetchModels } from "@/services/modelService";
 
 export function ModelDetailContent({ modelName }: { modelName: string }) {
   const [model, setModel] = useState<ModelsResponse["models"][0] | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const loadModel = async () => {
-      if (!modelName) return;
-      
-      setIsLoading(true);
-      try {
-        // First try localStorage
-        const modelData = localStorage.getItem(`model-${modelName}`);
-        if (modelData) {
-          setModel(JSON.parse(modelData));
-          setIsLoading(false);
-          return;
-        }
-
-        // If not in localStorage, try getting all models
-        const allModels = await fetchModels();
-        const foundModel = allModels.models.find(
-          (m) => m.model_name.replace(/[/:]/g, "-") === modelName
-        );
-        
-        if (foundModel) {
-          localStorage.setItem(`model-${modelName}`, JSON.stringify(foundModel));
-          setModel(foundModel);
-        } else {
-          throw new Error("Model not found");
-        }
-      } catch (error) {
-        console.error("Error loading model data:", error);
-        setError("Failed to load model data. Please try again later.");
-      } finally {
-        setIsLoading(false);
+    try {
+      const modelData = localStorage.getItem(`model-${modelName}`);
+      if (modelData) {
+        setModel(JSON.parse(modelData));
       }
-    };
-
-    loadModel();
+    } catch (error) {
+      console.error("Error loading model data:", error);
+    } finally {
+      setIsLoading(false);
+    }
   }, [modelName]);
 
   if (isLoading) {
