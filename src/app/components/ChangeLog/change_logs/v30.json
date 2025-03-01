@@ -1,0 +1,22 @@
+{
+  "date": "February 21, 2025",
+  "Title": "Full-text search",
+  "snapshot": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/full-text-search.png",
+  "introduction": "We have improved the full-text search in Logs to let you search any LLM logs faster.",
+  "sections": {
+    "New": [
+      {"tag": "Models", "description": "Added Grok as a new model provider."},
+      {"tag": "Prompts", "description": "You can now add comments in prompts to share notes with your team."}
+    ],
+    "Improved": [
+      {"tag": "Prompts", "description": "Create new prompts by duplicating existing ones."},
+      {"tag": "Playground", "description": "Open logs directly in Playground with the prompt auto-selected."},
+      {"tag": "Playground", "description": "Increased max token limit to 16,384 in Playground."}
+    ],
+    "Fixed": [
+      {"tag": "Logs", "description": "Fixed image display issues in Logs."},
+      {"tag": "Logs", "description": "Fixed broken log filter editing."},
+      {"tag": "Playground", "description": "Fixed prompt commit issues in Playground."}
+    ]
+  }
+}
