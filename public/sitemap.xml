@@ -147,5 +147,13 @@
       <loc>https://keywordsai.co/blog/top-10-llm-api-providers</loc>
       <priority>1.0</priority>
    </url>
+      <url>
+      <loc>https://keywordsai.co/blog/how-to-use-openai-deep-research-effectively</loc>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://keywordsai.co/blog/introducing-grok-3-what-it-is-how-to-access-it-and-why-it-matters</loc>
+      <priority>1.0</priority>
+   </url>
 
 </urlset>
