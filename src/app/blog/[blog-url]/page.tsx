@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { blogs } from "../articles/articles";
 import { Blog } from "../articles/articles"; // Import the Blog type
 import { Largecard } from "../components/Largecard";
@@ -99,6 +99,7 @@ export default async function BlogDetail({
 
   return (
     <React.Fragment>
+
       <div
         className={cn(
           "flex flex-col pt-[140px] pb-[120px] px-sm items-center gap-xl w-full !select-text"
