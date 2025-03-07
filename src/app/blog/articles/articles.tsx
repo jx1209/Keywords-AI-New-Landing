@@ -3956,4 +3956,64 @@ export const blogs: Blog[] = [
       }
     ],
   },
+  {
+    id: 41,
+    timestamp: "March 6, 2025",
+    slug: "/blog/posthog-keywords-ai-integration",
+    title: "PostHog <> Keywords AI Integration",
+    cover: {
+      id: 1,
+      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/posthog/cover.jpg",
+    },
+    type: "INTEGRATION",
+    author: {
+      name: "Hendrix",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/hendrix.png",
+        props: {
+          variant: "circle",
+        },
+      },
+    },
+    paragraphs: [
+      {
+        id: 1,
+        text: "We're excited to announce the new integration between [PostHog](https://posthog.com/) and [Keywords AI](https://www.keywordsai.co). \n\n You can now easily send your LLM data from Keywords AI directly into PostHog. This integration lets you analyze all of your product data and insights in one platform. No more switching between tools—just clear, unified analytics for better decision-making. \n\n With this integration, you can: \n- Combine data from Keywords AI and PostHog in one place \n- Easily analyze and visualize your AI-driven data \n- Save time and simplify your workflow \n\n Try out the Keywords AI <> PostHog integration and get a complete view of your product analytics today!​​​",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/posthog/posthog.gif",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 2,
+        primary_title: "What is PostHog?",
+        text:"[PostHog](https://posthog.com/) is **a free, open-source platform that helps developers build better products**. It combines product analytics, session replay, user surveys, and more into one place. \n\n **Features** \n- **Product analytics**: Track product usage and performance \n- **Session replay**: See what users do on your site or app \n- **Heatmaps**: Visualize user activity \n- **Feature flags**: Control which features are available to users \n- **Experiments**: Run A/B tests and other experiments \n- **Surveys**: Get feedback from users \n- **Data warehouse**: Store and query product usage data \n\n **How it works**:\n- You can deploy PostHog to the cloud or self-host it on your own infrastructure \n- You can use SQL to query product usage data \n- You can try out the features for free before paying \n\n **Why it's useful** \n- PostHog helps developers build successful products \n- It provides tools to improve user experience and product quality \n- It helps you understand how users interact with your product"
+      },
+      {
+        id: 3,
+        primary_title: "Integrate Keywords AI with PostHog",
+        text: "1. Sign up for [Keywords AI](https://www.keywordsai.co/) and add it to your app. \n2. Copy PostHog host and project API key from your [PostHog project settings](https://us.posthog.com/settings/project). \n3. In your Keywords AI requests in your code, add the following parameters: ",
+        image: {
+          id: 1,
+          url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/posthog/integration-code.png",
+          props: {
+            variant: "md",
+          },
+        },
+      },
+      {
+        id: 4,  
+        text: "Keywords AI will now send events to PostHog under the name `keywords_ai_api_logging`. They send events as soon as they're available.",
+      },
+      {
+        id: 5,
+        primary_title: "Using the Keywords AI dashboard template on PostHog",
+        text: "Once you've installed the integration, our Keywords AI [dashboard template](https://posthog.com/docs/product-analytics/dashboards) helps you quickly set up relevant insights. You can see an [example dashboard here](https://us.posthog.com/shared/p1AymhS7EEm97nZOGA8nWmsdshhzYA). To create your own dashboard from a template: \n1. Go the [dashboard tab](https://us.posthog.com/dashboard) in PostHog. \n2. Click the **New dashboard** button in the top right. \n3. Select **LLM metrics – Keywords AI** from the list of templates.",
+      }
+    ],
+  },
 ];

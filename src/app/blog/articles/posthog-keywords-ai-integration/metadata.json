@@ -1,0 +1,9 @@
+{
+  "timestamp": "March 6, 2025",
+  "type": "INTEGRATION",  
+  "subtitle": "",
+  "title": "PostHog <> Keywords AI Integration",
+  "h1": "PostHog <> Keywords AI Integration",
+  "description": "Discover the new integration between Keywords AI and PostHog that streamlines your workflow by combining LLM data with product analytics. Learn how to set up and use this integration to analyze AI-driven insights, create dashboards, and make better decisions in one unified platform. Find step-by-step setup instructions and maximize the value of your product data today!",
+  "image": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/posthog/cover.jpg"
+}
