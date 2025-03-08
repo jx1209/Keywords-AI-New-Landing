@@ -2403,7 +2403,7 @@ export const RightArrow = ({
   );
 };
 
-export const ChangeLogHeaderLine = ({}) => {
+export const ChangeLogHeaderLine = ({ className = '' }) => {
   return (
     <svg
       width="600"
@@ -2411,6 +2411,7 @@ export const ChangeLogHeaderLine = ({}) => {
       viewBox="0 0 600 2"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <rect
         width="600"
