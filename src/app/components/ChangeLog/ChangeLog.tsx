@@ -1,34 +1,32 @@
-// import React, {useEffect, useState} from 'react';
-// import { LogHeader } from './components/LogHeader/LogHeader';
-// import {LogContent } from './components/LogContent/LogContent';
-// import { Page } from 'src/components/Page';
-// import log1 from './change_logs/v1.json';
-// import log2 from './change_logs/v2.json';
-
-// export function ChangeLog() {
-
-//   const logs = [log1, log2];
-
-//   return (
-//     <Page>
-//       <div aria-label='frame 798'
-//         className="flex pt-[80px] pr-xl pb-[120px] pl-xl flex-col items-center gap-xl self-stretch ">
-//         <LogHeader />
-//         {logs.map((log, index) => (
-//           <LogContent key={index} log={log} />
-//         ))}
-//       </div>
-//     </Page>
-//   );
-// }
 "use client";
 import React, { useEffect, useState } from "react";
 import { LogHeader } from "./components/LogHeader/LogHeader";
 import { LogContent } from "./components/LogContent/LogContent";
 import { Page } from "@/app/components/Page/Page";
 import logs from "./change_logs";
+import './ChangeLog.css';
 
 export function ChangeLog() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Effect to detect screen size and update state
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    // Check on initial render
+    checkIfMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', checkIfMobile);
+    };
+  }, []);
+
   // const [logs, setLogs] = useState<any[]>([]);
 
   // useEffect(() => {
@@ -59,11 +57,20 @@ export function ChangeLog() {
     <Page>
       <div
         aria-label="frame 798"
-        className="flex pt-[80px] pr-xl pb-[120px] pl-xl flex-col items-center gap-[120px] self-stretch"
+        className={`flex flex-col items-center self-stretch ${
+          isMobile 
+            ? "pt-[40px] pb-[60px] gap-[60px] px-4" 
+            : "pt-[80px] pr-xl pb-[120px] pl-xl gap-[120px]"
+        }`}
       >
         <LogHeader />
-        {logs.map((log, index) => (
-          <LogContent key={index} log={log} />
+        {sortedLogs.map((log, index) => (
+          <div 
+            key={index}
+            className={isMobile ? "w-full" : "w-auto max-w-[1200px]"}
+          >
+            <LogContent log={log} />
+          </div>
         ))}
       </div>
     </Page>

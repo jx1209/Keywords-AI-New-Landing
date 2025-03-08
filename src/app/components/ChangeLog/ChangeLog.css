@@ -1,3 +1,18 @@
 .ChangeLog {
   
 }
+
+.changelog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0 120px;
+  gap: 120px;
+}
+
+@media (max-width: 768px) {
+  .changelog-container {
+    padding: 40px 0 60px;
+    gap: 60px;
+  }
+}

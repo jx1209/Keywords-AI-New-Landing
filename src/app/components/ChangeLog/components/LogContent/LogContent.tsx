@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/app/components/Buttons";
 import {
   Right,
@@ -131,14 +132,38 @@ export function LogSection({ sectionContent, sectionName }: LogSectionProps) {
 }
 
 export function LogContent({ log }: { log: Log }) {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // Effect to detect screen size and update state
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    // Check on initial render
+    checkIfMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', checkIfMobile);
+    };
+  }, []);
+
   const isExternalLink =
     log.snapshot?.startsWith("http://") || log.snapshot?.startsWith("https://");
+    
   return (
-    <div aria-label="changelog history" className="flex w-[1200px] items-start">
-      <div className="flex w-[300px] h-[28px] py-xxs px-0 flex-col justify-center items-start gap-[8px] flex-shrink-0">
+    <div 
+      aria-label="changelog history" 
+      className={`flex ${isMobile ? 'flex-col w-full' : 'flex-row w-[1200px]'} items-start`}
+    >
+      <div className={`flex ${isMobile ? 'w-full mb-4' : 'w-[300px]'} h-[28px] py-xxs px-0 flex-col justify-center items-start gap-[8px] flex-shrink-0`}>
         <p className="caption text-gray-4">{log.date}</p>
       </div>
-      <div className="flex w-[600px] flex-col items-start gap-md flex-shrink-0">
+      <div className={`flex ${isMobile ? 'w-full' : 'w-[600px]'} flex-col items-start gap-md flex-shrink-0`}>
         <p className="text-gray-white display-xs-md">{log.Title}</p>
         {log.snapshot && (
           <div className="relative w-full aspect-w-16 aspect-h-9">
