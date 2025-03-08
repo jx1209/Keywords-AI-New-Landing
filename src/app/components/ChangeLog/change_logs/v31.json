@@ -1,0 +1,22 @@
+{
+  "date": "February 28, 2025",
+  "Title": "Jinja support in Prompts",
+  "snapshot": "https://keywordsai-static.s3.us-east-1.amazonaws.com/docs/prompt/jinja-in-prompts.png",
+  "introduction": "We have introduced Jinja support in prompts, allowing you to use Jinja templates to create more dynamic prompts. For more details, visit the [Jinja in Prompts](https://docs.keywordsai.co/features/prompt/advanced/jinja-support) page.",
+  "sections": {
+    "New": [
+      {"tag": "Evals", "description": "Human annotation is now available for each LLM log. Learn more [here](https://docs.keywordsai.co/features/evaluation/human-evals/human-evals-setup)."},
+      {"tag": "Models", "description": "Integrated the [GPT-4.5](https://www.keywordsai.co/llm-library/gpt-4.5-preview) model."},
+      {"tag": "API", "description": "Logging for embedding models is now supported. See details [here](https://docs.keywordsai.co/features/monitoring/logging/embedding)."},
+      {"tag": "API", "description": "Added support for the [OpenAI GO SDK](https://docs.keywordsai.co/integration/development-frameworks/openai-sdk)."}
+    ],
+    "Improved": [
+      {"tag": "API", "description": "PDF file support has been added. More information [here](https://docs.keywordsai.co/features/generation/upload-pdf)."},
+      {"tag": "Testsets", "description": "You can now add an ideal output column to your test sets."}
+    ],
+    "Fixed": [
+      {"tag": "Logs", "description": "Resolved image display issues in logs."},
+      {"tag": "Playground", "description": "Fixed the bug where the model was empty in Compare mode."}
+    ]
+  }
+}

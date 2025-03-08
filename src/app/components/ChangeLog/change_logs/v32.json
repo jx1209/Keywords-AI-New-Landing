@@ -1,0 +1,31 @@
+{
+  "date": "March 7, 2025",
+  "Title": "Human, LLM, and Code Evaluations",
+  "snapshot": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/evaluators.png",
+  "introduction": "We have redesigned Evaluations, allowing you to run human, LLM, and code evaluations in Keywords AI. Set up your first [evaluator](https://docs.keywordsai.co/features/evaluation/llm-evals/llm-evaluator) in minutes.",
+  "sections": {
+    "New": [
+      {"tag": "Experiments", "description": "Renamed Lab to Experiments."},
+      {"tag": "Experiments", "description": "You can now [export your experiments](https://docs.keywordsai.co/features/prompt/lab) as JSON/CSV files."},
+      {"tag": "Experiments", "description": "Run evaluations within Experiments."},
+      {"tag": "Dashboard", "description": "New graph: Top Prompts. Learn [how to monitor prompts](https://docs.keywordsai.co/features/prompt/monitor-a-prompt)."},
+      {"tag": "Prompts", "description": "Log and monitor an external prompt without creating a new prompt in Keywords AI. Learn more [here](https://docs.keywordsai.co/features/prompt/advanced/log-custom-prompt)."}
+    ],
+    "Improved": [
+      {"tag": "Experiments", "description": "Variables are now logged when running experiments."},
+      {"tag": "Experiments", "description": "Improved error message display during experiments."},
+      {"tag": "Experiments", "description": "Improved prompt selection workflow when creating an experiment."}
+    ],
+    "Fixed": [
+      {"tag": "API", "description": "Resolved the issue where the [API playground](https://docs.keywordsai.co/api-endpoints/integration/request-logging-endpoint) in the documentation was not functioning."},
+      {"tag": "Playground", "description": "Fixed the bug where the message box couldn't be scrolled when messages were too long."},
+      {"tag": "Playground", "description": "Resolved occasional 'model not found' errors."},
+      {"tag": "Experiments", "description": "Fixed the bug preventing single column execution."},
+      {"tag": "Experiments", "description": "Resolved the issue preventing row clearing."},
+      {"tag": "Prompts", "description": "Fixed the issue where commit messages were not displayed in the Overview."},
+      {"tag": "Prompts", "description": "Resolved the issue preventing prompt logging with the Logging API."},
+      {"tag": "Settings", "description": "Fixed the bug preventing Anthropic API key testing."},
+      {"tag": "Testsets", "description": "Resolved the issue preventing ideal output column parsing when importing CSV files."}
+    ]
+  }
+}

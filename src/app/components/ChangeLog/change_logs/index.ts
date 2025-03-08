@@ -29,9 +29,11 @@ import log27 from './v27.json'
 import log28 from './v28.json'
 import log29 from './v29.json'
 import log30 from './v30.json'
+import log31 from './v31.json'
+import log32 from './v32.json'
 // Import all your log files h ere
 
-const logs = [log30, log29, log28, log27, log26, log25, log24, log23, log22,log21, log20, log19,log18, log17,log16, log15, log14, log13, log12, log11, log10, log9, log8, log7, log6, log5, log4, log3, log2, log1
+const logs = [log32, log31, log30, log29, log28, log27, log26, log25, log24, log23, log22,log21, log20, log19,log18, log17,log16, log15, log14, log13, log12, log11, log10, log9, log8, log7, log6, log5, log4, log3, log2, log1
 ] // Add all imported logs to this array
 
 export default logs
