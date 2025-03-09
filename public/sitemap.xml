@@ -155,5 +155,13 @@
       <loc>https://keywordsai.co/blog/introducing-grok-3-what-it-is-how-to-access-it-and-why-it-matters</loc>
       <priority>1.0</priority>
    </url>
+   <url>
+      <loc>https://keywordsai.co/blog/introduction-to-mcp</loc>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://keywordsai.co/blog/posthog-keywords-ai-integration</loc>
+      <priority>1.0</priority>
+   </url>
 
 </urlset>
