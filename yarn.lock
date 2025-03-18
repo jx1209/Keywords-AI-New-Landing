@@ -1970,6 +1970,11 @@ concat-map@0.0.1:
   resolved "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
 
+core-js@^3.38.1:
+  version "3.41.0"
+  resolved "https://registry.npmjs.org/core-js/-/core-js-3.41.0.tgz"
+  integrity sha512-SJ4/EHwS36QMJd6h/Rg+GyR4A5xE0FSI3eZ+iBVpfqf1x0eTSg1smWLHrA+2jQThZSh97fmSgFSU8B61nxosxA==
+
 crelt@^1.0.5:
   version "1.0.6"
   resolved "https://registry.npmjs.org/crelt/-/crelt-1.0.6.tgz"
@@ -5008,14 +5013,15 @@ postcss@8.4.31:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-posthog-js@^1.158.1:
-  version "1.158.1"
-  resolved "https://registry.npmjs.org/posthog-js/-/posthog-js-1.158.1.tgz"
-  integrity sha512-BRCZUpkZTsNPTTclpqv6tB9aGD9OH1Lh+3SZdqo/JMbPesKRQ2XSis6WhxWmujrTZDfdJtVa7tnQG1aT2Ag4Yg==
+posthog-js@^1.231.0:
+  version "1.231.0"
+  resolved "https://registry.npmjs.org/posthog-js/-/posthog-js-1.231.0.tgz"
+  integrity sha512-8v3zRytQBg3KyKUPLy/9S5fw7ATeiKz3n3pLFxl1fQsV/a2mIt/MAwkIREZXTzi7mamsvtfXhSdggG7UYK/Ojw==
   dependencies:
+    core-js "^3.38.1"
     fflate "^0.4.8"
     preact "^10.19.3"
-    web-vitals "^4.0.1"
+    web-vitals "^4.2.4"
 
 preact@^10.19.3:
   version "10.23.1"
@@ -6202,10 +6208,10 @@ web-namespaces@^2.0.0:
   resolved "https://registry.npmjs.org/web-namespaces/-/web-namespaces-2.0.1.tgz"
   integrity sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==
 
-web-vitals@^4.0.1:
-  version "4.2.2"
-  resolved "https://registry.npmjs.org/web-vitals/-/web-vitals-4.2.2.tgz"
-  integrity sha512-nYfoOqb4EmElljyXU2qdeE76KsvoHdftQKY4DzA9Aw8DervCg2bG634pHLrJ/d6+B4mE3nWTSJv8Mo7B2mbZkw==
+web-vitals@^4.2.4:
+  version "4.2.4"
+  resolved "https://registry.npmjs.org/web-vitals/-/web-vitals-4.2.4.tgz"
+  integrity sha512-r4DIlprAGwJ7YM11VZp4R884m0Vmgr6EAKe3P+kO0PPj3Unqyvv59rczf6UiGcb9Z8QxZVcqKNwv/g0WNdWwsw==
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"

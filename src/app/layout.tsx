@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { NavigationLayout } from "@/layouts/NavigationLayout";
-import { PHProvider } from "./providers";
+import { PostHogProvider } from './providers'
 import dynamic from "next/dynamic";
 import Head from "next/head";
 // const inter = Inter({
@@ -83,9 +83,11 @@ export default function RootLayout({
       </Head>
         <body>
           {/* <body> */}
-          <div className="bg-gray-black h-full w-full">
-            <NavigationLayout>{children}</NavigationLayout>
-          </div>
+          <PostHogProvider>
+            <div className="bg-gray-black h-full w-full">
+              <NavigationLayout>{children}</NavigationLayout>
+            </div>
+          </PostHogProvider>
         </body>
     </html>
   );
