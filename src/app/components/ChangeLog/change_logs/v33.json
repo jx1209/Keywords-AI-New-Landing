@@ -1,0 +1,23 @@
+{
+  "date": "March 14, 2025",
+  "Title": "Run evaluations in Experiments",
+  "snapshot": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/evals-experiments.jpg",
+  "introduction": "You can now run LLM evals in Experiments. Import the defined evaluators and then choose the evaluator you want to run for each cell.",
+  "sections": {
+    "New": [
+      {"tag": "Prompts", "description": "Track prompt changes for each version, similar to GitHub."},
+      {"tag": "Experiments", "description": "View detailed metrics for each run in every cell."},
+      {"tag": "Logs", "description": "Log variables in prompts when executing them on the platform."}
+    ],
+    "Improved": [
+      {"tag": "Webhooks", "description": "Improved the setup process for webhooks."},
+      {"tag": "Experiments", "description": "Clear all evaluation results with a single click."}
+    ],
+    "Fixed": [
+      {"tag": "Dashboard", "description": "Fixed a bug where the Dashboard summary values were incorrect."},
+      {"tag": "Logs", "description": "Fixed a bug where images couldn't render correctly."},
+      {"tag": "Traces", "description": "Fixed a bug where JSON mode didn't work in the side panel."},
+      {"tag": "Experiments", "description": "Fixed a bug where the ideal output was missing when duplicating a row."}
+    ]
+  }
+}

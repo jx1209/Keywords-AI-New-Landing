@@ -7,7 +7,6 @@
     "New": [
       {"tag": "Experiments", "description": "Renamed Lab to Experiments."},
       {"tag": "Experiments", "description": "You can now [export your experiments](https://docs.keywordsai.co/features/prompt/lab) as JSON/CSV files."},
-      {"tag": "Experiments", "description": "Run evaluations within Experiments."},
       {"tag": "Dashboard", "description": "New graph: Top Prompts. Learn [how to monitor prompts](https://docs.keywordsai.co/features/prompt/monitor-a-prompt)."},
       {"tag": "Prompts", "description": "Log and monitor an external prompt without creating a new prompt in Keywords AI. Learn more [here](https://docs.keywordsai.co/features/prompt/advanced/log-custom-prompt)."}
     ],

@@ -1,0 +1,23 @@
+{
+  "date": "March 21, 2025",
+  "Title": "Native integration for OpenAI Agents SDK",
+  "snapshot": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/openai.jpg",
+  "introduction": "We worked with OpenAIto build a native integration for the OpenAI Agents SDK. Today, we are very excited to launch as a tracing processor. \n\n With just a few lines of code, you can trace all your agent workflows and debug them much faster. Check out the [quick demo here](https://x.com/keywordsai/status/1903197075241869409).",
+  "sections": {
+    "New": [
+      {"tag": "API", "description": "Added [Linkup integration](https://docs.keywordsai.co/integration/dev-tools/linkup) to incorporate search capabilities in LLM calls."},
+      {"tag": "API", "description": "Enabled control over API key rate limits via API payloads."},
+      {"tag": "API", "description": "You can now use API to [CRUD your API keys](https://docs.keywordsai.co/api-endpoints/temporary-api-keys/create-temporary-key) and do API key management."},
+      {"tag": "Logs", "description": "Allowed logs to be attached directly to existing or new experiments."}
+
+    ],
+    "Improved": [
+      {"tag": "Traces", "description": "Improved the UI for traces, making them easier to read and debug."}
+    ],
+    "Fixed": [
+      {"tag": "Logs", "description": " Fixed a bug where the token count for Anthropic Claude Haiku was miscalculated"},
+      {"tag": "API", "description": "Fixed a bug where API key usage limits in the UI were not functioning correctly."},
+      {"tag": "Playground", "description": "Fixed a bug where tool calls in Compare mode were not working."}
+    ]
+  }
+}
