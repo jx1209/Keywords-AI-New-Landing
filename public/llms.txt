@@ -1,0 +1,18 @@
+# Keywords AI
+
+> Keywords AI is a full-stack LLM engineering platform for developers and PMs. It helps AI teams build, monitor, and evaluate AI performance.
+
+
+## Docs
+- [Overview](https://docs.keywordsai.co/get-started/overview): Introduction of features in Keywords AI.
+- [AI observability quickstart](https://docs.keywordsai.co/features/monitoring/overview): Guide to set up AI observability
+- [AI gateway](https://docs.keywordsai.co/features/generation/overview): Guide to set up the AI gateway which allows developers call 300+ LLMs in a single format.
+- [Prompt management](https://docs.keywordsai.co/features/prompt/overview): Guide to create, monitor, and improve prompts in Keywords AI.
+- [LLM evals](https://docs.keywordsai.co/features/evaluation/overview): Guide to set up LLM evals to evaluate LLM output efficiently.
+
+
+## Reference
+- [GitHub Repository](https://github.com/Keywords-AI/keywordsai): An open-sourced package for AI agent tracing.
+- [Y Combinator Profile](https://www.ycombinator.com/companies/keywords-ai): Y Combinator official page about Keywords AI 
+- [Company Blog](https://www.keywordsai.co/blog): Guide, tutorials, and news that written by Keywords AI team
+- [API Reference](https://docs.keywordsai.co/api-endpoints/integration/request-logging-endpoint): Detailed API documentation for advanced integrations
