@@ -1,0 +1,22 @@
+{
+  "date": "March 28, 2025",
+  "Title": "Logs Side Panel UI Update",
+  "video": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/new_logs.mp4",
+  "introduction": "We redesigned the Logs side panel for improved readability and LLM debugging. The new interface allows for more efficient testing and refinement of LLM outputs.",
+  "sections": {
+    "New": [
+      {"tag": "Models", "description": "Added [Deepseek V3 0324](https://www.keywordsai.co/llm-library/fireworks_ai-deepseek-v3-0324) model."},
+      {"tag": "Logs", "description": "You can now group filters in Logs and save it as a new view."},
+      {"tag": "Traces", "description": "You can now group filters in Traces and save it as a new view."},
+      {"tag": "Traces", "description": "You can now run Evals or add scores to a span in Traces."},
+      {"tag": "Experiments", "description": "You can now open an experiment from Prompts."}
+
+    ],
+    "Improved": [
+      {"tag": "Playground", "description": "Updated model configurations to reduce errors."}
+    ],
+    "Fixed": [
+      {"tag": "Logs", "description": "Fixed log refreshing when users view detailed logs."}
+    ]
+  }
+}

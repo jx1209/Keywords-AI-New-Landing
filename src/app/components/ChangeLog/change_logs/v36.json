@@ -1,0 +1,23 @@
+{
+  "date": "April 4, 2025",
+  "Title": "New integration: OpenAI Responses API",
+  "snapshot": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/responses-api.jpg",
+  "introduction": "The [Responses API](https://docs.keywordsai.co/integration/development-frameworks/openai-responses) is OpenAI’s most advanced interface for generating model responses, unifying the best of Chat Completions and Assistants API. \n\n Today, we're launching the support for the Responses API - making it easy for developers to set up LLM observability and evaluations with just a few lines of code.",
+  "sections": {
+    "New": [
+      {"tag": "API", "description": "Added [AssemblyAI integration](https://docs.keywordsai.co/integration/providers/assemblyai) for speech-to-text functionality through Keywords AI gateway"},
+      {"tag": "Dashboard", "description": "Added 'is not' operator to dashboard filters"},
+      {"tag": "Playground", "description": "Added support for tool_calls in assistant messages"},
+      {"tag": "Experiments", "description": "Added JSON/CSV export for experiments"},
+      {"tag": "Experiments", "description": "Added link sharing for experiments"}
+    ],
+    "Improved": [
+      {"tag": "Traces", "description": "You can now open a specific span in Logs."}
+    ],
+    "Fixed": [
+      {"tag": "Playground", "description": "Fixed bug where tool calls were not logged from Playground"},
+      {"tag": "Logs", "description": "Fixed visibility issue for API keys and models in Logs page"},
+      {"tag": "Prompts", "description": "Fixed non-functional label filter in Prompts page"}
+    ]
+  }
+}

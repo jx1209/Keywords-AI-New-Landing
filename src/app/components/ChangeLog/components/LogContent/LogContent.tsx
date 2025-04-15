@@ -70,6 +70,7 @@ interface Log {
   date: string;
   Title: string;
   snapshot?: string;
+  video?: string;
   version?: string;
   introduction: string;
   sections: {
@@ -152,8 +153,8 @@ export function LogContent({ log }: { log: Log }) {
     };
   }, []);
 
-  const isExternalLink =
-    log.snapshot?.startsWith("http://") || log.snapshot?.startsWith("https://");
+  const isExternalLink = (url?: string) => 
+    url?.startsWith("http://") || url?.startsWith("https://");
     
   return (
     <div 
@@ -165,11 +166,11 @@ export function LogContent({ log }: { log: Log }) {
       </div>
       <div className={`flex ${isMobile ? 'w-full' : 'w-[600px]'} flex-col items-start gap-md flex-shrink-0`}>
         <p className="text-gray-white display-xs-md">{log.Title}</p>
-        {log.snapshot && (
+        {log.snapshot && !log.video && (
           <div className="relative w-full aspect-w-16 aspect-h-9">
             <Image
               src={
-                isExternalLink
+                isExternalLink(log.snapshot)
                   ? log.snapshot
                   : `/images/changelog/snapshots/${log.snapshot}`
               }
@@ -179,6 +180,23 @@ export function LogContent({ log }: { log: Log }) {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               style={{ objectFit: "contain", width: "100%", height: "auto" }}
               className="rounded-lg"
+            />
+          </div>
+        )}
+        {log.video && (
+          <div className="relative w-full aspect-w-16 aspect-h-9">
+            <video
+              src={
+                isExternalLink(log.video)
+                  ? log.video
+                  : `/images/changelog/videos/${log.video}`
+              }
+              controls
+              autoPlay={false}
+              muted
+              loop
+              className="rounded-lg w-full h-auto"
+              style={{ objectFit: "contain", width: "100%", height: "auto" }}
             />
           </div>
         )}
