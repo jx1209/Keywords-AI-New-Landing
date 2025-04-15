@@ -1,0 +1,23 @@
+{
+  "date": "April 11, 2025",
+  "Title": "Vercel AI SDK integration",
+  "snapshot": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/vercel-ai-sdk.jpg",
+  "introduction": "If you're building AI agents with Vercel AI SDK, you can now easily add [Keywords AI tracing](https://docs.keywordsai.co/features/monitoring/traces/integrations/vercel-ai-sdk) to your Next.js project. This integration lets you clearly see what's happening inside your AI agents, from start to finish. \n\n It takes less than 5 minutes to set up, is completely safe for your existing system, and gives you powerful insights to improve your AI performance.",
+  "sections": {
+    "New": [
+      {"tag": "Models", "description": "Added Gemini 2.5 Pro."},
+      {"tag": "API", "description": "Added Threads list endpoint."},
+      {"tag": "Settings", "description": "Added temporary state for API keys."},
+      {"tag": "Dashboard", "description": "Improved dashboard loading speed by 300%."}
+    ],
+    "Improved": [
+      {"tag": "Playground", "description": "Added concurrent display of AI responses and tool calls."}
+    ],
+    "Fixed": [
+      {"tag": "Dashboard", "description": "Resolved custom properties filter issue."},
+      {"tag": "Logs", "description": "Fixed side panel variables display."},
+      {"tag": "Settings", "description": "Resolved Load balancer functionality."},
+      {"tag": "Prompts", "description": "Fixed prompt template display."}
+    ]
+  }
+}
