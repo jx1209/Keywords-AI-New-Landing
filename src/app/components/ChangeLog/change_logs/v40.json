@@ -1,0 +1,21 @@
+{
+  "date": "May 2, 2025",
+  "Title": "Draggable dashboard charts",
+  "video": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/dashboard-drag.mp4",
+  "introduction": "You can now easily drag and rearrange dashboard charts to customize their layout just the way you want.",
+  "sections": {
+    "New": [
+      {"tag": "Dashboard", "description": "Added draggable charts to let you rearrange and customize your Dashboard layout."},
+      {"tag": "Prompts", "description": "You can now press Tab to auto-generate commit messages for your prompts."},
+      {"tag": "Playground", "description": "Added support for uploading and processing PDFs in Playground."},
+      {"tag": "Models", "description": "Added the Llama 4 family of models for use."}
+    ],
+    "Improved": [
+      {"tag": "Logs", "description": "Improved full-text search in Logs for faster and more accurate results."},
+      {"tag": "Models", "description": "Added reasoning capabilities to OpenAI O series models for better analysis."}
+    ],
+    "Fixed": [
+      {"tag": "Traces", "description": "Fixed a bug where Traces were not displaying correctly."}
+    ]
+  }
+}

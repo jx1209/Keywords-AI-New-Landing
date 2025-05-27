@@ -1,0 +1,18 @@
+{
+  "date": "May 16, 2025",
+  "Title": "New graphs for monitoring LLM usage",
+  "snapshot": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/new-dashboard-avg-graphs.jpg",
+  "introduction": "We’ve just released new graphs to help you track your LLM usage more easily: \n- Average prompt tokens  \n- Average completion tokens  \n- Average tokens  \n- Max tokens per minute  \n\nThese new graphs make it easier to spot trends, optimize performance, and manage costs. \n\n Check them out and get a deeper understanding of your LLM activity!",
+  "sections": {
+    "New": [
+      {"tag": "Models", "description": "Added GPT-4o Search Preview and GPT-4o Mini Search Preview."}
+    ],
+    "Improved": [
+      {"tag": "Logs", "description": "Improved the filter save feature in Logs."},
+      {"tag": "Logs", "description": "Improved Logs page performance by 2x."}
+    ],
+    "Fixed": [
+      {"tag": "Prompts", "description": "Fixed a bug where new lines were not saved in prompt templates."}
+    ]
+  }
+}

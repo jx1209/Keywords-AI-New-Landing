@@ -1,0 +1,26 @@
+{
+  "date": "May 9, 2025",
+  "Title": "Prompt version monitoring",
+  "snapshot": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/prompt-version-monitoring.jpg",
+  "introduction": "You can now track prompt versions by linking a prompt ID in your code and deploying new versions in the UI. \n\n This helps you track the performance of each version, ensuring you're always using the best one. \n\n We are making it easier to test, deploy, and improve prompts. Try it out today!",
+"sections": {
+    "New": [
+      {"tag": "Logs", "description": "Added the ability to filter out tracing spans on the logs page."},
+      {"tag": "Models", "description": "Added the Gemini 2.5 Flash model."}
+    ],
+    "Improved": [
+      {"tag": "Logs", "description": "Improved filtering with the Feedback system."},
+      {"tag": "Logs", "description": "Revamped the time range picker design for easier range selection."},
+      {"tag": "Logs", "description": "Improved the log side panel UI for better usability."},
+      {"tag": "Prompts", "description": "Upgraded the prompt metrics table to support live aggregation."},
+      {"tag": "Prompts", "description": "You can now view detailed configurations and variables for each previous prompt version, making it easier to review changes and roll back if needed."},
+      {"tag": "Models", "description": "Added an API key indicator on the Models page to easily identify the active model."}
+    ],
+    "Fixed": [
+      {"tag": "Logs", "description": "Fixed a bug where Temperature was not displayed in the side panel."},
+      {"tag": "Playground", "description": "Fixed a bug where commit messages were not displayed when committing a prompt from the Playground."},
+      {"tag": "Prompts", "description": "Resolved an issue where users could change parameters for read-only prompt versions."},
+      {"tag": "Caches", "description": "Fixed a bug where all caches could not be deleted."}
+    ]
+  }
+}
