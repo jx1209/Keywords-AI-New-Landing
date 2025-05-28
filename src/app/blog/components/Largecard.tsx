@@ -39,7 +39,7 @@ export const Largecard: React.FC<Props> = ({
         src={image}
         alt="cover"
       /> */}
-      <div className="relative h-[280px] min-w-[320px] w-full">
+      <div className="relative  w-full aspect-[16/9]">
         <Image
           src={image}
           alt="cover"

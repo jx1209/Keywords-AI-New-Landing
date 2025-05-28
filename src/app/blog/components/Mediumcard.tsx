@@ -24,7 +24,7 @@ export const MediumCard: React.FC<Props> = ({ blog }) => {
         src={blog.cover.url}
         alt="cover"
       /> */}
-      <div className="relative h-[200px] min-w-[320px] w-full">
+      <div className="relative min-w-[320px] w-full aspect-[16/9]">
         <Image
           src={blog.cover.url}
           alt="cover"
