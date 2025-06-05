@@ -546,7 +546,7 @@ export const blogs: Blog[] = [
           props: {
             variant: "md",
           },
-        },
+        }, 
       },
       {
         id: 14,

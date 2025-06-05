@@ -1,0 +1,95 @@
+---
+title: The ten LLM metrics you need to monitor (and why)
+date: June 20, 2024
+author: Hendrix
+cover: /images/blog_Images/blog2/cover.jpg
+---
+
+## The ten LLM metrics you need to monitor (and why)
+
+### TL;DR
+
+Effective LLM monitoring is crucial for delivering high-quality AI applications while managing costs. Focus on:  
+- **Accuracy Monitoring**: Combine human evaluation and AI scoring to ensure relevant, readable outputs.  
+- **Cost & Latency**: Use comprehensive tools to track expenses and optimize performance.  
+- **Outage Management**: Implement in-house alerts or third-party solutions for seamless fallback and uptime.
+
+### What is LLM monitoring?
+
+LLM monitoring involves tracking the performance of LLM applications using a variety of evaluation metrics and techniques.  
+
+It ensures models deliver accurate, reliable results and provides observability for developers, enabling them to identify and address issues promptly.
+
+### What are the common metrics with LLM applications?
+
+**Accuracy**  
+
+Ensuring high accuracy in LLM applications can be challenging due to various factors:  
+- **[Hallucination](https://docs.keywordsai.co/features/evaluation/generation/faithfulness):** LLMs sometimes generate information that appears plausible but is entirely fabricated. This can mislead users and reduce trust in the application.  
+- **[Answer Relevance](https://docs.keywordsai.co/features/evaluation/generation/answer-relevance)**: The model may provide off-topic responses or not directly addressing the user’s query, affecting the application's usefulness.  
+- **[Readability](https://docs.keywordsai.co/features/evaluation/generation/flesch-kincaid)**: The generated text may be grammatically correct but awkward or difficult to read, hampering user understanding and engagement.
+
+**Cost**  
+
+Cost is a significant factor in LLM applications. Selecting the most appropriate model for your AI product can save thousands of dollars monthly.  
+
+Occasionally, some requests can be costly, costing $1-5 each. Analyzing and managing these costly requests is crucial to control expenses effectively.
+
+**Latency**  
+
+Latency is crucial, especially in real-time applications like voice AI. Delays can hinder user experience and reduce effectiveness.  
+
+Key aspects include:  
+
+- **Time to First Token (TTFT):** The time it takes for the model to generate the first token after receiving a request. A shorter TTFT enhances the perceived responsiveness of the application.  
+- **Time Per Output Token (TPOT):** The time taken to generate each subsequent token after the first one. Reducing TPOT can improve the overall generation speed.  
+- **Total Generation Time:** The cumulative time required to generate the entire response.  
+- **Speed:** This measures how many tokens the model can generate per second. Higher speed indicates better performance and a smoother user experience.  
+- Latency Calculation: Latency is calculated as TTFT + (TPOT * number of tokens to be generated). Managing both TTFT and TPOT is essential to minimize overall latency.
+
+**Outage from providers**  
+
+With many LLM providers like OpenAI, Anthropic, and Mistral, outages can occur, causing downtime for your apps.  
+
+These interruptions can disrupt the availability of LLM applications, affecting business operations and user satisfaction.
+
+![Outage from providers](/images/blog_Images/blog2/outage.jpg)
+
+### How to monitor these metrics?
+
+**Accuracy**
+
+To ensure high output quality in LLM applications, various methods can be employed:  
+
+- **Human Evaluation:** This aligns with user preferences but can introduce bias and subjectivity. Using a diverse group of evaluators helps mitigate these issues but could be costly.  
+- **[LLM-as-a-Judge](https://docs.keywordsai.co/features/evaluation/overview)**: The most cost-effective and efficient way to evaluate numerous inferences. However, it might yield inaccurate evaluation outcomes due to LLM performance limitations.
+
+![LLM Output evaluations on Keywords AI](/images/blog_Images/blog2/eval.jpg)
+
+**Cost & Latency**
+
+Managing both cost and latency effectively requires a comprehensive dashboard that tracks expenses and performance metrics.
+
+- Providers’ Native Tracking: Limited to cost tracking without latency metrics. Only offers a monthly view and requires accessing different dashboards if multiple LLMs are used. It doesn’t provide specific costs or latency metrics for individual inferences.
+
+![OpenAI dashboard](/images/blog_Images/blog2/dashboard.jpg)
+
+- Keywords AI Solution: Offers a custom timeline, consolidates costs of different LLMs into a single chart, and allows detailed analysis of individual requests to see exact costs. Additionally, it provides both overall and specific latency metrics for each request.
+
+![Keywords AI LLM dashboard](/images/blog_Images/blog2/keywords_dashboard.jpg)
+
+![Keywords AI Log](/images/blog_Images/blog2/log.jpg)
+
+**Outage from providers**
+
+No one wants downtime for their product! Ensuring continuous availability of LLM apps is crucial for maintaining user satisfaction and business operations.  
+- **Build your own alert system:** Develop an in-house solution to monitor LLM providers and automatically switch to backups during outages. This offers full control but requires significant time —20+ hours for setup and 30+ hours for debugging.  
+- **[Auto fallback to other LLMs](https://docs.keywordsai.co/features/generation/fallbacks):** Use a third-party solution for real-time outage notifications and automatic fallback. This approach minimizes downtime without extensive setup, ensuring 100% uptime by seamlessly switching to fallback models.
+
+![Keywords AI alerts & fallback](/images/blog_Images/blog2/alert.jpg)
+
+### Learn more about LLM monitoring
+
+[Keywords AI](https://keywordsai.co) is a unified developer platform where you can [call 150+ LLMs using the OpenAI SDK with one API key](https://docs.keywordsai.co/integration/development-frameworks/openai-sdk) and get insights into your AI products. This platform provides comprehensive insights into your AI products, helping you build better AI solutions with complete observability.
+
+With just two lines of code, you can enhance your AI products, track performance, manage costs, and ensure reliability. Explore Keywords AI to streamline your LLM management and elevate your AI capabilities.
