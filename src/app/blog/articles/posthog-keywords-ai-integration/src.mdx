@@ -1,0 +1,63 @@
+---
+title: "PostHog <> Keywords AI Integration"
+date: March 6, 2025
+author: Hendrix
+cover: https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/posthog/cover.jpg
+---
+
+## PostHog <> Keywords AI Integration
+
+We're excited to announce the new integration between [PostHog](https://posthog.com/) and [Keywords AI](https://www.keywordsai.co).
+
+You can now easily send your LLM data from Keywords AI directly into PostHog. This integration lets you analyze all of your product data and insights in one platform. No more switching between tools—just clear, unified analytics for better decision-making.
+
+With this integration, you can:
+- Combine data from Keywords AI and PostHog in one place  
+- Easily analyze and visualize your AI-driven data  
+- Save time and simplify your workflow
+
+![Keywords AI and PostHog integration](https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/posthog/posthog.gif)
+
+Try out the Keywords AI <> PostHog integration and get a complete view of your product analytics today!
+
+### What is PostHog?
+
+[PostHog](https://posthog.com/) is **a free, open-source platform that helps developers build better products**. It combines product analytics, session replay, user surveys, and more into one place.
+
+**Features**
+- **Product analytics**: Track product usage and performance  
+- **Session replay**: See what users do on your site or app  
+- **Heatmaps**: Visualize user activity  
+- **Feature flags**: Control which features are available to users  
+- **Experiments**: Run A/B tests and other experiments  
+- **Surveys**: Get feedback from users  
+- **Data warehouse**: Store and query product usage data
+
+**How it works**:
+- You can deploy PostHog to the cloud or self-host it on your own infrastructure  
+- You can use SQL to query product usage data  
+- You can try out the features for free before paying
+
+**Why it's useful**
+- PostHog helps developers build successful products  
+- It provides tools to improve user experience and product quality  
+- It helps you understand how users interact with your product
+
+### Integrate Keywords AI with PostHog
+
+1. Sign up for [Keywords AI](https://www.keywordsai.co/) and add it to your app.  
+2. Copy PostHog host and project API key from your [PostHog project settings](https://us.posthog.com/settings/project).  
+3. In your Keywords AI requests in your code, add the following parameters:
+
+![Integration code example](https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/posthog/integration-code.png)
+
+Keywords AI will now send events to PostHog under the name `keywords_ai_api_logging`. They send events as soon as they're available.
+
+### Using the Keywords AI dashboard template on PostHog
+
+Once you've installed the integration, our Keywords AI [dashboard template](https://posthog.com/docs/product-analytics/dashboards) helps you quickly set up relevant insights. You can see an [example dashboard here](https://us.posthog.com/shared/p1AymhS7EEm97nZOGA8nWmsdshhzYA).
+
+To create your own dashboard from a template:
+1. Go the [dashboard tab](https://us.posthog.com/dashboard) in PostHog.  
+2. Click the **New dashboard** button in the top right.  
+3. Select **LLM metrics – Keywords AI** from the list of templates.

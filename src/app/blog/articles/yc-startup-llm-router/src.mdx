@@ -1,0 +1,97 @@
+---
+title: "A YC startup's first project - an LLM router (with code)"
+date: July 22, 2024
+author: Hendrix
+cover: /images/blog_Images/blog12/cover.jpg
+---
+
+## A YC startup's first project - an LLM router (with code)
+
+Last September, [Andy](https://www.linkedin.com/in/hanheli/) came across a paper that introduced the concept of [FrugalGPT](https://arxiv.org/abs/2305.05176). This paper presented a method for reducing the cost of using Large Language Models (LLMs) while maintaining comparable performance by leveraging various smaller models.
+
+Inspired by FrugalGPT, we quickly turned theory into practice. [Raymond](https://www.linkedin.com/in/yunrui-huang/) developed a Minimum Viable Product (MVP) for an LLM router in just one week, followed by a front-end implementation the next week. Remarkably, we secured our first customer by week three.
+
+This blog post will guide you through our journey of building the LLM router MVP and provide insights on how you can create your own.
+
+### What is FrugalGPT?
+
+**FrugalGPT** is a framework designed to reduce the costs of using Large Language Models (LLMs) while maintaining or improving performance. It employs three strategies:
+
+- **Prompt Adaptation:** Reducing the length of prompts to save costs.  
+- **LLM Approximation:** Using cheaper models or caching responses to approximate expensive LLMs.  
+- **LLM Cascade:** Sequentially querying different LLMs, starting with cheaper ones and only using expensive models if necessary.  
+
+FrugalGPT can significantly cut costs (up to 98%) and even enhance accuracy by up to 4% compared to using a single LLM like GPT-4.
+
+![from FrugalGPT](/images/blog_Images/blog12/graph.png)
+
+### Initial concept of the LLM router
+
+After thoroughly reviewing the FrugalGPT paper, Andy recognized its potential to significantly reduce costs for AI startups and developers. This was particularly relevant to us, as our one-stop job search copilot consumed substantial daily resources on OpenAI.
+
+Our investigation led us to focus on LLM approximation, which we found to be the most practical and efficient strategy for our use case. To rapidly gather user feedback, we created a simplified LLM router integrating only GPT-3.5 Turbo and GPT-4.
+
+At the time, the cost difference between these models was substantial:  
+- GPT-4: $30 (input) and $60 (output) per million tokens  
+- GPT-3.5 Turbo: $0.5 (input) and $1.5 (output) per million tokens  
+
+This stark contrast highlighted the importance of efficient model selection. After all, you wouldn't want your AI application to use the expensive GPT-4 for simple responses like "Hello"!
+
+### Developing the MVP: Architecture and Classification System
+
+Our LLM router concept utilizes an embedding model (text-embedding-3-small from OpenAI) to classify input, generate a vector score, and select the most suitable LLM based on that score. To enhance the router's model selection capability, we first established our evaluation and model ranking framework.
+
+**Model Ranking System:**
+
+We defined models and their characteristics in our backend:
+
+```python
+gpt_4 = ModelParam(model_name="gpt-4", speed=48, max_context_window=8192, model_size=170, mmlu_score=86.4, mt_bench_score=8.96, big_bench_score=83, input_cost=30, output_cost=60, rate_limit=10000, function_call=1)
+
+gpt_3_5_turbo = ModelParam(model_name="gpt-3.5-turbo", speed=150, max_context_window=4096, model_size=20, mmlu_score=70, mt_bench_score=7.94, big_bench_score=71.6, input_cost=0.5, output_cost=0.1, function_call=1)
+
+difficulty_details = {
+  "1": "This query is just as a greeting or the most basic human interaction.",
+  "2": "This is a simple question that can be answered with a single sentence.",
+  "3": "This question requires a few sentences to answer, probably some logic or reasoning, basic coding question, or short JSON parsing.",
+  "4": "This question requires a paragraph to answer, requires a fair amount of logic and reasoning, coding algorithm, or long JSON parsing.",
+  "5": "This question requires a long answer, intricated logic or reasoning, complicated coding questions, or complicated nested JSON parsing."
+}
+
+category_details = {
+  "Writing": "Engaging in narrative and creative text generation.",
+  "Questions": "Responding to inquiries across various topics.",
+  "Math": "Performing calculations and interpreting data.",
+  "Roleplay": "Engaging in simulated dialogues and scenarios.",
+  "Analysis": "Performing sentiment analysis, summarization, and entity recognition.",
+  "Creativity": "Generating ideas and concepts in arts and design.",
+  "Coding": "This task requires coding assistants and code generation.",
+  "Education": "Developing learning materials and providing explanations.",
+  "Research": "Conducting online research and compiling information.",
+  "Translation": "Translating text across multiple languages."
+}
+
+format_details = {
+  "PlainText": "Standard unformatted text responses.",
+  "StructuredData": "JSON, XML, and YAML output for structured data formats.",
+  "CodeScript": "Generation of source code and executable scripts.",
+  "ListOutput": "Bullet points and numbered list formats.",
+  "InteractiveText": "Q&A style and other interactive text elements.",
+  "Customized": "Custom instructions and unique output formats."
+}
+
+expertise_details = {
+  "STEM": "Covering science, technology, engineering, mathematics topics.",
+  "Humanities": "Specializing in literature, history, philosophy, arts.",
+  "Business": "Expertise in economics, management, marketing.",
+  "Health": "Providing healthcare and medical knowledge.",
+  "Legal": "Insights into law, politics, and governance.",
+  "Education": "Specializing in teaching and learning techniques.",
+  "Environment": "Focus on ecology, geography, and environmental science.",
+  "Tech": "Information technology, computer science, AI specialization.",
+  "Arts": "Covering music, visual arts, and entertainment.",
+  "Social": "Understanding of sociology, psychology, anthropology."
+}
+```
+
+Check out the full code for the LLM router here: [LLM Router Code](https://medium.com/ai-advances/a-yc-startups-first-project-an-llm-router-with-code-4e8a66363b94)

@@ -1,0 +1,81 @@
+---
+title: "Claude Haiku can substitute GPT-4 in 95% of AI tasks at 4% cost"
+date: March 25, 2024
+author: Hendrix
+cover: /images/blog_Images/blog1/cover.jpg
+---
+
+## Claude Haiku can substitute GPT-4 in 95% of AI tasks at 4% cost
+
+### TL;DR
+
+* We compared Anthropic's Claude 3 Haiku and OpenAI's GPT-4-Turbo in various AI tasks.  
+* Haiku offers faster response times, lower costs, and comparable performance.  
+* Claude 3 Haiku could potentially substitute GPT-4-Turbo in 95% of AI applications at 1/25th Cost.  
+* Haiku demonstrates better readability and can handle specific tasks more effectively than GPT-4-Turbo in certain situations.
+
+This article presents the details of our tests and their results, highlighting Haiku's strengths.
+
+### Intro
+
+Claude 3 Haiku: Haiku is Anthropic's newest, fastest, and most streamlined model, delivering near-instant replies.  
+
+GPT-4-Turbo: OpenAI's flagship model, renowned for its versatility in tasks ranging from writing to programming, has set the benchmark for excellence over the past year.
+
+![Anthropic's family of models](/images/blog_Images/blog1/anthropic_family.jpg)
+
+### Test results
+
+We created a knowledge base for a virtual AI company and asked most of the questions based on this information.  
+
+After running almost 100 different prompts, here are the results of each model's performance:  
+
+**Speed Comparison:**  
+
+- Haiku's average generation time is 78% faster than GPT-4-preview-0125 (2.283s vs 10.475s)  
+- Haiku's time to first token (TTFT) is 58% faster than GPT-4-preview-0125 (0.45s vs 1.07s)
+
+![Speed comparison](/images/blog_Images/blog1/speed.jpg)
+
+**Cost comparison:**  
+
+- Haiku's average cost per request is 95% lower than GPT-4 ($0.00032 vs $0.007)  
+- Input Pricing: Haiku - $0.25 / MTok, GPT-4-Turbo - $10.00 / MTok  
+- Output Pricing: Haiku - $1.25 / MTok, GPT-4-Turbo - $30.00 / MTok
+
+![Cost comparison](/images/blog_Images/blog1/cost.jpg)
+
+**Evaluation tests:**  
+
+We conducted evaluation tests on Keywords AI, a critical component in natural language processing tasks. The results are as follows:  
+
+- GPT-4-0125-preview: Context Precision: 0.96, Faithfulness: 0.97, Readability: 0.85, Relevance: 0.94  
+- Claude-3-haiku: Context Precision: 0.92, Faithfulness: 0.91, Readability: 0.88, Relevance: 0.94  
+- Haiku demonstrates better readability than GPT-4-preview-0125 (0.88 vs 0.85)  
+- Both models have similar performance in context precision, faithfulness, and relevance  
+
+**Interesting Observation:**  
+
+When using the "Airportcode extractor" prompt from OpenAI's prompt library, GPT-4 couldn't solve the problem, while Haiku successfully extracted the airport codes.
+
+### Conclusion
+
+Based on our extensive testing and analysis, Claude 3 Haiku has proven to be a strong contender against GPT-4 in various AI tasks.
+
+With its faster response times, lower cost per request, and comparable performance in key evaluation metrics, Haiku could potentially substitute GPT-4 in most AI applications.
+
+As AI continues to advance, models like Claude 3 Haiku will play a crucial role in shaping the future of natural language processing and AI-driven solutions.
+
+### How You Can Run Your Own Tests
+
+Visit [Keywords AI](https://keywordsai.co) and click on "Dashboard"  
+
+Choose the models you want to test in [Playground](https://docs.keywordsai.co/features/prompt/test&compare) and run requests!  
+
+Check / Export your every single request on the [Request page](https://docs.keywordsai.co/features/monitoring/logging).  
+
+Turn on the [evaluations](https://docs.keywordsai.co/features/evaluation/overview) you want to run and see the result!  
+
+Best of all, integrating Keywords AI into your codebase is a snap, requiring only a couple of lines of code.  
+
+This means you can quickly and effortlessly incorporate state-of-the-art AI models into your projects and applications.
