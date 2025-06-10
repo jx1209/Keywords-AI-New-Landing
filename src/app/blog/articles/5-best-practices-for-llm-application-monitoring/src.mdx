@@ -1,0 +1,109 @@
+---
+title: "5 Best Practices for LLM Application Monitoring"
+date: October 21, 2024
+author: Hendrix
+cover: https://keywordsai-static.s3.amazonaws.com/landing/blog/5-best-practices/cover.png
+---
+
+## 5 Best Practices for LLM Application Monitoring
+
+LLM apps need careful watching. Here's how to do it right:  
+- **Track key metrics**: Accuracy, latency, cost, user engagement  
+- **Set up alerts**: Choose metrics, set thresholds, plan actions  
+- **Check data quality**: Define standards, use tools, monitor over time  
+- **Test for security**: Use [OWASP](https://owasp.org/www-project-top-ten/) Top 10, control access, watch logs  
+- **Pick an LLM monitoring platform**: [Keywords AI](https://www.keywordsai.co/), Langsmith
+
+### Why it matters:
+- Keeps AI apps reliable and safe  
+- Catches mistakes and biases  
+- Saves money on resources  
+- Protects user data
+
+> Remember: LLM monitoring is ongoing. Keep learning and improving your process.
+
+### 1. Track Key Metrics
+
+Keeping your LLM app running smoothly? It's all about watching the right numbers. Here's what you need to track:  
+
+**Accuracy**: Is your LLM getting it right? This is key for quality.  
+
+**Latency**: Speed counts. Watch these:  
+- Time to First Token (TTFT)  
+- Time Per Output Token (TPOT)  
+
+**Cost**: LLM requests can hit your wallet hard. Some might set you back $1–5 each.  
+
+**User Engagement**: Are folks actually using your LLM?
+
+![User Engagement](https://keywordsai-static.s3.amazonaws.com/landing/blog/5-best-practices/user-engagement.png)
+
+### 2. Set Up Alert Systems
+
+Alert systems are crucial for your LLM app. They help you catch issues fast and get user feedback.  
+
+Here's how to set up effective alerts:  
+
+- **Pick your metrics**  
+Choose what to track based on your app's goals. This might include accuracy, latency, or user engagement.  
+
+- **Set thresholds**  
+Decide when an alert should trigger. For example:
+
+![Threshold](https://keywordsai-static.s3.amazonaws.com/landing/blog/5-best-practices/threshold.png)
+
+- **Choose alert channels**  
+Pick how you'll get notified. Options include Slack, email, SMS, or [PagerDuty](https://www.pagerduty.com/).  
+
+- **Create an action plan**  
+Know what to do when an alert fires. This might mean checking data quality, adjusting model parameters, or pausing the service for fixes.  
+
+- **Gather user feedback**  
+Set up ways for users to report issues or give input. This could be through in-app feedback forms, user surveys, or support ticket analysis.  
+
+- **Use anomaly detection**  
+Spot weird patterns that might signal problems. Tools like [Edge Delta](https://edgedelta.com/use-cases/anomaly-detection) can help with this.  
+
+- **Test your system**  
+Make sure alerts work as planned. Run drills to check response times and processes.  
+
+Keep improving your alert system. What you track today might not be what you need tomorrow.
+
+### 3. Check Data Quality
+
+Data quality can make or break your LLM app. Bad data? Bad results. Simple as that.  
+
+Here's how to keep your data clean:  
+
+**Set quality standards**  
+What's “good data” for your app? Define it. Example:
+
+![Eval Metric](https://keywordsai-static.s3.amazonaws.com/landing/blog/5-best-practices/eval-metric.png)
+
+**Use LLM evaluation framework**  
+Frameworks like Relari and Ragas can run evaluations on your LLM responses and your RAG content. You can self host those frameworks or choose a provider to automatically log your LLM requests and run the evaluations, like Keywords AI.  
+
+**Monitor key metrics**  
+Track data quality over time. Watch for drops.  
+
+**Export good data to a dataset**  
+Simply export those good data to a dataset — you could feed your LLM with those golden datasets.
+
+### 4. Test for Security Flaws
+
+LLM apps can be a hacker's playground. You need to test for security issues regularly.  
+
+Here's how:
+
+**Use the OWASP Top 10 for LLMs**  
+OWASP lists the top 10 security risks for LLM apps:
+
+![Security](https://keywordsai-static.s3.amazonaws.com/landing/blog/5-best-practices/security.png)
+
+### 5. Pick a Unified LLMOps Platform
+
+You need specialized tools to keep your LLM apps running smoothly. Here are some top options:  
+
+**Keywords AI**: Built for AI startups. Features include:
+
+![Keywords AI](https://keywordsai-static.s3.amazonaws)
