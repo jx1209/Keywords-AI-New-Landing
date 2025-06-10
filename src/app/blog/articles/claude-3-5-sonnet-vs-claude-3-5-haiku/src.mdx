@@ -1,0 +1,74 @@
+---
+title: "Claude 3.5 Haiku vs. Sonnet: Speed or Power? A Comprehensive Comparison"
+date: November 26, 2024
+author: Hendrix
+cover: https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/haiku_vs_sonnet/cover.png
+---
+
+Anthropic's latest release, Claude 3.5 Haiku, promises to combine speed with enhanced capabilities. While maintaining similar speed to its predecessor, it shows significant improvements across various benchmarks, even outperforming the previous flagship model, Claude 3 Opus, in several areas.
+
+This comparison between Claude 3.5 Haiku and Claude 3.5 Sonnet aims to help you make an informed choice: whether to prioritize speed and cost efficiency with Haiku, or opt for Sonnet's superior performance capabilities.
+
+## Comparison methodology
+
+Our analysis utilizes Keywords AI's LLM playground, a platform that supports over 200 language models and offers function-calling capabilities. We'll explore the following aspects:
+
+- Basic comparison  
+- Benchmark comparison  
+- Processing speed  
+- Evaluation metrics  
+- Suggested use cases
+
+## Basic comparison
+
+|                     | Claude 3.5 Haiku             | Claude 3.5 Sonnet            |
+|---------------------|------------------------------|------------------------------|
+| Input               | $1.00 / 1M tokens            | $3.00 / 1M tokens            |
+| Output              | $5.00 / 1M tokens            | $15.00 / 1M tokens           |
+| Context window      | 200K                         | 200K                         |
+| Max output tokens   | 8192                         | 8192                         |
+| Supported inputs    | Text and Images              | Text and Images              |
+| Function calling    | Yes                          | Yes                          |
+| Knowledge cutoff    | July 2024                    | April 2024                   |
+
+## Benchmark comparison
+
+| Benchmark           | Claude 3.5 Haiku | Claude 3.5 Sonnet |
+|---------------------|------------------|--------------------|
+| MMLU Pro            | 65.0             | 78.0               |
+| GPQA Diamond        | 41.6             | 65.0               |
+| MATH                | 69.4             | 78.3               |
+| HumanEval           | 88.1             | 93.7               |
+
+Claude 3.5 Sonnet demonstrates consistently higher performance across all benchmarks. The most notable gap appears in GPQA Diamond, where Sonnet (65.0%) outperforms Haiku (41.6%) by 23.4 percentage points.
+
+Both models show strong capabilities in code generation (HumanEval), though Sonnet maintains its edge with 93.7% versus Haiku's 88.1%. These results indicate that while both models are capable, Sonnet offers superior performance for complex tasks.
+
+## Speed comparison
+
+### Generation time
+
+Our extensive testing, conducted across multiple requests, shows minimal difference in latency between the two models. Claude 3.5 Haiku demonstrates slightly faster performance at 13.98s/request, while Claude 3.5 Sonnet follows closely at 14.17s/request.
+
+![Generation Time](https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/haiku_vs_sonnet/generation_time.png)
+
+### Speed (Tokens per second)
+
+The throughput comparison reveals similar token generation capabilities. Claude 3.5 Haiku leads slightly with 52.54 tokens/second, while Claude 3.5 Sonnet generates 50.88 tokens/second.
+
+![Speed](https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/haiku_vs_sonnet/speed.png)
+
+### TTFT (Time to First Token)
+
+Claude 3.5 Haiku demonstrates significantly faster initial response with a TTFT of 0.36 seconds, while Claude 3.5 Sonnet takes 0.64 seconds.
+
+![TTFT](https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/haiku_vs_sonnet/ttft.png)
+
+Overall, Haiku shows slightly better speed performance across all metrics. While the latency difference is minimal (13.98s vs 14.17s), Haiku has a faster first response time (0.36s vs 0.64s) and slightly higher throughput (52.54 vs 50.88 tokens/s). If speed is your primary concern—especially for real-time applications or chat-like interfaces—Haiku is a better choice.
+
+## Performance comparison
+
+We conducted evaluation tests on the [Keywords AI](https://www.keywordsai.co), an LLM evals and prompt management platform. The evaluation comprised five parts:
+
+- 🧑‍💻 Coding Task: Sonnet handles complex scenarios better. Haiku works well for simple tasks but may hallucinate with >150 lines of code.
+- 🔍 Logical R
