@@ -1,0 +1,24 @@
+{
+  "date": "April 25, 2025",
+  "Title": "Redesigned prompt list UI",
+  "snapshot": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/prompt-list-ui.jpg",
+  "introduction": "We’ve redesigned the prompt list UI to make managing prompts easier and more efficient. \n\n Here’s what’s new: \n- 🔍 Search for prompts seamlessly. \n- 📝 View additional details, like version and model, without needing to click. \n- 🎨 More colors for labels to improve organization. \n\nWe’re excited about these improvements and hope they make your workflow smoother!",
+  "sections": {
+    "New": [
+      {"tag": "Logs", "description": "Added word and character count for LLM results in the side panel."},
+      {"tag": "Playground", "description": "Added word and character count for LLM results to show result length."},
+      {"tag": "Prompts", "description": "Added support for importing PDF files from Prompts to Experiments."},
+      {"tag": "Models", "description": "Added support for Gemini 2.5 Flash."}
+    ],
+    "Improved": [
+      {"tag": "Logs", "description": "Improved display of structured_output logs in the side panel."},
+      {"tag": "Prompts", "description": "Added automatic saving of variable values in the Prompts side panel."},
+      {"tag": "Testsets", "description": "Added a savable table view for Testsets."},
+      {"tag": "Experiments", "description": "Improved performance of Experiments, allowing import of 100+ rows from Testsets."},
+      {"tag": "API", "description": "Removed the version parameter from the prompt parameter."}
+    ],
+    "Fixed": [
+      {"tag": "Logs", "description": "Fixed a bug where filtering by prompt ID did not work."}
+    ]
+  }
+}

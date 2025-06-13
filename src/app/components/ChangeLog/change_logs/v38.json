@@ -1,0 +1,31 @@
+{
+  "date": "April 18, 2025",
+  "Title": "New display modes in Experiments",
+  "video": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/experiments-display-mode.mp4",
+  "introduction": "We have added 3 display modes in Experiments. \n\n Now, you can easily adjust the display height of each cell by switching between these modes.",
+  "sections": {
+    "New": [
+      {"tag": "Dashboard", "description": "Added graph for average prompt tokens."},
+      {"tag": "Dashboard", "description": "Added P99 latency percentile to the latency graph."},
+      {"tag": "Logs", "description": "Added filter for generation latency."},
+      {"tag": "Prompts", "description": "Added reasoning effort option for o3-mini."},
+      {"tag": "Prompts", "description": "Added search bar for prompts."},
+      {"tag": "Experiments", "description": "Added prompt template display."},
+      {"tag": "Models", "description": "Added GPT-4.1 family models."},
+      {"tag": "Models", "description": "Added o4-mini."}
+    ],
+    "Improved": [
+      {"tag": "Prompts", "description": "Added streaming for in-prompt runs."},
+      {"tag": "Users", "description": "Added savable table view in Users."},
+      {"tag": "Threads", "description": "Added savable table view in Threads."},
+      {"tag": "Settings", "description": "You can now add custom model names to the Fallback list."}
+    ],
+    "Fixed": [
+      {"tag": "Logs", "description": "Fixed a bug where Variable mode did not work in Logs."},
+      {"tag": "Prompts", "description": "Fixed a bug where prompt template display did not work."},
+      {"tag": "Playground", "description": "Fixed a bug where variables could not be saved in Playground."},
+      {"tag": "Experiments", "description": "Fixed a bug where cost calculation showed NaN."},
+      {"tag": "API", "description": "Fixed a bug where Gemini 2.5 Pro could not be called under Vertex AI."}
+    ]
+  }
+}

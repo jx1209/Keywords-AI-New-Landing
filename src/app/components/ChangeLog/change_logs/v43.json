@@ -1,0 +1,25 @@
+{
+  "date": "May 23, 2025",
+  "Title": "Bar charts in Dashboard.",
+  "snapshot": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/bar-charts-dashboard.jpg",
+  "introduction": "We just shipped bar charts to the Dashboard on Keywords AI (YC W24)! \n\n Why bar charts? \n\n Line graphs are great for trends, but when you're working with discrete time buckets — like hourly traffic or error counts — bar charts are much easier to read. You can quickly spot spikes, compare values, and get a clear sense of what's happening. \n\n Some common use cases: \n- See traffic by hour more clearly \n- Catch error spikes at a glance \n- Understand how prompt and completion tokens change over time \n\n You can turn it on in: \n\n Settings → Preferences → Show bar chart",
+"sections": {
+    "New": [
+      {"tag": "Dashboard", "description": "Added cache hit rate graphs."},
+      {"tag": "Logs", "description": "Added generation time filter. You can now filter logs by response time."},
+      {"tag": "Caches", "description": "Added cache hit rate aggregation metrics."},
+      {"tag": "Models", "description": "Added Anthropic Claude 4 family models."},
+      {"tag": "Models", "description": "Added Gemini 2.5 Pro preview 0506."}
+    ],
+    "Improved": [
+
+      {"tag": "Experiments", "description": "Improved histogram chart display for better data visualization."}
+    ],
+    "Fixed": [
+      {"tag": "Dashboard", "description": "Fixed a bug where previous period data displayed incorrectly in charts."},
+      {"tag": "Logs", "description": "Fixed a bug where the clear all filters button didn't work."},
+      {"tag": "Settings", "description": "Fixed a bug where data export progress remained stuck at 0%."},
+      {"tag": "Settings", "description": "Fixed a bug where Google login failed to authenticate users."}
+    ]
+  }
+}
