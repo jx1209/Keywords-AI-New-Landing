@@ -92,6 +92,7 @@ export default async function BlogDetail({
           aria-label="hero"
           className="flex flex-col max-w-[800px] items-start gap-sm w-full"
         >
+          {/* Title block */}
           <div
             className="flex flex-col w-full items-start gap-xl "
             aria-label="title-block"
@@ -129,7 +130,7 @@ export default async function BlogDetail({
 
         {/* Main content area */}
         <div className="flex flex-col max-w-[1200px] w-full items-center gap-sm">
-          <div className="flex flex-col max-w-[800px] w-full items-start gap-sm prose prose-invert max-w-none">
+          <div className="flex flex-col max-w-[800px] w-full items-start gap-sm prose prose-invert">
             {mdxContent ? (
               // Render MDX content using MarkdownRenderer
               <MarkdownRenderer>{mdxContent.content}</MarkdownRenderer>
