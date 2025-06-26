@@ -1,0 +1,77 @@
+---
+title: "Introducing Google’s Agent Development Kit (ADK)"
+date: June 25, 2025
+author: Hendrix
+cover: https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/google-adk-intro/cover.jpg
+---
+
+*Google’s Agent Development Kit (ADK) is a new open-source toolkit that makes it easier to build **multi-agent AI applications***. Instead of creating one large AI model to do everything, ADK lets developers combine **multiple specialized agents** into a single system. Each agent can focus on a specific task (for example, one agent for answering questions and another for handling calculations), and ADK provides the structure to **coordinate** these agents. The goal is to simplify the end-to-end process of developing intelligent agents so that even complex, multi-agent workflows feel as manageable as building a typical software app.
+
+## Accessing the ADK SDK
+
+Google ADK is available as a lightweight Python library (with early support for Java as well). You can install it from PyPI using a single command: pip install google-adk. The project is open-source, so you can find the code, examples, and documentation on the official ADK docs site. For a deeper dive and the announcement details, check out the official Google Developers Blog post introducing ADK. These resources provide guides, tutorials, and API references to help you get started quickly.
+
+*Getting started* is straightforward. After installation, you can initialize a new agent project by following the guides in the docs. The ADK documentation walks you through setting up a project structure (with files for your agent logic and configuration) and configuring your first agent. Since ADK is distributed as a standard SDK, you can work in your local development environment. In fact, ADK emphasizes a **local-first development** experience – it includes a command-line interface (CLI) and even a web-based UI for testing agents on your machine. This means you can build, run, and debug your multi-agent system locally before deploying it to the cloud.
+
+## Building AI Agents with ADK
+
+Using ADK to build an AI agent involves a few simple steps. First, you **define the tools** or functions that your agents can use. Tools are just routines like web search, database queries, calculators, or any custom function you want your agent to call. Next, you **define one or more agents** and give each an LLM (large language model) and instructions. An agent can be as simple as a single chat bot, or it can be a higher-level coordinator agent that delegates tasks to other sub-agents. Finally, you **orchestrate the agents** – meaning you decide how they hand off tasks to each other and in what order things should happen.
+
+For example, imagine you want to build a simple assistant agent that can greet users. With ADK, you could do something like this in Python:
+
+```python
+from google.adk import Agent, Tool
+
+# 1. Define a simple tool function
+def greet(name: str) -> str:
+    return f"Hello, {name}!"
+
+# 2. Register the function as an ADK tool
+greet_tool = Tool.from_function(greet, name="GreetingTool")
+
+# 3. Create an agent with an LLM model and the tool
+agent = Agent(
+    name="GreeterAgent",
+    model="openai/gpt-3.5-turbo",  # or a Google Gemini model ID
+    tools=[greet_tool],
+    instruction="You are a friendly assistant that greets the user by name."
+)
+
+# 4. Run the agent on an input
+result = agent.run("Greet Alice")
+print(result.final_output)  # This should output a greeting using the tool
+```
+
+In this snippet, we created a tool (greet_tool) from a Python function and gave it to our GreeterAgent. The agent is configured with a language model (it could be an OpenAI model or Google’s Gemini model) and a simple instruction. When we run the agent with a prompt, the agent will decide to use the greeting tool to produce the answer (in this case, saying hello to Alice). This example is trivial, but it shows the basic workflow: **install ADK, define tools, define agents, then run your agent**. ADK handles the heavy lifting of deciding which agent or tool should handle a user query, especially when you have multiple agents working together.
+
+## Key Features of ADK (Modular, Local-First, Open)
+
+**Modular, Multi-Agent Design:** ADK was built with a *“multi-agent by design”* philosophy. It’s easy to compose multiple agents, each with distinct goals or skills, and arrange them in a hierarchy (for example, a top-level agent that delegates subtasks to specialist sub-agents). The kit provides an orchestrator under the hood to manage interactions between agents, so they can hand off tasks or call each other when needed. This modular approach means you can start simple and gradually add more agents or tools as your application grows in complexity. Whether you’re building a simple chatbot that just uses a couple of tools or a complex workflow of many cooperating agents, ADK gives you a structured way to do it.
+
+**Integrated, Local-First Development:** A standout feature of ADK is its emphasis on the developer experience. You can develop, test, and debug your agents **locally** with ADK’s CLI and visual web UI. As you run an agent, you can inspect what each agent is doing step by step – see the messages, tool calls, and decisions in real-time. This local-first approach lets you iterate quickly without needing to deploy to a server for each change. When it’s time to evaluate how well your agent is performing, ADK comes with a **built-in evaluation framework** to validate agent behavior. You can write test cases or use provided evaluation tools to simulate various scenarios and ensure your agents respond correctly. This focus on local development and testing makes the whole cycle of **Build → Interact → Evaluate → Deploy** much smoother.
+
+**Open and Interoperable:** Google’s ADK is open-source and built on open standards, which makes it very flexible. It’s **model-agnostic** – while it’s optimized for Google’s own Gemini models, you can plug in other LLMs (OpenAI, Anthropic, local models, etc.) just as easily. It’s also **deployment-agnostic** – you can run agents locally, on your own servers, or take advantage of cloud services. In fact, ADK has deep integration with Google Cloud’s Vertex AI platform for deployment when you need to scale up, but this is optional. Another aspect of being “open” is that ADK is designed to **work with other frameworks and tools**. For example, it supports standard interfaces like OpenAPI for tools (so you can integrate web APIs easily), and it includes an Agent-to-Agent communication protocol (A2A) that is being developed as an open standard for agent interoperability. All of this means ADK won’t lock you into a proprietary ecosystem – it plays nicely with external tools and libraries, giving you lots of freedom to extend your agent applications.
+
+## ADK vs Other Agent Frameworks
+
+With the rise of AI agents, you might be aware of other frameworks like **LangGraph** (from the LangChain team) and OpenAI’s **Agents SDK**. Each approach has its own philosophy, so how does ADK compare? Below is a brief look focusing on simplicity, performance, and extensibility:
+
+* **LangGraph (LangChain):** LangGraph, built on LangChain, uses a graph-based model for managing complex agent workflows with fine-grained control. It’s highly extensible thanks to LangChain’s ecosystem, but introduces complexity — graphs, nodes, and edges—requiring a learning curve. Performance tuning is manual and workflow - driven. In contrast, ADK offers more structure out-of-the-box, making common multi-agent patterns easier to build without custom orchestration. Use LangGraph for custom flows; ADK for faster, structured development.
+
+* **OpenAI’s Agents SDK:** A lightweight, minimalist framework with just a few core primitives (Agents, Handoffs, Guardrails), designed for quick prototyping and simplicity. It supports agent delegation, tracing, and evaluation, and is open-source and provider-agnostic—working with 100+ LLMs, not just OpenAI’s. Compared to ADK, it’s easier to get started with but less structured for complex multi-agent systems. ADK offers a broader toolset, built-in orchestration, and deep Vertex AI integration, making it better suited for production-scale agent workflows. Use OpenAI’s SDK for fast iteration; use ADK when you need structure and scalability.
+
+## Tools and Ecosystem for ADK Development
+
+One of the strengths of ADK is how it fits into the broader AI development ecosystem. Here are some **tools and resources** that you can use alongside ADK to support the AI product development cycle:
+
+* **Google Gemini API:** ADK is optimized to work seamlessly with Google’s state-of-the-art Gemini models. You can use the Gemini API to access powerful LLMs (like Gemini 2.5) for your agents. By using Gemini through ADK, your agents can leverage advanced reasoning and tool-use capabilities that these models provide, and you have the option to deploy on Vertex AI’s managed infrastructure for high performance and scalability. In practice, this means if you need an agent to analyze complex data or handle large context windows, pairing ADK with Gemini gives you that muscle out-of-the-box.
+
+* **LangChain Integrations:** If you’re already using LangChain, you can integrate its tools or pipelines directly into ADK. Many developers use LangChain for data connectors or RAG pipelines, while relying on ADK for multi-agent orchestration. Both are open-source and work well together. For debugging, you can use LangSmith alongside ADK, though ADK also includes built-in tracing and logging.
+
+* **Vector Databases:** Many AI applications need long-term memory or knowledge retrieval. With ADK, you can integrate **vector databases** such as Pinecone, Weaviate, FAISS, or Google’s own Vertex AI Matching Engine to store and retrieve embeddings. This allows your agents to recall information or look up facts from a knowledge base. ADK doesn’t include a vector store by itself, but you can connect to one via tools or connectors. For instance, you might have a tool in ADK that queries a vector DB for relevant documents when the agent needs context. Developers commonly use vector stores for enabling agents to do semantic search over documents, and ADK fully supports this pattern (it even provides connectors and examples for working with external data sources). By using a vector database with ADK, your multi-agent system can have a shared memory or a reference knowledge source that all agents can tap into when needed.
+
+* **Evaluation and Testing Tools:** Getting an agent to work is one thing — making it reliable is another. ADK includes a built-in evaluation framework (AgentEvaluator) for testing agent behavior via code or CLI. You can also use external tools like OpenAI Evals or academic benchmarks. With built-in logging and tracing, it’s easy to plug ADK into eval dashboards or services like Vertex AI Evaluation. ADK makes it simple to test and improve agents before shipping.
+
+In conclusion, Google’s Agent Development Kit is a **developer-friendly SDK for multi-agent AI** that combines flexibility with structure. It lowers the barrier to creating advanced AI applications by providing the building blocks (agents, tools, orchestrators, etc.) and a full development lifecycle (local development, debugging UI, evaluation framework, and deployment pathways). Whether you’re a beginner experimenting with your first AI agents or an experienced developer looking to build a complex agent system, ADK offers a robust foundation to do it. 
+
+By integrating with powerful models like Gemini and supporting a wide range of tools and standards, ADK stands out as an **extensible, performance-minded** framework – all while keeping things accessible with simple abstractions. As the ecosystem of AI agents grows, frameworks like ADK will be key to enabling developers to innovate faster without getting bogged down in the complexity of managing multiple intelligent components. Google ADK invites you to imagine what you can build when your apps are powered by collaborative AI agents – and it gives you the means to build it. Happy hacking with ADK!

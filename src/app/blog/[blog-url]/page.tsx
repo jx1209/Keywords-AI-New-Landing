@@ -130,7 +130,7 @@ export default async function BlogDetail({
 
         {/* Main content area */}
         <div className="flex flex-col max-w-[1200px] w-full items-center gap-sm">
-          <div className="flex flex-col max-w-[800px] w-full items-start gap-sm prose prose-invert">
+          <div className="flex flex-col max-w-[800px] w-full items-start gap-sm">
             {mdxContent ? (
               // Render MDX content using MarkdownRenderer
               <MarkdownRenderer>{mdxContent.content}</MarkdownRenderer>

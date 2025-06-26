@@ -46,52 +46,115 @@ Our LLM router concept utilizes an embedding model (text-embedding-3-small from 
 We defined models and their characteristics in our backend:
 
 ```python
-gpt_4 = ModelParam(model_name="gpt-4", speed=48, max_context_window=8192, model_size=170, mmlu_score=86.4, mt_bench_score=8.96, big_bench_score=83, input_cost=30, output_cost=60, rate_limit=10000, function_call=1)
+gpt_4 = ModelParam(
+    model_name="gpt-4", 
+    speed=48, 
+    max_context_window=8192, 
+    model_size=170, 
+    mmlu_score=86.4, 
+    mt_bench_score=8.96, 
+    big_bench_score=83, 
+    input_cost=30, 
+    output_cost=60, 
+    rate_limit=10000, 
+    function_call=1
+)
 
-gpt_3_5_turbo = ModelParam(model_name="gpt-3.5-turbo", speed=150, max_context_window=4096, model_size=20, mmlu_score=70, mt_bench_score=7.94, big_bench_score=71.6, input_cost=0.5, output_cost=0.1, function_call=1)
+gpt_3_5_turbo = ModelParam(
+    model_name="gpt-3.5-turbo", 
+    speed=150, 
+    max_context_window=4096, 
+    model_size=20, 
+    mmlu_score=70, 
+    mt_bench_score=7.94, 
+    big_bench_score=71.6, 
+    input_cost=0.5, 
+    output_cost=0.1, 
+    function_call=1
+)
 
 difficulty_details = {
-  "1": "This query is just as a greeting or the most basic human interaction.",
-  "2": "This is a simple question that can be answered with a single sentence.",
-  "3": "This question requires a few sentences to answer, probably some logic or reasoning, basic coding question, or short JSON parsing.",
-  "4": "This question requires a paragraph to answer, requires a fair amount of logic and reasoning, coding algorithm, or long JSON parsing.",
-  "5": "This question requires a long answer, intricated logic or reasoning, complicated coding questions, or complicated nested JSON parsing."
+    "1": "This query is just as a greeting or the most basic human interaction.",
+    "2": "This is a simple question that can be answered with a single sentence.",
+    "3": "This question requires a few sentences to answer, probably some logic or reasoning, basic coding question, or short JSON parsing.",
+    "4": "This question requires a paragraph to answer, requires a fair amount of logic and reasoning, coding algorithm, or long JSON parsing.",
+    "5": "This question requires a long answer, intricated logic or reasoning, complicated coding questions, or complicated nested JSON parsing."
 }
 
 category_details = {
-  "Writing": "Engaging in narrative and creative text generation.",
-  "Questions": "Responding to inquiries across various topics.",
-  "Math": "Performing calculations and interpreting data.",
-  "Roleplay": "Engaging in simulated dialogues and scenarios.",
-  "Analysis": "Performing sentiment analysis, summarization, and entity recognition.",
-  "Creativity": "Generating ideas and concepts in arts and design.",
-  "Coding": "This task requires coding assistants and code generation.",
-  "Education": "Developing learning materials and providing explanations.",
-  "Research": "Conducting online research and compiling information.",
-  "Translation": "Translating text across multiple languages."
+    "Writing": "Engaging in narrative and creative text generation.",
+    "Questions": "Responding to inquiries across various topics.",
+    "Math": "Performing calculations and interpreting data.",
+    "Roleplay": "Engaging in simulated dialogues and scenarios.",
+    "Analysis": "Performing sentiment analysis, summarization, and entity recognition.",
+    "Creativity": "Generating ideas and concepts in arts and design.",
+    "Coding": "This task requires coding assistants and code generation.",
+    "Education": "Developing learning materials and providing explanations.",
+    "Research": "Conducting online research and compiling information.",
+    "Translation": "Translating text across multiple languages."
 }
 
 format_details = {
-  "PlainText": "Standard unformatted text responses.",
-  "StructuredData": "JSON, XML, and YAML output for structured data formats.",
-  "CodeScript": "Generation of source code and executable scripts.",
-  "ListOutput": "Bullet points and numbered list formats.",
-  "InteractiveText": "Q&A style and other interactive text elements.",
-  "Customized": "Custom instructions and unique output formats."
+    "PlainText": "Standard unformatted text responses.",
+    "StructuredData": "JSON, XML, and YAML output for structured data formats.",
+    "CodeScript": "Generation of source code and executable scripts.",
+    "ListOutput": "Bullet points and numbered list formats.",
+    "InteractiveText": "Q&A style and other interactive text elements.",
+    "Customized": "Custom instructions and unique output formats."
 }
 
 expertise_details = {
-  "STEM": "Covering science, technology, engineering, mathematics topics.",
-  "Humanities": "Specializing in literature, history, philosophy, arts.",
-  "Business": "Expertise in economics, management, marketing.",
-  "Health": "Providing healthcare and medical knowledge.",
-  "Legal": "Insights into law, politics, and governance.",
-  "Education": "Specializing in teaching and learning techniques.",
-  "Environment": "Focus on ecology, geography, and environmental science.",
-  "Tech": "Information technology, computer science, AI specialization.",
-  "Arts": "Covering music, visual arts, and entertainment.",
-  "Social": "Understanding of sociology, psychology, anthropology."
+    "STEM": "Covering science, technology, engineering, mathematics topics.",
+    "Humanities": "Specializing in literature, history, philosophy, arts.",
+    "Business": "Expertise in economics, management, marketing.",
+    "Health": "Providing healthcare and medical knowledge.",
+    "Legal": "Insights into law, politics, and governance.",
+    "Education": "Specializing in teaching and learning techniques.",
+    "Environment": "Focus on ecology, geography, and environmental science.",
+    "Tech": "Information technology, computer science, AI specialization.",
+    "Arts": "Covering music, visual arts, and entertainment.",
+    "Social": "Understanding of sociology, psychology, anthropology."
 }
 ```
 
-Check out the full code for the LLM router here: [LLM Router Code](https://medium.com/ai-advances/a-yc-startups-first-project-an-llm-router-with-code-4e8a66363b94)
+### Router Implementation
+
+The core routing logic uses embedding similarity to determine query complexity and route to the appropriate model:
+
+```python
+def route_query(query: str, embedding_model: str = "text-embedding-3-small"):
+    """
+    Route a query to the most appropriate LLM based on complexity analysis.
+    """
+    # Get query embedding
+    embedding = get_embedding(query, embedding_model)
+    
+    # Calculate complexity score
+    complexity_score = calculate_complexity(embedding, query)
+    
+    # Route based on complexity
+    if complexity_score < 0.3:
+        return gpt_3_5_turbo
+    else:
+        return gpt_4
+
+def calculate_complexity(embedding, query):
+    """
+    Calculate query complexity based on various factors.
+    """
+    # Length factor
+    length_factor = min(len(query.split()) / 100, 1.0)
+    
+    # Keyword-based complexity detection
+    complex_keywords = ['algorithm', 'implement', 'analyze', 'complex', 'detailed']
+    keyword_factor = sum(1 for word in complex_keywords if word in query.lower()) / len(complex_keywords)
+    
+    # Combine factors (this is simplified - in practice you'd use ML models)
+    complexity = (length_factor + keyword_factor) / 2
+    
+    return complexity
+```
+
+This approach allowed us to automatically route simple queries to the cost-effective GPT-3.5 Turbo while reserving GPT-4 for complex tasks that truly required its advanced capabilities.
+
+For more detailed implementation and the complete codebase, check out our [full article on Medium](https://medium.com/ai-advances/a-yc-startups-first-project-an-llm-router-with-code-4e8a66363b94).
