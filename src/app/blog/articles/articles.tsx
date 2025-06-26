@@ -1043,4 +1043,25 @@ export const blogs: Blog[] = [
       },
     },
   },
+  {
+    id: 46,
+    timestamp: "June 25, 2025",
+    slug: "/blog/google-adk-intro",
+    title: "Introducing Google’s Agent Development Kit (ADK)",
+    cover: {
+      id: 1,
+      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/google-adk-intro/cover.jpg",
+    },
+    type: "GUIDE",
+    author: {
+      name: "Hendrix",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/hendrix.png",
+        props: {
+          variant: "circle",
+        },
+      },
+    },
+  },
 ];
