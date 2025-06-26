@@ -1,0 +1,55 @@
+---
+title: "LLM logging with Vercel AI SDK"
+date: November 16, 2024
+author: Hendrix
+cover: https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/vercel_sdk/cover.png
+---
+
+## LLM logging with Vercel AI SDK
+
+OpenAI dominates the AI market, with Anthropic and Gemini also gaining popularity. Developers need these models to build reliable AI products. Using OpenAI or Anthropic's basic SDKs can be challenging. Frameworks like LangChain and Vercel AI SDK simplify development and handle complex workflows.
+
+Vercel's AI SDK provides a unified API for text generation, structured data, and tool calls with LLMs. It also offers a modern UI, streamlining app creation. However, it lacks observability tools for LLM apps, making performance monitoring and debugging difficult.
+
+Once your app's basic functionalities are set up, monitoring and improving performance becomes crucial. [Keywords AI](https://www.keywordsai.co/) fills this gap.
+
+In this blog, we'll show how to implement LLM logging in production in just 5 minutes using a simple AI app.
+
+### Installing the AI SDK and Importing It into Your Codebase
+
+Using Vercel's starter code, you can quickly create a local project. Begin by importing the Anthropic framework to leverage Anthropic models in your app.
+
+![Install SDK](https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/vercel_sdk/install.jpg)
+
+To make the app functional, implement two functions in your `api/route.ts` file:  
+
+1. **Import Anthropic Framework**: Set up the Anthropic client by importing the necessary modules and configuring the API keys.  
+2. **Call Anthropic Models**: Create a function that handles requests to the Anthropic API, enabling your app to generate AI responses.
+
+![Function Calls](https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/vercel_sdk/function_calls.jpg)
+
+With these functions added, run your app to view the frontend and assess its performance.  
+
+The app is working! What's next?
+
+![Sample App](https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/vercel_sdk/sample_app.gif)
+
+### Track the performance and improve it
+
+**Keywords AI** is an LLM monitoring and evaluation platform that enables you to monitor, debug, and enhance your AI app's performance. By integrating with the AI SDK, you can add monitoring capabilities with just a few lines of code changes.
+
+Steps to Integrate Keywords AI:
+
+**Generate an API Key**: Visit [Keywords AI](https://platform.keywordsai.co/) and obtain your API key.
+
+**Update Your Code**:
+- Replace the `baseURL` with `https://api.keywordsai.co/api/anthropic/v1`.
+- Replace the `apiKey` with your Keywords AI API key.
+
+Now, you can monitor your AI app directly through Keywords AI.
+
+![Monitoring Example](https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/vercel_sdk/monitor_example.gif)
+
+### Full Code Snippet:
+
+![Full Code](https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/vercel_sdk/full_code.jpg)
