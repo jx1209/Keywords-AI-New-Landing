@@ -144,22 +144,25 @@ export function MarkdownRenderer({ children: markdown }: MarkdownRendererProps) 
         ),
         
         // Images
-        img: ({ src, alt, ...props }) => {
+        img: ({ src, alt, width, height, ...props }) => {
           if (!src) return null;
           
           // Extract caption from alt text (format: "alt text|caption text")
           const [altText, caption] = (alt || '').split('|').map(s => s.trim());
+          
+          // Filter out props that might conflict with Next.js Image
+          const { style, ...safeProps } = props;
           
           return (
             <figure className="my-6 flex flex-col items-center">
               <Image
                 src={src}
                 alt={altText || 'Blog image'}
-                width={800}
-                height={0}
+                width={typeof width === 'number' ? width : 800}
+                height={typeof height === 'number' ? height : 450}
                 className="w-full rounded-lg"
-                style={{ height: 'auto' }}
-                {...props}
+                style={{ height: 'auto', ...style }}
+                {...safeProps}
               />
               {caption && (
                 <figcaption className="caption text-gray-4 mt-2 text-center">

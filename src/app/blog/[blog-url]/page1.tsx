@@ -1,4 +1,6 @@
-import React, { useEffect } from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import { blogs } from "../articles/articles";
 import { Blog } from "../articles/articles"; // Import the Blog type
 import { Largecard } from "../components/Largecard";
@@ -47,15 +49,29 @@ const getImageClass = (size: string) => {
   }
 };
 
-export default async function BlogDetail() {
+export default function BlogDetail() {
+  const [metadata, setMetadata] = useState<any>(null);
   console.log("POSTHOG KEY:", process.env.NEXT_PUBLIC_POSTHOG_KEY);
   const params = useParams();
   const rawBlogUrl = params?.['blog-url'];
   const blogUrl = Array.isArray(rawBlogUrl) ? rawBlogUrl[0] : rawBlogUrl ?? '';
 
   const blog = blogs.find((blog) => blog.slug === '/blog/' + blogUrl);
-  const metadata = blog ? await getMetadata(blogUrl) : null;
 
+  useEffect(() => {
+    const fetchMetadata = async () => {
+      if (blog) {
+        try {
+          const meta = await getMetadata(blogUrl);
+          setMetadata(meta);
+        } catch (error) {
+          console.error('Error fetching metadata:', error);
+        }
+      }
+    };
+    
+    fetchMetadata();
+  }, [blog, blogUrl]);
 
   useEffect(() => {
     if (blog) {
