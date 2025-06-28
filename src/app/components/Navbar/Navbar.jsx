@@ -28,17 +28,18 @@ export function Navbar() {
   const pathname = usePathname();
   const resourceItems = [
     {
+      title: "Customers",
+      subTitle: "See who's using Keywords AI.",
+      icon: UserAnalyticsIcon,
+      link: "/customers",
+    },
+    {
       title: "Accelerators & AI grants finder",
       subTitle: "Find and apply for accelerators & grants.",
       icon: DashboardIcon,
       link: "/accelerator-grant-finder",
     },
-    {
-      title: "SEO description generator",
-      subTitle: "Generate SEO-friendly descriptions.",
-      icon: RequestsIcon,
-      link: "https://seo.keywordsai.co/",
-    }
+
   ];
   const leftItems = [
     {
