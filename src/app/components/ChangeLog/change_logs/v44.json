@@ -1,0 +1,22 @@
+{
+  "date": "May 30, 2025",
+  "Title": "LLM Cache Metrics Graphs",
+  "snapshot": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/llm-caches-graphs.jpg",
+  "introduction": "We’ve just shipped new graphs that show your LLM caching details! \n\n When you enable LLM caching with Keywords AI Gateway, cache metrics appear automatically in your dashboard.  \n\nWhy use Keywords AI LLM caching? \n✅ Reduce latency \n✅ Save cost \n✅ Improve scalability",
+"sections": {
+    "New": [
+      {"tag": "Playground", "description": "Added support for uploading and processing PDFs in the Playground."}
+    ],
+    "Improved": [
+      {"tag": "Dashboard", "description": "Improved page loading times for faster access."},
+      {"tag": "Logs", "description": "Improved usability of the time range selector in Logs."},
+      {"tag": "Playground", "description": "You can now open Logs directly in a new Playground tab."}
+    ],
+    "Fixed": [
+      {"tag": "Logs", "description": "Fixed a bug where tool calls were not displayed in the side panel."},
+      {"tag": "Logs", "description": "Fixed a bug where hiding Image variables did not work."},
+      {"tag": "Experiments", "description": "Fixed a bug where experiments could not be deleted."},
+      {"tag": "Settings", "description": "Fixed a bug where invoices could not be viewed in Settings."}
+    ]
+  }
+}

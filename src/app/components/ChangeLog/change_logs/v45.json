@@ -1,0 +1,22 @@
+{
+  "date": "June 6, 2025",
+  "Title": "Introducing Signals",
+  "snapshot": "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/changelog/signals.jpg",
+  "introduction": "We just merged Logs, Threads, and Traces into a single Signals page. \n\nFollowing the OpenTelemetry convention, Signals unifies different types of observability data — so you can investigate LLM logs, traces, and threads without switching tabs. \n\nOne clean view to understand everything happening in your LLM workflow.",
+"sections": {
+    "New": [
+      {"tag": "Playground", "description": "Added support for uploading and processing PDFs in the Playground."}
+    ],
+    "Improved": [
+      {"tag": "Dashboard", "description": "Improved page performance for bar charts."},
+      {"tag": "Playground", "description": "Improved the UI of response format selector."},
+      {"tag": "Users", "description": "Improved filters in Users."}
+    ],
+    "Fixed": [
+      {"tag": "Prompts", "description": "Fixed a bug where Commit + Deploy does not work."},
+      {"tag": "Logs", "description": "Fixed a bug where hiding Image variables did not work."},
+      {"tag": "Experiments", "description": "Fixed a bug where experiments could not be deleted."},
+      {"tag": "Settings", "description": "Fixed a bug where invoices could not be viewed in Settings."}
+    ]
+  }
+}

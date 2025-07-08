@@ -42,9 +42,11 @@ import log40 from './v40.json'
 import log41 from './v41.json'
 import log42 from './v42.json'
 import log43 from './v43.json'
+import log44 from './v44.json'
+import log45 from './v45.json'
 // Import all your log files h ere
 
-const logs = [log43, log42, log41, log40, log39, log38, log37, log36, log35, log34, log33, log32, log31, log30, log29, log28, log27, log26, log25, log24, log23, log22,log21, log20, log19,log18, log17,log16, log15, log14, log13, log12, log11, log10, log9, log8, log7, log6, log5, log4, log3, log2, log1
+const logs = [log45, log44, log43, log42, log41, log40, log39, log38, log37, log36, log35, log34, log33, log32, log31, log30, log29, log28, log27, log26, log25, log24, log23, log22,log21, log20, log19,log18, log17,log16, log15, log14, log13, log12, log11, log10, log9, log8, log7, log6, log5, log4, log3, log2, log1
 ] // Add all imported logs to this array
 
 export default logs
