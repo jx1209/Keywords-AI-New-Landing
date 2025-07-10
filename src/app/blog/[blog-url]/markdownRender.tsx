@@ -70,7 +70,7 @@ export function MarkdownRenderer({ children: markdown }: MarkdownRendererProps) 
           </h2>
         ),
         h3: ({ children, ...props }) => (
-          <h3 className="text-xl font-semibold text-gray-white mb-3 mt-4" {...props}>
+          <h3 className="text-lg font-semibold text-gray-white mb-1 mt-1" {...props}>
             {children}
           </h3>
         ),
