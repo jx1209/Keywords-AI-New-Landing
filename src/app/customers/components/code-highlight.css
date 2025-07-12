@@ -1,0 +1,117 @@
+/* Code syntax highlighting styles for customer MDX pages */
+
+/* Base code block styles */
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0;
+  background: transparent;
+  color: #f9fafd;
+}
+
+/* Keywords */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-link {
+  color: #6483f0;
+  font-weight: 500;
+}
+
+/* Strings */
+.hljs-string,
+.hljs-attr,
+.hljs-template-variable,
+.hljs-template-tag,
+.hljs-addition {
+  color: #73cb98;
+}
+
+/* Numbers */
+.hljs-number,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-meta {
+  color: #7590f2;
+}
+
+/* Comments */
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion {
+  color: #b1b3bc;
+  font-style: italic;
+}
+
+/* Functions */
+.hljs-function,
+.hljs-title,
+.hljs-class .hljs-title,
+.hljs-type {
+  color: #f9fafd;
+  font-weight: 600;
+}
+
+/* Variables */
+.hljs-variable,
+.hljs-name,
+.hljs-attribute {
+  color: #f9fafd;
+}
+
+/* Built-ins */
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #6483f0;
+}
+
+/* Regex */
+.hljs-regexp {
+  color: #73cb98;
+}
+
+/* Tags */
+.hljs-tag {
+  color: #6483f0;
+}
+
+/* Emphasis */
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+/* Language-specific adjustments */
+.hljs-javascript .hljs-function,
+.hljs-typescript .hljs-function {
+  color: #6483f0;
+}
+
+.hljs-json .hljs-attr {
+  color: #6483f0;
+}
+
+.hljs-css .hljs-selector-class,
+.hljs-css .hljs-selector-id {
+  color: #73cb98;
+}
+
+.hljs-css .hljs-attribute {
+  color: #6483f0;
+}
+
+/* Copy button hover area */
+pre:hover {
+  position: relative;
+}
+
+/* Make code blocks more readable */
+pre code {
+  line-height: 1.5;
+  font-size: 14px;
+  font-family: 'Fira Code', 'Monaco', 'Consolas', 'Ubuntu Mono', monospace;
+} 

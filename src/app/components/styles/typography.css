@@ -26,7 +26,7 @@
 .display-sm {
   @apply text-gray-white font-inter;
   font-size: 26px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 32px;
   font-style: normal;
 }
@@ -118,7 +118,7 @@
   @apply text-gray-white font-inter;
   font-size: 30px;
   font-weight: 700;
-  line-height: 40px;
+  line-height: 38px;
   font-style: normal;
 }
 

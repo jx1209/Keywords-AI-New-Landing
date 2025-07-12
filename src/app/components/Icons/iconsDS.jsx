@@ -748,9 +748,9 @@ export const File = ({
 };
 // className={"flex-shrink-0"}>
 // className={active ? activeFill : fill} />
-export const Link = ({
-  fill = "fill-primary",
-  activeFill = "fill-primary",
+export const LinkIcon = ({
+  fill = "fill-gray-4",
+  activeFill = "fill-gray-white",
   active = false,
   size = "lg",
 }) => {
@@ -2488,3 +2488,5 @@ export const Redirect = ({
       );
   }
 };
+
+
