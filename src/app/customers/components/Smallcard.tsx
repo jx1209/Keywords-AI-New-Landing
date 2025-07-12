@@ -1,22 +1,19 @@
 "use client";
 import React from "react";
-import BlogDetail from "../[customer-url]/page";
-import { Blog } from "../customer-list/customer-list";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
+import Link from "next/link"; 
 import Image from "next/image";
+import { Customer } from "../customer-list/customer-list";
 
 type Props = {
-  blog: Blog;
+  customer: Customer;
 };
 
-export const Smallcard: React.FC<Props> = ({ blog }) => {
-  console.log(blog);
-  const isExternalLink = blog.slug.startsWith('http://') || blog.slug.startsWith('https://');
+export const Smallcard: React.FC<Props> = ({ customer }) => {
+  const isExternalLink = customer.slug.startsWith('http://') || customer.slug.startsWith('https://');
   return (
     <Link
       className="flex max-w-[800px] items-center gap-lg cursor-pointer transform transition-transform duration-300 hover:scale-101"
-      href={`${blog.slug}`}
+      href={`${customer.slug}`}
       {...(isExternalLink ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       // onClick={() => {
       //   <BlogDetail />;
@@ -24,8 +21,8 @@ export const Smallcard: React.FC<Props> = ({ blog }) => {
     >
       <div className="relative w-[200px] h-[116px]">
         <Image
-          src={blog.cover.url}
-          alt={blog.title}
+          src={customer.cover.url}
+          alt={customer.title}
           fill
           sizes="200px"
           style={{ objectFit: "cover" }}
@@ -34,10 +31,10 @@ export const Smallcard: React.FC<Props> = ({ blog }) => {
       </div>
       <div className="flex flex-col items-start gap-sm flex-1 min-h-[116px]">
         <div className="flex flex-col items-start gap-xxxs flex-1">
-          <span className="text-sm-regular text-gray-4">{blog.type}</span>
-          <span className="display-xs-md text-gray-white">{blog.title}</span>
+          <span className="text-sm-regular text-gray-4">{customer.industry}</span>
+          <span className="display-xs-md text-gray-white">{customer.title}</span>
         </div>
-        <span className="text-sm-regular text-gray-4">{blog.timestamp}</span>
+        <span className="text-sm-regular text-gray-4">{customer.date}</span>
       </div>
     </Link>
   );

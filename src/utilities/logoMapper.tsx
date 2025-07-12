@@ -22,7 +22,7 @@ import {
 type LogoSize = "sm" | "md";
 
 interface LogoMapping {
-  [key: string]: (props: { size?: LogoSize }) => JSX.Element;
+  [key: string]: (props: { size?: LogoSize }) => JSX.Element | undefined;
 }
 
 const logoComponents: LogoMapping = {
