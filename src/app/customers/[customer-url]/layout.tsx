@@ -1,5 +1,6 @@
 import { getCustomerMetadata } from "@/utilities/getCustomerMetadata";
 import "@mintlify/mdx/dist/styles.css";
+import "../components/code-highlight.css";
 import type { Metadata } from "next";
 
 export async function generateMetadata({

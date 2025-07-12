@@ -41,28 +41,50 @@ export type Customer = {
   meta?: {
     description?: string;
   };
+  highlight?: {
+    value: string;
+    description: string;
+  };
+  atAGlance?: {
+    customer: string;
+    stage: string;
+    industry: string;
+    challenge: string;
+    solution: string;
+  };
 };
 
 export const customers: Customer[] = [
   {
-    id: 45,
+    id: 1,
     date: "May 27, 2025",
-    slug: "/customers/claude-sonnet-4-vs-claude-opus-4-a-comprehensive-comparison",
-    title: "Claude Sonnet 4 vs Claude Opus 4: A comprehensive comparison",
+    slug: "/customers/octolane",
+    title: "How Octolane’s self-driving CRM cut debug time by 90% with Keywords AI",
     cover: {
       id: 1,
-      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/claude-4-opus-vs-sonnet/cover.jpg",
+      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/customers/octolane/founders.jpg",
     },
     industry: "TECHNOLOGY",
     company: {
-      name: "Keywords AI",
+      name: "Octolane AI",
       logo: {
         id: 1,
-        url: "/images/blog_Images/hendrix.png",
+        url: "OctolaneLogo-md",
         props: {
           variant: "circle",
         },
       },
+    },
+    highlight: {
+      value: "10X",
+      description: "FASTER DEBUGGING OF LLM FAILURES"
+    },
+    atAGlance: {
+      customer: "Octolane AI (YC W24) - The First Self-Driving AI CRM",
+      stage: "Seed round - $2.6M",
+      industry: "B2B SaaS / AI CRM",
+      challenge: "LLM bugs and blindspots slowed down shipping speed",
+      solution: "Drop-in observability, prompt management, and prompt debugging with Keywords AI",
     },
   },
 ];

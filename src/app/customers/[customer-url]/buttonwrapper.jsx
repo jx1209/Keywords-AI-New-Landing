@@ -10,7 +10,7 @@ export function ButtonWrapper(props) {
     <Button
       {...props}
       onClick={() => {
-        window.open("https://platform.keywordsai.co/platform", "_blank");
+        window.open("https://platform.keywordsai.co/login", "_blank");
       }}
     />
   );

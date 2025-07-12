@@ -3,6 +3,7 @@ import Customers from "../../components/Customers/Customers";
 import CustomerDetail from "../[customer-url]/page";
 import Link from "next/link";
 import Image from "next/image";
+import { getLogoComponent, isLogoComponentName } from "@/utilities/logoMapper";
 
 type Props = {
   image: string;
@@ -12,6 +13,10 @@ type Props = {
   companyLogo: string;
   slug: string;
   id: number;
+  highlight?: {
+    value: string;
+    description: string;
+  };
 };
 
 export const Largecard: React.FC<Props> = ({
@@ -22,11 +27,12 @@ export const Largecard: React.FC<Props> = ({
   companyLogo,
   slug,
   id,
+  highlight,
 }) => {
   const isExternalLink = slug.startsWith('http://') || slug.startsWith('https://');
   return (
     <Link
-      className="w-full max-w-[588px] min-h-[703px] after:flex flex-col pb-lg items-start gap-lg flex-1 rounded-lg border border-gray-3 bg-gray-2 cursor-pointer transform transition-transform duration-200 hover:scale-101"
+      className="w-full max-w-[588px] after:flex flex-col items-start gap-lg flex-1 rounded-lg border border-gray-3 bg-gray-2 cursor-pointer transform transition-transform duration-200 hover:scale-101"
       href={`${slug}`}
       {...(isExternalLink ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       // onClick={() => {
@@ -39,7 +45,7 @@ export const Largecard: React.FC<Props> = ({
         src={image}
         alt="cover"
       /> */}
-      <div className="relative w-full h-[331px]">
+      <div className="relative w-full h-[331px] min-w-[320px]">
         <Image
           src={image}
           alt="cover"
@@ -48,23 +54,19 @@ export const Largecard: React.FC<Props> = ({
           className="rounded-t-lg"
         />
       </div>
-      <div className="flex flex-col py-0 px-lg items-start gap-sm self-stretch">
-        <div className="flex flex-col items-start gap-xxs ">
-          <span className="caption text-gray-4">{industry}</span>
-          <span className="display-xs-md text-gray-white min-h-[80px]">
+      <div className="flex flex-col px-lg items-start gap-sm ">
+        <div className="flex flex-col items-start gap-lg ">
+          <div className="flex items-center min-h-[28px]">
+            {getLogoComponent(companyLogo)}
+          </div>
+          <span className="display-xs-md text-gray-white min-h-[84px]">
             {title}
           </span>
         </div>
-        <div className="flex flex-row justify-between items-center self-stretch ">
-          <span className="caption text-gray-4">{date}</span>
-          <div className="relative h-[24px] w-[24px]">
-            <Image
-              src={companyLogo}
-              alt="company logo"
-              fill
-              style={{ objectFit: "cover" }}
-              className="rounded-full"
-            />
+        <div className="flex flex-row justify-between items-center ">
+          <div className="flex gap-xs items-start ">
+            <span className="display-xs text-gray-white">{highlight?.value || ""}</span>
+            <span className="text-md-medium text-gray-white">{highlight?.description || ""}</span>
           </div>
         </div>
       </div>

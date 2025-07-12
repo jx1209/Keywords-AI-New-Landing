@@ -20,7 +20,7 @@ interface CustomerMetaData {
 export async function getCustomerMetadata(
   filePath: string
 ): Promise<CustomerMetaData | null> {
-  const basePath = path.join(process.cwd(), "src", "app", "customers", "articles", filePath);
+  const basePath = path.join(process.cwd(), "src", "app", "customers", "customer-list", filePath);
 
   const jsonPath = path.join(basePath, "metadata.json");
   try {

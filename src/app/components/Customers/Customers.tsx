@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { customers } from "../../customers/articles/articles";
+import { customers } from "../../customers/customer-list/customer-list";
 import { Largecard } from "../../customers/components/Largecard";
 import { MediumCard } from "../../customers/components/Mediumcard";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
@@ -33,6 +33,7 @@ export default function Customers() {
                   companyLogo={customer.company.logo.url}
                   slug={customer.slug}
                   id={customer.id}
+                  highlight={customer.highlight}
                 />
               ))}
             </div>

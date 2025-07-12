@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Check, Link } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/app/components/Buttons/Button/Button';
+import { LinkIcon } from '@/app/components/Icons/iconsDS';
 
 interface HeadingWithCopyLinkProps {
     level: 1 | 2 | 3 | 4 | 5 | 6;
@@ -58,9 +58,9 @@ export const HeadingWithCopyLink: React.FC<HeadingWithCopyLinkProps> = ({
                     onClick={copyAndJump}
                 >
                     {copied ? (
-                        <Check className="size-full text-muted-foreground" />
+                        <LinkIcon size="md" />
                     ) : isHovered ? (
-                        <Link className="size-full text-muted-foreground" />
+                        <LinkIcon size="md" />
                     ) : null}
                 </Button>
             )}

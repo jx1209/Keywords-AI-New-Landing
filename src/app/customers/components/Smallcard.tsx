@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import BlogDetail from "../[customer-url]/page";
-import { Blog } from "../articles/articles";
+import { Blog } from "../customer-list/customer-list";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
