@@ -966,7 +966,7 @@ export const blogs: Blog[] = [
     title: "A Complete Guide to the Model Context Protocol (MCP) in 2025",
     cover: {
       id: 1,
-      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/guide-of-mcp/cover.png",
+      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/guide-of-mcp/cover_v2.jpg",
     },
     type: "GUIDE",
     author: {
@@ -1008,7 +1008,7 @@ export const blogs: Blog[] = [
     title: "GPT-4.1 vs GPT-4.5: A comprehensive comparison",
     cover: {
       id: 1,
-      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/gpt-4.5-vs-gpt-4.1/cover.jpg",
+      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/gpt-4.5-vs-gpt-4.1/cover_v3.jpg",
     },
     type: "MODELS",
     author: {
@@ -1029,7 +1029,7 @@ export const blogs: Blog[] = [
     title: "Claude Sonnet 4 vs Claude Opus 4: A comprehensive comparison",
     cover: {
       id: 1,
-      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/claude-4-opus-vs-sonnet/cover.jpg",
+      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/claude-4-opus-vs-sonnet/cover_v2.jpg",
     },
     type: "MODELS",
     author: {
@@ -1050,7 +1050,7 @@ export const blogs: Blog[] = [
     title: "Introducing Google’s Agent Development Kit (ADK)",
     cover: {
       id: 1,
-      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/google-adk-intro/cover.jpg",
+      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/google-adk-intro/cover_v2.jpg",
     },
     type: "GUIDE",
     author: {
@@ -1058,6 +1058,27 @@ export const blogs: Blog[] = [
       image: {
         id: 1,
         url: "/images/blog_Images/hendrix.png",
+        props: {
+          variant: "circle",
+        },
+      },
+    },
+  },
+  {
+    id: 47,
+    timestamp: "June 25, 2025",
+    slug: "/blog/intro-grok4",
+    title: "Developer guide to grok 4",
+    cover: {
+      id: 1,
+      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/grok-4/cover_v1.jpg",
+    },
+    type: "MODELS",
+    author: {
+      name: "Frank",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/frank.jpg",
         props: {
           variant: "circle",
         },
