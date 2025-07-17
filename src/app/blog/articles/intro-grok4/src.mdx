@@ -93,9 +93,9 @@ response = client.chat.completions.create(
 
 | Metric | Grok 4 | o3 | Gemini 2.5 Pro | Claude 4 Sonnet | Claude 4 Opus | DeepSeek R1 |
 |---|---|---|---|---|---|---|
-| **Context Window** | 256k | 128k | 1M (2M planned) | 200k | 200k | 128k |
-| **Input Price ($/1M)** | $3.00 | $10.00 | $1.25 (<200k), $2.50 (>200k) | $3.00 | $15.00 | $0.55 |
-| **Output Price ($/1M)** | $15.00 | $40.00 | $10.00 | $15.00 | $75.00 | $2.19 |
+| **Context Window** | 256k | 200k | 1M (2M planned) | 200k | 200k | 128k |
+| **Input Price ($/1M)** | $3.00 | $2.00 | $1.25 (<200k), $2.50 (>200k) | $3.00 | $15.00 | $0.55 |
+| **Output Price ($/1M)** | $15.00 | $8.00 | $10.00 | $15.00 | $75.00 | $2.19 |
 | **Reasoning Mode** | Always-on CoT | Advanced reasoning | Deep Think mode | Thinking mode | Extended thinking | Built-in reasoning |
 | **Tool Integration** | Live Search, JSON functions | Full tool API | Search, function calling | Tool calling, safety filters | Tool calling, parallel compute | Basic tools, OSS flexibility |
 | **Multimodal** | Text + Image + Voice (mobile) | Text only (API) | Text + Image + Video + Audio | Text + Image | Text + Image | Text only |
