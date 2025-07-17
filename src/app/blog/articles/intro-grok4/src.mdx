@@ -1,0 +1,125 @@
+---
+title: "The developer guide to Grok-4"
+date: July 16, 2025
+author: Frank
+---
+
+Grok 4 is the July 2025 flagship model from xAI. It delivers a 256k token context window, built in tools, multimodal input, and an optional Heavy multi agent tier. API pricing is $3 per million input tokens and $15 per million output tokens (same as Grok 3). This guide covers capabilities, quick API setup, and how Grok 4 compares to current premium reasoning models from OpenAI, Google, Anthropic, and DeepSeek.
+
+---
+
+## Overview of Grok 4
+
+### Grok-4 Release & Variants
+
+- Announced July 10, 2025 as xAI's most capable model targeting advanced reasoning and real time intelligence.
+- Two variants: Grok 4 (single agent) and Grok 4 Heavy (parallel multi agent for complex jobs).
+
+### Core API Specs
+
+| Attribute                | Grok 4                                                 |
+| ------------------------ | ------------------------------------------------------ |
+| Context window           | 256 k tokens                                           |
+| Pricing (per 1 M tokens) | \$3 input / \$15 output                                |
+| Heavy subscription       | \$300 / month seat for multi-agent tier                |
+| Modalities               | Text + images (vision endpoint); voice in mobile apps  |
+| Tool use                 | Native web/X search & function calling                 | 
+
+
+### Stand-out Features
+
+* **Always-on chain-of-thought**: the legacy reasoning\_effort toggle is gone and every call runs in full reasoning mode.
+* **Live search agent**: lets the model fetch current web or X posts during inference—no extra orchestration needed.
+* **Structured outputs & function calling**: follow the OpenAI JSON schema standard.
+
+---
+
+## Grok API Access
+
+### Getting Started with xAI API
+
+Step 1: Create an xAI account at [console.x.ai](https://console.x.ai) and generate your API key. Store it securely as an environment variable.
+
+Step 2: Make your first API request following the [official tutorial](https://docs.x.ai/docs/tutorial#step-4-make-a-request-from-python-or-javascript).
+
+Step 3: You can also use OpenAI or Anthropic SDK compatibility by changing the base URL.
+
+```python
+client = OpenAI(
+    api_key=os.getenv("XAI_API_KEY"),
+    base_url="https://api.x.ai/v1",
+)
+
+# Sending the query
+response = client.chat.completions.create(
+    model="grok-4",
+    messages=[
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "Which ingredients do you notice on the picture?"
+        }
+      ]
+    }
+  ],
+)
+
+print(response.choices[0].message.content)
+```
+
+### Alternative: Using Keywords AI Gateway
+
+You can also access Grok 4 through the **Keywords AI gateway**, which provides unified access to all mainstream AI models.([Library](https://www.keywordsai.co/llm-library)) We offer seamless compatibility with popular SDKs including OpenAI, Anthropic, LangChain, Vercel AI SDK, Mastra, and etc., making integration effortless regardless of your preferred development stack.
+
+```python
+from openai import OpenAI
+
+client = OpenAI(
+    base_url="https://api.keywordsai.co/api/",
+    api_key=YOUR_KEYWORDSAI_API_KEY,
+)
+
+response = client.chat.completions.create(
+    model="gpt-4o-mini",
+    #Any models you would like to use.
+    messages=[{"role":"user", "content":"Tell me a long story"}],
+)
+```
+---
+
+## API-First Model Comparison (July 2025)
+
+| Metric | Grok 4 | o3 | Gemini 2.5 Pro | Claude 4 Sonnet | Claude 4 Opus | DeepSeek R1 |
+|---|---|---|---|---|---|---|
+| **Context Window** | 256k | 128k | 1M (2M planned) | 200k | 200k | 128k |
+| **Input Price ($/1M)** | $3.00 | $10.00 | $1.25 (<200k), $2.50 (>200k) | $3.00 | $15.00 | $0.55 |
+| **Output Price ($/1M)** | $15.00 | $40.00 | $10.00 | $15.00 | $75.00 | $2.19 |
+| **Reasoning Mode** | Always-on CoT | Advanced reasoning | Deep Think mode | Thinking mode | Extended thinking | Built-in reasoning |
+| **Tool Integration** | Live Search, JSON functions | Full tool API | Search, function calling | Tool calling, safety filters | Tool calling, parallel compute | Basic tools, OSS flexibility |
+| **Multimodal** | Text + Image + Voice (mobile) | Text only (API) | Text + Image + Video + Audio | Text + Image | Text + Image | Text only |
+| **Special Features** | Multi-agent Heavy ($300/mo) | Mathematical precision | 1M+ token processing | Fast inference (1.9s) | Industry-leading coding | Open source weights |
+---
+
+## When Grok 4 Is the Right Choice
+
+| Prefer Grok 4 when…                                                       | Why                                                                                                                       |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------  |
+| **You need ultra-long context** (legal transcripts, book-length prompts). | 256k tokens exceeds most competitors except Gemini 2.5 Pro's 1M window, ideal for comprehensive document analysis.        |
+| **Real-time data or social feeds are critical.**                          | Native Live Search pulls current web & X results during inference—no external API orchestration needed.                   |
+| **Advanced mathematical reasoning.**                                      | Heavy variant achieves 44.4% on Humanity's Last Exam and 100% on AIME 2025, outperforming most competitors.               |
+| **Multi-agent collaboration is needed.**                                  | Heavy tier ($300/mo) runs parallel AI agents for complex problem-solving that single models can't handle effectively.     |
+| **Cost-effective reasoning at scale.**                                    | $3/$15 pricing matches Claude 4 Sonnet but with always-on chain-of-thought and superior context window.                   |
+
+---
+
+## Alternatives
+
+* Production coding pipelines → Claude 4 Sonnet/Opus
+* Multimodal experiences with video/audio → Gemini 2.5 Pro
+* Budget-conscious deployments → DeepSeek R1
+* Enterprise safety and compliance → Claude 4 models
+* General-purpose versatility → OpenAI o3
+
+---
