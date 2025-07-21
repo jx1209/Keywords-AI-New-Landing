@@ -1,0 +1,112 @@
+---
+title: "Kimi K2 Explained: Specs, Benchmarks & How to Start Building Today"
+date: July 21, 2025
+author: Frank
+cover: https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/kimi-k2/cover_v2.png
+---
+
+# Kimi K2 Explained: Specs, Benchmarks & How to Start Building Today
+
+Moonshot AI's **Kimi K2** has entered the arena, and it's one of the most powerful open-weight models released to date. With **1 trillion parameters**, **128K token context**, and top-tier performance on coding and math tasks, Kimi K2 is quickly becoming a go-to choice for developers looking for a high-performing, low-cost alternative to GPT-4 and Claude.
+
+In this guide, we’ll break down what makes Kimi K2 special, how it compares to other frontier models, and how you can start building with it today.
+
+
+![Kimi K2 Cover](https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/kimi-k2/cover_v2.png)
+---
+
+## What Is Kimi K2?
+
+Kimi K2 is a **Mixture of Experts (MoE)** large language model developed by [Moonshot AI](https://moonshot.ai). It is the successor to the original Kimi Chat model and is designed to be fast, efficient, and open-weight—meaning developers can download the weights and run the model themselves.
+
+At its core, K2 uses a MoE architecture with **1 trillion total parameters** and **32 billion active** at runtime, which means only a subset of the model is activated per query. This gives it both speed and scale.
+
+---
+
+## Key Specs at a Glance
+
+* **Architecture:** MoE with 384 experts, 61 layers, 64 heads
+* **Total Parameters:** 1 trillion (1T)
+* **Active Parameters:** 32 billion (32B)
+* **Context Window:** 128,000 tokens
+* **Modalities:** Text-only (multimodal expected in future variants)
+* **License:** Open-weight (non-commercial usage allowed)
+
+---
+
+## Benchmark Performance
+
+Kimi K2 shines in reasoning, math, and especially coding tasks:
+
+| Benchmark         | Score       | Comparison                    |
+| ----------------- | ----------- | ----------------------------- |
+| **LiveCodeBench** | 53.7%       | #1 among open models          |
+| **MATH 500**      | 97%+        | Near GPT-4.1                  |
+| **HumanEval**     | Competitive | Beats many proprietary models |
+
+These results put Kimi K2 in the same league as Claude Opus and GPT-4.1, particularly in agentic workflows and code generation.
+
+---
+
+## Pricing & Access Options (Available at Keywords AI Platform)
+
+Kimi K2 is available via multiple hosting providers and offers extremely competitive rates:
+
+| Provider        | Input \$/M | Output \$/M | Notes                |
+| --------------- | ---------- | ----------- | -------------------- |
+| **OpenRouter**  | \$0.15     | \$2.50      | More options         |
+| **DeepInfra**   | \$0.55     | \$2.20      | Public API           |
+| **SiliconFlow** | \$0.58     | \$2.29      | 100K TPM limit       |
+| **Together AI** | \$1.00     | \$3.00      | Easy quickstart code |
+
+You can also run the model yourself with weights from Hugging Face or directly from Moonshot AI.
+
+---
+
+## Why Kimi K2 Matters
+
+Kimi K2 isn’t just another big model. It’s part of a growing trend of **open-weight, high-performance LLMs** that offer developers real control and flexibility.
+
+* **Open-weight:** Access the raw model files and run it locally or in your own infra.
+* **Massive context:** 128K tokens lets you process entire books, transcripts, or long threads in one go.
+* **Coding-first design:** K2 dominates in agentic coding tasks, competitive with proprietary options.
+* **Cost-effective:** Underpricing most API-based models like GPT-4, Claude Opus, or Gemini.
+
+---
+
+## How to Start Building with Kimi K2
+
+You can use Kimi K2 via hosted APIs (like OpenRouter) or self-host the model. Here’s how to start quickly:
+
+
+### Option 1: Keywords AI Gateway
+
+You can also Kimi K2 calls through [Keywords AI](https://www.keywordsai.co/) to monitor logs, costs, and trace executions across models.
+
+### Option2: OpenRouter Example (Python)
+
+```python
+from openai import OpenAI
+client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key="YOUR_API_KEY")
+client.chat.completions.create(
+  model="moonshot/kimi-k2",
+  messages=[{"role": "user", "content": "Write a Python function to reverse a string."}]
+)
+```
+
+## Frequently Asked Questions
+
+**Q: Can I download the Kimi K2 weights?**
+A: Yes, the weights are available on Hugging Face and Moonshot's website.
+
+**Q: Is Kimi K2 better than GPT-4o?**
+A: GPT-4o still leads in general reasoning and multimodal.
+
+**Q: Can I use Kimi K2 in production?**
+A: Yes, but commercial use requires specific licensing. Check Moonshot's terms.
+
+---
+
+## Final Thoughts
+
+Kimi K2 is a milestone for open AI. It’s fast, smart, and affordable. All while giving developers more transparency and control than any closed model can. Whether you're building agents, tools, or research prototypes, this is one model you should definitely try.

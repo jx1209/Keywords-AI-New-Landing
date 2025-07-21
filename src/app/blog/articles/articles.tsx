@@ -1066,7 +1066,7 @@ export const blogs: Blog[] = [
   },
   {
     id: 47,
-    timestamp: "June 25, 2025",
+    timestamp: "July 12, 2025",
     slug: "/blog/intro-grok4",
     title: "Developer guide to grok 4",
     cover: {
@@ -1085,4 +1085,26 @@ export const blogs: Blog[] = [
       },
     },
   },
+  {
+    id: 48,
+    timestamp: "July 21, 2025",
+    slug: "/blog/kimi-k2",
+    title: "Kimi K2 Explained: Specs, Benchmarks & How to Start Building Today",
+
+    cover: {
+      id: 1,
+      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/kimi-k2/cover_v2.png",
+    },
+    type: "MODELS",
+    author: {
+      name: "Frank",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/frank.jpg",
+        props: {
+          variant: "circle",
+        },
+      },
+    },
+  }
 ];

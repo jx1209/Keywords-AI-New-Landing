@@ -171,5 +171,14 @@
       <loc>https://keywordsai.co/blog/claude-sonnet-4-vs-claude-opus-4-a-comprehensive-comparison</loc>
       <priority>1.0</priority>
    </url>
+   <url>
+      <loc>https://www.keywordsai.co/blog/intro-grok4</loc>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.keywordsai.co/blog/kimi-k2</loc>
+      <priority>1.0</priority>
+   </url>
+
 
 </urlset>
