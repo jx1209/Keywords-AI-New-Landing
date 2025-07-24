@@ -15,7 +15,7 @@ export const MediumCard: React.FC<Props> = ({ blog }) => {
   const isExternalLink = blog.slug.startsWith('http://') || blog.slug.startsWith('https://');
   return (
     <Link
-      className="flex flex-col items-start gap-lg flex-1 rounded-lg border border-gray-3 bg-gray-2 max-w-[400px] w-full cursor-pointer transform transition-transform duration-200 hover:scale-101"
+      className="flex flex-col items-start gap-lg flex-1 pb-md rounded-lg border border-gray-3 bg-gray-2 max-w-[400px] w-full cursor-pointer transform transition-transform duration-200 hover:scale-101"
       href={`${blog.slug}`}
       {...(isExternalLink ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >

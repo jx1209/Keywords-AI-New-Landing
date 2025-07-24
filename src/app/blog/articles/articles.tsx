@@ -1106,5 +1106,26 @@ export const blogs: Blog[] = [
         },
       },
     },
+  },
+  {
+    id: 49,
+    timestamp: "July 24, 2025",
+    slug: "/blog/how-to-fix-it-when-llms-get-lost-in-multi-turn-conversation",
+    title: "How to Fix it When LLMs Get Lost in Multi-Turn Conversation",
+    cover: {
+      id: 1,
+      url: "https://keywordsai-static.s3.us-east-1.amazonaws.com/landing/blog/why-llms-fails-in-multi-turn-convos/cover.png",
+    },
+    type: "GUIDE",
+    author: {
+      name: "Hendrix",
+      image: {
+        id: 1,
+        url: "/images/blog_Images/hendrix.png",
+        props: {
+          variant: "circle",
+        },
+      },
+    },
   }
 ];

@@ -109,7 +109,7 @@ export function MarkdownRenderer({ children: markdown }: MarkdownRendererProps) 
           }
           
           return (
-            <p className="text-blog-body text-blog mb-4" {...props}>
+            <p className="text-blog-body text-gray-4 mb-4" {...props}>
               {children}
             </p>
           );
